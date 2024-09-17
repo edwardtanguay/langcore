@@ -1,10 +1,11 @@
-import dutchVerbs from '../data/dutchVerbs.json';
+import { useContext } from "react";
+import { AppContext } from "../AppContext";
 
-dutchVerbs.sort((a, b) => a.rank < b.rank ? 1 : -1);
-
-const devMode = false;
+const devMode = true;
 
 export const PageDutchVerbs = () => {
+	const { dutchVerbs } = useContext(AppContext);
+
 	return (
 		<>
 			{dutchVerbs.map(dutchVerb => {
