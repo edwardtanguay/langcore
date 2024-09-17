@@ -32,6 +32,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			imperfectSingular: rawDutchVerb.imperfectSingular,
 			imperfectSingularExampleLink: getExampleLink(rawDutchVerb.imperfectSingular),
 			imperfectPlural: rawDutchVerb.imperfectPlural,
+			imperfectPluralExampleLink: getExampleLink(rawDutchVerb.imperfectPlural),
 			participleVerb,
 			participleNoun: "ik",
 			participleHelper,
