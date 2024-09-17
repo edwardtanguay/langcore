@@ -36,6 +36,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			participleVerb,
 			participleNoun: "ik",
 			participleHelper,
+			participleExampleLink: getExampleLink(participleVerb),
 			rank: Number(rawDutchVerb.rank),
 			extras: rawDutchVerb.extras,
 		};
