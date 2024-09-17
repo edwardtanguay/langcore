@@ -12,7 +12,10 @@ export const PageDutchVerbs = () => {
 			{dutchVerbs.map(dutchVerb => {
 				return (
 					<div key={dutchVerb.dpodId}>
-						<p onClick={() => handleIsOpenToggle(dutchVerb)} className="bg-slate-300 mb-3 px-2 py-1 cursor-pointer rounded"><span className='font-semibold text-[1.4rem]'>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</span> <span className="">- {dutchVerb.infinitive}</span></p>
+						<p onClick={() => handleIsOpenToggle(dutchVerb)} className="bg-slate-300 mb-3 px-2 py-1 cursor-pointer rounded"><span className='font-semibold text-[1.4rem]'>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</span>
+							{dutchVerb.isOpen && (
+								<span> - {dutchVerb.infinitive}</span>
+							)}</p>
 						{
 							dutchVerb.isOpen && (
 								<div className='ml-3 font-mono text-[1rem] flex flex-col gap-4 bg-white p-3 rounded mb-4 mt-2'>
