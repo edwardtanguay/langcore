@@ -1,10 +1,9 @@
-import { useContext } from "react"
-import { AppContext } from "../AppContext"
+import { NavLink } from "react-router-dom";
 
 export const PageWelcome = () => {
-	const { message } = useContext(AppContext);
 
 	return (
-		<p>{message}</p>
+		<p>Welcome to the Language Core, currently we have <NavLink className="underline" to="/dutchVerbs"
+		>Dutch Verbs</NavLink>.</p>
 	)
 }
