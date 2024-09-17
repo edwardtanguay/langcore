@@ -1,5 +1,5 @@
 export const PageAbout = () => {
 	return (
-		<p>This is the about page.</p>
+		<p>I use this site to learn languages. See <a href="https://tanguay-eu.vercel.app">more of my projects</a>.</p>
 	)
 }

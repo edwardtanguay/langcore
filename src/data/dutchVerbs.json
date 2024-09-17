@@ -1,0 +1,74 @@
+[
+	{
+		"dpodId": "mvFL7v",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to bake",
+		"infinitive": "bakken",
+		"present": "bak",
+		"imperfectSingular": "bakte",
+		"imperfectPlural": "bakten",
+		"participle": "heb gebakken",
+		"rank": "3.8",
+		"extras": ""
+	},
+	{
+		"dpodId": "QkrYyM",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to begin",
+		"infinitive": "beginnen",
+		"present": "begin",
+		"imperfectSingular": "begon",
+		"imperfectPlural": "begonnen",
+		"participle": "ben begonnen",
+		"rank": "4.9",
+		"extras": ""
+	},
+	{
+		"dpodId": "ABF6yB",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to understand",
+		"infinitive": "begrijpen",
+		"present": "begrijp",
+		"imperfectSingular": "begreep",
+		"imperfectPlural": "begrepen",
+		"participle": "heb begrepen",
+		"rank": "4.93",
+		"extras": ""
+	},
+	{
+		"dpodId": "dTX5Nf",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to pay",
+		"infinitive": "betalen",
+		"present": "betaal",
+		"imperfectSingular": "betaalde",
+		"imperfectPlural": "betaalden",
+		"participle": "heb betaald",
+		"rank": "4.6",
+		"extras": ""
+	},
+	{
+		"dpodId": "KtFyR6",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to mean",
+		"infinitive": "bedoelen",
+		"present": "bedoel",
+		"imperfectSingular": "bedoelde",
+		"imperfectPlural": "bedoelden",
+		"participle": "heb bedoeld",
+		"rank": "4.7",
+		"extras": ""
+	},
+	{
+		"dpodId": "qoPypd",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to pray",
+		"infinitive": "bidden",
+		"present": "bid",
+		"imperfectSingular": "bad",
+		"imperfectPlural": "baden",
+		"participle": "gebeden",
+		"rank": "4.4",
+		"extras": ""
+	}
+]
