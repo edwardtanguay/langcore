@@ -30,6 +30,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			present: rawDutchVerb.present,
 			presentExampleLink: getExampleLink(rawDutchVerb.present),
 			imperfectSingular: rawDutchVerb.imperfectSingular,
+			imperfectSingularExampleLink: getExampleLink(rawDutchVerb.imperfectSingular),
 			imperfectPlural: rawDutchVerb.imperfectPlural,
 			participleVerb,
 			participleNoun: "ik",
