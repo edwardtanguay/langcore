@@ -4,6 +4,7 @@ import { getDutchVerbs } from "./dataModel";
 
 interface IAppContext {
 	dutchVerbs: DutchVerb[];
+	handleIsOpenToggle: (dutchVerb: DutchVerb) => void
 }
 
 interface IAppProvider {
@@ -19,10 +20,17 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		setDutchVerbs(getDutchVerbs())
 	}, []);
 
+	const handleIsOpenToggle = (dutchVerb: DutchVerb) => {
+		dutchVerb.isOpen = !dutchVerb.isOpen;
+		const _dutchVerbs = structuredClone(dutchVerbs);
+		setDutchVerbs(_dutchVerbs);
+	}
+
 	return (
 		<AppContext.Provider
 			value={{
-				dutchVerbs
+				dutchVerbs,
+				handleIsOpenToggle
 			}}
 		>
 			{children}

@@ -30,4 +30,5 @@ export type DutchVerb = {
 	rank: number;
 	extras: string;
 	conjugationLink: string;
+	isOpen: boolean;
 }
