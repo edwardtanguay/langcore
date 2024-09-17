@@ -1,12 +1,22 @@
 import _rawDutchVerbs from "./data/dutchVerbs.json";
 import { RawDutchVerb } from "./types";
 import { DutchVerb } from "./types";
+import * as qstr from "./qtools/qstr";
 
 const rawDutchVerbs: RawDutchVerb[] = _rawDutchVerbs;
 
+const getParticipleParts = (participle: string) => {
+	const parts = qstr.breakIntoParts(participle, " ");
+	return [parts[0], parts[1]];
+};
+
 export const getDutchVerbs = (): DutchVerb[] => {
 	const dutchVerbs: DutchVerb[] = [];
+
 	for (const rawDutchVerb of rawDutchVerbs) {
+		const [participleHelper, participleVerb] = getParticipleParts(
+			rawDutchVerb.participle
+		);
 		const dutchVerb: DutchVerb = {
 			dpodId: rawDutchVerb.dpodId,
 			dpodWhenCreated: rawDutchVerb.dpodWhenCreated,
@@ -15,12 +25,14 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			present: rawDutchVerb.present,
 			imperfectSingular: rawDutchVerb.imperfectSingular,
 			imperfectPlural: rawDutchVerb.imperfectPlural,
-			participle: rawDutchVerb.participle,
+			participleVerb,
+			participleNoun: "ik",
+			participleHelper,
 			rank: Number(rawDutchVerb.rank),
-			extras: rawDutchVerb.extras
+			extras: rawDutchVerb.extras,
 		};
 		dutchVerbs.push(dutchVerb);
 	}
-	dutchVerbs.sort((a, b) => a.rank < b.rank ? 1 : -1);
+	dutchVerbs.sort((a, b) => (a.rank < b.rank ? 1 : -1));
 	return dutchVerbs;
 };
