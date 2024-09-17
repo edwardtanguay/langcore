@@ -26,6 +26,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			dpodWhenCreated: rawDutchVerb.dpodWhenCreated,
 			english: rawDutchVerb.english,
 			infinitive: rawDutchVerb.infinitive,
+			infinitiveExampleLink: getExampleLink(rawDutchVerb.infinitive),
 			present: rawDutchVerb.present,
 			presentExampleLink: getExampleLink(rawDutchVerb.present),
 			imperfectSingular: rawDutchVerb.imperfectSingular,

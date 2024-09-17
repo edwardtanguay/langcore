@@ -18,7 +18,7 @@ export const PageDutchVerbs = () => {
 								<p>vandaag <span className='present'><a href={dutchVerb.presentExampleLink} target="_blank">{dutchVerb.present}</a></span> ik</p>
 							{/* <FaMagnifyingGlass /> */}
 							</div>
-							<p>vandaag <span className='present'>{dutchVerb.infinitive}</span> we</p>
+							<p>vandaag <span className='present'><a href={dutchVerb.infinitiveExampleLink} target="_blank">{dutchVerb.infinitive}</a></span> we</p>
 							<p>gisteren <span className='past'>{dutchVerb.imperfectSingular}</span> ik</p>
 							<p>gisteren <span className='past'>{dutchVerb.imperfectPlural}</span> we</p>
 							<p>{dutchVerb.participleNoun} <span className={`font-bold ${dutchVerb.participleHelper === 'ben' ? 'text-red-600' : ''}`}>{dutchVerb.participleHelper}</span> gisteren <span className='participle'>{dutchVerb.participleVerb}</span></p>

@@ -16,6 +16,7 @@ export type DutchVerb = {
 	dpodWhenCreated: string;
 	english: string;
 	infinitive: string;
+	infinitiveExampleLink: string;
 	present: string;
 	presentExampleLink: string;
 	imperfectSingular: string;
