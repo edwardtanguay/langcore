@@ -10,7 +10,11 @@ export const PageDutchVerbs = () => {
 			{dutchVerbs.map(dutchVerb => {
 				return (
 					<div key={dutchVerb.dpodId}>
-						<p>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</p>
+						<p className='font-semibold text-lg'>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</p>
+						<div className='ml-3 font-mono text-[.8rem] flex flex-col gap-2 bg-white p-3 rounded mb-4 mt-2'>
+							<p>vandaag <span className='present'>{dutchVerb.present}</span> ik</p>
+							<p>we <span className='present'>{dutchVerb.infinitive}</span> vandaag</p>
+						</div>
 					</div>
 				)
 			})}
