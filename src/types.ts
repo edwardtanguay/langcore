@@ -17,6 +17,7 @@ export type DutchVerb = {
 	english: string;
 	infinitive: string;
 	present: string;
+	presentExampleLink: string;
 	imperfectSingular: string;
 	imperfectPlural: string;
 	participleNoun: string;

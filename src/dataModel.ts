@@ -10,6 +10,10 @@ const getParticipleParts = (participle: string) => {
 	return [parts[0], parts[1]];
 };
 
+const getExampleLink = (word: string) => {
+	return `https://tatoeba.org/de/sentences/search?from=nld&query=%3D${word}&to=eng`;
+}
+
 export const getDutchVerbs = (): DutchVerb[] => {
 	const dutchVerbs: DutchVerb[] = [];
 
@@ -23,6 +27,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			english: rawDutchVerb.english,
 			infinitive: rawDutchVerb.infinitive,
 			present: rawDutchVerb.present,
+			presentExampleLink: getExampleLink(rawDutchVerb.present),
 			imperfectSingular: rawDutchVerb.imperfectSingular,
 			imperfectPlural: rawDutchVerb.imperfectPlural,
 			participleVerb,
