@@ -12,7 +12,7 @@ export const PageDutchVerbs = () => {
 			{dutchVerbs.map(dutchVerb => {
 				return (
 					<div key={dutchVerb.dpodId}>
-						<p className='font-semibold text-lg'>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</p>
+						<p ><span className='font-semibold text-[1.4rem]'>{dutchVerb.english}{devMode && <span> <sup className='text-[.8rem] text-gray-500'>{dutchVerb.rank}</sup></span>}</span> <span className="">- {dutchVerb.infinitive}</span></p>
 						<div className='ml-3 font-mono text-[1rem] flex flex-col gap-4 bg-white p-3 rounded mb-4 mt-2'>
 							<div className="flex justify-between">
 								<p>vandaag <span className='present'><a href={dutchVerb.presentExampleLink} target="_blank">{dutchVerb.present}</a></span> ik</p>
