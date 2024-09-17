@@ -14,6 +14,10 @@ const getExampleLink = (word: string) => {
 	return `https://tatoeba.org/de/sentences/search?from=nld&query=%3D${word}&to=eng`;
 }
 
+const getConjugationLink = (word: string) => {
+	return `https://en.bab.la/conjugation/dutch/${word}`;
+}
+
 export const getDutchVerbs = (): DutchVerb[] => {
 	const dutchVerbs: DutchVerb[] = [];
 
@@ -39,6 +43,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			participleExampleLink: getExampleLink(participleVerb),
 			rank: Number(rawDutchVerb.rank),
 			extras: rawDutchVerb.extras,
+			conjugationLink: getConjugationLink(rawDutchVerb.infinitive)
 		};
 		dutchVerbs.push(dutchVerb);
 	}

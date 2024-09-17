@@ -29,4 +29,5 @@ export type DutchVerb = {
 	participleExampleLink: string;
 	rank: number;
 	extras: string;
+	conjugationLink: string;
 }
