@@ -1,7 +1,7 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
 
-const devMode = false;
+const devMode = true;
 
 export const PageDutchVerbs = () => {
 	const { dutchVerbs } = useContext(AppContext);
