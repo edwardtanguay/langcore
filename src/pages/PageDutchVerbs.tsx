@@ -27,12 +27,12 @@ export const PageDutchVerbs = () => {
 									<p>gisteren <span className='past'><a href={dutchVerb.imperfectSingularExampleLink} target="_blank">{dutchVerb.imperfectSingular}</a></span> ik</p>
 									<p>gisteren <span className='past'><a href={dutchVerb.imperfectPluralExampleLink} target="_blank">{dutchVerb.imperfectPlural}</a></span> we</p>
 									<p>{dutchVerb.participleNoun} <span className={`font-bold ${dutchVerb.participleHelper === 'ben' ? 'text-red-600' : ''}`}>{dutchVerb.participleHelper}</span> gisteren <span className='participle'><a href={dutchVerb.participleExampleLink} target="_blank">{dutchVerb.participleVerb}</a></span></p>
-									<div className="text-xs -mt-3">
+									<div className="text-sm -mt-3">
 										{dutchVerb.examples.map(example => {
 											return (
 												<div key={example.dpodId} className="mt-3">
-													<div className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-600">{example.english}</div>
-													<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-semibold">{example.dutch}</div>
+													<div className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-800">{example.english}</div>
+													<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-bold">{example.dutch}</div>
 												</div>
 											)
 										})}

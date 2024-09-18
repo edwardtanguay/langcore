@@ -1,6 +1,7 @@
 - .. add examples
 	- x copy them over
 	- .. make examples flashcards
+		- .. make more visible
 - .. add first wave
 - make sort constant
 - enable testing and saving results
