@@ -30,9 +30,9 @@ export const PageDutchVerbs = () => {
 									<div className="text-xs -mt-3">
 										{dutchVerb.examples.map(example => {
 											return (
-												<div key={example.dpodId} className="mt-3 border py-1 px-2">
-													<div>{example.english}</div>
-													<div>{example.dutch}</div>
+												<div key={example.dpodId} className="mt-3">
+													<div className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-600">{example.english}</div>
+													<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-semibold">{example.dutch}</div>
 												</div>
 											)
 										})}
