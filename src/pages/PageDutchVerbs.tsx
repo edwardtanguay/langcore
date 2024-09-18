@@ -1,11 +1,18 @@
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { FaMagnifyingGlass } from "react-icons/fa6";
+import { DutchVerbExample } from "../types";
 
 const devMode = true;
 
 export const PageDutchVerbs = () => {
-	const { dutchVerbs, handleIsOpenToggle } = useContext(AppContext);
+	const { dutchVerbs, setDutchVerbs, handleIsOpenToggle } = useContext(AppContext);
+
+	const handleExampleToggle = (example: DutchVerbExample) => {
+		example.isOpen = !example.isOpen;
+		const _dutchVerbs = structuredClone(dutchVerbs);
+		setDutchVerbs(_dutchVerbs);
+	}
 
 	return (
 		<>
@@ -31,8 +38,10 @@ export const PageDutchVerbs = () => {
 										{dutchVerb.examples.map(example => {
 											return (
 												<div key={example.dpodId} className="mt-3">
-													<div className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-800">{example.english}</div>
-													<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-bold">{example.dutch}</div>
+													<div onClick={() => handleExampleToggle(example)} className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-800">{example.english}</div>
+													{example.isOpen && (
+														<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-bold">{example.dutch}</div>
+													)}
 												</div>
 											)
 										})}

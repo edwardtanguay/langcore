@@ -1,7 +1,9 @@
 - .. add examples
 	- x copy them over
 	- .. make examples flashcards
-		- .. make more visible
+		- x make more visible
+		- .. flashcards
+		- borders
 - .. add first wave
 - make sort constant
 - enable testing and saving results

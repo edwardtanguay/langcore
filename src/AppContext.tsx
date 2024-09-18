@@ -4,6 +4,7 @@ import { getDutchVerbs } from "./dataModel";
 
 interface IAppContext {
 	dutchVerbs: DutchVerb[];
+	setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	handleIsOpenToggle: (dutchVerb: DutchVerb) => void
 }
 
@@ -30,6 +31,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		<AppContext.Provider
 			value={{
 				dutchVerbs,
+				setDutchVerbs,
 				handleIsOpenToggle
 			}}
 		>

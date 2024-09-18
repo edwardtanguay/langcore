@@ -47,4 +47,5 @@ export type DutchVerbExample = {
 	verb: string;
 	english: string;
 	dutch: string;
+	isOpen: boolean;
 };
