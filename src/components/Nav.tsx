@@ -1,27 +1,29 @@
-
 import { NavLink } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import * as tools from '../qtools/qstr';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { AppContext } from "../AppContext";
 
-const menuItems = [
-	{
-		idCode: 'welcome',
-		title: 'Welcome'
-	},
-	{
-		idCode: 'dutchVerbs',
-		title: 'Dutch Verbs'
-	},
-	{
-		idCode: 'about',
-		title: 'About'
-	}
-]
 
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
+	const { dutchVerbs } = useContext(AppContext);
+
+	const menuItems = [
+		{
+			idCode: 'welcome',
+			title: 'Welcome'
+		},
+		{
+			idCode: 'dutchVerbs',
+			title: `${dutchVerbs.length} Dutch Verbs`
+		},
+		{
+			idCode: 'about',
+			title: 'About'
+		}
+	]
 
 	const location = useLocation();
 	const pageIdCode = tools.chopLeft(location.pathname, '/');
@@ -47,7 +49,7 @@ export const Nav = () => {
 										<>
 											{(menuItem.idCode !== currentMenuItem.idCode && (
 												<div key={index}
-												className="mt-[.2rem]"	
+													className="mt-[.2rem]"
 												><NavLink to={menuItem.idCode}
 													onClick={() => setShowMobileMenu(false)}>{menuItem.title}</NavLink></div>
 											))}
