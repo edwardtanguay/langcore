@@ -55,6 +55,7 @@ export const getDutchVerbs = (): DutchVerb[] => {
 				.filter((m) => m.verb === rawDutchVerb.infinitive)
 				.map((m) => {
 					return {
+						dpodId: m.dpodId,
 						verb: m.verb,
 						english: m.english,
 						dutch: m.dutch,

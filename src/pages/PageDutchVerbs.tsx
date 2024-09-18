@@ -28,6 +28,16 @@ export const PageDutchVerbs = () => {
 									<p>gisteren <span className='past'><a href={dutchVerb.imperfectPluralExampleLink} target="_blank">{dutchVerb.imperfectPlural}</a></span> we</p>
 									<p>{dutchVerb.participleNoun} <span className={`font-bold ${dutchVerb.participleHelper === 'ben' ? 'text-red-600' : ''}`}>{dutchVerb.participleHelper}</span> gisteren <span className='participle'><a href={dutchVerb.participleExampleLink} target="_blank">{dutchVerb.participleVerb}</a></span></p>
 									<p>There are {dutchVerb.examples.length} examples.</p>
+									<div className="border-slate-800 border w-fit p-3">
+										{dutchVerb.examples.map(example => {
+											return (
+												<div key={example.dpodId} className="mb-3">
+													<div>{example.english}</div>
+													<div>{example.dutch}</div>
+												</div>
+											)
+										})}
+									</div>
 								</div>
 							)
 						}

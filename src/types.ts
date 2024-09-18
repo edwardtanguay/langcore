@@ -35,6 +35,7 @@ export type DutchVerb = {
 };
 
 export type RawDutchVerbExample = {
+	dpodId: string;
 	verb: string;
 	english: string;
 	dutch: string;
@@ -42,6 +43,7 @@ export type RawDutchVerbExample = {
 };
 
 export type DutchVerbExample = {
+	dpodId: string;
 	verb: string;
 	english: string;
 	dutch: string;
