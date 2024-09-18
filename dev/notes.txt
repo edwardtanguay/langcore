@@ -1,9 +1,10 @@
 - .. add examples
 	- x copy them over
-	- .. make examples flashcards
+	- x make examples flashcards
 		- x make more visible
-		- .. flashcards
-		- borders
+		- x flashcards
+		- x borders
+- .. fill all with examples
 - .. add first wave
 - make sort constant
 - enable testing and saving results

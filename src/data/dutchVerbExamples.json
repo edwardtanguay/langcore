@@ -310,5 +310,45 @@
 		"english": "Let's sit on the grass.",
 		"dutch": "Laten we op het gras gaan zitten.",
 		"extras": ""
+	},
+	{
+		"dpodId": "onfK0k",
+		"dpodWhenCreated": "2024-09-19 00:43:58",
+		"verb": "begrijpen",
+		"english": "Do you understand what I am saying?",
+		"dutch": "Begrijp je wat ik zeg?",
+		"extras": ""
+	},
+	{
+		"dpodId": "oUASqC",
+		"dpodWhenCreated": "2024-09-19 00:43:58",
+		"verb": "begrijpen",
+		"english": "I don't understand this sentence.",
+		"dutch": "Ik begrijp die zin niet.",
+		"extras": ""
+	},
+	{
+		"dpodId": "ae8IcQ",
+		"dpodWhenCreated": "2024-09-19 00:43:58",
+		"verb": "begrijpen",
+		"english": "I didn't understand what the professor said.",
+		"dutch": "Ik begreep niet wat de professor zei.",
+		"extras": ""
+	},
+	{
+		"dpodId": "C6VzTz",
+		"dpodWhenCreated": "2024-09-19 00:43:58",
+		"verb": "begrijpen",
+		"english": "He pretended that he understood, even though he didn't.",
+		"dutch": "Hij deed alsof hij het had begrepen, ook al was dat niet zo.",
+		"extras": ""
+	},
+	{
+		"dpodId": "ie07kV",
+		"dpodWhenCreated": "2024-09-19 00:43:58",
+		"verb": "begrijpen",
+		"english": "Hij begreep dat ze geen grap maakte.",
+		"dutch": "He realized she wasn't kidding.",
+		"extras": ""
 	}
 ]
