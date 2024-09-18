@@ -3,7 +3,7 @@ import { AppContext } from "../AppContext";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { DutchVerbExample } from "../types";
 
-const devMode = true;
+const devMode = false;
 
 export const PageDutchVerbs = () => {
 	const { dutchVerbs, setDutchVerbs, handleIsOpenToggle } = useContext(AppContext);
@@ -38,9 +38,9 @@ export const PageDutchVerbs = () => {
 										{dutchVerb.examples.map(example => {
 											return (
 												<div key={example.dpodId} className="mt-3">
-													<div onClick={() => handleExampleToggle(example)} className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-800">{example.english}</div>
+													<div onClick={() => handleExampleToggle(example)} className="border rounded-t-md py-1 px-2 bg-slate-200 italic text-slate-800 cursor-pointer border-r-slate-400 border-l-slate-400 border-t-slate-400">{example.english}</div>
 													{example.isOpen && (
-														<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-bold">{example.dutch}</div>
+														<div className="border rounded-b-md py-1 px-2 bg-slate-300 font-bold border-r-slate-400 border-l-slate-400 border-b-slate-400">{example.dutch}</div>
 													)}
 												</div>
 											)
