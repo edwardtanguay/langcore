@@ -9,7 +9,7 @@ export type RawDutchVerb = {
 	participle: string;
 	rank: string;
 	extras: string;
-}
+};
 
 export type DutchVerb = {
 	dpodId: string;
@@ -31,4 +31,18 @@ export type DutchVerb = {
 	extras: string;
 	conjugationLink: string;
 	isOpen: boolean;
-}
+	examples: DutchVerbExample[];
+};
+
+export type RawDutchVerbExample = {
+	verb: string;
+	english: string;
+	dutch: string;
+	extras: string;
+};
+
+export type DutchVerbExample = {
+	verb: string;
+	english: string;
+	dutch: string;
+};

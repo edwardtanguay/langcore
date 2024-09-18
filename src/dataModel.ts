@@ -1,9 +1,11 @@
 import _rawDutchVerbs from "./data/dutchVerbs.json";
-import { RawDutchVerb } from "./types";
+import _rawDutchVerbExamples from "./data/dutchVerbExamples.json";
+import { RawDutchVerb, RawDutchVerbExample } from "./types";
 import { DutchVerb } from "./types";
 import * as qstr from "./qtools/qstr";
 
 const rawDutchVerbs: RawDutchVerb[] = _rawDutchVerbs;
+const rawDutchVerbExamples: RawDutchVerbExample[] = _rawDutchVerbExamples;
 
 const getParticipleParts = (participle: string) => {
 	const parts = qstr.breakIntoParts(participle, " ");
@@ -49,6 +51,15 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			extras: rawDutchVerb.extras,
 			conjugationLink: getConjugationLink(rawDutchVerb.infinitive),
 			isOpen: false,
+			examples: rawDutchVerbExamples
+				.filter((m) => m.verb === rawDutchVerb.infinitive)
+				.map((m) => {
+					return {
+						verb: m.verb,
+						english: m.english,
+						dutch: m.dutch,
+					};
+				}),
 		};
 		dutchVerbs.push(dutchVerb);
 	}
