@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 
-const devMode = false;
+const devMode = true;
 
 export const PageDutchVerbs = () => {
 	const { dutchVerbs, handleIsOpenToggle } = useContext(AppContext);
