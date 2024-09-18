@@ -1,5 +1,6 @@
 - .. add examples
-	- .. copy them over
+	- x copy them over
+	- .. make examples flashcards
 - .. add first wave
 - make sort constant
 - enable testing and saving results
