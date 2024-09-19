@@ -286,5 +286,17 @@
 		"participle": "heb genoten",
 		"rank": "4.4",
 		"extras": ""
+	},
+	{
+		"dpodId": "Gp1pht",
+		"dpodWhenCreated": "2024-09-19 09:27:22",
+		"english": "to have",
+		"infinitive": "hebben",
+		"present": "heb",
+		"imperfectSingular": "had",
+		"imperfectPlural": "hadden",
+		"participle": "heb gehad",
+		"rank": "4.99",
+		"extras": ""
 	}
 ]

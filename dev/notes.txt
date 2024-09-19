@@ -1,10 +1,5 @@
-- .. add examples
-	- x copy them over
-	- x make examples flashcards
-		- x make more visible
-		- x flashcards
-		- x borders
-- .. fill all with examples
+- .. make context variable: siteLocation: local | vercel
+	- put in template
 - .. add first wave
 - make sort constant
 - enable testing and saving results
