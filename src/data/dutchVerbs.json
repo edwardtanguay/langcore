@@ -223,7 +223,7 @@
 		"present": "draag",
 		"imperfectSingular": "droeg",
 		"imperfectPlural": "droegen",
-		"participle": "het gedragen",
+		"participle": "heb gedragen",
 		"rank": "4.55",
 		"extras": ""
 	},
@@ -273,6 +273,18 @@
 		"imperfectPlural": "gingen",
 		"participle": "ben gegaan",
 		"rank": "4.935",
+		"extras": ""
+	},
+	{
+		"dpodId": "DFD5uA",
+		"dpodWhenCreated": "2024-09-19 08:21:35",
+		"english": "to enjoy",
+		"infinitive": "genieten",
+		"present": "geniet",
+		"imperfectSingular": "genoot",
+		"imperfectPlural": "genoten",
+		"participle": "heb genoten",
+		"rank": "4.4",
 		"extras": ""
 	}
 ]
