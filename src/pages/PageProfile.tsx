@@ -1,12 +1,14 @@
 import React from "react";
-import { useStoreState } from "../store/hooks.ts"
+import { useStoreState, useStoreActions } from "../store/hooks.ts"
 
 export const PageProfile = () => {
 	const { firstName } = useStoreState((state) => state.profileModel);
+	const { setFirstName } = useStoreActions((actions) => actions.profileModel);
+
 
 	const handleChangeFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
-		console.log(111, value);
+		setFirstName(value);
 	}
 
 	return (

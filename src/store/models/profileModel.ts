@@ -5,12 +5,12 @@ export interface ProfileModel {
 	firstName: string;
 
 	// actions
-	setChangeFirstName: Action<this, string>;
+	setFirstName: Action<this, string>;
 }
 
 export const profileModel: ProfileModel = {
 	firstName: '',
-	setChangeFirstName: action((state, firstName) => {
+	setFirstName: action((state, firstName) => {
 		state.firstName = firstName; 
 	})
 };
