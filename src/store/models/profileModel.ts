@@ -9,7 +9,7 @@ export interface ProfileModel {
 }
 
 export const profileModel: ProfileModel = {
-	firstName: 'nnn',
+	firstName: '',
 	setChangeFirstName: action((state, firstName) => {
 		state.firstName = firstName; 
 	})
