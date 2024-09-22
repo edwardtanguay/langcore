@@ -12,11 +12,11 @@
 	}
 
 	.buttonNotLearned {
-		@apply bg-gray-400;
+		@apply bg-[#CBD5E1];
 	}
 
 	.buttonLearned {
-		@apply bg-green-500;
+		@apply bg-[#26ba1e]
 	}
 }
 
@@ -63,4 +63,8 @@ form .formRow {
 		width: 100%;
 		font-size: 1.2rem;
 	}
+}
+
+.verbLearned {
+	background-color: #26ba1e;
 }

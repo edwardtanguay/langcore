@@ -5,9 +5,11 @@ import { DutchVerbExample } from "../types";
 import { DevArea } from "../components/DevArea";
 import * as config from '../config';
 import { ManageArea } from "../components/ManageArea";
+import { useStoreState } from "../store/hooks.ts"
 
 export const PageDutchVerbs = () => {
 	const { dutchVerbs, setDutchVerbs, handleIsOpenToggle } = useContext(AppContext);
+	const { learnedVerbs } = useStoreState((state) => state.profileModel);
 
 	const handleExampleToggle = (example: DutchVerbExample) => {
 		example.isOpen = !example.isOpen;
@@ -18,9 +20,10 @@ export const PageDutchVerbs = () => {
 	return (
 		<>
 			{dutchVerbs.map(dutchVerb => {
+				const learned = learnedVerbs.includes(dutchVerb.dpodId);
 				return (
-					<div key={dutchVerb.dpodId}>
-						<p onClick={() => handleIsOpenToggle(dutchVerb)} className="bg-slate-300 mb-3 px-2 py-1 cursor-pointer rounded"><span className='font-semibold text-[1.4rem]'>{dutchVerb.english}{config.devMode() && <span> <sup className='text-[.8rem] text-gray-500'>Rank: {dutchVerb.rank}, <span style={{color: dutchVerb.examples.length === 0 ? 'red': ''}}>Examples: {dutchVerb.examples.length}</span></sup></span>}</span>
+					<div key={dutchVerb.dpodId} >
+						<p onClick={() => handleIsOpenToggle(dutchVerb)} className={`bg-slate-300 mb-3 px-2 py-1 cursor-pointer rounded ${learned ? 'verbLearned' : ''}`}><span className='font-semibold text-[1.4rem]'>{dutchVerb.english}{config.devMode() && <span> <sup className='text-[.8rem] text-gray-500'>Rank: {dutchVerb.rank}, <span style={{ color: dutchVerb.examples.length === 0 ? 'red' : '' }}>Examples: {dutchVerb.examples.length}</span></sup></span>}</span>
 							{dutchVerb.isOpen && (
 								<span> - {dutchVerb.infinitive}</span>
 							)}</p>
@@ -47,8 +50,8 @@ export const PageDutchVerbs = () => {
 											)
 										})}
 									</div>
-									<DevArea dutchVerb={dutchVerb}/>
-									<ManageArea dutchVerb={dutchVerb}/>
+									<DevArea dutchVerb={dutchVerb} />
+									<ManageArea dutchVerb={dutchVerb} />
 								</div>
 							)
 						}
