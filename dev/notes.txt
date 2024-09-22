@@ -1,6 +1,7 @@
 - x first half of first wave
 - .. text for entering examples
-
+	- .. only for dev
+	
 - .. examples for first half
 - enable to mark and save "known"
 
