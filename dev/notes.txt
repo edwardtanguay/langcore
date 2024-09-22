@@ -14,7 +14,9 @@
 		- x persist it
 	- x make button show correctly 
 		- x display verb suuids
-	- .. show how many		
+	- x show how many
+	- .. make button work
+	
 
 
 - .. rest of first wave

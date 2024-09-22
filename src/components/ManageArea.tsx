@@ -1,4 +1,4 @@
-import { useStoreState } from "../store/hooks.ts"
+import { useStoreActions, useStoreState } from "../store/hooks.ts"
 import { DutchVerb } from "../types.ts";
 
 interface IProps {
@@ -7,15 +7,16 @@ interface IProps {
 
 export const ManageArea = ({ dutchVerb }: IProps) => {
 	const { learnedVerbs } = useStoreState((state) => state.profileModel);
+	const { addVerbLearned, removeVerbLearned } = useStoreActions((actions) => actions.profileModel);
 
 	const learned = learnedVerbs.includes(dutchVerb.dpodId);
 
 	return (
 		<div>
 			{learned ? (
-				<button className="buttonManageArea buttonLearned">Learned</button>
+				<button onClick={() => removeVerbLearned(dutchVerb.dpodId)} className="buttonManageArea buttonLearned">Learned</button>
 			) : (
-				<button className="buttonManageArea buttonNotLearned">Not Learned</button>
+				<button onClick={() => addVerbLearned(dutchVerb.dpodId)} className="buttonManageArea buttonNotLearned">Not Learned</button>
 			)}
 		</div>
 	)
