@@ -17,9 +17,11 @@ export const PageDutchVerbs = () => {
 		setDutchVerbs(_dutchVerbs);
 	}
 
+	const percent = ((learnedVerbs.length / dutchVerbs.length) * 100).toFixed(0);
+
 	return (
 		<>
-			<h2 className="mb-4 text-center">You have learned {learnedVerbs.length} of {dutchVerbs.length} verbs.</h2>
+			<h2 className="mb-4 text-center">You have learned {learnedVerbs.length} of {dutchVerbs.length} verbs: <b>{percent}%</b></h2>
 			{dutchVerbs.map(dutchVerb => {
 				const learned = learnedVerbs.includes(dutchVerb.dpodId);
 				return (

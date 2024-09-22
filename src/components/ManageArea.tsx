@@ -22,9 +22,9 @@ export const ManageArea = ({ dutchVerb }: IProps) => {
 	return (
 		<div>
 			{learned ? (
-				<button onClick={() => removeVerb(dutchVerb)} className="buttonManageArea buttonLearned">Learned</button>
+				<button onClick={() => removeVerb(dutchVerb)} className="buttonManageArea buttonLearned">Toggle Learned</button>
 			) : (
-				<button onClick={() => addVerb(dutchVerb)} className="buttonManageArea buttonNotLearned">Not Learned</button>
+				<button onClick={() => addVerb(dutchVerb)} className="buttonManageArea buttonNotLearned">Toggle Learned</button>
 			)}
 		</div>
 	)

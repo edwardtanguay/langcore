@@ -16,7 +16,11 @@
 		- x display verb suuids
 	- x show how many
 	- x make button work
-	- .. close automatically
+	- x close automatically
+	- x percent
+	- .. sign up and link
+	- show stats on profile
+	- RESET PROFILE
 
 - sign in
 
