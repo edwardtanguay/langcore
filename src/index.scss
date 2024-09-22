@@ -6,6 +6,18 @@
 	h1 {
 		font-variant: small-caps;
 	}
+
+	.buttonManageArea {
+		@apply w-full rounded py-2 font-sans;
+	}
+
+	.buttonNotLearned {
+		@apply bg-gray-400;
+	}
+
+	.buttonLearned {
+		@apply bg-green-500;
+	}
 }
 
 a.active {
@@ -17,7 +29,7 @@ a.active {
 	font-weight: bold;
 	background-color: #333;
 	padding: 2px 4px;
-	border-radius: .3rem;
+	border-radius: 0.3rem;
 }
 
 .past {
@@ -25,7 +37,7 @@ a.active {
 	font-weight: bold;
 	background-color: #333;
 	padding: 2px 4px;
-	border-radius: .3rem;
+	border-radius: 0.3rem;
 }
 
 .participle {
@@ -33,9 +45,9 @@ a.active {
 	font-weight: bold;
 	background-color: #333;
 	padding: 2px 4px;
-	border-radius: .3rem;
+	border-radius: 0.3rem;
 }
 
 .verbDataLine {
-	margin-bottom: .9rem;
+	margin-bottom: 0.9rem;
 }

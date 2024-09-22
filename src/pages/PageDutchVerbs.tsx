@@ -4,6 +4,7 @@ import { FaMagnifyingGlass } from "react-icons/fa6";
 import { DutchVerbExample } from "../types";
 import { DevArea } from "../components/DevArea";
 import * as config from '../config';
+import { ManageArea } from "../components/ManageArea";
 
 export const PageDutchVerbs = () => {
 	const { dutchVerbs, setDutchVerbs, handleIsOpenToggle } = useContext(AppContext);
@@ -47,6 +48,7 @@ export const PageDutchVerbs = () => {
 										})}
 									</div>
 									<DevArea dutchVerb={dutchVerb}/>
+									<ManageArea/>
 								</div>
 							)
 						}

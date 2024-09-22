@@ -7,6 +7,7 @@ import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
 import { PageDutchVerbs } from "./pages/PageDutchVerbs.tsx";
+import { PageProfile } from "./pages/PageProfile.tsx";
 
 const router = createBrowserRouter([
 	{
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
 			{
 				path: "dutchVerbs",
 				element: <PageDutchVerbs/>
+			},
+			{
+				path: "profile",
+				element: <PageProfile />,
 			},
 			{
 				path: "about",

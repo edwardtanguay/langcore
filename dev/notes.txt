@@ -1,9 +1,11 @@
 - x first half of first wave
-- .. text for entering examples
-	- .. only for dev
-	
-- .. examples for first half
-- enable to mark and save "known"
+- x text for entering examples
+- x only for dev
+- x examples for first half
+- .. enable to mark and save "known"
+	- .. make Learned / Not Learned button
+		- .. first make siteUser object with first name
+			- .. make profile page with mock name
 
 - .. rest of first wave
 - add second wave
