@@ -13,9 +13,9 @@ export const ManageArea = ({ dutchVerb }: IProps) => {
 	return (
 		<div>
 			{learned ? (
-				<button className="buttonManageArea buttonLearned">Learned / Not Learned</button>
+				<button className="buttonManageArea buttonLearned">Learned</button>
 			) : (
-				<button className="buttonManageArea buttonNotLearned">Learned / Not Learned</button>
+				<button className="buttonManageArea buttonNotLearned">Not Learned</button>
 			)}
 		</div>
 	)
