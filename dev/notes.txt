@@ -1,4 +1,8 @@
-- .. add first wave
+- x first half of first wave
+- .. examples for first half
+- enable to mark and save "known"
+
+- .. rest of first wave
 - add second wave
 
 - enable testing and saving results
@@ -7,7 +11,7 @@
 - verbGroups
 	- liegen, liggen, leggen
 	- kopen, koken
-	- zien, zeggen
+	- zien, zeggen, zijn
 	- maken, mogen
 - search
 - quiz: see "ik mat", type VERB: "meten"
