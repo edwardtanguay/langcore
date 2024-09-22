@@ -8,7 +8,8 @@
 			- x make profile page with mock name
 			- x name form textbox
 			- .. allow change in textbox and show on top
-				- .. set up easy-peasy
+				- x set up easy-peasy
+				- .. show at top
 
 
 - .. rest of first wave
