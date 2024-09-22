@@ -32,7 +32,7 @@ export type DutchVerb = {
 	conjugationLink: string;
 	isOpen: boolean;
 	examples: DutchVerbExample[];
-	exampleDatapodText: string;
+	exampleDatapodTextLines: string[];
 };
 
 export type RawDutchVerbExample = {

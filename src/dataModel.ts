@@ -62,7 +62,10 @@ export const getDutchVerbs = (): DutchVerb[] => {
 						isOpen: false,
 					};
 				}),
-			exampleDatapodText: "nnn",
+			exampleDatapodTextLines: qstr.convertStringBlockToLines(`
+==dutchVerbExample
+${rawDutchVerb.infinitive}
+			`)
 		};
 		dutchVerbs.push(dutchVerb);
 	}

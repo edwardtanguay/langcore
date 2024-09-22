@@ -102,3 +102,68 @@ export const isEmpty = (line: string) => {
 export const replaceAll = (text: string, search: string, replace: string) => {
 	return text.split(search).join(replace);
 };
+
+// also does full trim, of array and each line
+export const convertStringBlockToLines = (
+	stringBlock: string,
+	trimLines = true
+) => {
+	let roughLines: string[] = [];
+
+	if (qstr.isEmpty(stringBlock)) {
+		return [];
+	}
+	roughLines = stringBlock.split("\n");
+	if (trimLines) {
+		roughLines = qstr.trimAllLinesInLinesArray(roughLines);
+	} else {
+		// remove at least the ending \r (since not trimming is intended for leaving TABs at the end)
+		roughLines = qstr.trimAllLinesOfSlashRInLinesArray(roughLines);
+	}
+	roughLines = qstr.trimLinesOfEndBlanks(roughLines);
+	return roughLines;
+};
+export const trimAllLinesOfSlashRInLinesArray = (lines: string[]) => {
+	const newLines: string[] = [];
+	lines.forEach(function (line) {
+		const newLine = qstr.chopRight(line, "\r");
+		newLines.push(newLine);
+	});
+	return newLines;
+};
+
+export const trimAllLinesInLinesArray = (lines: string[]) => {
+	const newLines: string[] = [];
+	lines.forEach(function (line) {
+		const newLine = line.trim();
+		newLines.push(newLine);
+	});
+	return newLines;
+};
+
+// returns a lines array that has front and end blank strings, as one without these blanks
+export const trimLinesOfEndBlanks = (lines: string[]) => {
+	lines = qstr.trimBeginningLinesOfBlanks(lines);
+	lines = lines.reverse();
+	lines = qstr.trimBeginningLinesOfBlanks(lines);
+	lines = lines.reverse();
+	return lines;
+};
+
+
+// if first line of lines array is blank, it will remove it
+// but don't remove any blank lines from middle or end
+export const trimBeginningLinesOfBlanks = (lines: string[]) => {
+	const newLines: string[] = [];
+	let trimmingBlanks = true;
+	lines.forEach(function (line) {
+		const newLine = line;
+		if (trimmingBlanks && line === "") {
+			// skip it since it is a preceding blank item
+		} else {
+			newLines.push(newLine);
+			trimmingBlanks = false;
+		}
+	});
+	return newLines;
+};
