@@ -12,9 +12,9 @@
 				- x show at top
 				- x handle change
 		- x persist it
-	- .. make button show correctly 
-		- .. display verb suuids
-			
+	- x make button show correctly 
+		- x display verb suuids
+	- .. show how many		
 
 
 - .. rest of first wave

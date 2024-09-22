@@ -18,7 +18,7 @@ export const Nav = () => {
 		},
 		{
 			idCode: 'dutchVerbs',
-			title: `${dutchVerbs.length} Dutch Verbs`
+			title: `Dutch Verbs`
 		},
 		{
 			idCode: 'profile',

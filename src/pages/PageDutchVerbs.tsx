@@ -19,6 +19,7 @@ export const PageDutchVerbs = () => {
 
 	return (
 		<>
+			<h2 className="mb-4 text-center">You have learned {learnedVerbs.length} of {dutchVerbs.length} verbs.</h2>
 			{dutchVerbs.map(dutchVerb => {
 				const learned = learnedVerbs.includes(dutchVerb.dpodId);
 				return (
