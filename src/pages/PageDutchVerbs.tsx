@@ -2,6 +2,7 @@ import { useContext } from "react";
 import { AppContext } from "../AppContext";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { DutchVerbExample } from "../types";
+import { DevArea } from "../components/DevArea";
 
 const devMode = true;
 
@@ -46,6 +47,7 @@ export const PageDutchVerbs = () => {
 											)
 										})}
 									</div>
+									<DevArea/>
 								</div>
 							)
 						}

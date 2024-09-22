@@ -1,4 +1,6 @@
 - x first half of first wave
+- .. text for entering examples
+
 - .. examples for first half
 - enable to mark and save "known"
 
@@ -6,6 +8,8 @@
 - add second wave
 
 - enable testing and saving results
+
+- make automatically that dev is not shown online
 - other important verbs
 - mark as learned
 - verbGroups

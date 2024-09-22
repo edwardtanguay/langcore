@@ -59,9 +59,10 @@ export const getDutchVerbs = (): DutchVerb[] => {
 						verb: m.verb,
 						english: m.english,
 						dutch: m.dutch,
-						isOpen: false
+						isOpen: false,
 					};
 				}),
+			exampleDatapodText: "nnn",
 		};
 		dutchVerbs.push(dutchVerb);
 	}
