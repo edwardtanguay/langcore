@@ -15,9 +15,10 @@
 	- x make button show correctly 
 		- x display verb suuids
 	- x show how many
-	- .. make button work
-	
+	- x make button work
+	- .. close automatically
 
+- sign in
 
 - .. rest of first wave
 - add second wave

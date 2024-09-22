@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AppContext } from "../AppContext.tsx";
 import { useStoreActions, useStoreState } from "../store/hooks.ts"
 import { DutchVerb } from "../types.ts";
 
@@ -8,15 +10,26 @@ interface IProps {
 export const ManageArea = ({ dutchVerb }: IProps) => {
 	const { learnedVerbs } = useStoreState((state) => state.profileModel);
 	const { addVerbLearned, removeVerbLearned } = useStoreActions((actions) => actions.profileModel);
+	const { handleIsOpenToggle } = useContext(AppContext);
 
 	const learned = learnedVerbs.includes(dutchVerb.dpodId);
+
+	const addVerb = (dutchVerb: DutchVerb) => {
+		addVerbLearned(dutchVerb.dpodId)
+		handleIsOpenToggle(dutchVerb);
+	}
+
+	const removeVerb = (dutchVerb: DutchVerb) => {
+		removeVerbLearned(dutchVerb.dpodId)
+		handleIsOpenToggle(dutchVerb);
+	}
 
 	return (
 		<div>
 			{learned ? (
-				<button onClick={() => removeVerbLearned(dutchVerb.dpodId)} className="buttonManageArea buttonLearned">Learned</button>
+				<button onClick={() => removeVerb(dutchVerb)} className="buttonManageArea buttonLearned">Learned</button>
 			) : (
-				<button onClick={() => addVerbLearned(dutchVerb.dpodId)} className="buttonManageArea buttonNotLearned">Not Learned</button>
+				<button onClick={() => addVerb(dutchVerb)} className="buttonManageArea buttonNotLearned">Not Learned</button>
 			)}
 		</div>
 	)
