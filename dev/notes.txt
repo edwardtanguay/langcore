@@ -18,8 +18,8 @@
 	- x make button work
 	- x close automatically
 	- x percent
-	- .. sign up and link
-	- show stats on profile
+	- x sign up and link
+	- .. show stats on profile
 	- RESET PROFILE
 
 - sign in

@@ -9,6 +9,7 @@ export interface ProfileModel {
 	setFirstName: Action<this, string>;
 	addVerbLearned: Action<this, string>;
 	removeVerbLearned: Action<this, string>;
+	resetAllLearningHistory: Action<this>;
 }
 
 export const profileModel: ProfileModel = {
@@ -24,5 +25,8 @@ export const profileModel: ProfileModel = {
 	removeVerbLearned: action((state, verbIdCode) => {
 		console.log("REMOVE", verbIdCode);
 		state.learnedVerbs = state.learnedVerbs.filter((m) => m !== verbIdCode);
+	}),
+	resetAllLearningHistory: action((state) => {
+		state.learnedVerbs = [];
 	}),
 };
