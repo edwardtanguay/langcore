@@ -26,3 +26,4 @@
 	- sneeuwen
 	- spijten
 - make sort constant
+- FIX: all dev text should be created as a string, so that it can be included as value in textarea

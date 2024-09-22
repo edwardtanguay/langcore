@@ -4,6 +4,7 @@ import * as tools from '../qtools/qstr';
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useContext, useState } from "react";
 import { AppContext } from "../AppContext";
+import React from "react";
 
 
 export const Nav = () => {
@@ -46,14 +47,13 @@ export const Nav = () => {
 							<div>
 								{menuItems.map((menuItem, index) => {
 									return (
-										<>
+										<React.Fragment key={index}>
 											{(menuItem.idCode !== currentMenuItem.idCode && (
-												<div key={index}
-													className="mt-[.2rem]"
+												<div className="mt-[.2rem]"
 												><NavLink to={menuItem.idCode}
 													onClick={() => setShowMobileMenu(false)}>{menuItem.title}</NavLink></div>
 											))}
-										</>
+										</React.Fragment>
 									)
 								})}
 							</div>
@@ -63,11 +63,11 @@ export const Nav = () => {
 						<ul className="flex gap-4">
 							{menuItems.map((menuItem, index) => {
 								return (
-									<>
+									<React.Fragment key={index}>
 										{(
 											<li key={index}><NavLink to={menuItem.idCode}>{menuItem.title}</NavLink></li>
 										)}
-									</>
+									</React.Fragment>
 								)
 							})}
 						</ul>
