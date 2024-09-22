@@ -9,7 +9,8 @@
 			- x name form textbox
 			- .. allow change in textbox and show on top
 				- x set up easy-peasy
-				- .. show at top
+				- x show at top
+				- .. handle change
 
 
 - .. rest of first wave
