@@ -526,5 +526,89 @@
 		"participle": "heb gemogen",
 		"rank": "4.95",
 		"extras": ""
+	},
+	{
+		"dpodId": "0uE3VX",
+		"dpodWhenCreated": "2024-09-22 17:10:58",
+		"english": "to take",
+		"infinitive": "nemen",
+		"present": "neem",
+		"imperfectSingular": "nam",
+		"imperfectPlural": "namen",
+		"participle": "heb genomen",
+		"rank": "4.77",
+		"extras": ""
+	},
+	{
+		"dpodId": "gTEeNv",
+		"dpodWhenCreated": "2024-09-22 17:10:58",
+		"english": "to ride",
+		"infinitive": "rijden",
+		"present": "rijd",
+		"imperfectSingular": "reed",
+		"imperfectPlural": "reden",
+		"participle": "heb gereden",
+		"rank": "4.69",
+		"extras": ""
+	},
+	{
+		"dpodId": "aML9KU",
+		"dpodWhenCreated": "2024-09-22 17:30:26",
+		"english": "to shine",
+		"infinitive": "schijnen",
+		"present": "schijn",
+		"imperfectSingular": "scheen",
+		"imperfectPlural": "schenen",
+		"participle": "heb geschenen",
+		"rank": "4.2",
+		"extras": ""
+	},
+	{
+		"dpodId": "dFmvSa",
+		"dpodWhenCreated": "2024-09-22 17:30:26",
+		"english": "to write",
+		"infinitive": "schrijven",
+		"present": "schrijf",
+		"imperfectSingular": "schreef",
+		"imperfectPlural": "schreven",
+		"participle": "heb geschreven",
+		"rank": "4.49",
+		"extras": ""
+	},
+	{
+		"dpodId": "dvPg3G",
+		"dpodWhenCreated": "2024-09-22 18:26:00",
+		"english": "to push",
+		"infinitive": "schuiven",
+		"present": "schuif",
+		"imperfectSingular": "schoof",
+		"imperfectPlural": "schoven",
+		"participle": "heb geschoven",
+		"rank": "3.88",
+		"extras": ""
+	},
+	{
+		"dpodId": "yHMv7O",
+		"dpodWhenCreated": "2024-09-22 18:26:00",
+		"english": "to sleep",
+		"infinitive": "slapen",
+		"present": "slaap",
+		"imperfectSingular": "sliep",
+		"imperfectPlural": "sliepen",
+		"participle": "heb geslapen",
+		"rank": "4.1",
+		"extras": ""
+	},
+	{
+		"dpodId": "7oUrs4",
+		"dpodWhenCreated": "2024-09-22 18:26:00",
+		"english": "to close",
+		"infinitive": "sluiten",
+		"present": "sluit",
+		"imperfectSingular": "sloot",
+		"imperfectPlural": "sloten",
+		"participle": "heb gesloten",
+		"rank": "4.45",
+		"extras": ""
 	}
 ]

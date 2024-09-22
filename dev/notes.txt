@@ -14,4 +14,6 @@
 - quiz: see "VERB: moeten", type: gisteren "moest" ik
 - deal with special verbs
 	- regenen
+	- sneeuwen
+	- spijten
 - make sort constant
