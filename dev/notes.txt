@@ -1,6 +1,17 @@
-- .. make context variable: siteLocation: local | vercel
-	- put in template
 - .. add first wave
-- make sort constant
-- enable testing and saving results
 - add second wave
+
+- enable testing and saving results
+- other important verbs
+- mark as learned
+- verbGroups
+	- liegen, liggen, leggen
+	- kopen, koken
+	- zien, zeggen
+	- maken, mogen
+- search
+- quiz: see "ik mat", type VERB: "meten"
+- quiz: see "VERB: moeten", type: gisteren "moest" ik
+- deal with special verbs
+	- regenen
+- make sort constant
