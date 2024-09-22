@@ -16,12 +16,10 @@ export const ManageArea = ({ dutchVerb }: IProps) => {
 
 	const addVerb = (dutchVerb: DutchVerb) => {
 		addVerbLearned(dutchVerb.dpodId)
-		handleIsOpenToggle(dutchVerb);
 	}
 
 	const removeVerb = (dutchVerb: DutchVerb) => {
 		removeVerbLearned(dutchVerb.dpodId)
-		handleIsOpenToggle(dutchVerb);
 	}
 
 	return (
