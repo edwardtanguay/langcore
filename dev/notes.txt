@@ -6,7 +6,9 @@
 	- .. make Learned / Not Learned button
 		- .. first make siteUser object with first name
 			- x make profile page with mock name
-			- .. name form textbox
+			- x name form textbox
+			- .. allow change in textbox and show on top 
+			
 
 - .. rest of first wave
 - add second wave
