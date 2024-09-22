@@ -7,8 +7,9 @@
 		- .. first make siteUser object with first name
 			- x make profile page with mock name
 			- x name form textbox
-			- .. allow change in textbox and show on top 
-			
+			- .. allow change in textbox and show on top
+				- .. set up easy-peasy
+
 
 - .. rest of first wave
 - add second wave
