@@ -55,7 +55,7 @@ export const PageProfile = () => {
 							<label>Reset all learning history:</label>
 							<button type="button" className="buttonNormal mt-1" onClick={askIfSure}>RESET ALL DATA NOW</button>
 							{askingIfSure && (
-								<div className="ml-3">
+								<div className="ml-3 mt-1">
 									<p>Are you sure?</p>
 									<div className="flex gap-2">
 										<button type="button" className="buttonNormal mt-1" onClick={resetData}>Yes</button>
