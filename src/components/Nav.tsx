@@ -2,14 +2,12 @@ import { NavLink } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
 import * as tools from '../qtools/qstr';
 import { GiHamburgerMenu } from "react-icons/gi";
-import { useContext, useState } from "react";
-import { AppContext } from "../AppContext";
+import { useState } from "react";
 import React from "react";
 
 
 export const Nav = () => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
-	const { dutchVerbs } = useContext(AppContext);
 
 	const menuItems = [
 		{
