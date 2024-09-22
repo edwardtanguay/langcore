@@ -48,7 +48,7 @@ export const PageDutchVerbs = () => {
 										})}
 									</div>
 									<DevArea dutchVerb={dutchVerb}/>
-									<ManageArea/>
+									<ManageArea dutchVerb={dutchVerb}/>
 								</div>
 							)
 						}

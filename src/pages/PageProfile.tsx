@@ -2,7 +2,7 @@ import React from "react";
 import { useStoreState, useStoreActions } from "../store/hooks.ts"
 
 export const PageProfile = () => {
-	const { firstName, learnedVerbs } = useStoreState((state) => state.profileModel);
+	const { firstName } = useStoreState((state) => state.profileModel);
 	const { setFirstName } = useStoreActions((actions) => actions.profileModel);
 
 
@@ -17,15 +17,6 @@ export const PageProfile = () => {
 				<label htmlFor="firstName">First Name:</label>
 				<input type="text" id="firstName" onChange={e => handleChangeFirstName(e)} value={firstName}></input>
 			</div>
-
-			<h2>Learned verbs:</h2>
-			<ul>
-				{learnedVerbs.map(suuid => {
-					return (
-						<li key={suuid}>{suuid}</li>
-					)
-				})}
-			</ul>
 		</form>
 	)
 }
