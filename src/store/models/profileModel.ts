@@ -18,11 +18,11 @@ export const profileModel: ProfileModel = {
 		state.firstName = firstName;
 	}),
 	addVerbLearned: action((state, verbIdCode) => {
-		console.log('ADD', verbIdCode);
+		console.log("ADD", verbIdCode);
 		state.learnedVerbs.push(verbIdCode);
 	}),
 	removeVerbLearned: action((state, verbIdCode) => {
-		console.log('REMOVE', verbIdCode);
+		console.log("REMOVE", verbIdCode);
 		state.learnedVerbs = state.learnedVerbs.filter((m) => m !== verbIdCode);
 	}),
 };
