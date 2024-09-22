@@ -4,13 +4,14 @@
 - x examples for first half
 - .. enable to mark and save "known"
 	- .. make Learned / Not Learned button
-		- .. first make siteUser object with first name
+		- x first make siteUser object with first name
 			- x make profile page with mock name
 			- x name form textbox
-			- .. allow change in textbox and show on top
+			- x allow change in textbox and show on top
 				- x set up easy-peasy
 				- x show at top
-				- .. handle change
+				- x handle change
+		- .. persist it
 
 
 - .. rest of first wave

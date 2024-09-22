@@ -1,10 +1,12 @@
-import { createStore } from "easy-peasy";
-import { profileModel, ProfileModel } from "./models/profileModel"
+import { createStore, persist } from "easy-peasy";
+import { profileModel, ProfileModel } from "./models/profileModel";
 
 export type StoreModel = {
-	profileModel: ProfileModel
+	profileModel: ProfileModel;
 };
 
 export const store = createStore<StoreModel>({
-	profileModel
+	profileModel: persist(profileModel, {
+		storage: "localStorage",
+	}),
 });
