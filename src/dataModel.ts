@@ -65,6 +65,12 @@ export const getDutchVerbs = (): DutchVerb[] => {
 			exampleDatapodTextLines: qstr.convertStringBlockToLines(`
 ==dutchVerbExample
 ${rawDutchVerb.infinitive}
+
+==dutchVerbExample
+${rawDutchVerb.infinitive}
+
+==dutchVerbExample
+${rawDutchVerb.infinitive}
 			`)
 		};
 		dutchVerbs.push(dutchVerb);

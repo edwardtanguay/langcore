@@ -14,7 +14,7 @@ export const DevArea = ({ dutchVerb }: IProps) => {
 					<div className="bg-slate-700 text-slate-300 font-mono text-xs p-1">
 						{dutchVerb.exampleDatapodTextLines.map((line, index) => {
 							return (
-								<div key={index}>{line}</div>
+								<div key={index}>{line}&nbsp;</div>
 							)
 						})}
 					</div>
