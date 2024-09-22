@@ -2,8 +2,8 @@
 - x text for entering examples
 - x only for dev
 - x examples for first half
-- .. enable to mark and save "known"
-	- .. make Learned / Not Learned button
+- .. enable to mark and save if learned
+	- x make Learned / Not Learned button
 		- x first make siteUser object with first name
 			- x make profile page with mock name
 			- x name form textbox
@@ -11,7 +11,10 @@
 				- x set up easy-peasy
 				- x show at top
 				- x handle change
-		- .. persist it
+		- x persist it
+	- .. make button show correctly 
+		- .. display verb suuids
+			
 
 
 - .. rest of first wave
