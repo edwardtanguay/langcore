@@ -5,7 +5,8 @@
 - .. enable to mark and save "known"
 	- .. make Learned / Not Learned button
 		- .. first make siteUser object with first name
-			- .. make profile page with mock name
+			- x make profile page with mock name
+			- .. name form textbox
 
 - .. rest of first wave
 - add second wave

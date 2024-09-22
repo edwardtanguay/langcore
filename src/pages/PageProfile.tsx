@@ -1,5 +1,10 @@
 export const PageProfile = () => {
 	return (
-		<p>the profile page</p>
+		<form>
+			<div className="formRow">
+				<label htmlFor="firstName">First Name:</label>
+				<input type="text" id="fullName"></input>
+			</div>
+		</form>
 	)
 }

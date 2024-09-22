@@ -51,3 +51,16 @@ a.active {
 .verbDataLine {
 	margin-bottom: 0.9rem;
 }
+
+form .formRow {
+	label {
+		font-size: 1rem;
+		font-variant: small-caps;
+		display: block;
+		opacity: .6;
+	}
+	input {
+		width: 100%;
+		font-size: 1.2rem;
+	}
+}
