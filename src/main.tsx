@@ -8,6 +8,8 @@ import { Page404 } from "./pages/Page404.tsx";
 import { AppProvider } from "./AppContext.tsx";
 import { PageDutchVerbs } from "./pages/PageDutchVerbs.tsx";
 import { PageProfile } from "./pages/PageProfile.tsx";
+import { StoreProvider } from "easy-peasy";
+import { store } from "./store/store.ts";
 
 const router = createBrowserRouter([
 	{
@@ -21,7 +23,7 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "dutchVerbs",
-				element: <PageDutchVerbs/>
+				element: <PageDutchVerbs />
 			},
 			{
 				path: "profile",
@@ -40,7 +42,9 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<AppProvider>
-		<RouterProvider router={router} />
-	</AppProvider>
+	<StoreProvider store={store}>
+		<AppProvider>
+			<RouterProvider router={router} />
+		</AppProvider>
+	</StoreProvider>
 );
