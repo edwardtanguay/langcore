@@ -1,3 +1,3 @@
 export const devMode = () => {
-	return false;
+	return true;
 }
