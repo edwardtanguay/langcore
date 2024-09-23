@@ -29,6 +29,9 @@
 
 - enable testing and saving results
 
+- enable special notes for verb
+	- vergeten: Vergeten is conjugated with both zijn and hebben, with zijn when one no longer knows something, "Ik ben zijn naam vergeten", and with hebben when negligence is indicated, "Ik heb mijn sleutels vergeten."
+
 - make automatically that dev is not shown online
 - other important verbs
 - mark as learned
