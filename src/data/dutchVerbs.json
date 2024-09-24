@@ -730,5 +730,29 @@
 		"participle": "ben vergeten",
 		"rank": "4.51",
 		"extras": ""
+	},
+	{
+		"dpodId": "KpQ4wK",
+		"dpodWhenCreated": "2024-09-24 07:51:50",
+		"english": "to lose",
+		"infinitive": "verliezen",
+		"present": "verlies",
+		"imperfectSingular": "verloor",
+		"imperfectPlural": "verloren",
+		"participle": "ben verloren",
+		"rank": "4.3",
+		"extras": ""
+	},
+	{
+		"dpodId": "6ZfbzU",
+		"dpodWhenCreated": "2024-09-24 07:53:51",
+		"english": "to avoid",
+		"infinitive": "vermijden",
+		"present": "vermijd",
+		"imperfectSingular": "vermeed",
+		"imperfectPlural": "vermeden",
+		"participle": "heb vermeden",
+		"rank": "4.2",
+		"extras": ""
 	}
 ]
