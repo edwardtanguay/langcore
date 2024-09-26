@@ -1694,5 +1694,29 @@
 		"english": "It can be avoided.",
 		"dutch": "Dat kan worden vermeden.",
 		"extras": ""
+	},
+	{
+		"dpodId": "EhJm7p",
+		"dpodWhenCreated": "2024-09-26 14:25:21",
+		"verb": "vinden",
+		"english": "I found the key underneath the mat.",
+		"dutch": "Ik vond de sleutel onder de mat.",
+		"extras": ""
+	},
+	{
+		"dpodId": "KIQMfW",
+		"dpodWhenCreated": "2024-09-26 14:25:21",
+		"verb": "vinden",
+		"english": "We thought it wise not to continue our trip.",
+		"dutch": "Wij vonden het verstandig om onze reis niet voort te zetten.",
+		"extras": ""
+	},
+	{
+		"dpodId": "dKVSwO",
+		"dpodWhenCreated": "2024-09-26 14:25:21",
+		"verb": "vinden",
+		"english": "Did you find your book?",
+		"dutch": "Heb je je boek gevonden?",
+		"extras": ""
 	}
 ]
