@@ -766,5 +766,89 @@
 		"participle": "heb gevonden",
 		"rank": "4.79",
 		"extras": ""
+	},
+	{
+		"dpodId": "RCKfXG",
+		"dpodWhenCreated": "2024-09-26 23:12:05",
+		"english": "to fly",
+		"infinitive": "vliegen",
+		"present": "vlieg",
+		"imperfectSingular": "vloog",
+		"imperfectPlural": "vlogen",
+		"participle": "heb gevlogen",
+		"rank": "4.49",
+		"extras": ""
+	},
+	{
+		"dpodId": "SYRwuP",
+		"dpodWhenCreated": "2024-09-26 23:35:19",
+		"english": "to ask",
+		"infinitive": "vragen",
+		"present": "vraag",
+		"imperfectSingular": "vroeg",
+		"imperfectPlural": "vroegen",
+		"participle": "heb gevraagd",
+		"rank": "4.88",
+		"extras": ""
+	},
+	{
+		"dpodId": "r86Dfy",
+		"dpodWhenCreated": "2024-09-26 23:35:19",
+		"english": "to wash",
+		"infinitive": "wassen",
+		"present": "was",
+		"imperfectSingular": "waste",
+		"imperfectPlural": "wasten",
+		"participle": "heb gewassen",
+		"rank": "4.3",
+		"extras": ""
+	},
+	{
+		"dpodId": "0A27Fl",
+		"dpodWhenCreated": "2024-09-26 23:35:19",
+		"english": "to know",
+		"infinitive": "weten",
+		"present": "weet",
+		"imperfectSingular": "wist",
+		"imperfectPlural": "wisten",
+		"participle": "heb geweten",
+		"rank": "4.95",
+		"extras": ""
+	},
+	{
+		"dpodId": "8oBMBK",
+		"dpodWhenCreated": "2024-09-26 23:35:19",
+		"english": "to show",
+		"infinitive": "wijzen",
+		"present": "wijs",
+		"imperfectSingular": "wees",
+		"imperfectPlural": "wezen",
+		"participle": "heb gewezen",
+		"rank": "4.78",
+		"extras": ""
+	},
+	{
+		"dpodId": "XfKppG",
+		"dpodWhenCreated": "2024-09-26 23:35:19",
+		"english": "to become",
+		"infinitive": "worden",
+		"present": "word",
+		"imperfectSingular": "werd",
+		"imperfectPlural": "werden",
+		"participle": "ben geworden",
+		"rank": "4.89",
+		"extras": ""
+	},
+	{
+		"dpodId": "Kd6lgL",
+		"dpodWhenCreated": "2024-09-26 23:39:38",
+		"english": "to say",
+		"infinitive": "zeggen",
+		"present": "zeg",
+		"imperfectSingular": "zei",
+		"imperfectPlural": "zeiden",
+		"participle": "heb gezegd",
+		"rank": "4.94",
+		"extras": ""
 	}
 ]

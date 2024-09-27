@@ -22,6 +22,10 @@
 	- .. show stats on profile
 	- RESET PROFILE
 
+- points
+- second menu as underlines
+- show infinitive, ask for first-person past, and all other combinations
+
 - sign in
 
 - .. rest of first wave
