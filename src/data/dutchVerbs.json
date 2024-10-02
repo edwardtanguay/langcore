@@ -910,5 +910,41 @@
 		"participle": "heb gezommen",
 		"rank": "3.82",
 		"extras": ""
+	},
+	{
+		"dpodId": "rlDkGx",
+		"dpodWhenCreated": "2024-10-02 11:11:31",
+		"english": "to happen",
+		"infinitive": "gebeuren",
+		"present": "gebeur",
+		"imperfectSingular": "gebeurde",
+		"imperfectPlural": "gebeurden",
+		"participle": "ben gebeurd",
+		"rank": "4.78",
+		"extras": ""
+	},
+	{
+		"dpodId": "IHEqSm",
+		"dpodWhenCreated": "2024-10-02 11:11:31",
+		"english": "to hope",
+		"infinitive": "hopen",
+		"present": "hoop",
+		"imperfectSingular": "hoopte",
+		"imperfectPlural": "hoopten",
+		"participle": "heb gehoopt",
+		"rank": "4.73",
+		"extras": ""
+	},
+	{
+		"dpodId": "GxdpLt",
+		"dpodWhenCreated": "2024-10-02 11:22:36",
+		"english": "to make",
+		"infinitive": "maken",
+		"present": "maak",
+		"imperfectSingular": "maakte",
+		"imperfectPlural": "maakten",
+		"participle": "heb gemaakt",
+		"rank": "4.94",
+		"extras": ""
 	}
 ]
