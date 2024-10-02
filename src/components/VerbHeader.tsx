@@ -27,7 +27,11 @@ export const VerbHeader = ({ dutchVerb, learnedVerbs }: IProps) => {
 					)}
 				</div>
 				<div className={`flex flex-col justify-center font-mono ${timesOpened === 0 ? `opacity-20` : `opacity-70 text-orange-800`}`}>
-					{timesOpened}
+					{timesOpened > 0 && (
+						<>
+							{timesOpened}
+						</>
+					)}
 				</div>
 			</p>
 		</>

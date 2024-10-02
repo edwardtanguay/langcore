@@ -35,6 +35,11 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 			if (userVerb) {
 				userVerb.timesOpened++;
 				setUserVerbs(userVerbs);
+			} else {
+				userVerbs.push({
+					dpodId: dutchVerb.dpodId,
+					timesOpened: 1
+				})
 			}
 		}
 	}

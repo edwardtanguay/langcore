@@ -12,19 +12,14 @@ export interface ProfileModel {
 	addVerbLearned: Action<this, string>;
 	removeVerbLearned: Action<this, string>;
 	resetAllLearningHistory: Action<this>;
-	setUserVerbs: Action<this,UserVerb[]>
+	setUserVerbs: Action<this, UserVerb[]>;
 }
 
 export const profileModel: ProfileModel = {
 	// state
 	firstName: "",
 	learnedVerbs: [],
-	userVerbs: [
-		{
-			dpodId: "rHtI93",
-			timesOpened: 88,
-		},
-	],
+	userVerbs: [],
 
 	// actions
 	setFirstName: action((state, firstName) => {
@@ -41,5 +36,5 @@ export const profileModel: ProfileModel = {
 	}),
 	setUserVerbs: action((state, userVerbs) => {
 		state.userVerbs = userVerbs;
-	})
+	}),
 };
