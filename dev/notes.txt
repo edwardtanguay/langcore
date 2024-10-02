@@ -1,3 +1,12 @@
+- .. feature: show how many times verb was looked at 
+	- .. display number on right
+		- .. refactor into components
+- feature: various tests: show infinitive, ask for single-person past, etc.
+- feature: audio pronunciation
+- feature: for each action, player receives points 
+
+===
+
 - x first half of first wave
 - x text for entering examples
 - x only for dev
