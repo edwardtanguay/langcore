@@ -3,7 +3,8 @@
 		- x refactor into SingleDutchVerb component
 		- x refactor into ExampleArea
 		- x refactor into VerbArea
-	- .. make property numberOfTimesOpened on verb and show it
+	- x make property numberOfTimesOpened on verb and show it
+	- .. font variant smallcaps
 - feature: various tests: show infinitive, ask for single-person past, etc.
 - feature: audio pronunciation
 - feature: for each action, player receives points 
