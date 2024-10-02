@@ -12,9 +12,11 @@ export interface ProfileModel {
 	addVerbLearned: Action<this, string>;
 	removeVerbLearned: Action<this, string>;
 	resetAllLearningHistory: Action<this>;
+	setUserVerbs: Action<this,UserVerb[]>
 }
 
 export const profileModel: ProfileModel = {
+	// state
 	firstName: "",
 	learnedVerbs: [],
 	userVerbs: [
@@ -23,6 +25,8 @@ export const profileModel: ProfileModel = {
 			timesOpened: 88,
 		},
 	],
+
+	// actions
 	setFirstName: action((state, firstName) => {
 		state.firstName = firstName;
 	}),
@@ -35,4 +39,7 @@ export const profileModel: ProfileModel = {
 	resetAllLearningHistory: action((state) => {
 		state.learnedVerbs = [];
 	}),
+	setUserVerbs: action((state, userVerbs) => {
+		state.userVerbs = userVerbs;
+	})
 };
