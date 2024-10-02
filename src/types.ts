@@ -50,3 +50,8 @@ export type DutchVerbExample = {
 	dutch: string;
 	isOpen: boolean;
 };
+
+export type UserVerb = {
+	dpodId: string;
+	timesOpened: number;
+}

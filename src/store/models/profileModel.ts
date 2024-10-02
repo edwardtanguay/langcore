@@ -1,9 +1,11 @@
 import { Action, action } from "easy-peasy";
+import { UserVerb } from "../../types";
 
 export interface ProfileModel {
 	// variables
 	firstName: string;
 	learnedVerbs: string[];
+	userVerbs: UserVerb[];
 
 	// actions
 	setFirstName: Action<this, string>;
@@ -15,15 +17,14 @@ export interface ProfileModel {
 export const profileModel: ProfileModel = {
 	firstName: "",
 	learnedVerbs: [],
+	userVerbs: [],
 	setFirstName: action((state, firstName) => {
 		state.firstName = firstName;
 	}),
 	addVerbLearned: action((state, verbIdCode) => {
-		console.log("ADD", verbIdCode);
 		state.learnedVerbs.push(verbIdCode);
 	}),
 	removeVerbLearned: action((state, verbIdCode) => {
-		console.log("REMOVE", verbIdCode);
 		state.learnedVerbs = state.learnedVerbs.filter((m) => m !== verbIdCode);
 	}),
 	resetAllLearningHistory: action((state) => {
