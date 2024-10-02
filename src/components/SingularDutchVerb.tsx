@@ -1,11 +1,11 @@
-import { FaMagnifyingGlass } from "react-icons/fa6";
 import { DevArea } from "./DevArea";
 import * as config from '../config';
 import { ManageArea } from "./ManageArea";
 import { useContext } from "react";
 import { AppContext } from "../AppContext";
-import { DutchVerb} from "../types";
+import { DutchVerb } from "../types";
 import { ExampleArea } from "./ExampleArea";
+import { VerbArea } from "./VerbArea";
 
 interface IProps {
 	dutchVerb: DutchVerb;
@@ -26,14 +26,7 @@ export const SingularDutchVerb = ({ dutchVerb, learnedVerbs }: IProps) => {
 			{
 				dutchVerb.isOpen && (
 					<div className='ml-3 font-mono text-[1rem] flex flex-col gap-4 bg-white p-3 rounded mb-4 mt-2'>
-						<div className="flex justify-between">
-							<p>vandaag <span className='present'><a href={dutchVerb.presentExampleLink} target="_blank">{dutchVerb.present}</a></span> ik</p>
-							<a href={dutchVerb.conjugationLink} target="_blank"><FaMagnifyingGlass /></a>
-						</div>
-						<p>vandaag <span className='present'><a href={dutchVerb.infinitiveExampleLink} target="_blank">{dutchVerb.infinitive}</a></span> we</p>
-						<p>gisteren <span className='past'><a href={dutchVerb.imperfectSingularExampleLink} target="_blank">{dutchVerb.imperfectSingular}</a></span> ik</p>
-						<p>gisteren <span className='past'><a href={dutchVerb.imperfectPluralExampleLink} target="_blank">{dutchVerb.imperfectPlural}</a></span> we</p>
-						<p>{dutchVerb.participleNoun} <span className={`font-bold ${dutchVerb.participleHelper === 'ben' ? 'text-red-600' : ''}`}>{dutchVerb.participleHelper}</span> gisteren <span className='participle'><a href={dutchVerb.participleExampleLink} target="_blank">{dutchVerb.participleVerb}</a></span></p>
+						<VerbArea dutchVerb={dutchVerb} />
 						<ExampleArea examples={dutchVerb.examples} />
 						<DevArea dutchVerb={dutchVerb} />
 						<ManageArea dutchVerb={dutchVerb} />
