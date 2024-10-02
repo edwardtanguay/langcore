@@ -1,6 +1,7 @@
 - .. feature: show how many times verb was looked at 
 	- .. display number on right
-		- .. refactor into components
+		- x refactor into SingleDutchVerb component
+		- .. refactor into ExampleArea
 - feature: various tests: show infinitive, ask for single-person past, etc.
 - feature: audio pronunciation
 - feature: for each action, player receives points 
