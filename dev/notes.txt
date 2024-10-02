@@ -1,11 +1,12 @@
-- .. feature: show how many times verb was looked at 
+- x feature: show how many times verb was looked at 
 	- x display number on right
 		- x refactor into SingleDutchVerb component
 		- x refactor into ExampleArea
 		- x refactor into VerbArea
 	- x make property numberOfTimesOpened on verb and show it
 	- x font variant smallcaps
-	- .. reset
+	- x reset
+	- x fix reset
 - feature: various tests: show infinitive, ask for single-person past, etc.
 - feature: audio pronunciation
 - feature: for each action, player receives points 

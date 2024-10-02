@@ -5,7 +5,7 @@ import { AppContext } from "../AppContext";
 import { NavLink } from "react-router-dom";
 
 export const PageProfile = () => {
-	const { firstName, learnedVerbs } = useStoreState((state) => state.profileModel);
+	const { firstName, learnedVerbs, userVerbs } = useStoreState((state) => state.profileModel);
 	const { setFirstName, resetAllLearningHistory } = useStoreActions((actions) => actions.profileModel);
 	const { dutchVerbs } = useContext(AppContext);
 	const [askingIfSure, setAskingIfSure] = useState(false);
@@ -44,7 +44,7 @@ export const PageProfile = () => {
 					</div>
 					<div className="formRow mt-3">
 						<label>Learn:</label>
-						{learnedVerbs.length === 0 ? (
+						{learnedVerbs.length === 0 && userVerbs.length === 0 ? (
 							<p><NavLink to="/dutchVerbs" className="underline">Start learning Dutch verbs</NavLink></p>
 						) : (
 							<p><NavLink to="/dutchVerbs" className="underline">Continue learning Dutch verbs</NavLink></p>
