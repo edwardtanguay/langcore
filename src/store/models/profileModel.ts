@@ -17,7 +17,12 @@ export interface ProfileModel {
 export const profileModel: ProfileModel = {
 	firstName: "",
 	learnedVerbs: [],
-	userVerbs: [],
+	userVerbs: [
+		{
+			dpodId: "rHtI93",
+			timesOpened: 88,
+		},
+	],
 	setFirstName: action((state, firstName) => {
 		state.firstName = firstName;
 	}),
