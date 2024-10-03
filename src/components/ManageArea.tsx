@@ -1,3 +1,5 @@
+import { useContext } from "react";
+import { AppContext } from "../AppContext.tsx";
 import { useStoreActions, useStoreState } from "../store/hooks.ts"
 import { DutchVerb } from "../types.ts";
 
@@ -8,10 +10,12 @@ interface IProps {
 export const ManageArea = ({ dutchVerb }: IProps) => {
 	const { learnedVerbs } = useStoreState((state) => state.profileModel);
 	const { addVerbLearned, removeVerbLearned } = useStoreActions((actions) => actions.profileModel);
+	const { handleIsOpenToggle } = useContext(AppContext);
 
 	const learned = learnedVerbs.includes(dutchVerb.dpodId);
 
 	const addVerb = (dutchVerb: DutchVerb) => {
+		handleIsOpenToggle(dutchVerb);
 		addVerbLearned(dutchVerb.dpodId)
 	}
 
