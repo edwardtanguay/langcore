@@ -25,6 +25,9 @@ const { mode, view } = getUrlParams();
 
 if (mode === 'print') {
 	document.body.style.backgroundColor = '#fff';
+	const rootElement = document.getElementById('root');
+	rootElement?.classList.remove('justify-center');
+	rootElement?.classList.add('justify-start');
 }
 
 const router = createBrowserRouter([
@@ -61,7 +64,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 	<>
 		{mode === 'print' && (
 			<section style={{ background: '#fff' }}>
-			{printerOutput.print(view)}
+				{printerOutput.print(view)}
 			</section>
 		)}
 		{mode !== 'print' && (
