@@ -2,6 +2,7 @@ import * as printerOutput from "./printerOutput.ts";
 import { getDutchVerbs } from "./dataModel";
 
 const dutchVerbs = getDutchVerbs();
+const blank = "____________";
 
 export const print = (idCode: string) => {
 	switch (idCode) {
@@ -29,7 +30,10 @@ export const printTestAll = () => {
 <div class="mb-6">
 	<p>${count}. ${dv.english}</p>
 	<div>
-	 ${dv.present} - ${dv.infinitive} - ${dv.imperfectSingular} - ${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
+	${blank}/
+	</div>
+	<div class="font-mono">
+	 ${dv.present}/${dv.infinitive} - ${dv.imperfectSingular}/${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
 	</div>
 </div>
 `;
