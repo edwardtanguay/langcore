@@ -20,7 +20,7 @@
 	}
 
 	.buttonLearned {
-		@apply bg-[#26ba1e]
+		@apply bg-[#26ba1e];
 	}
 }
 
@@ -61,7 +61,7 @@ form .formRow {
 		font-size: 1rem;
 		font-variant: small-caps;
 		display: block;
-		opacity: .6;
+		opacity: 0.6;
 	}
 	input {
 		width: 100%;
@@ -71,4 +71,10 @@ form .formRow {
 
 .verbLearned {
 	background-color: #26ba1e;
+}
+
+@media print {
+	.no-break {
+		page-break-inside: avoid;
+	}
 }
