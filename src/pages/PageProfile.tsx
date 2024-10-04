@@ -50,8 +50,6 @@ export const PageProfile = () => {
 							<p><NavLink to="/dutchVerbs" className="underline">Continue learning Dutch verbs</NavLink></p>
 						)}
 					</div>
-					[{learnedVerbs.length}]
-					[{userVerbs.length}]
 					{(learnedVerbs.length !== 0 || userVerbs.length !== 0) && (
 						<div className="formRow mt-3">
 							<label>Reset all learning history:</label>
