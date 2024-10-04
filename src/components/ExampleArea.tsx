@@ -23,7 +23,7 @@ export const ExampleArea = ({ examples }: IProps) => {
 	}
 
 	const handleGoToAudioSite = (example: DutchVerbExample) => {
-		window.open(`https://translate.google.com/saved?sl=nl&tl=en&text=${example.dutch}&op=translate`, '_blank');
+		window.open(`https://translate.google.com/?sl=nl&tl=en&text=${example.dutch}&op=translate`, '_blank');
 	}
 
 	const handleToggleExampleLearned = (example: DutchVerbExample) => {
