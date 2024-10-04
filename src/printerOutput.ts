@@ -2,7 +2,7 @@ import * as printerOutput from "./printerOutput.ts";
 import { getDutchVerbs } from "./dataModel";
 
 const dutchVerbs = getDutchVerbs();
-const blank = "_______";
+const blank = "_".repeat(50);
 
 export const print = (idCode: string) => {
 	switch (idCode) {
@@ -25,17 +25,16 @@ export const printTestAll = () => {
 	let r = "";
 	r += printerOutput.pageHeader();
 	let count = 1;
-	r += `<div class="flex gap-[2rem] flex-wrap justify-between">`;
+	r += `<div class="flex gap-x-[2rem] flex-wrap justify-between">`;
 	for (const dv of dutchVerbs) {
 		r += `
-<div class="mb-2 text-[.7rem] no-break">
-	<p>${count}. ${dv.english}</p>
-	
+<div class="text-[.7rem] no-break mb-2">
 	<div class="font-mono">
-		<div class="mb-3">
-		${blank}|${blank} ${blank}|${blank} ${blank}${blank}
+		<div>
+		${blank}
 		</div>
-		<div class="text-[#ccc] text-[.7rem]">
+		<div class="font-bold">${dv.english}</div>
+		<div class="text-[#999] text-[.7rem] font-sans">
 		${dv.present}/${dv.infinitive} - ${dv.imperfectSingular}/${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
 		</div>
 	</div>
