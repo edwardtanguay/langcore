@@ -10,6 +10,22 @@ import { PageDutchVerbs } from "./pages/PageDutchVerbs.tsx";
 import { PageProfile } from "./pages/PageProfile.tsx";
 import { StoreProvider } from "easy-peasy";
 import { store } from "./store/store.ts";
+import * as printerOutput from './printerOutput.ts';
+
+const getUrlParams = () => {
+	const params = new URLSearchParams(window.location.search);
+	let mode = params.get('mode');
+	let view = params.get('view');
+	mode = mode ? mode : '';
+	view = view ? view : '';
+	return { mode, view };
+}
+
+const { mode, view } = getUrlParams();
+
+if (mode === 'print') {
+	document.body.style.backgroundColor = '#fff';
+}
 
 const router = createBrowserRouter([
 	{
@@ -42,9 +58,18 @@ const router = createBrowserRouter([
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-	<StoreProvider store={store}>
-		<AppProvider>
-			<RouterProvider router={router} />
-		</AppProvider>
-	</StoreProvider>
+	<>
+		{mode === 'print' && (
+			<section style={{ background: '#fff' }}>
+			{printerOutput.print(view)}
+			</section>
+		)}
+		{mode !== 'print' && (
+			<StoreProvider store={store}>
+				<AppProvider>
+					<RouterProvider router={router} />
+				</AppProvider>
+			</StoreProvider>
+		)}
+	</>
 );

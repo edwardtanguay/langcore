@@ -1,3 +1,8 @@
+- .. testall report
+	- .. show blank
+		- http://localhost:3123/?mode=print&view=testall
+
+
 - x 4.96 - dutchVerbs - feature: audio pronunciation
 	- x find where to put link
 	- x put audio icon at end of Dutch example
