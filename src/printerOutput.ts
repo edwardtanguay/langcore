@@ -8,23 +8,31 @@ export const print = (idCode: string) => {
 		case "testAll":
 			return printerOutput.printTestAll();
 		default:
-			return 'unknown view';
+			return "unknown view";
 	}
 };
 
 export const pageHeader = () => {
 	return `
-<div style="font-size: 1.2rem; margin-bottom: -.5rem">Dutch Verbs - Test All</div>	
-<div style="font-size: .9rem; margin-bottom: .5rem; font-style: italic">Edward's Language Core Site</div>	
+<div style="font-size: .9rem; margin-bottom: -.5rem; font-style: italic;color: #555">Edward's Language Core Site</div>
+<div style="font-size: 1.5rem; margin-bottom: -.3rem">Dutch Verbs - Test All</div>	
+<div style="font-size: .9rem; margin-bottom: .5rem; font-style: italic">https://langcore.vercel.app/dutchVerbs</div>	
 	`;
-}
+};
 
 export const printTestAll = () => {
-	let r = '';
+	let r = "";
 	r += printerOutput.pageHeader();
 	let count = 1;
-	for (const dutchVerb of dutchVerbs) {
-		r += `<p>${count}. ${dutchVerb.english}</p>`;
+	for (const dv of dutchVerbs) {
+		r += `
+<div class="mb-6">
+	<p>${count}. ${dv.english}</p>
+	<div>
+	 ${dv.present} - ${dv.infinitive} - ${dv.imperfectSingular} - ${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
+	</div>
+</div>
+`;
 		count++;
 	}
 	return r;
