@@ -1,4 +1,7 @@
 import * as printerOutput from "./printerOutput.ts";
+import { getDutchVerbs } from "./dataModel";
+
+const dutchVerbs = getDutchVerbs();
 
 export const print = (idCode: string) => {
 	switch (idCode) {
@@ -10,5 +13,11 @@ export const print = (idCode: string) => {
 };
 
 export const printTestAll = () => {
-	return "print";
+	let r = '';
+	let count = 1;
+	for (const dutchVerb of dutchVerbs) {
+		r += `<p>${count}. ${dutchVerb.english}</p>`;
+		count++;
+	}
+	return r;
 };

@@ -63,8 +63,7 @@ const router = createBrowserRouter([
 ReactDOM.createRoot(document.getElementById("root")!).render(
 	<>
 		{mode === 'print' && (
-			<section style={{ background: '#fff' }}>
-				{printerOutput.print(view)}
+			<section style={{ background: '#fff' }} dangerouslySetInnerHTML={{ __html: printerOutput.print(view) }}>
 			</section>
 		)}
 		{mode !== 'print' && (
