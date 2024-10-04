@@ -2,7 +2,7 @@ import * as printerOutput from "./printerOutput.ts";
 import { getDutchVerbs } from "./dataModel";
 
 const dutchVerbs = getDutchVerbs();
-const blank = "____________";
+const blank = "_______";
 
 export const print = (idCode: string) => {
 	switch (idCode) {
@@ -16,8 +16,8 @@ export const print = (idCode: string) => {
 export const pageHeader = () => {
 	return `
 <div style="font-size: .9rem; margin-bottom: -.5rem; font-style: italic;color: #555">Edward's Language Core Site</div>
-<div style="font-size: 1.5rem; margin-bottom: -.3rem">Dutch Verbs - Test All</div>	
-<div style="font-size: .9rem; margin-bottom: .5rem; font-style: italic">https://langcore.vercel.app/dutchVerbs</div>	
+<div style="font-size: 1.5rem; margin-bottom: -.3rem">Dutch Verbs - Basic Tenses</div>	
+<div style="font-size: .9rem; margin-bottom: 1rem; font-style: italic">https://langcore.vercel.app/dutchVerbs</div>	
 	`;
 };
 
@@ -27,13 +27,16 @@ export const printTestAll = () => {
 	let count = 1;
 	for (const dv of dutchVerbs) {
 		r += `
-<div class="mb-6">
+<div class="mb-6 text-[.7rem]">
 	<p>${count}. ${dv.english}</p>
-	<div>
-	${blank}/
-	</div>
+	
 	<div class="font-mono">
-	 ${dv.present}/${dv.infinitive} - ${dv.imperfectSingular}/${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
+		<div>
+		${blank} /${blank} - ${blank} /${blank} - ${blank}${blank}
+		</div>
+		<div class="text-[#ccc]">
+		${dv.present}/${dv.infinitive} - ${dv.imperfectSingular}/${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
+		</div>
 	</div>
 </div>
 `;
