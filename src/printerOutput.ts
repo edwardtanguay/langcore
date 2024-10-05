@@ -24,7 +24,6 @@ export const pageHeader = () => {
 export const printTestAll = () => {
 	let r = "";
 	r += printerOutput.pageHeader();
-	let count = 1;
 	r += `<div class="flex gap-x-[2rem] flex-wrap justify-between">`;
 	for (const dv of dutchVerbs) {
 		r += `
@@ -40,7 +39,6 @@ export const printTestAll = () => {
 	</div>
 </div>
 `;
-		count++;
 	}
 	r += `</div>`;
 	return r;
