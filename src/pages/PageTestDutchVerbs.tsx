@@ -1,12 +1,15 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../AppContext";
+import { DutchVerb } from "../types";
 
 export const PageTestDutchVerbs = () => {
 	const { getRandomNotAnsweredCorrectlyVerb } = useContext(AppContext);
 	const [answerVerb, setAnswerVerb] = useState('nnn');
+	const [dv, setDv] = useState<DutchVerb | null>(null);
 
-	// const dv = dutchVerbs.find(m => m.infinitive === 'hebben')
-	const dv = getRandomNotAnsweredCorrectlyVerb();
+	useEffect(() => {
+		setDv(getRandomNotAnsweredCorrectlyVerb());
+	}, [])
 
 	const handleChangeAnswerVerb = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -21,7 +24,6 @@ export const PageTestDutchVerbs = () => {
 					<form>
 						<div key={dv.dpodId}>
 							<p className="text-orange-900 mb-2 text-xl">{dv.english}</p>
-							{/* <p>{dv.mainTextAnswer}</p> */}
 						</div>
 						<div>
 							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} className="w-full text-sm" />

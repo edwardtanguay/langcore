@@ -5,9 +5,9 @@ import { useStoreActions, useStoreState } from "./store/hooks";
 
 interface IAppContext {
 	dutchVerbs: DutchVerb[];
-	randomDutchVerbs: DutchVerb[];
+	// randomDutchVerbs: DutchVerb[];
 	setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
-	setRandomDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
+	// setRandomDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
 	getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
 }
@@ -16,12 +16,14 @@ interface IAppProvider {
 	children: React.ReactNode;
 }
 
-export const randomizeVerbs = (
-	arr: DutchVerb[]): DutchVerb[] => {
-	return arr.sort(() => Math.random() - 0.5);
-};
+const initialDutchVerbs = getDutchVerbs();
 
-export const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
+// export const randomizeVerbs = (
+// 	arr: DutchVerb[]): DutchVerb[] => {
+// 	return arr.sort(() => Math.random() - 0.5);
+// };
+
+const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
 	const randomIndex = Math.floor(Math.random() * dutchVerbs.length);
 	return dutchVerbs[randomIndex];
 }
@@ -30,18 +32,21 @@ export const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
-	const [dutchVerbs, setDutchVerbs] = useState<DutchVerb[]>([]);
-	const [randomDutchVerbs, setRandomDutchVerbs] = useState<DutchVerb[]>([]);
+	const [dutchVerbs, setDutchVerbs] = useState<DutchVerb[]>(initialDutchVerbs);
+	// const [randomDutchVerbs, setRandomDutchVerbs] = useState<DutchVerb[]>([]);
 	const { userVerbs } = useStoreState((state) => state.profileModel);
 	const { setUserVerbs } = useStoreActions((actions) => actions.profileModel);
 
 	useEffect(() => {
-		setDutchVerbs(getDutchVerbs());
-		setRandomDutchVerbs(randomizeVerbs(getDutchVerbs()));
+		// setDutchVerbs(getDutchVerbs());
+		// setRandomDutchVerbs(randomizeVerbs(getDutchVerbs()));
 	}, []);
 
 	const getRandomNotAnsweredCorrectlyVerb = () => {
-		return getRandomVerb(dutchVerbs);
+		console.log(`sending ${dutchVerbs.length} verbs`);
+		const randomVerb = getRandomVerb(dutchVerbs);
+		console.log(111, randomVerb);
+		return randomVerb;
 	}
 
 	const handleIsOpenToggle = (dutchVerb: DutchVerb) => {
@@ -68,9 +73,9 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		<AppContext.Provider
 			value={{
 				dutchVerbs,
-				randomDutchVerbs,
+				// randomDutchVerbs,
 				setDutchVerbs,
-				setRandomDutchVerbs,
+				// setRandomDutchVerbs,
 				handleIsOpenToggle,
 				getRandomNotAnsweredCorrectlyVerb
 			}}
