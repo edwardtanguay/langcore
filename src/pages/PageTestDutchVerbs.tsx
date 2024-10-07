@@ -27,6 +27,7 @@ export const PageTestDutchVerbs = () => {
 		} else {
 			console.log('incorrect: ' + dv?.mainTestAnswer);
 		}
+		setDv(getRandomNotAnsweredCorrectlyVerb());
 	}
 
 	return (

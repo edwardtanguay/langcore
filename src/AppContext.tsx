@@ -17,20 +17,22 @@ interface IAppProvider {
 const initialDutchVerbs = getDutchVerbs();
 
 const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
+	console.log(dutchVerbs.map(m => m.english));
 	const randomIndex = Math.floor(Math.random() * dutchVerbs.length);
 	return dutchVerbs[randomIndex];
 }
-
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [dutchVerbs, setDutchVerbs] = useState<DutchVerb[]>(initialDutchVerbs);
-	const { userVerbs } = useStoreState((state) => state.profileModel);
+	const { userVerbs, verbsTestedCorrect } = useStoreState((state) => state.profileModel);
 	const { setUserVerbs } = useStoreActions((actions) => actions.profileModel);
 
 	const getRandomNotAnsweredCorrectlyVerb = () => {
-		const randomVerb = getRandomVerb(dutchVerbs);
+		console.log(verbsTestedCorrect);
+		const notAnsweredVerbs = dutchVerbs.filter(m => !verbsTestedCorrect.includes(m.dpodId) )
+		const randomVerb = getRandomVerb(notAnsweredVerbs);
 		return randomVerb;
 	}
 
