@@ -14,7 +14,7 @@ export const PageTestDutchVerbs = () => {
 				return (
 					<div key={dv.dpodId}>
 						<p>{dv.infinitive}</p>
-						<p>{dv.mainTextAnswer}</p>
+						<p className="text-xs">{dv.mainTextAnswer}</p>
 					</div>
 				)
 			})}
