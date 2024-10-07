@@ -1,3 +1,21 @@
+
+- .. create "Test Dutch Verbs" page
+	- .. create base page
+	- show all verbs on site
+	- create property: mainTestAnswer: string
+	- create user property: verbsTestedCorrect: string[]
+	- on load, show random verb
+	- test user with input
+	- if correct
+		- add dpodId to list
+	- get random verb from those not tested
+	- show how many of so many tested correctly
+	- test with 3 verbs and program end
+
+
+
+===============================================================================
+
 - .. testall report
 	- .. show blank
 		- http://localhost:3123/?mode=print&view=testall
