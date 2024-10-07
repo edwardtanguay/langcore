@@ -34,6 +34,7 @@ export type DutchVerb = {
 	isOpen: boolean;
 	examples: DutchVerbExample[];
 	exampleDatapodTextLines: string[];
+	mainTextAnswer: string;
 };
 
 export type RawDutchVerbExample = {

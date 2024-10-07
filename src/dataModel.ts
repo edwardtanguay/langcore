@@ -71,7 +71,9 @@ ${rawDutchVerb.infinitive}
 
 ==dutchVerbExample
 ${rawDutchVerb.infinitive}
-			`)
+			`),
+			mainTextAnswer: 'nnn'
+
 		};
 		dutchVerbs.push(dutchVerb);
 	}
