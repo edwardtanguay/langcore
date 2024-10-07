@@ -41,6 +41,7 @@ export const profileModel: ProfileModel = {
 	resetAllLearningHistory: action((state) => {
 		state.learnedVerbs = [];
 		state.userVerbs = [];
+		state.verbsTestedCorrect = [];
 	}),
 	setUserVerbs: action((state, userVerbs) => {
 		state.userVerbs = userVerbs;
