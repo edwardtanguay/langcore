@@ -7,6 +7,7 @@ export interface ProfileModel {
 	learnedVerbs: string[];
 	userVerbs: UserVerb[];
 	learnedExamples: string[];
+	verbsTestedCorrect: string[];
 
 	// actions
 	setFirstName: Action<this, string>;
@@ -16,6 +17,7 @@ export interface ProfileModel {
 	setUserVerbs: Action<this, UserVerb[]>;
 	addExampleLearned: Action<this, string>;
 	removeExampleLearned: Action<this, string>;
+	addVerbTestedCorrect: Action<this, string>;
 }
 
 export const profileModel: ProfileModel = {
@@ -24,6 +26,7 @@ export const profileModel: ProfileModel = {
 	learnedVerbs: [],
 	userVerbs: [],
 	learnedExamples: [],
+	verbsTestedCorrect: [],
 
 	// actions
 	setFirstName: action((state, firstName) => {
@@ -46,6 +49,11 @@ export const profileModel: ProfileModel = {
 		state.learnedExamples.push(exampleIdCode);
 	}),
 	removeExampleLearned: action((state, verbIdCode) => {
-		state.learnedExamples = state.learnedExamples.filter((m) => m !== verbIdCode);
+		state.learnedExamples = state.learnedExamples.filter(
+			(m) => m !== verbIdCode
+		);
+	}),
+	addVerbTestedCorrect: action((state, verbIdCode) => {
+		state.verbsTestedCorrect.push(verbIdCode);
 	}),
 };
