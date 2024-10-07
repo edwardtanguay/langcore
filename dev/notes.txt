@@ -3,10 +3,10 @@
 	- x create base page
 	- x show all verbs on site
 		- x randomize order
-	- .. create property: mainTestAnswer: string, and display
-	- create user property: verbsTestedCorrect: string[]
-	- on load, show random verb
+	- x create property: mainTestAnswer: string, and display
+	- .. on load, show random verb
 	- test user with input
+	- .. create user property: verbsTestedCorrect: string[]
 	- if correct
 		- add dpodId to list
 	- get random verb from those not tested
