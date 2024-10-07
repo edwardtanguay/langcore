@@ -34,7 +34,7 @@ export type DutchVerb = {
 	isOpen: boolean;
 	examples: DutchVerbExample[];
 	exampleDatapodTextLines: string[];
-	mainTextAnswer: string;
+	mainTestAnswer: string;
 };
 
 export type RawDutchVerbExample = {
@@ -56,8 +56,8 @@ export type DutchVerbExample = {
 export type UserVerb = {
 	dpodId: string;
 	timesOpened: number;
-}
+};
 
 export type SortedItem = {
-  [key: string]: any;
+	[key: string]: any;
 };

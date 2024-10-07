@@ -20,9 +20,12 @@ const getConjugationLink = (word: string) => {
 	return `https://en.bab.la/conjugation/dutch/${word}`;
 };
 
-const getMainTextAnswer = (rdv: RawDutchVerb, participleVerb: string): string => {
-	return `${rdv.present} ${rdv.infinitive} ${rdv.imperfectSingular} ${rdv.imperfectPlural} ${participleVerb}`
-}
+const getMainTestAnswer = (
+	rdv: RawDutchVerb,
+	participleVerb: string
+): string => {
+	return `${rdv.present} ${rdv.infinitive} ${rdv.imperfectSingular} ${rdv.imperfectPlural} ${participleVerb}`;
+};
 
 export const getDutchVerbs = (): DutchVerb[] => {
 	const dutchVerbs: DutchVerb[] = [];
@@ -76,8 +79,7 @@ ${rawDutchVerb.infinitive}
 ==dutchVerbExample
 ${rawDutchVerb.infinitive}
 			`),
-			mainTextAnswer: getMainTextAnswer(rawDutchVerb, participleVerb)
-
+			mainTestAnswer: getMainTestAnswer(rawDutchVerb, participleVerb),
 		};
 		dutchVerbs.push(dutchVerb);
 	}

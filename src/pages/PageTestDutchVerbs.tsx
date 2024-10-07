@@ -19,10 +19,10 @@ export const PageTestDutchVerbs = () => {
 
 	const handleCheckAnswer = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
-		if (answerVerb === dv?.mainTextAnswer) {
+		if (answerVerb === dv?.mainTestAnswer) {
 			console.log('CORRECT');
 		} else {
-			console.log('incorrect: ' + dv?.mainTextAnswer);
+			console.log('incorrect: ' + dv?.mainTestAnswer);
 		}
 	}
 
