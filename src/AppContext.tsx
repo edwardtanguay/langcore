@@ -34,6 +34,10 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		setRandomDutchVerbs(randomizeVerbs(getDutchVerbs()));
 	}, []);
 
+	const getRandomNotAnsweredCorrectlyVerb = () => {
+		
+	}
+
 	const handleIsOpenToggle = (dutchVerb: DutchVerb) => {
 		dutchVerb.isOpen = !dutchVerb.isOpen;
 		const _dutchVerbs = structuredClone(dutchVerbs);
