@@ -2,11 +2,11 @@ import { useContext, useState } from "react";
 import { AppContext } from "../AppContext";
 
 export const PageTestDutchVerbs = () => {
-	const { randomDutchVerbs } = useContext(AppContext);
+	const { getRandomNotAnsweredCorrectlyVerb } = useContext(AppContext);
 	const [answerVerb, setAnswerVerb] = useState('nnn');
 
 	// const dv = dutchVerbs.find(m => m.infinitive === 'hebben')
-	const dv = randomDutchVerbs[0]
+	const dv = getRandomNotAnsweredCorrectlyVerb();
 
 	const handleChangeAnswerVerb = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;

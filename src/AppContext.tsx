@@ -8,7 +8,8 @@ interface IAppContext {
 	randomDutchVerbs: DutchVerb[];
 	setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	setRandomDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
-	handleIsOpenToggle: (dutchVerb: DutchVerb) => void
+	handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
+	getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
 }
 
 interface IAppProvider {
@@ -19,6 +20,11 @@ export const randomizeVerbs = (
 	arr: DutchVerb[]): DutchVerb[] => {
 	return arr.sort(() => Math.random() - 0.5);
 };
+
+export const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
+	const randomIndex = Math.floor(Math.random() * dutchVerbs.length);
+	return dutchVerbs[randomIndex];
+}
 
 
 export const AppContext = createContext<IAppContext>({} as IAppContext);
@@ -35,7 +41,7 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	}, []);
 
 	const getRandomNotAnsweredCorrectlyVerb = () => {
-		
+		return getRandomVerb(dutchVerbs);
 	}
 
 	const handleIsOpenToggle = (dutchVerb: DutchVerb) => {
@@ -65,7 +71,8 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 				randomDutchVerbs,
 				setDutchVerbs,
 				setRandomDutchVerbs,
-				handleIsOpenToggle
+				handleIsOpenToggle,
+				getRandomNotAnsweredCorrectlyVerb
 			}}
 		>
 			{children}
