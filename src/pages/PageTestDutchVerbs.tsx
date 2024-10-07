@@ -25,8 +25,9 @@ export const PageTestDutchVerbs = () => {
 		if (answerVerb === dv?.mainTestAnswer) {
 			addVerbTestedCorrect(dv.dpodId);
 		} else {
-			console.log('incorrect: ' + dv?.mainTestAnswer);
+			console.log('incorrect');
 		}
+		setAnswerVerb('');
 		setDv(getRandomNotAnsweredCorrectlyVerb());
 	}
 

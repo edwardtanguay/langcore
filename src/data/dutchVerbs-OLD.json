@@ -1,0 +1,38 @@
+[
+	{
+		"dpodId": "mvFL7v",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to bake",
+		"infinitive": "bakken",
+		"present": "bak",
+		"imperfectSingular": "bakte",
+		"imperfectPlural": "bakten",
+		"participle": "heb gebakken",
+		"rank": "3.8",
+		"extras": ""
+	},
+	{
+		"dpodId": "QkrYyM",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to begin",
+		"infinitive": "beginnen",
+		"present": "begin",
+		"imperfectSingular": "begon",
+		"imperfectPlural": "begonnen",
+		"participle": "ben begonnen",
+		"rank": "4.9",
+		"extras": ""
+	},
+	{
+		"dpodId": "ABF6yB",
+		"dpodWhenCreated": "2024-09-17 09:03:45",
+		"english": "to understand",
+		"infinitive": "begrijpen",
+		"present": "begrijp",
+		"imperfectSingular": "begreep",
+		"imperfectPlural": "begrepen",
+		"participle": "heb begrepen",
+		"rank": "4.93",
+		"extras": ""
+	}
+]
