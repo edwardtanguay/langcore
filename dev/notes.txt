@@ -7,9 +7,10 @@
 	- x on load, show random verb
 	- x show user with input
 	- x test user with input, say right or wrong and show answer
-	- .. create user property: verbsTestedCorrect: string[]
-	- if correct
+	- x create user property: verbsTestedCorrect: string[]
+	- x if correct
 		- add dpodId to list
+	- .. reduce to three and show all
 	- get random verb from those not tested
 	- show how many of so many tested correctly
 	- test with 3 verbs and program end
