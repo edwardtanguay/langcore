@@ -5,7 +5,9 @@ import { useStoreActions, useStoreState } from "./store/hooks";
 
 interface IAppContext {
 	dutchVerbs: DutchVerb[];
+	randomDutchVerbs: DutchVerb[];
 	setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
+	setRandomDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	handleIsOpenToggle: (dutchVerb: DutchVerb) => void
 }
 
@@ -13,15 +15,23 @@ interface IAppProvider {
 	children: React.ReactNode;
 }
 
+export const randomizeVerbs = (
+	arr: DutchVerb[]): DutchVerb[] => {
+	return arr.sort(() => Math.random() - 0.5);
+};
+
+
 export const AppContext = createContext<IAppContext>({} as IAppContext);
 
 export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const [dutchVerbs, setDutchVerbs] = useState<DutchVerb[]>([]);
+	const [randomDutchVerbs, setRandomDutchVerbs] = useState<DutchVerb[]>([]);
 	const { userVerbs } = useStoreState((state) => state.profileModel);
 	const { setUserVerbs } = useStoreActions((actions) => actions.profileModel);
 
 	useEffect(() => {
-		setDutchVerbs(getDutchVerbs())
+		setDutchVerbs(getDutchVerbs());
+		setRandomDutchVerbs(randomizeVerbs(getDutchVerbs()));
 	}, []);
 
 	const handleIsOpenToggle = (dutchVerb: DutchVerb) => {
@@ -48,7 +58,9 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 		<AppContext.Provider
 			value={{
 				dutchVerbs,
+				randomDutchVerbs,
 				setDutchVerbs,
+				setRandomDutchVerbs,
 				handleIsOpenToggle
 			}}
 		>

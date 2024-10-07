@@ -1,13 +1,17 @@
-import { useContext } from "react";
+import { useContext, useState } from "react";
 import { AppContext } from "../AppContext";
-import * as qstr from '../qtools/qstr';
 
 export const PageTestDutchVerbs = () => {
-	const { dutchVerbs } = useContext(AppContext);
+	const { randomDutchVerbs } = useContext(AppContext);
+	const [answerVerb, setAnswerVerb] = useState('nnn');
 
-	qstr.randomizeArray(dutchVerbs);
 	// const dv = dutchVerbs.find(m => m.infinitive === 'hebben')
-	const dv = dutchVerbs[0]
+	const dv = randomDutchVerbs[0]
+
+	const handleChangeAnswerVerb = (e: React.ChangeEvent<HTMLInputElement>) => {
+		const value = e.target.value;
+		setAnswerVerb(value);
+	}
 
 	return (
 		<>
@@ -20,7 +24,7 @@ export const PageTestDutchVerbs = () => {
 							{/* <p>{dv.mainTextAnswer}</p> */}
 						</div>
 						<div>
-							<input className="w-full text-sm" />
+							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} className="w-full text-sm" />
 							<button className="buttonNormal mt-3 w-full" type="button">check answer</button>
 						</div>
 						<div className="mt-6">
