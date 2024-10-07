@@ -5,7 +5,7 @@ import { DutchVerb } from "../types";
 import { useStoreActions, useStoreState } from "../store/hooks";
 
 export const PageTestDutchVerbs = () => {
-	const { getRandomNotAnsweredCorrectlyVerb } = useContext(AppContext);
+	const { getRandomNotAnsweredCorrectlyVerb, dutchVerbs } = useContext(AppContext);
 	const [answerVerb, setAnswerVerb] = useState('');
 	const [dv, setDv] = useState<DutchVerb | null>(null);
 	const { verbsTestedCorrect } = useStoreState((state) => state.profileModel);
@@ -35,19 +35,18 @@ export const PageTestDutchVerbs = () => {
 		<>
 			{dv && (
 				<>
-					<h2 className="text-xl mb-3">Test Yourself on Dutch Verbs</h2>
-					[{verbsTestedCorrect.join(',')}]
+					<h2 className="text-xl mb-3">{verbsTestedCorrect.length} of {dutchVerbs.length} Verbs Answered Correctly</h2>
 					<form onSubmit={(e) => handleCheckAnswer(e)}>
 						<div key={dv.dpodId}>
-							<p className="text-orange-900 mb-2 text-xl">{dv.english}</p>
+							<p className="text-orange-900 text-xl">{dv.english}</p>
 						</div>
 						<div>
-							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} className="w-full text-sm" />
-							<button className="buttonNormal mt-3 w-full" >check answer</button>
+							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} autoComplete="off" spellCheck="false" className="w-full text-sm" />
+							<div className="text-xs">
+								<p className="text-gray-500"><span>e.g.</span><span className="italic"> heb hebben had hadden gehad</span></p>
+							</div>
 						</div>
-						<div className="mt-6">
-							<p className="text-gray-500"><span>e.g.</span><span className="italic"> heb hebben had hadden gehad</span></p>
-						</div>
+						<button className="buttonNormal mt-3 w-full" >check answer</button>
 					</form>
 				</>
 			)}

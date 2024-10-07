@@ -9,11 +9,14 @@
 	- x test user with input, say right or wrong and show answer
 	- x create user property: verbsTestedCorrect: string[]
 	- x if correct
-		- add dpodId to list
-	- .. reduce to three and show all
-	- get random verb from those not tested
-	- show how many of so many tested correctly
-	- test with 3 verbs and program end
+		- x add dpodId to list
+	- x reduce to three and show all
+	- x get random verb from those not tested
+	- x show how many of so many tested correctly
+	- x test with 3 verbs and program end
+	- x title "0 of 104 Verbs Answered Correctly"
+	- .. fix spellcheck
+	- show answer and NEXT button
 
 
 
