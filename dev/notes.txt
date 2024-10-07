@@ -4,9 +4,10 @@
 	- x show all verbs on site
 		- x randomize order
 	- x create property: mainTestAnswer: string, and display
-	- .. on load, show random verb
-	- test user with input
-	- .. create user property: verbsTestedCorrect: string[]
+	- x on load, show random verb
+	- x show user with input
+	- .. test user with input
+	- create user property: verbsTestedCorrect: string[]
 	- if correct
 		- add dpodId to list
 	- get random verb from those not tested
