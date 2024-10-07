@@ -1,7 +1,8 @@
 
 - .. create "Test Dutch Verbs" page
-	- .. create base page
-	- show all verbs on site
+	- x create base page
+	- .. show all verbs on site
+		- .. randomize order
 	- create property: mainTestAnswer: string
 	- create user property: verbsTestedCorrect: string[]
 	- on load, show random verb

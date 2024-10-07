@@ -1,3 +1,4 @@
+import { SortedItem } from "../types";
 import * as qstr from "./qstr";
 
 /**
@@ -150,7 +151,6 @@ export const trimLinesOfEndBlanks = (lines: string[]) => {
 	return lines;
 };
 
-
 // if first line of lines array is blank, it will remove it
 // but don't remove any blank lines from middle or end
 export const trimBeginningLinesOfBlanks = (lines: string[]) => {
@@ -166,4 +166,10 @@ export const trimBeginningLinesOfBlanks = (lines: string[]) => {
 		}
 	});
 	return newLines;
+};
+
+export const randomizeArray = (
+	arr: SortedItem[]
+): void => {
+	arr.sort(() => Math.random() - 0.5);
 };

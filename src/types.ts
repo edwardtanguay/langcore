@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 export type RawDutchVerb = {
 	dpodId: string;
 	dpodWhenCreated: string;
@@ -55,3 +56,7 @@ export type UserVerb = {
 	dpodId: string;
 	timesOpened: number;
 }
+
+export type SortedItem = {
+  [key: string]: any;
+};
