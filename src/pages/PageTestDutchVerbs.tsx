@@ -16,7 +16,7 @@ export const PageTestDutchVerbs = () => {
 					<h2 className="text-xl mb-3">Test Yourself on Dutch Verbs</h2>
 					<form>
 						<div key={dv.dpodId}>
-							<p className="text-orange-900 mb-2 text-xl">{dv.infinitive}</p>
+							<p className="text-orange-900 mb-2 text-xl">{dv.english}</p>
 							{/* <p>{dv.mainTextAnswer}</p> */}
 						</div>
 						<div>
@@ -24,7 +24,7 @@ export const PageTestDutchVerbs = () => {
 							<button className="buttonNormal mt-3 w-full" type="button">check answer</button>
 						</div>
 						<div className="mt-6">
-							<p><span>e.g.</span><span className="italic"> heb hebben had hadden gehad</span></p>
+							<p className="text-gray-500"><span>e.g.</span><span className="italic"> heb hebben had hadden gehad</span></p>
 						</div>
 					</form>
 				</>
