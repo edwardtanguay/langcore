@@ -15,8 +15,8 @@
 	- x show how many of so many tested correctly
 	- x test with 3 verbs and program end
 	- x title "0 of 104 Verbs Answered Correctly"
-	- .. fix spellcheck
-	- show answer and NEXT button
+	- ,, fix spellcheck
+	- .. show answer and NEXT button
 
 
 

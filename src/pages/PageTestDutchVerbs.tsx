@@ -17,7 +17,7 @@ export const PageTestDutchVerbs = () => {
 
 	const handleChangeAnswerVerb = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
-		setAnswerVerb(value);
+		setAnswerVerb(value.toLowerCase());
 	}
 
 	const handleCheckAnswer = (e: React.FormEvent<HTMLFormElement>) => {
@@ -35,13 +35,14 @@ export const PageTestDutchVerbs = () => {
 		<>
 			{dv && (
 				<>
+					<p>ver 2.0</p>
 					<h2 className="text-xl mb-3">{verbsTestedCorrect.length} of {dutchVerbs.length} Verbs Answered Correctly</h2>
 					<form onSubmit={(e) => handleCheckAnswer(e)}>
 						<div key={dv.dpodId}>
 							<p className="text-orange-900 text-xl">{dv.english}</p>
 						</div>
 						<div>
-							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} autoComplete="off" spellCheck="false" className="w-full text-sm" />
+							<input value={answerVerb} onChange={(e) => handleChangeAnswerVerb(e)} autoComplete="off" spellCheck="false" type="email" className="w-full text-sm" />
 							<div className="text-xs">
 								<p className="text-gray-500"><span>e.g.</span><span className="italic"> heb hebben had hadden gehad</span></p>
 							</div>
