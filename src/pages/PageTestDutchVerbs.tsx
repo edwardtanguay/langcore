@@ -2,11 +2,14 @@
 import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../AppContext";
 import { DutchVerb } from "../types";
+import { useStoreActions, useStoreState } from "../store/hooks";
 
 export const PageTestDutchVerbs = () => {
 	const { getRandomNotAnsweredCorrectlyVerb } = useContext(AppContext);
-	const [answerVerb, setAnswerVerb] = useState('nnn');
+	const [answerVerb, setAnswerVerb] = useState('');
 	const [dv, setDv] = useState<DutchVerb | null>(null);
+	const { verbsTestedCorrect } = useStoreState((state) => state.profileModel);
+	const { addVerbsTestedCorrect: addVerbTestedCorrect } = useStoreActions((actions) => actions.profileModel);
 
 	useEffect(() => {
 		setDv(getRandomNotAnsweredCorrectlyVerb());
@@ -20,7 +23,7 @@ export const PageTestDutchVerbs = () => {
 	const handleCheckAnswer = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (answerVerb === dv?.mainTestAnswer) {
-			console.log('CORRECT');
+			addVerbTestedCorrect(dv.dpodId);
 		} else {
 			console.log('incorrect: ' + dv?.mainTestAnswer);
 		}
@@ -31,6 +34,7 @@ export const PageTestDutchVerbs = () => {
 			{dv && (
 				<>
 					<h2 className="text-xl mb-3">Test Yourself on Dutch Verbs</h2>
+					[{verbsTestedCorrect.join(',')}]
 					<form onSubmit={(e) => handleCheckAnswer(e)}>
 						<div key={dv.dpodId}>
 							<p className="text-orange-900 mb-2 text-xl">{dv.english}</p>

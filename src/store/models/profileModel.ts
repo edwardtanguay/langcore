@@ -17,7 +17,7 @@ export interface ProfileModel {
 	setUserVerbs: Action<this, UserVerb[]>;
 	addExampleLearned: Action<this, string>;
 	removeExampleLearned: Action<this, string>;
-	addVerbTestedCorrect: Action<this, string>;
+	addVerbsTestedCorrect: Action<this, string>;
 }
 
 export const profileModel: ProfileModel = {
@@ -53,7 +53,7 @@ export const profileModel: ProfileModel = {
 			(m) => m !== verbIdCode
 		);
 	}),
-	addVerbTestedCorrect: action((state, verbIdCode) => {
+	addVerbsTestedCorrect: action((state, verbIdCode) => {
 		state.verbsTestedCorrect.push(verbIdCode);
 	}),
 };
