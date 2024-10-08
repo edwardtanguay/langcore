@@ -78,6 +78,12 @@ ${rawDutchVerb.infinitive}
 
 ==dutchVerbExample
 ${rawDutchVerb.infinitive}
+
+==dutchVerbExample
+${rawDutchVerb.infinitive}
+
+==dutchVerbExample
+${rawDutchVerb.infinitive}
 			`),
 			mainTestAnswer: getMainTestAnswer(rawDutchVerb, participleVerb),
 		};
