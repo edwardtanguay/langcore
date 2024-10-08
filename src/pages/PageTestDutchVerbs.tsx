@@ -13,6 +13,7 @@ export const PageTestDutchVerbs = () => {
 	const { addVerbsTestedCorrect: addVerbTestedCorrect } = useStoreActions((actions) => actions.profileModel);
 	const [showingAnswer, setShowingAnswer] = useState(false);
 	const [verbIsCorrect, setVerbIsCorrect] = useState(false);
+	const numberOfVerbsTestedCorrect = useStoreState((state) => state.profileModel.getNumberOfVerbsTestedCorrect);
 
 	useEffect(() => {
 		setDv(getRandomNotAnsweredCorrectlyVerb());
@@ -44,6 +45,7 @@ export const PageTestDutchVerbs = () => {
 		<>
 			{dv && (
 				<>
+					[{numberOfVerbsTestedCorrect}]
 					<h2 className="text-xl mb-3">{verbsTestedCorrect.length} of {dutchVerbs.length} Verbs Answered Correctly</h2>
 					<form onSubmit={(e) => handleCheckAnswer(e)}>
 						<div key={dv.dpodId}>

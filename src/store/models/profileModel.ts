@@ -1,4 +1,4 @@
-import { Action, action } from "easy-peasy";
+import { Action, action, Computed, computed } from "easy-peasy";
 import { UserVerb } from "../../types";
 
 export interface ProfileModel {
@@ -8,6 +8,9 @@ export interface ProfileModel {
 	userVerbs: UserVerb[];
 	learnedExamples: string[];
 	verbsTestedCorrect: string[];
+
+	// computed
+	getNumberOfVerbsTestedCorrect: Computed<this, number>;
 
 	// actions
 	setFirstName: Action<this, string>;
@@ -27,6 +30,11 @@ export const profileModel: ProfileModel = {
 	userVerbs: [],
 	learnedExamples: [],
 	verbsTestedCorrect: [],
+
+	//computed
+	getNumberOfVerbsTestedCorrect: computed(() => {
+		return 99;
+	}),
 
 	// actions
 	setFirstName: action((state, firstName) => {
