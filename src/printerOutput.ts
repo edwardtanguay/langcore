@@ -25,6 +25,7 @@ export const printTestAll = () => {
 	let r = "";
 	r += printerOutput.pageHeader();
 	r += `<div class="flex gap-x-[2rem] flex-wrap justify-between">`;
+	let count = 1;
 	for (const dv of dutchVerbs) {
 		r += `
 <div class="text-[.7rem] no-break mb-2">
@@ -32,13 +33,14 @@ export const printTestAll = () => {
 		<div>
 		${blank}
 		</div>
-		<div class="font-bold">${dv.english}</div>
+		<div class="font-bold">${count}. ${dv.english}</div>
 		<div class="text-[#999] text-[.7rem] font-sans">
 		${dv.present}/${dv.infinitive} - ${dv.imperfectSingular}/${dv.imperfectPlural} - ${dv.participleHelper} ${dv.participleVerb}
 		</div>
 	</div>
 </div>
 `;
+		count++;
 	}
 	r += `</div>`;
 	return r;
