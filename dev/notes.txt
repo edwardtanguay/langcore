@@ -1,3 +1,8 @@
+- verbs
+	- follow
+	- to stick (stekken)
+
+
 - .. use/test verb test
 	- .. add examples for current verb
 	- show all correct at bottom
