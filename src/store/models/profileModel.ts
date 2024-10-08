@@ -32,8 +32,8 @@ export const profileModel: ProfileModel = {
 	verbsTestedCorrect: [],
 
 	//computed
-	getNumberOfVerbsTestedCorrect: computed(() => {
-		return 99;
+	getNumberOfVerbsTestedCorrect: computed((state) => {
+		return state.verbsTestedCorrect.length; 
 	}),
 
 	// actions
