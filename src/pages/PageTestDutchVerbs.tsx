@@ -13,11 +13,16 @@ export const PageTestDutchVerbs = () => {
 	const { addVerbsTestedCorrect: addVerbTestedCorrect } = useStoreActions((actions) => actions.profileModel);
 	const [showingAnswer, setShowingAnswer] = useState(false);
 	const [verbIsCorrect, setVerbIsCorrect] = useState(false);
-	const numberOfVerbsTestedCorrect = useStoreState((state) => state.profileModel.getNumberOfVerbsTestedCorrect);
+	// const numberOfVerbsTestedCorrect = useStoreState((state) => state.profileModel.getNumberOfVerbsTestedCorrect);
 
 	useEffect(() => {
 		setDv(getRandomNotAnsweredCorrectlyVerb());
 	}, [])
+
+	const getFullVerbsTestedCorrect = (): DutchVerb[] => {
+		const dvs = dutchVerbs.filter(m => verbsTestedCorrect.includes(m.dpodId));
+		return dvs ? dvs : [];	
+	}
 
 	const handleChangeAnswerVerb = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
@@ -45,8 +50,6 @@ export const PageTestDutchVerbs = () => {
 		<>
 			{dv && (
 				<>
-					[{numberOfVerbsTestedCorrect}]
-					<h2 className="text-xl mb-3">{verbsTestedCorrect.length} of {dutchVerbs.length} Verbs Answered Correctly</h2>
 					<form onSubmit={(e) => handleCheckAnswer(e)}>
 						<div key={dv.dpodId}>
 							<p className="text-xl">{dv.english}</p>
@@ -63,7 +66,7 @@ export const PageTestDutchVerbs = () => {
 							<div>
 								<div className="flex justify-between mt-3">
 									<p className={`text-sm ${verbIsCorrect ? 'text-green-900' : 'text-red-700'}`}>{dv.mainTestAnswer}</p>
-									<a href={dv.conjugationLink} target="_blank"><FaMagnifyingGlass /></a>
+									<a href={dv.conjugationLink} target="_blank"><span className="text-xs block mt-1"><FaMagnifyingGlass /></span></a>
 								</div>
 								<ul className="ml-6 list-disc text-xs mt-2 mb-2">
 									{dv.examples.map(example => {
@@ -79,6 +82,14 @@ export const PageTestDutchVerbs = () => {
 							<button className="buttonNormal mt-3 w-full" >check answer</button>
 						)}
 					</form>
+					<h2 className="text-sm mb-1 mt-3">{verbsTestedCorrect.length} of {dutchVerbs.length} verbs answered correctly:</h2>
+					<div className="mt-2">
+						{getFullVerbsTestedCorrect().map(vb => {
+							return (
+								<p className="text-green-900 text-sm">{vb.mainTestAnswer}</p>
+							)
+						})}
+					</div>
 				</>
 			)}
 		</>
