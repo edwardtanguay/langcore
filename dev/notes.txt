@@ -1,5 +1,10 @@
+- .. use/test verb test
+	- .. add examples for current verb
+	- show all correct at bottom
+	- add all rest
 
-- .. create "Test Dutch Verbs" page
+
+- x create "Test Dutch Verbs" page
 	- x create base page
 	- x show all verbs on site
 		- x randomize order
@@ -15,8 +20,8 @@
 	- x show how many of so many tested correctly
 	- x test with 3 verbs and program end
 	- x title "0 of 104 Verbs Answered Correctly"
-	- ,, fix spellcheck
-	- .. show answer and NEXT button
+	- x fix spellcheck
+	- x show answer and NEXT button
 
 
 

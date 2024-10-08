@@ -3,6 +3,7 @@ import { useContext, useEffect, useState } from "react";
 import { AppContext } from "../AppContext";
 import { DutchVerb } from "../types";
 import { useStoreActions, useStoreState } from "../store/hooks";
+import { FaMagnifyingGlass } from "react-icons/fa6";
 
 export const PageTestDutchVerbs = () => {
 	const { getRandomNotAnsweredCorrectlyVerb, dutchVerbs } = useContext(AppContext);
@@ -58,7 +59,17 @@ export const PageTestDutchVerbs = () => {
 						</div>
 						{showingAnswer && (
 							<div>
-								<p className={`text-sm ${verbIsCorrect ? 'text-green-900' : 'text-red-700'}`}>{dv.mainTestAnswer}</p>
+								<div className="flex justify-between mt-3">
+									<p className={`text-sm ${verbIsCorrect ? 'text-green-900' : 'text-red-700'}`}>{dv.mainTestAnswer}</p>
+									<a href={dv.conjugationLink} target="_blank"><FaMagnifyingGlass /></a>
+								</div>
+								<ul className="ml-6 list-disc text-xs mt-2 mb-2">
+									{dv.examples.map(example => {
+										return (
+											<li>{example.dutch}</li>
+										)
+									})}
+								</ul>
 								<button type="button" onClick={handleNext} className="buttonNormal mt-3 w-full" >NEXT</button>
 							</div>
 						)}
