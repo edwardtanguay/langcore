@@ -216,18 +216,6 @@
 		"extras": ""
 	},
 	{
-		"dpodId": "u5Tm9F",
-		"dpodWhenCreated": "2024-09-18 22:05:47",
-		"english": "to carry",
-		"infinitive": "dragen",
-		"present": "draag",
-		"imperfectSingular": "droeg",
-		"imperfectPlural": "droegen",
-		"participle": "heb gedragen",
-		"rank": "4.55",
-		"extras": ""
-	},
-	{
 		"dpodId": "kaxFg8",
 		"dpodWhenCreated": "2024-09-18 22:11:35",
 		"english": "to drink",
@@ -662,7 +650,7 @@
 	{
 		"dpodId": "qQD1jN",
 		"dpodWhenCreated": "2024-09-23 01:40:54",
-		"english": "to meet",
+		"english": "to meet (up)",
 		"infinitive": "treffen",
 		"present": "tref",
 		"imperfectSingular": "trof",
@@ -950,7 +938,7 @@
 	{
 		"dpodId": "eHdau2",
 		"dpodWhenCreated": "2024-10-04 09:59:17",
-		"english": "to meet",
+		"english": "to meet (first time)",
 		"infinitive": "ontmoeten",
 		"present": "ontmoet",
 		"imperfectSingular": "ontmoette",
@@ -1087,7 +1075,7 @@
 		"present": "stel",
 		"imperfectSingular": "stelde",
 		"imperfectPlural": "stelden",
-		"participle": "ik heb gesteld",
+		"participle": "heb gesteld",
 		"rank": "4.232",
 		"extras": ""
 	},
@@ -1437,6 +1425,18 @@
 		"imperfectPlural": "bedotten",
 		"participle": "had bedot",
 		"rank": "3.6",
+		"extras": ""
+	},
+	{
+		"dpodId": "5v9BJv",
+		"dpodWhenCreated": "2024-10-08 23:16:16",
+		"english": "to wish",
+		"infinitive": "wensen",
+		"present": "wens",
+		"imperfectSingular": "wenste",
+		"imperfectPlural": "wensten",
+		"participle": "gewenst",
+		"rank": "4.2",
 		"extras": ""
 	}
 ]
