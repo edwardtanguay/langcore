@@ -1,5 +1,7 @@
 - .. output: Verb Example Test
-	- .. do mock
+	- x do mock
+	- x random order
+	- .. correct format
 
 - .. use/test verb test
 	- .. add examples for current verb

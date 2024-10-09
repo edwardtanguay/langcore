@@ -1,5 +1,6 @@
 import * as printerOutput from "./printerOutput.ts";
 import { getDutchVerbs } from "./dataModel";
+import * as qstr from "./qtools/qstr.ts";
 
 const dutchVerbs = getDutchVerbs();
 const blank = "_".repeat(50);
@@ -25,7 +26,7 @@ export const pageHeader = (title: string) => {
 
 export const printTestAll = () => {
 	let r = "";
-	r += printerOutput.pageHeader('Dutch Verbs - Basic Tenses');
+	r += printerOutput.pageHeader("Dutch Verbs - Basic Tenses");
 	r += `<div class="flex gap-x-[2rem] flex-wrap justify-between">`;
 	let count = 1;
 	for (const dv of dutchVerbs) {
@@ -50,11 +51,16 @@ export const printTestAll = () => {
 
 export const printTestExamples = () => {
 	let r = "";
-	r += printerOutput.pageHeader('Verb Example Test');
+	r += printerOutput.pageHeader("Verb Example Test");
 	r += `<div class="">`;
 	let count = 1;
+	qstr.randomizeInPlaceArray(dutchVerbs);
 	for (const dv of dutchVerbs) {
-		r += `<span>${count}. ${dv.infinitive}</span>`;
+		r += `<span>(${count}) <span style="font-weight: bold">${
+			dv.infinitive
+		}</span> - ${dv.examples
+			.map((example) => example.dutch)
+			.join(" ")}</span> `;
 		count++;
 	}
 	r += `</div>`;
