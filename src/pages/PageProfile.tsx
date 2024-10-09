@@ -71,6 +71,7 @@ export const PageProfile = () => {
 				<h3 className="font-semibold">Printouts:</h3>
 				<ul className="ml-6 list-disc">
 					<li><a href="?mode=print&view=testAll" target="_blank" className="underline">Dutch Verbs - Basic Tenses</a></li>
+					<li><a href="?mode=print&view=testExamples" target="_blank" className="underline">Dutch Verbs - Examples</a></li>
 				</ul>
 			</div>
 		</form>

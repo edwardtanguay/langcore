@@ -8,22 +8,24 @@ export const print = (idCode: string) => {
 	switch (idCode) {
 		case "testAll":
 			return printerOutput.printTestAll();
+		case "testExamples":
+			return printerOutput.printTestExamples();
 		default:
 			return "unknown view";
 	}
 };
 
-export const pageHeader = () => {
+export const pageHeader = (title: string) => {
 	return `
 <div style="font-size: .9rem; margin-bottom: -.5rem; font-style: italic;color: #555">Edward's Language Core Site</div>
-<div style="font-size: 1.5rem; margin-bottom: -.3rem">Dutch Verbs - Basic Tenses</div>	
+<div style="font-size: 1.5rem; margin-bottom: -.3rem">${title}</div>	
 <div style="font-size: .9rem; margin-bottom: 1rem; font-style: italic">https://langcore.vercel.app/dutchVerbs</div>	
 	`;
 };
 
 export const printTestAll = () => {
 	let r = "";
-	r += printerOutput.pageHeader();
+	r += printerOutput.pageHeader('Dutch Verbs - Basic Tenses');
 	r += `<div class="flex gap-x-[2rem] flex-wrap justify-between">`;
 	let count = 1;
 	for (const dv of dutchVerbs) {
@@ -40,6 +42,19 @@ export const printTestAll = () => {
 	</div>
 </div>
 `;
+		count++;
+	}
+	r += `</div>`;
+	return r;
+};
+
+export const printTestExamples = () => {
+	let r = "";
+	r += printerOutput.pageHeader('Verb Example Test');
+	r += `<div class="">`;
+	let count = 1;
+	for (const dv of dutchVerbs) {
+		r += `<span>${count}. ${dv.infinitive}</span>`;
 		count++;
 	}
 	r += `</div>`;

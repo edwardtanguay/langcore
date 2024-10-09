@@ -1,7 +1,5 @@
-- verbs
-	- follow
-	- to stick (stekken)
-
+- .. output: Verb Example Test
+	- .. do mock
 
 - .. use/test verb test
 	- .. add examples for current verb
