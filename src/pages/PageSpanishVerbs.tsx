@@ -5,7 +5,16 @@ export const PageSpanishVerbs = () => {
 
 	return (
 		<>
-			<p>There are {spanishVerbs.length} Spanish verbs.</p>
+			<h2 className="mb-3">There are {spanishVerbs.length} Spanish verbs.</h2>
+			<section>
+				{spanishVerbs.map((sv) => {
+					return (
+						<div key={sv.verb} className="bg-slate-300 w-fit p-3 mb-3">
+							<p>{sv.verb} - {sv.type} - {sv.base}</p>
+						</div>
+					)
+				})}
+			</section>
 		</>
 	)
 }
