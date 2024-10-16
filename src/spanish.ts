@@ -1,80 +1,12 @@
-import { SpanishVerbTense } from "./types";
+import { SpanishVerb, SpanishVerbTense, SpanishVerbType } from "./types";
 
 export const tenses = {
 	_2PRES: {
+		title: "present",
 		rules: [],
-	},
-	_2IMPE: {
-		rules: [
-			{
-				rule: "ongoing action in the past",
-				examples: [
-					{
-						spanish: "Estaba leyendo un libro.",
-						english: "I was reading a book.",
-					},
-				],
-			},
-			{
-				rule: "habitual action in the past",
-				examples: [
-					{
-						spanish: "Cada verano íbamos a la playa.",
-						english: "Every summer, we used to go to the beach.",
-					},
-				],
-			},
-			{
-				rule: "background information in the past",
-				examples: [
-					{
-						spanish: "Era una noche oscura y tormentosa.",
-						english: "It was a dark and stormy night.",
-					},
-				],
-			},
-			{
-				rule: "physical and emotional states in the past",
-				examples: [
-					{
-						spanish: "Ella estaba cansada y triste.",
-						english: "She was tired and sad.",
-					},
-				],
-			},
-			{
-				rule: "age in the past",
-				examples: [
-					{
-						spanish: "Tenía diez años cuando me mudé.",
-						english: "I was ten years old when I moved.",
-					},
-				],
-			},
-			{
-				rule: "two simultaneous actions in the past",
-				examples: [
-					{
-						spanish:
-							"Mientras él estudiaba, ella escuchaba música.",
-						english:
-							"While he was studying, she was listening to music.",
-					},
-				],
-			},
-			{
-				rule: "a request or desire in the past",
-				examples: [
-					{
-						spanish: "Quería un coche nuevo.",
-						english: "I wanted a new car.",
-					},
-				],
-			},
-		],
 		endings: {
 			ar: {
-				yo: "é",
+				yo: "nnné",
 				tu: "aste",
 				el: "ó",
 				nosotros: "amos",
@@ -99,10 +31,107 @@ export const tenses = {
 			},
 		},
 	},
-	_2PRET: {
+	_2IMPE: {
+		title: "imperfect",
 		rules: [
 			{
-				rule: "completed action in the past",
+				description: "ongoing action in the past",
+				examples: [
+					{
+						spanish: "Estaba leyendo un libro.",
+						english: "I was reading a book.",
+					},
+				],
+			},
+			{
+				description: "habitual action in the past",
+				examples: [
+					{
+						spanish: "Cada verano íbamos a la playa.",
+						english: "Every summer, we used to go to the beach.",
+					},
+				],
+			},
+			{
+				description: "background information in the past",
+				examples: [
+					{
+						spanish: "Era una noche oscura y tormentosa.",
+						english: "It was a dark and stormy night.",
+					},
+				],
+			},
+			{
+				description: "physical and emotional states in the past",
+				examples: [
+					{
+						spanish: "Ella estaba cansada y triste.",
+						english: "She was tired and sad.",
+					},
+				],
+			},
+			{
+				description: "age in the past",
+				examples: [
+					{
+						spanish: "Tenía diez años cuando me mudé.",
+						english: "I was ten years old when I moved.",
+					},
+				],
+			},
+			{
+				description: "two simultaneous actions in the past",
+				examples: [
+					{
+						spanish:
+							"Mientras él estudiaba, ella escuchaba música.",
+						english:
+							"While he was studying, she was listening to music.",
+					},
+				],
+			},
+			{
+				description: "a request or desire in the past",
+				examples: [
+					{
+						spanish: "Quería un coche nuevo.",
+						english: "I wanted a new car.",
+					},
+				],
+			},
+		],
+		endings: {
+			ar: {
+				yo: "aba",
+				tu: "abas",
+				el: "aba",
+				nosotros: "ábamos",
+				vosotros: "abais",
+				ellos: "aban",
+			},
+			er: {
+				yo: "ía",
+				tu: "ías",
+				el: "ía",
+				nosotros: "íamos",
+				vosotros: "íais",
+				ellos: "ían",
+			},
+			ir: {
+				yo: "ía",
+				tu: "ías",
+				el: "ía",
+				nosotros: "íamos",
+				vosotros: "íais",
+				ellos: "ían",
+			},
+		},
+	},
+	_2PRET: {
+		title: "preterite",
+		rules: [
+			{
+				description: "completed action in the past",
 				examples: [
 					{
 						spanish: "Ayer estudié para el examen.",
@@ -111,7 +140,7 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "specific time frame in the past",
+				description: "specific time frame in the past",
 				examples: [
 					{
 						spanish: "El año pasado viajamos a España.",
@@ -120,7 +149,7 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "sequential actions in the past",
+				description: "sequential actions in the past",
 				examples: [
 					{
 						spanish: "Me levanté, me duché y desayuné.",
@@ -129,7 +158,7 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "interrupting action in the past",
+				description: "interrupting action in the past",
 				examples: [
 					{
 						spanish: "Estaba estudiando cuando sonó el teléfono.",
@@ -138,7 +167,7 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "change in state or condition in the past",
+				description: "change in state or condition in the past",
 				examples: [
 					{
 						spanish: "Ella se puso feliz al recibir la noticia.",
@@ -147,7 +176,8 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "action with a clear beginning and end in the past",
+				description:
+					"action with a clear beginning and end in the past",
 				examples: [
 					{
 						spanish: "Viví en México por cinco años.",
@@ -156,7 +186,7 @@ export const tenses = {
 				],
 			},
 			{
-				rule: "a notible event or milestone in the past",
+				description: "a notible event or milestone in the past",
 				examples: [
 					{
 						spanish: "Nos casamos en 2010.",
@@ -194,7 +224,30 @@ export const tenses = {
 	},
 };
 
-export const getTenseHelp = (tenseIdCode: SpanishVerbTense) => {
-	const rules = tenses[tenseIdCode].rules;
-	return `this is a <b>test</b> of ${tenseIdCode} with ${rules.length} rules`;
+export const getTenseHelp = (
+	sv: SpanishVerb,
+	tenseIdCode: SpanishVerbTense
+) => {
+	const tense = tenses[tenseIdCode];
+	const boldVerbType = `<span class="font-bold uppercase">${sv.verbType}</span>`;
+	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
+	return `
+<h2>endings for ${boldVerbType} verbs in the ${boldTitle} tense: </h2>
+<div class="mt-2 ml-3">
+	${Object.entries(tense.endings[sv.verbType as SpanishVerbType]).map(
+		(entry, index) => {
+			return `<span key=${index}>-${entry[1]}</span>`
+		}
+	).join(', ')}
+</div>
+
+<h2 class="mt-3 mb-3">use the ${boldTitle} tense for:</h2>
+<ul class="list-disc ml-6">
+${tense.rules
+	.map((rule, index) => {
+		return `<li key=${index}> ${rule.description} </li>`;
+	})
+	.join("")}
+</ul>
+	`;
 };

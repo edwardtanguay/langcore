@@ -36,7 +36,7 @@ export const PageSpanishVerbs = () => {
 									</tr>
 								</thead>
 								<tbody>
-									<SpanishTenseBlock sv={sv} title="present" tenseClass="tensePresent" tenseIdCode="_2PRES" />
+									<SpanishTenseBlock sv={sv}  title="present" tenseClass="tensePresent" tenseIdCode="_2PRES" />
 									<SpanishTenseBlock sv={sv} title="imperfect" tenseClass="tenseImperfect" tenseIdCode="_2IMPE" />
 									<SpanishTenseBlock sv={sv} title="preterite" tenseClass="tensePreterite" tenseIdCode="_2PRET" />
 								</tbody>
