@@ -12,6 +12,7 @@ import { StoreProvider } from "easy-peasy";
 import { store } from "./store/store.ts";
 import * as printerOutput from './printerOutput.ts';
 import { PageTestDutchVerbs } from "./pages/PageTestDutchVerbs.tsx";
+import { PageSpanishVerbs } from "./pages/PageSpanishVerbs.tsx";
 
 const getUrlParams = () => {
 	const params = new URLSearchParams(window.location.search);
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
 			{
 				path: "test-dutch-verbs",
 				element: <PageTestDutchVerbs />,
+			},
+			{
+				path: "spanishVerbs",
+				element: <PageSpanishVerbs/>
 			},
 			{
 				path: "about",

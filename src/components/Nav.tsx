@@ -23,6 +23,10 @@ export const Nav = () => {
 			title: 'Test Dutch Verbs'
 		},
 		{
+			idCode: 'spanishVerbs',
+			title: `Spanish Verbs`
+		},
+		{
 			idCode: 'profile',
 			title: 'Profile'
 		},
