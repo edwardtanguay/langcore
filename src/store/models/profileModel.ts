@@ -1,5 +1,6 @@
 import { Action, action, Computed, computed } from "easy-peasy";
 import { SpanishVerb, UserVerb } from "../../types";
+import { SpanishVerbManager } from "../../classes/spanishVerbManager";
 
 export interface ProfileModel {
 	// variables
@@ -69,17 +70,7 @@ export const profileModel: ProfileModel = {
 		state.verbsTestedCorrect.push(verbIdCode);
 	}),
 	loadSpanishVerbs: action((state) => {
-		state.spanishVerbs = [
-			{
-				verb: "vvv001",
-				type: "ar",
-				base: "bbb",
-			},
-			{
-				verb: "vvv002",
-				type: "ar",
-				base: "bbb",
-			},
-		];
+		const spanishVerbManager = new SpanishVerbManager("test");
+		state.spanishVerbs = spanishVerbManager.getVerbs();
 	}),
 };
