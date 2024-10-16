@@ -59,6 +59,28 @@ export class SpanishVerbManager {
 		}
 	}
 
+	private create_2IMPE(verbType: string, verbBase: string): PersonalPronouns {
+		if (verbType === "ar") {
+			return {
+				yo: `${verbBase}aba`,
+				tu: `${verbBase}abas`,
+				el: `${verbBase}aba`,
+				nosotros: `${verbBase}ábamos`,
+				vosotros: `${verbBase}abais`,
+				ellos: `${verbBase}aban`,
+			};
+		} else {
+			return {
+				yo: `${verbBase}ía`,
+				tu: `${verbBase}ías`,
+				el: `${verbBase}ía`,
+				nosotros: `${verbBase}íamos`,
+				vosotros: `${verbBase}íais`,
+				ellos: `${verbBase}ían`,
+			};
+		}
+	}
+
 	private getVerbLineParts(line: string): {
 		verb: string;
 		english: string;
@@ -96,7 +118,7 @@ export class SpanishVerbManager {
 						},
 						indicative: {
 							_2PRES: this.create_2PRES(verbType, verbBase),
-							_2IMPE: "habla", // Imperfect (I was speaking)
+							_2IMPE: this.create_2IMPE(verbType, verbBase),
 							_2PRET: "hablé", // Preterite (I spoke)
 							_2PRPE: "hablaré", // Future (I will speak)
 							_2PAPE: "hablaría", // Conditional (I would speak)

@@ -41,12 +41,21 @@ export const PageSpanishVerbs = () => {
 								<tbody>
 									<tr>
 										<td>present</td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.yo) }}></td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.tu) }}></td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.el) }}></td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.nosotros) }}></td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.vosotros) }}></td>
-										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.ellos) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.yo) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.tu) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.el) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.nosotros) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.vosotros) }}></td>
+										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.ellos) }}></td>
+									</tr>
+									<tr>
+										<td>imperfect</td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.yo) }}></td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.tu) }}></td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.el) }}></td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.nosotros) }}></td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.vosotros) }}></td>
+										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.ellos) }}></td>
 									</tr>
 								</tbody>
 							</table>

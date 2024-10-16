@@ -93,14 +93,19 @@ table.spanishVerb {
 	}
 	tbody {
 		td.data {
-			color: brown;
-			font-family: monospace;
 			background-color: #ccc;
 		}
 	}
 }
 
 .data {
-	color: brown;
 	font-family: monospace;
+}
+
+.tensePresent {
+	color: rgb(0, 90, 0);
+}
+
+.tenseImperfect {
+	color: rgb(156, 0, 0);
 }
