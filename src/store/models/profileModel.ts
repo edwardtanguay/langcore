@@ -70,7 +70,7 @@ export const profileModel: ProfileModel = {
 		state.verbsTestedCorrect.push(verbIdCode);
 	}),
 	loadSpanishVerbs: action((state) => {
-		const spanishVerbManager = new SpanishVerbManager("test");
+		const spanishVerbManager = new SpanishVerbManager("test222");
 		state.spanishVerbs = spanishVerbManager.getVerbs();
 	}),
 };

@@ -1,8 +1,7 @@
 import { SpanishVerb } from "../types";
 
 export class SpanishVerbManager {
-
-	private spanishVerbText = '';
+	private spanishVerbText = "";
 	private spanishVerbs: SpanishVerb[] = [];
 
 	constructor(spanishVerbText: string) {
@@ -15,7 +14,7 @@ export class SpanishVerbManager {
 			{
 				verb: "vvv001",
 				type: "ar",
-				base: "bbb",
+				base: "bbb" + `length = ${this.spanishVerbText.length}`,
 			},
 			{
 				verb: "vvv002",
