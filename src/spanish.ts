@@ -1,32 +1,3 @@
-export const verbEndings = {
-	_2PRET: {
-		ar: {
-			yo: "é",
-			tu: "aste",
-			el: "ó",
-			nosotros: "amos",
-			vosotros: "asteis",
-			ellos: "aron",
-		},
-		er: {
-			yo: "í",
-			tu: "iste",
-			el: "ió",
-			nosotros: "imos",
-			vosotros: "isteis",
-			ellos: "ieron",
-		},
-		ir: {
-			yo: "í",
-			tu: "iste",
-			el: "ió",
-			nosotros: "imos",
-			vosotros: "isteis",
-			ellos: "ieron",
-		},
-	},
-};
-
 export const tenses = {
 	_2IMPE: {
 		rules: [
@@ -96,6 +67,32 @@ export const tenses = {
 				],
 			},
 		],
+		endings: {
+			ar: {
+				yo: "é",
+				tu: "aste",
+				el: "ó",
+				nosotros: "amos",
+				vosotros: "asteis",
+				ellos: "aron",
+			},
+			er: {
+				yo: "í",
+				tu: "iste",
+				el: "ió",
+				nosotros: "imos",
+				vosotros: "isteis",
+				ellos: "ieron",
+			},
+			ir: {
+				yo: "í",
+				tu: "iste",
+				el: "ió",
+				nosotros: "imos",
+				vosotros: "isteis",
+				ellos: "ieron",
+			},
+		},
 	},
 	_2PRET: {
 		rules: [
@@ -163,5 +160,31 @@ export const tenses = {
 				],
 			},
 		],
+		endings: {
+			ar: {
+				yo: "é",
+				tu: "aste",
+				el: "ó",
+				nosotros: "amos",
+				vosotros: "asteis",
+				ellos: "aron",
+			},
+			er: {
+				yo: "í",
+				tu: "iste",
+				el: "ió",
+				nosotros: "imos",
+				vosotros: "isteis",
+				ellos: "ieron",
+			},
+			ir: {
+				yo: "í",
+				tu: "iste",
+				el: "ió",
+				nosotros: "imos",
+				vosotros: "isteis",
+				ellos: "ieron",
+			},
+		},
 	},
 };

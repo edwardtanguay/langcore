@@ -1,6 +1,6 @@
 import { PersonalPronouns, SpanishVerb } from "../types";
 import * as qstr from "../qtools/qstr";
-import { verbEndings } from "../spanish";
+import { tenses } from "../spanish";
 
 export class SpanishVerbManager {
 	private spanishVerbText = "";
@@ -86,31 +86,31 @@ export class SpanishVerbManager {
 		switch (verbType) {
 			case "ar":
 				return {
-					yo: `${verbBase}${verbEndings._2PRET.ar.yo}`,
-					tu: `${verbBase}${verbEndings._2PRET.ar.tu}`,
-					el: `${verbBase}${verbEndings._2PRET.ar.el}`,
-					nosotros: `${verbBase}${verbEndings._2PRET.ar.nosotros}`,
-					vosotros: `${verbBase}${verbEndings._2PRET.ar.vosotros}`,
-					ellos: `${verbBase}${verbEndings._2PRET.ar.ellos}`,
+					yo: `${verbBase}${tenses._2PRET.endings.ar.yo}`,
+					tu: `${verbBase}${tenses._2PRET.endings.ar.tu}`,
+					el: `${verbBase}${tenses._2PRET.endings.ar.el}`,
+					nosotros: `${verbBase}${tenses._2PRET.endings.ar.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRET.endings.ar.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRET.endings.ar.ellos}`,
 				};
 			case "er":
 				return {
-					yo: `${verbBase}${verbEndings._2PRET.er.yo}`,
-					tu: `${verbBase}${verbEndings._2PRET.er.tu}`,
-					el: `${verbBase}${verbEndings._2PRET.er.el}`,
-					nosotros: `${verbBase}${verbEndings._2PRET.er.nosotros}`,
-					vosotros: `${verbBase}${verbEndings._2PRET.er.vosotros}`,
-					ellos: `${verbBase}${verbEndings._2PRET.er.ellos}`,
+					yo: `${verbBase}${tenses._2PRET.endings.er.yo}`,
+					tu: `${verbBase}${tenses._2PRET.endings.er.tu}`,
+					el: `${verbBase}${tenses._2PRET.endings.er.el}`,
+					nosotros: `${verbBase}${tenses._2PRET.endings.er.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRET.endings.er.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRET.endings.er.ellos}`,
 				};
 			case "ir":
 			default:
 				return {
-					yo: `${verbBase}${verbEndings._2PRET.ir.yo}`,
-					tu: `${verbBase}${verbEndings._2PRET.ir.tu}`,
-					el: `${verbBase}${verbEndings._2PRET.ir.el}`,
-					nosotros: `${verbBase}${verbEndings._2PRET.ir.nosotros}`,
-					vosotros: `${verbBase}${verbEndings._2PRET.ir.vosotros}`,
-					ellos: `${verbBase}${verbEndings._2PRET.ir.ellos}`,
+					yo: `${verbBase}${tenses._2PRET.endings.ir.yo}`,
+					tu: `${verbBase}${tenses._2PRET.endings.ir.tu}`,
+					el: `${verbBase}${tenses._2PRET.endings.ir.el}`,
+					nosotros: `${verbBase}${tenses._2PRET.endings.ir.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRET.endings.ir.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRET.endings.ir.ellos}`,
 				};
 		}
 	}
