@@ -1,88 +1,88 @@
-hablar;speak
-cantar
-nadar
-trabajar
-estudiar
-caminar
-bailar
-cocinar
-escuchar
-viajar
-comprar
-llamar
-enseñar
-visitar
-ayudar
-limpiar
-usar
-mirar
-buscar
-llegar
-cambiar
-entrar
-esperar
-tomar
-preguntar
-necesitar
-saltar
-pagar
-dibujar
-cortar
+hablar; speak
+cantar; sing
+nadar; swim
+trabajar; work
+estudiar; study
+caminar; walk
+bailar; dance
+cocinar; cook
+escuchar; listen
+viajar; travel
+comprar; buy
+llamar; call
+enseñar; teach
+visitar; visit
+ayudar; help
+limpiar; clean
+usar; use
+mirar; watch/look
+buscar; search
+llegar; arrive
+cambiar; change
+entrar; enter
+esperar; wait/hope
+tomar; take/drink
+preguntar; ask
+necesitar; need
+saltar; jump
+pagar; pay
+dibujar; draw
+cortar; cut
 
-comer
-beber
-aprender
-correr
-leer
-vender
-temer
-comprender
-responder
-depender
-barrer
-creer
-romper
-prometer
-toser
-esconder
-deber
-poseer
-sorprender
-proceder
-suceder
-meter
-tejer
-absorber
-coser
-encender
-envolver
+comer; eat
+beber; drink
+aprender; learn
+correr; run
+leer; read
+vender; sell
+temer; fear
+comprender; understand
+responder; answer
+depender; depend
+barrer; sweep
+creer; believe
+romper; break
+prometer; promise
+toser; cough
+esconder; hide
+deber; owe/must
+poseer; possess
+sorprender; surprise
+proceder; proceed
+suceder; happen
+meter; put in
+tejer; knit
+absorber; absorb
+coser; sew
+encender; light/turn on
+envolver; wrap
 
-vivir
-escribir
-abrir
-recibir
-permitir
-decidir
-cubrir
-compartir
-asistir
-subir
-describir
-insistir
-sufrir
-prohibir
-omitir
-aplaudir
-cumplir
-descubrir
-unir
-partir
-discutir
-transmitir
-imprimir
-admitir
-persistir
-consumir
-resumir
-escupir
-ocurrir
+vivir; live
+escribir; write
+abrir; open
+recibir; receive
+permitir; allow/permit
+decidir; decide
+cubrir; cover
+compartir; share
+asistir; attend
+subir; go up/climb
+describir; describe
+insistir; insist
+sufrir; suffer
+prohibir; prohibit
+omitir; omit
+aplaudir; applaud
+cumplir; fulfill/complete
+descubrir; discover
+unir; unite
+partir; leave/part
+discutir; discuss/argue
+transmitir; transmit
+imprimir; print
+admitir; admit
+persistir; persist
+consumir; consume
+resumir; summarize
+escupir; spit
+ocurrir; occur
