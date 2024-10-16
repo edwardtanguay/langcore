@@ -91,4 +91,16 @@ table.spanishVerb {
 	th {
 		background-color: #f2f2f2;
 	}
+	tbody {
+		td.data {
+			color: brown;
+			font-family: monospace;
+			background-color: #ccc;
+		}
+	}
+}
+
+.data {
+	color: brown;
+	font-family: monospace;
 }
