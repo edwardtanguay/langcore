@@ -27,7 +27,7 @@ export const verbEndings = {
 	},
 };
 
-export const whenToUseTenses = {
+export const tenses = {
 	_2IMPE: [
 		{
 			rule: "ongoing action in the past",
