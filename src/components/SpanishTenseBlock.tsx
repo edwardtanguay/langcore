@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { SpanishVerb, SpanishVerbTense } from "../types";
 
 interface IProps {
@@ -8,15 +9,20 @@ interface IProps {
 }
 
 export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps) => {
+	const [showInfo, setShowInfo] = useState(false);
 
 	const buildTatoebaLink = (word: string) => {
 		return `<a target="_blank" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
 	}
 
+	const handleToggleShowInfo = () => {
+		setShowInfo(!showInfo);
+	}
+
 	return (
 		<>
 			<tr>
-				<td>{title}</td>
+				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none">{title}</span></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].yo) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].tu) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].el) }}></td>
@@ -24,9 +30,11 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
-			<tr>
-				<td colSpan={7}>skdjfskdjf skdfj sdkfj sdkjf </td>
-			</tr>
+			{showInfo && (
+				<tr className="bg-yellow-200 text-[#222] font-mono text-xs">
+					<td colSpan={7}>skdjfskdjf skdfj sdkfj sdkjf </td>
+				</tr>
+			)}
 		</>
 	)
 }
