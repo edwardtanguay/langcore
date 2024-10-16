@@ -4,6 +4,10 @@ import { useStoreState } from "../store/hooks";
 export const PageSpanishVerbs = () => {
 	const { spanishVerbs } = useStoreState((state) => state.profileModel);
 
+	const buildTatoebaLink = (word: string) => {
+		return `<a target="_blank" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
+	}
+
 	return (
 		<>
 			<h2 className="mb-3">There are {spanishVerbs.length} Spanish verbs.</h2>
@@ -37,12 +41,12 @@ export const PageSpanishVerbs = () => {
 								<tbody>
 									<tr>
 										<td>present</td>
-										<td className="data">{sv.conj.indicative._2PRES.yo}</td>
-										<td className="data">{sv.conj.indicative._2PRES.tu}</td>
-										<td className="data">{sv.conj.indicative._2PRES.el}</td>
-										<td className="data">{sv.conj.indicative._2PRES.nosotros}</td>
-										<td className="data">{sv.conj.indicative._2PRES.vosotros}</td>
-										<td className="data">{sv.conj.indicative._2PRES.ellos}</td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.yo) }}></td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.tu) }}></td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.el) }}></td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.nosotros) }}></td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.vosotros) }}></td>
+										<td className="data" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.ellos) }}></td>
 									</tr>
 								</tbody>
 							</table>

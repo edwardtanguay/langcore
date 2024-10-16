@@ -23,7 +23,7 @@ entrar; enter; 4.55
 esperar; wait/hope; 4.81
 tomar; take/drink; 4.9
 preguntar; ask; 4.96
-necesitar; need; 4.98
+necesitar; need; 4.78
 saltar; jump; 4.44
 pagar; pay; 4.92
 dibujar; draw; 3.7
