@@ -72,7 +72,9 @@ export type PersonalPronouns = {
 };
 
 export type SpanishVerb = {
+	spanish: string;
 	english: string;
+	rank: number;
 	verbType: string;
 	verbBase: string;
 	conjugation1Url: string;
