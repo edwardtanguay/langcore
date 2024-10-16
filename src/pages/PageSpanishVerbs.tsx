@@ -22,7 +22,10 @@ export const PageSpanishVerbs = () => {
 							<table className="spanishVerb">
 								<thead>
 									<tr>
-										<th><LookupLink sv={sv} kind={"conjugate123teachme"} /></th>
+										<th className="flex gap-1">
+											<LookupLink sv={sv} kind={"conjugate123teachme"} />
+											<LookupLink sv={sv} kind={"conjugateReverso"} />
+										</th>
 										<th>yo</th>
 										<th>tú</th>
 										<th>él</th>

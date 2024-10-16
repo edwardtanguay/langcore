@@ -108,7 +108,8 @@ export type SpanishVerb = {
 	};
 	verbType: string;
 	verbBase: string;
-	conjugationUrl: string;
+	conjugation1Url: string;
+	conjugation2Url: string;
 };
 
-export type LookupLinkKind = "conjugate123teachme";
+export type LookupLinkKind = "conjugate123teachme" | "conjugateReverso";

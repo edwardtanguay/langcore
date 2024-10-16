@@ -70,7 +70,8 @@ export class SpanishVerbManager {
 				const spanishVerb: SpanishVerb = {
 					verbBase,
 					verbType,
-					conjugationUrl: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,
+					conjugation1Url: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,
+					conjugation2Url: `https://conjugator.reverso.net/conjugation-spanish-verb-${verb}.html`,
 					conj: {
 						base: {
 							_1INFI: verb,
