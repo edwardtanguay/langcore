@@ -69,7 +69,7 @@ export type PersonalPronouns = {
 	nosotros: string;
 	vosotros: string;
 	ellos: string;
-}
+};
 
 export type SpanishVerb = {
 	conj: {
@@ -79,7 +79,7 @@ export type SpanishVerb = {
 			_1PAPA: string;
 		};
 		indicative: {
-			_2PRES: PersonalPronouns,
+			_2PRES: PersonalPronouns;
 			_2IMPE: string;
 			_2PRET: string;
 			_2PRPE: string;
@@ -110,3 +110,5 @@ export type SpanishVerb = {
 	verbBase: string;
 	conjugationUrl: string;
 };
+
+export type LookupLinkKind = "conjugate123teachme";

@@ -17,7 +17,6 @@ interface IAppProvider {
 const initialDutchVerbs = getDutchVerbs();
 
 const getRandomVerb = (dutchVerbs: DutchVerb[]): DutchVerb => {
-	console.log(dutchVerbs.map(m => m.english));
 	const randomIndex = Math.floor(Math.random() * dutchVerbs.length);
 	return dutchVerbs[randomIndex];
 }
@@ -30,7 +29,6 @@ export const AppProvider: React.FC<IAppProvider> = ({ children }) => {
 	const { setUserVerbs } = useStoreActions((actions) => actions.profileModel);
 
 	const getRandomNotAnsweredCorrectlyVerb = () => {
-		console.log(verbsTestedCorrect);
 		const notAnsweredVerbs = dutchVerbs.filter(m => !verbsTestedCorrect.includes(m.dpodId) )
 		const randomVerb = getRandomVerb(notAnsweredVerbs);
 		return randomVerb;
