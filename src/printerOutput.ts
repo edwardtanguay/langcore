@@ -1,6 +1,7 @@
 import * as printerOutput from "./printerOutput.ts";
 import { getDutchVerbs } from "./dataModel";
 import * as qstr from "./qtools/qstr.ts";
+import { DutchVerb } from "./types.ts";
 
 const dutchVerbs = getDutchVerbs();
 const blank = "_".repeat(50);
@@ -49,6 +50,15 @@ export const printTestAll = () => {
 	return r;
 };
 
+const blankOutText = (dv: DutchVerb, text: string) => {
+	const verbParts = qstr.breakIntoParts(dv.mainTestAnswer, " ");
+	verbParts.reverse();
+	for (const verbPart of verbParts) {
+		text = text.replace(verbPart, '______________');
+	}
+	return text;
+};
+
 export const printTestExamples = () => {
 	let r = "";
 	r += printerOutput.pageHeader("Verb Example Test");
@@ -56,11 +66,13 @@ export const printTestExamples = () => {
 	let count = 1;
 	qstr.randomizeInPlaceArray(dutchVerbs);
 	for (const dv of dutchVerbs) {
-		r += `<span>(${count}) <span style="font-weight: bold">${
-			dv.infinitive
-		}</span> - ${dv.examples
-			.map((example) => example.dutch)
-			.join(" ")}</span> `;
+		qstr.randomizeInPlaceArray(dv.examples);
+		r += `<span>(${count}) ${dv.examples
+			.map((example) => {
+				const blankedDutch = blankOutText(dv, example.dutch);
+				return ` <span class="font-semibold">${example.english}</span> <span>${blankedDutch}</span> `;
+			})
+			.join(" ")}</span> <span class="text-sm">[${dv.mainTestAnswer}] </span>`;
 		count++;
 	}
 	r += `</div>`;
