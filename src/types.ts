@@ -63,8 +63,41 @@ export type SortedItem = {
 };
 
 export type SpanishVerb = {
-	verb: string;
+	conj: {
+		base: {
+			_1INFI: string;
+			_1PRPA: string;
+			_1PAPA: string;
+		};
+		indicative: {
+			_2PRES: string;
+			_2IMPE: string;
+			_2PRET: string;
+			_2PRPE: string;
+			_2PAPE: string;
+			_2PREP: string;
+			_2FUIN: string;
+			_2FUTU: string;
+			_2FUTP: string;
+			_2COND: string;
+			_2CONP: string;
+		};
+		subjunctive: {
+			_3PRES: string;
+			_3IMP1: string;
+			_3IMP2: string;
+			_3PRPE: string;
+			_3PAP1: string;
+			_3PAP2: string;
+			_3FUTU: string;
+			_3FUTP: string;
+		};
+		imperative: {
+			_4AFFI: string;
+			_4NEGA: string;
+		};
+	};
 	verbType: string;
-	base: string;
+	verbBase: string;
 	conjugationUrl: string;
 };

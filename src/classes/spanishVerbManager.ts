@@ -18,13 +18,46 @@ export class SpanishVerbManager {
 
 			if (line !== "") {
 				const verb = line;
+				const verbBase = line.slice(0, -2);
 				const verbType = line.slice(-2);
-				const base = line.slice(0, -2);
 				const spanishVerb: SpanishVerb = {
-					verb,
+					verbBase,
 					verbType,
-					base,
-					conjugationUrl: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`
+					conjugationUrl: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,
+					conj: {
+						base: {
+							_1INFI: verb,
+							_1PRPA: "nnn",
+							_1PAPA: "hablado", // Past participle (spoken)
+						},
+						indicative: {
+							_2PRES: "hablo", // Present (I speak)
+							_2IMPE: "habla", // Imperfect (I was speaking)
+							_2PRET: "hablé", // Preterite (I spoke)
+							_2PRPE: "hablaré", // Future (I will speak)
+							_2PAPE: "hablaría", // Conditional (I would speak)
+							_2PREP: "hablarás", // Present (You speak)
+							_2FUIN: "hablaré", // Future (I will speak)
+							_2FUTU: "hablará", // Future (He/She/You formal will speak)
+							_2FUTP: "hablaremos", // Future (We will speak)
+							_2COND: "hablarían", // Conditional (They would speak)
+							_2CONP: "hablarías", // Conditional (You would speak)
+						},
+						subjunctive: {
+							_3PRES: "hable", // Present (I speak)
+							_3IMP1: "hablase", // Imperfect (I spoke)
+							_3IMP2: "hablara", // Imperfect (I spoke)
+							_3PRPE: "hablare", // Future (I will speak)
+							_3PAP1: "hable", // Present (I speak)
+							_3PAP2: "habléis", // Present (You all speak)
+							_3FUTU: "hablare", // Future (I will speak)
+							_3FUTP: "hablaran", // Future (They will speak)
+						},
+						imperative: {
+							_4AFFI: "habla", // Affirmative (Speak!)
+							_4NEGA: "no hables", // Negative (Don't speak!)
+						},
+					},
 				};
 				this.spanishVerbs.push(spanishVerb);
 			}
