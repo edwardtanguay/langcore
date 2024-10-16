@@ -116,3 +116,5 @@ export type SpanishVerb = {
 };
 
 export type LookupLinkKind = "conjugate123teachme" | "conjugateReverso";
+
+export type SpanishVerbTense = "_2PRES" | "_2IMPE" | "_2PRET";

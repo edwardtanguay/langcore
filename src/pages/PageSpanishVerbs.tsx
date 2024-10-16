@@ -1,12 +1,9 @@
 import { LookupLink } from "../components/LookupLink";
+import { SpanishTenseBlock } from "../components/SpanishTenseBlock";
 import { useStoreState } from "../store/hooks";
 
 export const PageSpanishVerbs = () => {
 	const { spanishVerbs } = useStoreState((state) => state.profileModel);
-
-	const buildTatoebaLink = (word: string) => {
-		return `<a target="_blank" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
-	}
 
 	return (
 		<>
@@ -14,7 +11,7 @@ export const PageSpanishVerbs = () => {
 			<section>
 				{spanishVerbs.map((sv) => {
 					return (
-						<div key={sv.conj.base._1INFI} style={{display: 'table'}} className="bg-slate-300 py-3 px-4 mb-3">
+						<div key={sv.conj.base._1INFI} style={{ display: 'table' }} className="bg-slate-300 py-3 px-4 mb-3">
 							<div className="mb-2 flex justify-between">
 								<div>
 									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span>
@@ -39,33 +36,9 @@ export const PageSpanishVerbs = () => {
 									</tr>
 								</thead>
 								<tbody>
-									<tr>
-										<td>present</td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.yo) }}></td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.tu) }}></td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.el) }}></td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.nosotros) }}></td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.vosotros) }}></td>
-										<td className="data tensePresent" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRES.ellos) }}></td>
-									</tr>
-									<tr>
-										<td>imperfect</td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.yo) }}></td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.tu) }}></td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.el) }}></td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.nosotros) }}></td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.vosotros) }}></td>
-										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.ellos) }}></td>
-									</tr>
-									<tr>
-										<td>preterite</td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.yo) }}></td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.tu) }}></td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.el) }}></td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.nosotros) }}></td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.vosotros) }}></td>
-										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.ellos) }}></td>
-									</tr>
+									<SpanishTenseBlock sv={sv} title="present" tenseClass="tensePresent" tenseIdCode="_2PRES" />
+									<SpanishTenseBlock sv={sv} title="imperfect" tenseClass="tenseImperfect" tenseIdCode="_2IMPE" />
+									<SpanishTenseBlock sv={sv} title="preterite" tenseClass="tensePreterite" tenseIdCode="_2PRET" />
 								</tbody>
 							</table>
 						</div>
