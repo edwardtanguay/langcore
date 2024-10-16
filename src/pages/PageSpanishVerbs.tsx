@@ -14,7 +14,7 @@ export const PageSpanishVerbs = () => {
 			<section>
 				{spanishVerbs.map((sv) => {
 					return (
-						<div key={sv.conj.base._1INFI} className="bg-slate-300 py-1 px-2 mb-3">
+						<div key={sv.conj.base._1INFI} style={{display: 'table'}} className="bg-slate-300 py-3 px-4 mb-3">
 							<div className="mb-2 flex justify-between">
 								<div>
 									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span>
