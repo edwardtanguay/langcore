@@ -1,3 +1,5 @@
+import { SpanishVerbTense } from "./types";
+
 export const tenses = {
 	_2IMPE: {
 		rules: [
@@ -187,4 +189,8 @@ export const tenses = {
 			},
 		},
 	},
+};
+
+export const getTenseHelp = (tenseIdCode: SpanishVerbTense) => {
+	return `this is a <b>test</b> of ${tenseIdCode}`;
 };

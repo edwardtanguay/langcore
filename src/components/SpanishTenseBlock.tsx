@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { SpanishVerb, SpanishVerbTense } from "../types";
+import { getTenseHelp } from "../spanish";
 
 interface IProps {
 	sv: SpanishVerb;
@@ -32,7 +33,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 			</tr>
 			{showInfo && (
 				<tr className="bg-yellow-200 text-[#222] font-mono text-xs">
-					<td colSpan={7}>skdjfskdjf skdfj sdkfj sdkjf </td>
+					<td colSpan={7} dangerouslySetInnerHTML={{__html: getTenseHelp(tenseIdCode)}}></td>
 				</tr>
 			)}
 		</>
