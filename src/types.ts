@@ -62,6 +62,15 @@ export type SortedItem = {
 	[key: string]: any;
 };
 
+export type PersonalPronouns = {
+	yo: string;
+	tu: string;
+	el: string;
+	nosotros: string;
+	vosotros: string;
+	ellos: string;
+}
+
 export type SpanishVerb = {
 	conj: {
 		base: {
@@ -70,7 +79,7 @@ export type SpanishVerb = {
 			_1PAPA: string;
 		};
 		indicative: {
-			_2PRES: string;
+			_2PRES: PersonalPronouns,
 			_2IMPE: string;
 			_2PRET: string;
 			_2PRPE: string;

@@ -12,7 +12,7 @@ export class SpanishVerbManager {
 		this.parseVerbs();
 	}
 
-	private create1PRPA(verbType: string, verbBase: string) {
+	private create_1PRPA(verbType: string, verbBase: string) {
 		if (verbType === "ar") {
 			return `${verbBase}ando`;
 		} else {
@@ -20,12 +20,25 @@ export class SpanishVerbManager {
 		}
 	}
 
-	private create1PAPA(verbType: string, verbBase: string) {
+	private create_1PAPA(verbType: string, verbBase: string) {
 		if (verbType === "ar") {
 			return `${verbBase}ado`;
 		} else {
 			return `${verbBase}ido`;
 		}
+	}
+
+	private create_2PRES(verbType: string, verbBase: string) {
+		// if (verbType === "ar") {
+			return {
+				yo: "nnn",
+				tu: "nnn",
+				el: "nnn",
+				nosotros: "nnn",
+				vosotros: "nnn",
+				ellos: "nnn",
+			};
+		// }
 	}
 
 	private parseVerbs() {
@@ -43,11 +56,11 @@ export class SpanishVerbManager {
 					conj: {
 						base: {
 							_1INFI: verb,
-							_1PRPA: this.create1PRPA(verbType, verbBase),
-							_1PAPA: this.create1PAPA(verbType, verbBase),
+							_1PRPA: this.create_1PRPA(verbType, verbBase),
+							_1PAPA: this.create_1PAPA(verbType, verbBase),
 						},
 						indicative: {
-							_2PRES: "hablo", // Present (I speak)
+							_2PRES: this.create_2PRES(verbType, verbBase),
 							_2IMPE: "habla", // Imperfect (I was speaking)
 							_2PRET: "hablé", // Preterite (I spoke)
 							_2PRPE: "hablaré", // Future (I will speak)
