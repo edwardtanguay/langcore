@@ -1,8 +1,11 @@
+import { useStoreState } from "../store/hooks";
+
 export const PageSpanishVerbs = () => {
+	const { spanishVerbs } = useStoreState((state) => state.profileModel);
 
 	return (
 		<>
-			<p>spanish verbs</p>
+			<p>There are {spanishVerbs.length} Spanish verbs.</p>
 		</>
 	)
 }

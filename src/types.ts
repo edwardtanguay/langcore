@@ -61,3 +61,9 @@ export type UserVerb = {
 export type SortedItem = {
 	[key: string]: any;
 };
+
+export type SpanishVerb = {
+	verb: string;
+	type: 'ar' | 'er' | 'ir';
+	base: string;
+};

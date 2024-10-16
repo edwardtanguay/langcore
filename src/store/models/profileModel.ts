@@ -1,5 +1,5 @@
 import { Action, action, Computed, computed } from "easy-peasy";
-import { UserVerb } from "../../types";
+import { SpanishVerb, UserVerb } from "../../types";
 
 export interface ProfileModel {
 	// variables
@@ -8,6 +8,7 @@ export interface ProfileModel {
 	userVerbs: UserVerb[];
 	learnedExamples: string[];
 	verbsTestedCorrect: string[];
+	spanishVerbs: SpanishVerb[];
 
 	// computed
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
@@ -21,6 +22,7 @@ export interface ProfileModel {
 	addExampleLearned: Action<this, string>;
 	removeExampleLearned: Action<this, string>;
 	addVerbsTestedCorrect: Action<this, string>;
+	loadSpanishVerbs: Action<this>;
 }
 
 export const profileModel: ProfileModel = {
@@ -30,10 +32,11 @@ export const profileModel: ProfileModel = {
 	userVerbs: [],
 	learnedExamples: [],
 	verbsTestedCorrect: [],
+	spanishVerbs: [],
 
 	//computed
 	getNumberOfVerbsTestedCorrect: computed((state) => {
-		return state.verbsTestedCorrect.length; 
+		return state.verbsTestedCorrect.length;
 	}),
 
 	// actions
@@ -64,5 +67,19 @@ export const profileModel: ProfileModel = {
 	}),
 	addVerbsTestedCorrect: action((state, verbIdCode) => {
 		state.verbsTestedCorrect.push(verbIdCode);
+	}),
+	loadSpanishVerbs: action((state) => {
+		state.spanishVerbs = [
+			{
+				verb: "vvv001",
+				type: "ar",
+				base: "bbb",
+			},
+			{
+				verb: "vvv002",
+				type: "ar",
+				base: "bbb",
+			},
+		];
 	}),
 };
