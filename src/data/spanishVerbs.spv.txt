@@ -1,4 +1,4 @@
-hablar
+hablar;speak
 cantar
 nadar
 trabajar

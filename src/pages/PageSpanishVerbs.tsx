@@ -13,7 +13,7 @@ export const PageSpanishVerbs = () => {
 						<div key={sv.conj.base._1INFI} className="bg-slate-300 w-100 py-1 px-2 mb-3">
 							<div className="mb-2 flex justify-between">
 								<div>
-									<span className="font-semibold text-[1.1rem] data">{sv.conj.base._1INFI}</span>
+									<span className="font-semibold text-[1.1rem] data">{sv.conj.base._1INFI}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span>
 								</div>
 								<div>
 									<span className="data">{sv.conj.base._1PRPA}</span> - <span className="data">{sv.conj.base._1PAPA}</span>

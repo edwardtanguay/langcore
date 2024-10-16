@@ -72,6 +72,11 @@ export type PersonalPronouns = {
 };
 
 export type SpanishVerb = {
+	english: string;
+	verbType: string;
+	verbBase: string;
+	conjugation1Url: string;
+	conjugation2Url: string;
 	conj: {
 		base: {
 			_1INFI: string;
@@ -106,10 +111,6 @@ export type SpanishVerb = {
 			_4NEGA: string;
 		};
 	};
-	verbType: string;
-	verbBase: string;
-	conjugation1Url: string;
-	conjugation2Url: string;
 };
 
 export type LookupLinkKind = "conjugate123teachme" | "conjugateReverso";

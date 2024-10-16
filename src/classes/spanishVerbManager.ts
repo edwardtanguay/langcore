@@ -59,15 +59,24 @@ export class SpanishVerbManager {
 		}
 	}
 
+	private getVerbLineParts(line: string) {
+		const parts = qstr.breakIntoParts(line, ";");
+		return {
+			verb: parts[0],
+			english: parts[1],
+		};
+	}
+
 	private parseVerbs() {
 		for (const _line of this.verbLines) {
 			const line = _line.trim();
-
-			if (line !== "") {
-				const verb = line;
-				const verbType = line.slice(-2); // ar, er, ir
-				const verbBase = line.slice(0, -2); // habl
+			if (line !== "" && line.includes(";")) {
+				// e.g. "cantar; sing"
+				const { verb, english } = this.getVerbLineParts(line);
+				const verbType = verb.slice(-2); // ar, er, ir
+				const verbBase = verb.slice(0, -2); // habl
 				const spanishVerb: SpanishVerb = {
+					english,
 					verbBase,
 					verbType,
 					conjugation1Url: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,
