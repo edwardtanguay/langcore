@@ -17,12 +17,14 @@ export class SpanishVerbManager {
 			const line = _line.trim();
 
 			if (line !== "") {
+				const verb = line;
 				const verbType = line.slice(-2);
 				const base = line.slice(0, -2);
 				const spanishVerb: SpanishVerb = {
-					verb: line,
+					verb,
 					verbType,
 					base,
+					conjugationUrl: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`
 				};
 				this.spanishVerbs.push(spanishVerb);
 			}

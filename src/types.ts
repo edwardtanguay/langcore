@@ -66,4 +66,5 @@ export type SpanishVerb = {
 	verb: string;
 	verbType: string;
 	base: string;
+	conjugationUrl: string;
 };
