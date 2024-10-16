@@ -12,14 +12,30 @@ export class SpanishVerbManager {
 		this.parseVerbs();
 	}
 
+	private create1PRPA(verbType: string, verbBase: string) {
+		if (verbType === "ar") {
+			return `${verbBase}ando`;
+		} else {
+			return `${verbBase}iendo`;
+		}
+	}
+
+	private create1PAPA(verbType: string, verbBase: string) {
+		if (verbType === "ar") {
+			return `${verbBase}ado`;
+		} else {
+			return `${verbBase}ido`;
+		}
+	}
+
 	private parseVerbs() {
 		for (const _line of this.verbLines) {
 			const line = _line.trim();
 
 			if (line !== "") {
 				const verb = line;
-				const verbBase = line.slice(0, -2);
-				const verbType = line.slice(-2);
+				const verbType = line.slice(-2); // ar, er, ir
+				const verbBase = line.slice(0, -2); // habl
 				const spanishVerb: SpanishVerb = {
 					verbBase,
 					verbType,
@@ -27,8 +43,8 @@ export class SpanishVerbManager {
 					conj: {
 						base: {
 							_1INFI: verb,
-							_1PRPA: "nnn",
-							_1PAPA: "hablado", // Past participle (spoken)
+							_1PRPA: this.create1PRPA(verbType, verbBase),
+							_1PAPA: this.create1PAPA(verbType, verbBase),
 						},
 						indicative: {
 							_2PRES: "hablo", // Present (I speak)
