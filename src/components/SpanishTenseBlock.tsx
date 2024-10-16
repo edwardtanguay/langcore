@@ -12,7 +12,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 	const [showInfo, setShowInfo] = useState(false);
 
 	const buildTatoebaLink = (word: string) => {
-		return `<a target="_blank" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
+		return `<a target="_blank" class="hover:underline" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
 	}
 
 	const handleToggleShowInfo = () => {
@@ -22,7 +22,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 	return (
 		<>
 			<tr>
-				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none">{title}</span></td>
+				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none hover:underline">{title}</span></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].yo) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].tu) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].el) }}></td>
