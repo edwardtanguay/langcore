@@ -11,7 +11,14 @@ export const PageSpanishVerbs = () => {
 				{spanishVerbs.map((sv) => {
 					return (
 						<div key={sv.conj.base._1INFI} className="bg-slate-300 w-100 py-1 px-2 mb-3">
-							<p className="mb-2"><span className="font-semibold text-[1.1rem] data">{sv.conj.base._1INFI}</span> - <span className="data">{sv.conj.base._1PRPA}</span> - <span className="data">{sv.conj.base._1PAPA}</span></p>
+							<div className="mb-2 flex justify-between">
+								<div>
+									<span className="font-semibold text-[1.1rem] data">{sv.conj.base._1INFI}</span>
+								</div>
+								<div>
+									<span className="data">{sv.conj.base._1PRPA}</span> - <span className="data">{sv.conj.base._1PAPA}</span>
+								</div>
+							</div>
 							<table className="spanishVerb">
 								<thead>
 									<tr>
