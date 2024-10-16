@@ -129,6 +129,6 @@ export class SpanishVerbManager {
 	}
 
 	public getVerbs() {
-		return this.spanishVerbs;
+		return this.spanishVerbs.sort((a, b) => a.rank > b.rank ? -1 : 1);
 	}
 }

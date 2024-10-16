@@ -10,79 +10,79 @@ escuchar; listen;4.88
 viajar; travel; 4.87
 comprar; buy; 4.91
 llamar; call; 4.88
-enseñar; teach
-visitar; visit
-ayudar; help
-limpiar; clean
-usar; use
-mirar; watch/look
-buscar; search
-llegar; arrive
-cambiar; change
-entrar; enter
-esperar; wait/hope
-tomar; take/drink
-preguntar; ask
-necesitar; need
-saltar; jump
-pagar; pay
-dibujar; draw
-cortar; cut
+enseñar; teach; 4.57
+visitar; visit; 4.61
+ayudar; help; 4.81
+limpiar; clean; 4.41
+usar; use; 4.71
+mirar; watch/look; 4.81
+buscar; search; 4.89
+llegar; arrive; 4.93
+cambiar; change; 4.82
+entrar; enter; 4.55
+esperar; wait/hope; 4.81
+tomar; take/drink; 4.9
+preguntar; ask; 4.96
+necesitar; need; 4.98
+saltar; jump; 4.44
+pagar; pay; 4.92
+dibujar; draw; 3.7
+cortar; cut; 4.2
 
-comer; eat
-beber; drink
-aprender; learn
-correr; run
-leer; read
-vender; sell
-temer; fear
-comprender; understand
-responder; answer
-depender; depend
-barrer; sweep
-creer; believe
-romper; break
-prometer; promise
-toser; cough
-esconder; hide
-deber; owe/must
-poseer; possess
-sorprender; surprise
-proceder; proceed
-suceder; happen
-meter; put in
-tejer; knit
-absorber; absorb
-coser; sew
-encender; light/turn on
-envolver; wrap
+comer; eat; 4.92
+beber; drink; 4.91
+aprender; learn; 4.96
+correr; run; 4.92
+leer; read; 4.82
+vender; sell; 4.69
+temer; fear; 3.6
+comprender; understand; 4.91
+responder; answer; 4.88
+depender; depend; 4.4
+barrer; sweep; 3.4
+creer; believe; 4.5
+romper; break; 3.4
+prometer; promise; 4.1
+toser; cough; 3.1
+esconder; hide; 3.5
+deber; owe/must; 4.93
+poseer; possess; 3.8
+sorprender; surprise; 4.0
+proceder; proceed; 3.9
+suceder; happen; 4.4
+meter; put in; 4.75
+tejer; knit; 2.7
+absorber; absorb; 3.9
+coser; sew; 2.3
+encender; light/turn on; 4.27
+envolver; wrap; 4.2
 
-vivir; live
-escribir; write
-abrir; open
-recibir; receive
-permitir; allow/permit
-decidir; decide
-cubrir; cover
-compartir; share
-asistir; attend
-subir; go up/climb
-describir; describe
-insistir; insist
-sufrir; suffer
-prohibir; prohibit
-omitir; omit
-aplaudir; applaud
-cumplir; fulfill/complete
-descubrir; discover
-unir; unite
-partir; leave/part
-discutir; discuss/argue
-transmitir; transmit
-imprimir; print
-admitir; admit
-persistir; persist
-consumir; consume
-resumir; summarize
-escupir; spit
-ocurrir; occur
+vivir; live; 4.94
+escribir; write; 4.96
+abrir; open; 4.82
+recibir; receive; 4.3
+permitir; allow/permit; 4.1
+decidir; decide; 4.2
+cubrir; cover; 3.7
+compartir; share; 3.8
+asistir; attend; 4.23
+subir; go up/climb; 4.1
+describir; describe; 4.32
+insistir; insist; 3.8
+sufrir; suffer; 3.6
+prohibir; prohibit; 4.0
+omitir; omit; 3.76
+aplaudir; applaud; 3.3
+cumplir; fulfill/complete; 3.7
+descubrir; discover; 4.2
+unir; unite; 3.6
+partir; leave/part; 4.7
+discutir; discuss/argue; 4.2
+transmitir; transmit; 3.8
+imprimir; print; 4.56
+admitir; admit; 4.1
+persistir; persist; 3.6
+consumir; consume; 3.9
+resumir; summarize; 4.2
+escupir; spit; 2.4
+ocurrir; occur; 3.8
