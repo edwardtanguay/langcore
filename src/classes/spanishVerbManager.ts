@@ -1,5 +1,6 @@
 import { PersonalPronouns, SpanishVerb } from "../types";
 import * as qstr from "../qtools/qstr";
+import { verbEndings } from "../spanish";
 
 export class SpanishVerbManager {
 	private spanishVerbText = "";
@@ -81,6 +82,39 @@ export class SpanishVerbManager {
 		}
 	}
 
+	private create_2PRET(verbType: string, verbBase: string): PersonalPronouns {
+		switch (verbType) {
+			case "ar":
+				return {
+					yo: `${verbBase}${verbEndings._2PRET.ar.yo}`,
+					tu: `${verbBase}${verbEndings._2PRET.ar.tu}`,
+					el: `${verbBase}${verbEndings._2PRET.ar.el}`,
+					nosotros: `${verbBase}${verbEndings._2PRET.ar.nosotros}`,
+					vosotros: `${verbBase}${verbEndings._2PRET.ar.vosotros}`,
+					ellos: `${verbBase}${verbEndings._2PRET.ar.ellos}`,
+				};
+			case "er":
+				return {
+					yo: `${verbBase}${verbEndings._2PRET.er.yo}`,
+					tu: `${verbBase}${verbEndings._2PRET.er.tu}`,
+					el: `${verbBase}${verbEndings._2PRET.er.el}`,
+					nosotros: `${verbBase}${verbEndings._2PRET.er.nosotros}`,
+					vosotros: `${verbBase}${verbEndings._2PRET.er.vosotros}`,
+					ellos: `${verbBase}${verbEndings._2PRET.er.ellos}`,
+				};
+			case "ir":
+			default:
+				return {
+					yo: `${verbBase}${verbEndings._2PRET.ir.yo}`,
+					tu: `${verbBase}${verbEndings._2PRET.ir.tu}`,
+					el: `${verbBase}${verbEndings._2PRET.ir.el}`,
+					nosotros: `${verbBase}${verbEndings._2PRET.ir.nosotros}`,
+					vosotros: `${verbBase}${verbEndings._2PRET.ir.vosotros}`,
+					ellos: `${verbBase}${verbEndings._2PRET.ir.ellos}`,
+				};
+		}
+	}
+
 	private getVerbLineParts(line: string): {
 		verb: string;
 		english: string;
@@ -119,7 +153,7 @@ export class SpanishVerbManager {
 						indicative: {
 							_2PRES: this.create_2PRES(verbType, verbBase),
 							_2IMPE: this.create_2IMPE(verbType, verbBase),
-							_2PRET: "hablé", // Preterite (I spoke)
+							_2PRET: this.create_2PRET(verbType, verbBase),
 							_2PRPE: "hablaré", // Future (I will speak)
 							_2PAPE: "hablaría", // Conditional (I would speak)
 							_2PREP: "hablarás", // Present (You speak)
@@ -151,6 +185,6 @@ export class SpanishVerbManager {
 	}
 
 	public getVerbs() {
-		return this.spanishVerbs.sort((a, b) => a.rank > b.rank ? -1 : 1);
+		return this.spanishVerbs.sort((a, b) => (a.rank > b.rank ? -1 : 1));
 	}
 }

@@ -88,7 +88,7 @@ export type SpanishVerb = {
 		indicative: {
 			_2PRES: PersonalPronouns;
 			_2IMPE: PersonalPronouns;
-			_2PRET: string;
+			_2PRET: PersonalPronouns;
 			_2PRPE: string;
 			_2PAPE: string;
 			_2PREP: string;

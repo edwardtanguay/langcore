@@ -57,6 +57,15 @@ export const PageSpanishVerbs = () => {
 										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.vosotros) }}></td>
 										<td className="data tenseImperfect" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2IMPE.ellos) }}></td>
 									</tr>
+									<tr>
+										<td>preterite</td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.yo) }}></td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.tu) }}></td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.el) }}></td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.nosotros) }}></td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.vosotros) }}></td>
+										<td className="data tensePreterite" dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative._2PRET.ellos) }}></td>
+									</tr>
 								</tbody>
 							</table>
 						</div>
