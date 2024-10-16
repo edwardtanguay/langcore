@@ -30,14 +30,14 @@ export class SpanishVerbManager {
 
 	private create_2PRES(verbType: string, verbBase: string) {
 		// if (verbType === "ar") {
-			return {
-				yo: "nnn",
-				tu: "nnn",
-				el: "nnn",
-				nosotros: "nnn",
-				vosotros: "nnn",
-				ellos: "nnn",
-			};
+		return {
+			yo: `${verbBase}o`,
+			tu: `${verbBase}as`,
+			el: `${verbBase}a`,
+			nosotros: `${verbBase}amos`,
+			vosotros: `${verbBase}áis`,
+			ellos: `${verbBase}an`,
+		};
 		// }
 	}
 
