@@ -10,7 +10,7 @@ export const PageSpanishVerbs = () => {
 				{spanishVerbs.map((sv) => {
 					return (
 						<div key={sv.verb} className="bg-slate-300 w-fit py-1 px-2 mb-3">
-							<p>{sv.verb} - {sv.type} - {sv.base}</p>
+							<p>{sv.verb}</p>
 						</div>
 					)
 				})}

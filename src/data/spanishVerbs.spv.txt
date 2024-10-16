@@ -3,3 +3,15 @@ trabajar
 nadar
 cantar
 estudiar
+
+comer
+beber
+aprender
+leer
+correr
+
+vivir
+escribir
+abrir
+recibir
+decidir

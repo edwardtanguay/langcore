@@ -64,6 +64,6 @@ export type SortedItem = {
 
 export type SpanishVerb = {
 	verb: string;
-	type: 'ar' | 'er' | 'ir';
+	verbType: string;
 	base: string;
 };
