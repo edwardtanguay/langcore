@@ -1,6 +1,9 @@
 import { SpanishVerbTense } from "./types";
 
 export const tenses = {
+	_2PRES: {
+		rules: [],
+	},
 	_2IMPE: {
 		rules: [
 			{
@@ -192,5 +195,6 @@ export const tenses = {
 };
 
 export const getTenseHelp = (tenseIdCode: SpanishVerbTense) => {
-	return `this is a <b>test</b> of ${tenseIdCode}`;
+	const rules = tenses[tenseIdCode].rules;
+	return `this is a <b>test</b> of ${tenseIdCode} with ${rules.length} rules`;
 };
