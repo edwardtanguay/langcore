@@ -1,4 +1,4 @@
-import { SpanishVerb } from "../types";
+import { PersonalPronouns, SpanishVerb } from "../types";
 import * as qstr from "../qtools/qstr";
 
 export class SpanishVerbManager {
@@ -28,17 +28,35 @@ export class SpanishVerbManager {
 		}
 	}
 
-	private create_2PRES(verbType: string, verbBase: string) {
-		// if (verbType === "ar") {
-		return {
-			yo: `${verbBase}o`,
-			tu: `${verbBase}as`,
-			el: `${verbBase}a`,
-			nosotros: `${verbBase}amos`,
-			vosotros: `${verbBase}áis`,
-			ellos: `${verbBase}an`,
-		};
-		// }
+	private create_2PRES(verbType: string, verbBase: string): PersonalPronouns {
+		if (verbType === "ar") {
+			return {
+				yo: `${verbBase}o`,
+				tu: `${verbBase}as`,
+				el: `${verbBase}a`,
+				nosotros: `${verbBase}amos`,
+				vosotros: `${verbBase}áis`,
+				ellos: `${verbBase}an`,
+			};
+		} else if (verbType === "er") {
+			return {
+				yo: `${verbBase}o`,
+				tu: `${verbBase}es`,
+				el: `${verbBase}e`,
+				nosotros: `${verbBase}emos`,
+				vosotros: `${verbBase}éis`,
+				ellos: `${verbBase}en`,
+			};
+		} else {
+			return {
+				yo: `${verbBase}o`,
+				tu: `${verbBase}es`,
+				el: `${verbBase}e`,
+				nosotros: `${verbBase}imos`,
+				vosotros: `${verbBase}ís`,
+				ellos: `${verbBase}en`,
+			};
+		}
 	}
 
 	private parseVerbs() {
