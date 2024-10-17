@@ -23,7 +23,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 
 	return (
 		<>
-			<tr>
+			<tr className="text-[.8rem]">
 				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none hover:underline">{title}</span></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].yo) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].tu) }}></td>
