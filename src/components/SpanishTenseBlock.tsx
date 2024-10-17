@@ -6,12 +6,13 @@ import * as qstr from '../qtools/qstr';
 interface IProps {
 	sv: SpanishVerb;
 	title: string;
-	tenseClass: string;
 	tenseIdCode: SpanishVerbTenseIdCode;
 }
 
-export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps) => {
+export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 	const [showInfo, setShowInfo] = useState(false);
+
+	const tenseClass = "tense" + tenseIdCode;
 
 	const buildTatoebaLink = (word: string) => {
 		return `<a target="_blank" class="hover:underline" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D%22${qstr.replaceAll(word, ' ', '+')}%22&to=eng&page=1`}">${word}</a>`;
@@ -33,7 +34,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
 			{showInfo && (
-				<tr className="bg-yellow-200 text-[#222] font-mono text-xs">
+				<tr className="bg-gray-200 text-[#222] font-mono text-xs">
 					<td colSpan={7} dangerouslySetInnerHTML={{ __html: getTenseHelp(tenseIdCode) }}></td>
 				</tr>
 			)}
