@@ -3,6 +3,14 @@ import { SpanishTense, SpanishVerbTenseIdCode, SpanishVerbType } from "./types";
 export const tenses = {
 	_2PRES: {
 		title: "present",
+		prefixes: {
+			yo: "",
+			tu: "",
+			el: "",
+			nosotros: "",
+			vosotros: "",
+			ellos: "",
+		},
 		rules: [],
 		endings: {
 			ar: {
@@ -33,6 +41,14 @@ export const tenses = {
 	},
 	_2IMPE: {
 		title: "imperfect",
+		prefixes: {
+			yo: "",
+			tu: "",
+			el: "",
+			nosotros: "",
+			vosotros: "",
+			ellos: "",
+		},
 		rules: [
 			{
 				description: "ongoing action in the past",
@@ -129,6 +145,14 @@ export const tenses = {
 	},
 	_2PRET: {
 		title: "preterite",
+		prefixes: {
+			yo: "",
+			tu: "",
+			el: "",
+			nosotros: "",
+			vosotros: "",
+			ellos: "",
+		},
 		rules: [
 			{
 				description: "completed action in the past",
@@ -224,6 +248,14 @@ export const tenses = {
 	},
 	_2PRPE: {
 		title: "present perfect",
+		prefixes: {
+			yo: "he",
+			tu: "has",
+			el: "ha",
+			nosotros: "hemos",
+			vosotros: "habéis",
+			ellos: "han",
+		},
 		rules: [],
 		endings: {
 			ar: {

@@ -122,30 +122,40 @@ export type SpanishVerbTenseIdCode = "_2PRES" | "_2IMPE" | "_2PRET" | "_2PRPE";
 export type SpanishVerbType = "ar" | "er" | "ir";
 
 type SpanishTenseExample = {
-  spanish: string;
-  english: string;
+	spanish: string;
+	english: string;
 };
 
 type SpanishTenseRule = {
-  description: string;
-  examples: SpanishTenseExample[];
+	description: string;
+	examples: SpanishTenseExample[];
 };
 
 type SpanishTenseEndings = {
-  yo: string;
-  tu: string;
-  el: string;
-  nosotros: string;
-  vosotros: string;
-  ellos: string;
+	yo: string;
+	tu: string;
+	el: string;
+	nosotros: string;
+	vosotros: string;
+	ellos: string;
+};
+
+type SpanishVerbPrefixes = {
+	yo: string;
+	tu: string;
+	el: string;
+	nosotros: string;
+	vosotros: string;
+	ellos: string;
 };
 
 export type SpanishTense = {
-  title: string;
-  rules: SpanishTenseRule[];
-  endings: {
-    ar: SpanishTenseEndings;
-    er: SpanishTenseEndings;
-    ir: SpanishTenseEndings;
-  };
+	title: string;
+	prefixes: SpanishVerbPrefixes;
+	rules: SpanishTenseRule[];
+	endings: {
+		ar: SpanishTenseEndings;
+		er: SpanishTenseEndings;
+		ir: SpanishTenseEndings;
+	};
 };
