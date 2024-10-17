@@ -59,7 +59,7 @@ export class SpanishVerbManager {
 						`${tenses[verbTenseIdCode].prefixes.nosotros} ${verbBase}${tenses[verbTenseIdCode].endings.er.nosotros}`.trim(),
 					vosotros:
 						`${tenses[verbTenseIdCode].prefixes.vosotros} ${verbBase}${tenses[verbTenseIdCode].endings.er.vosotros}`.trim(),
-					ellos: `${tenses[verbTenseIdCode].prefixes.ellos}${verbBase} ${tenses[verbTenseIdCode].endings.er.ellos}`.trim(),
+					ellos: `${tenses[verbTenseIdCode].prefixes.ellos}${verbBase}${tenses[verbTenseIdCode].endings.er.ellos}`.trim(),
 				};
 			case "ir":
 			default:
