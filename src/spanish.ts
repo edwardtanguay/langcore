@@ -1,9 +1,4 @@
-import {
-	SpanishTense,
-	SpanishVerb,
-	SpanishVerbTenseIdCode,
-	SpanishVerbType,
-} from "./types";
+import { SpanishTense, SpanishVerbTenseIdCode, SpanishVerbType } from "./types";
 
 export const tenses = {
 	_2PRES: {
@@ -245,10 +240,7 @@ export const htmlListEndingsForVerbType = (
 	`;
 };
 
-export const getTenseHelp = (
-	sv: SpanishVerb,
-	tenseIdCode: SpanishVerbTenseIdCode
-) => {
+export const getTenseHelp = (tenseIdCode: SpanishVerbTenseIdCode) => {
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
 	return `
