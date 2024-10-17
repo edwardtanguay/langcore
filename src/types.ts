@@ -89,7 +89,7 @@ export type SpanishVerb = {
 			_2PRES: PersonalPronouns;
 			_2IMPE: PersonalPronouns;
 			_2PRET: PersonalPronouns;
-			_2PRPE: string;
+			_2PRPE: PersonalPronouns;
 			_2PAPE: string;
 			_2PREP: string;
 			_2FUIN: string;
@@ -117,7 +117,7 @@ export type SpanishVerb = {
 
 export type LookupLinkKind = "conjugate123teachme" | "conjugateReverso";
 
-export type SpanishVerbTenseIdCode = "_2PRES" | "_2IMPE" | "_2PRET";
+export type SpanishVerbTenseIdCode = "_2PRES" | "_2IMPE" | "_2PRET" | "_2PRPE";
 
 export type SpanishVerbType = "ar" | "er" | "ir";
 

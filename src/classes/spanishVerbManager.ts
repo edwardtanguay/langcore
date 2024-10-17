@@ -1,4 +1,8 @@
-import { PersonalPronouns, SpanishVerb } from "../types";
+import {
+	PersonalPronouns,
+	SpanishVerb,
+	SpanishVerbTenseIdCode,
+} from "../types";
 import * as qstr from "../qtools/qstr";
 import { tenses } from "../spanish";
 
@@ -95,35 +99,39 @@ export class SpanishVerbManager {
 		}
 	}
 
-	private create_2PRET(verbType: string, verbBase: string): PersonalPronouns {
+	private createVerbTenses(
+		verbType: string,
+		verbBase: string,
+		verbTenseIdCode: SpanishVerbTenseIdCode
+	): PersonalPronouns {
 		switch (verbType) {
 			case "ar":
 				return {
-					yo: `${verbBase}${tenses._2PRET.endings.ar.yo}`,
-					tu: `${verbBase}${tenses._2PRET.endings.ar.tu}`,
-					el: `${verbBase}${tenses._2PRET.endings.ar.el}`,
-					nosotros: `${verbBase}${tenses._2PRET.endings.ar.nosotros}`,
-					vosotros: `${verbBase}${tenses._2PRET.endings.ar.vosotros}`,
-					ellos: `${verbBase}${tenses._2PRET.endings.ar.ellos}`,
+					yo: `${verbBase}${tenses[verbTenseIdCode].endings.ar.yo}`,
+					tu: `${verbBase}${tenses[verbTenseIdCode].endings.ar.tu}`,
+					el: `${verbBase}${tenses[verbTenseIdCode].endings.ar.el}`,
+					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ar.nosotros}`,
+					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ar.vosotros}`,
+					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.ar.ellos}`,
 				};
 			case "er":
 				return {
-					yo: `${verbBase}${tenses._2PRET.endings.er.yo}`,
-					tu: `${verbBase}${tenses._2PRET.endings.er.tu}`,
-					el: `${verbBase}${tenses._2PRET.endings.er.el}`,
-					nosotros: `${verbBase}${tenses._2PRET.endings.er.nosotros}`,
-					vosotros: `${verbBase}${tenses._2PRET.endings.er.vosotros}`,
-					ellos: `${verbBase}${tenses._2PRET.endings.er.ellos}`,
+					yo: `${verbBase}${tenses[verbTenseIdCode].endings.er.yo}`,
+					tu: `${verbBase}${tenses[verbTenseIdCode].endings.er.tu}`,
+					el: `${verbBase}${tenses[verbTenseIdCode].endings.er.el}`,
+					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.er.nosotros}`,
+					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.er.vosotros}`,
+					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.er.ellos}`,
 				};
 			case "ir":
 			default:
 				return {
-					yo: `${verbBase}${tenses._2PRET.endings.ir.yo}`,
-					tu: `${verbBase}${tenses._2PRET.endings.ir.tu}`,
-					el: `${verbBase}${tenses._2PRET.endings.ir.el}`,
-					nosotros: `${verbBase}${tenses._2PRET.endings.ir.nosotros}`,
-					vosotros: `${verbBase}${tenses._2PRET.endings.ir.vosotros}`,
-					ellos: `${verbBase}${tenses._2PRET.endings.ir.ellos}`,
+					yo: `${verbBase}${tenses[verbTenseIdCode].endings.ir.yo}`,
+					tu: `${verbBase}${tenses[verbTenseIdCode].endings.ir.tu}`,
+					el: `${verbBase}${tenses[verbTenseIdCode].endings.ir.el}`,
+					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ir.nosotros}`,
+					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ir.vosotros}`,
+					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.ir.ellos}`,
 				};
 		}
 	}
@@ -164,10 +172,26 @@ export class SpanishVerbManager {
 							_1PAPA: this.create_1PAPA(verbType, verbBase),
 						},
 						indicative: {
-							_2PRES: this.create_2PRES(verbType, verbBase),
-							_2IMPE: this.create_2IMPE(verbType, verbBase),
-							_2PRET: this.create_2PRET(verbType, verbBase),
-							_2PRPE: "hablaré", // Future (I will speak)
+							_2PRES: this.createVerbTenses(
+								verbType,
+								verbBase,
+								"_2PRES"
+							),
+							_2IMPE: this.createVerbTenses(
+								verbType,
+								verbBase,
+								"_2IMPE"
+							),
+							_2PRET: this.createVerbTenses(
+								verbType,
+								verbBase,
+								"_2PRET"
+							),
+							_2PRPE: this.createVerbTenses(
+								verbType,
+								verbBase,
+								"_2PRPE"
+							),
 							_2PAPE: "hablaría", // Conditional (I would speak)
 							_2PREP: "hablarás", // Present (You speak)
 							_2FUIN: "hablaré", // Future (I will speak)

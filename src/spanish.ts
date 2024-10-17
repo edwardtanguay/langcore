@@ -222,6 +222,36 @@ export const tenses = {
 			},
 		},
 	},
+	_2PRPE: {
+		title: "present perfect",
+		rules: [],
+		endings: {
+			ar: {
+				yo: "ado",
+				tu: "ado",
+				el: "ado",
+				nosotros: "ado",
+				vosotros: "ado",
+				ellos: "ado",
+			},
+			er: {
+				yo: "ado",
+				tu: "ado",
+				el: "ado",
+				nosotros: "ado",
+				vosotros: "ado",
+				ellos: "ado",
+			},
+			ir: {
+				yo: "ado",
+				tu: "ado",
+				el: "ado",
+				nosotros: "ado",
+				vosotros: "ado",
+				ellos: "ado",
+			},
+		},
+	},
 };
 
 export const htmlListEndingsForVerbType = (
