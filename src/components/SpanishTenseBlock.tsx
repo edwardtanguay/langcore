@@ -34,8 +34,10 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLink(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
 			{showInfo && (
-				<tr className="bg-gray-200 text-[#222] font-mono text-xs">
-					<td colSpan={7} dangerouslySetInnerHTML={{ __html: getTenseHelp(tenseIdCode) }}></td>
+				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
+					<td colSpan={7} style={{outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem'}} >
+						<div dangerouslySetInnerHTML={{ __html: getTenseHelp(tenseIdCode) }}></div>
+					</td>
 				</tr>
 			)}
 		</>

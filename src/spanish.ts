@@ -427,7 +427,7 @@ export const getTenseHelp = (tenseIdCode: SpanishVerbTenseIdCode) => {
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
 	return `
-<h2 class="mb-3">${boldTitle} tense is used for:</h2>
+<h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
@@ -436,7 +436,7 @@ ${tense.rules
 		<ul class="list-disc ml-6">
 			${rule.examples
 				.map((example, index) => {
-					return `<li key=${index} class="italic">${example.spanish}</li>`;
+					return `<li key=${index} class="tense${tenseIdCode}">${example.spanish}</li>`;
 				})
 				.join("")}
 		</ul>
@@ -444,7 +444,7 @@ ${tense.rules
 	})
 	.join("")}
 </ul>
-<h2 class="mt-3 mb-3">${boldTitle} tense regular verb endings:</h2>
+<h2 class="mt-5 mb-3">2. ${boldTitle} tense regular verb endings:</h2>
 ${htmlListEndingsForVerbType(tense, "ar")}
 ${htmlListEndingsForVerbType(tense, "er")}
 ${htmlListEndingsForVerbType(tense, "ir")}
