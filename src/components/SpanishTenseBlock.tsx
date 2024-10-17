@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { getTenseHelp } from "../spanish";
+import * as qstr from '../qtools/qstr';
 
 interface IProps {
 	sv: SpanishVerb;
@@ -13,7 +14,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps
 	const [showInfo, setShowInfo] = useState(false);
 
 	const buildTatoebaLink = (word: string) => {
-		return `<a target="_blank" class="hover:underline" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D${word}&to=eng&page=1`}">${word}</a>`;
+		return `<a target="_blank" class="hover:underline" href="${`https://tatoeba.org/de/sentences/search?from=spa&query=%3D%22${qstr.replaceAll(word, ' ', '+')}%22&to=eng&page=1`}">${word}</a>`;
 	}
 
 	const handleToggleShowInfo = () => {
