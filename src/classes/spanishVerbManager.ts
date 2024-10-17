@@ -41,31 +41,31 @@ export class SpanishVerbManager {
 		switch (verbType) {
 			case "ar":
 				return {
-					yo: `${verbBase}${tenses[verbTenseIdCode].endings.ar.yo}`,
-					tu: `${verbBase}${tenses[verbTenseIdCode].endings.ar.tu}`,
-					el: `${verbBase}${tenses[verbTenseIdCode].endings.ar.el}`,
-					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ar.nosotros}`,
-					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ar.vosotros}`,
-					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.ar.ellos}`,
+					yo: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ar.yo}`,
+					tu: `${tenses[verbTenseIdCode].prefixes.tu}${verbBase}${tenses[verbTenseIdCode].endings.ar.tu}`,
+					el: `${tenses[verbTenseIdCode].prefixes.el}${verbBase}${tenses[verbTenseIdCode].endings.ar.el}`,
+					nosotros: `${tenses[verbTenseIdCode].prefixes.nosotros}${verbBase}${tenses[verbTenseIdCode].endings.ar.nosotros}`,
+					vosotros: `${tenses[verbTenseIdCode].prefixes.vosotros}${verbBase}${tenses[verbTenseIdCode].endings.ar.vosotros}`,
+					ellos: `${tenses[verbTenseIdCode].prefixes.ellos}${verbBase}${tenses[verbTenseIdCode].endings.ar.ellos}`,
 				};
 			case "er":
 				return {
-					yo: `${verbBase}${tenses[verbTenseIdCode].endings.er.yo}`,
-					tu: `${verbBase}${tenses[verbTenseIdCode].endings.er.tu}`,
-					el: `${verbBase}${tenses[verbTenseIdCode].endings.er.el}`,
-					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.er.nosotros}`,
-					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.er.vosotros}`,
-					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.er.ellos}`,
+					yo: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.er.yo}`,
+					tu: `${tenses[verbTenseIdCode].prefixes.tu}${verbBase}${tenses[verbTenseIdCode].endings.er.tu}`,
+					el: `${tenses[verbTenseIdCode].prefixes.el}${verbBase}${tenses[verbTenseIdCode].endings.er.el}`,
+					nosotros: `${tenses[verbTenseIdCode].prefixes.nosotros}${verbBase}${tenses[verbTenseIdCode].endings.er.nosotros}`,
+					vosotros: `${tenses[verbTenseIdCode].prefixes.vosotros}${verbBase}${tenses[verbTenseIdCode].endings.er.vosotros}`,
+					ellos: `${tenses[verbTenseIdCode].prefixes.ellos}${verbBase}${tenses[verbTenseIdCode].endings.er.ellos}`,
 				};
 			case "ir":
 			default:
 				return {
-					yo: `${verbBase}${tenses[verbTenseIdCode].endings.ir.yo}`,
-					tu: `${verbBase}${tenses[verbTenseIdCode].endings.ir.tu}`,
-					el: `${verbBase}${tenses[verbTenseIdCode].endings.ir.el}`,
-					nosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ir.nosotros}`,
-					vosotros: `${verbBase}${tenses[verbTenseIdCode].endings.ir.vosotros}`,
-					ellos: `${verbBase}${tenses[verbTenseIdCode].endings.ir.ellos}`,
+					yo: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.yo}`,
+					tu: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.tu}`,
+					el: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.el}`,
+					nosotros: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.nosotros}`,
+					vosotros: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.vosotros}`,
+					ellos: `${tenses[verbTenseIdCode].prefixes.yo}${verbBase}${tenses[verbTenseIdCode].endings.ir.ellos}`,
 				};
 		}
 	}
