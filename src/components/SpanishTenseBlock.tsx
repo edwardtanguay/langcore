@@ -1,12 +1,12 @@
 import { useState } from "react";
-import { SpanishVerb, SpanishVerbTense } from "../types";
+import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { getTenseHelp } from "../spanish";
 
 interface IProps {
 	sv: SpanishVerb;
 	title: string;
 	tenseClass: string;
-	tenseIdCode: SpanishVerbTense;
+	tenseIdCode: SpanishVerbTenseIdCode;
 }
 
 export const SpanishTenseBlock = ({ sv, title, tenseClass, tenseIdCode }: IProps) => {

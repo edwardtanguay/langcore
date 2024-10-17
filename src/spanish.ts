@@ -1,4 +1,9 @@
-import { SpanishVerb, SpanishVerbTense, SpanishVerbType } from "./types";
+import {
+	SpanishTense,
+	SpanishVerb,
+	SpanishVerbTenseIdCode,
+	SpanishVerbType,
+} from "./types";
 
 export const tenses = {
 	_2PRES: {
@@ -6,28 +11,28 @@ export const tenses = {
 		rules: [],
 		endings: {
 			ar: {
-				yo: "nnné",
-				tu: "aste",
-				el: "ó",
+				yo: "o",
+				tu: "as",
+				el: "a",
 				nosotros: "amos",
-				vosotros: "asteis",
-				ellos: "aron",
+				vosotros: "áis",
+				ellos: "an",
 			},
 			er: {
-				yo: "í",
-				tu: "iste",
-				el: "ió",
-				nosotros: "imos",
-				vosotros: "isteis",
-				ellos: "ieron",
+				yo: "o",
+				tu: "es",
+				el: "e",
+				nosotros: "emos",
+				vosotros: "éis",
+				ellos: "en",
 			},
 			ir: {
-				yo: "í",
-				tu: "iste",
-				el: "ió",
+				yo: "o",
+				tu: "es",
+				el: "e",
 				nosotros: "imos",
-				vosotros: "isteis",
-				ellos: "ieron",
+				vosotros: "ís",
+				ellos: "en",
 			},
 		},
 	},
@@ -186,7 +191,7 @@ export const tenses = {
 				],
 			},
 			{
-				description: "a notible event or milestone in the past",
+				description: "a notable event or milestone in the past",
 				examples: [
 					{
 						spanish: "Nos casamos en 2010.",
@@ -224,28 +229,46 @@ export const tenses = {
 	},
 };
 
+export const htmlListEndingsForVerbType = (
+	tense: SpanishTense,
+	verbType: SpanishVerbType
+) => {
+	return `
+<div class="ml-3 data">
+	<span>${verbType.toUpperCase()}: </span>
+	${Object.entries(tense.endings[verbType as SpanishVerbType])
+		.map((entry, index) => {
+			return `<span key=${index}>-${entry[1]}</span>`;
+		})
+		.join(", ")}
+</div>
+	`;
+};
+
 export const getTenseHelp = (
 	sv: SpanishVerb,
-	tenseIdCode: SpanishVerbTense
+	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
 	const tense = tenses[tenseIdCode];
-	const boldVerbType = `<span class="font-bold uppercase">${sv.verbType}</span>`;
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
 	return `
-<h2>endings for ${boldVerbType} verbs in the ${boldTitle} tense: </h2>
-<div class="mt-2 ml-3">
-	${Object.entries(tense.endings[sv.verbType as SpanishVerbType]).map(
-		(entry, index) => {
-			return `<span key=${index}>-${entry[1]}</span>`
-		}
-	).join(', ')}
-</div>
+<h2>${boldTitle} tense regular verb endings:</h2>
+${htmlListEndingsForVerbType(tense, "ar")}
+${htmlListEndingsForVerbType(tense, "er")}
+${htmlListEndingsForVerbType(tense, "ir")}
 
-<h2 class="mt-3 mb-3">use the ${boldTitle} tense for:</h2>
+<h2 class="mt-3">${boldTitle} tense is used for:</h2>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
-		return `<li key=${index}> ${rule.description} </li>`;
+		return `
+		<li key=${index}> <span class="font-semibold">${rule.description}</span></li>
+		<ul class="list-disc ml-6">
+			${rule.examples.map((example, index) => {
+				return `<li key=${index} class="italic">${example.spanish}</li>`;
+			})}
+		</ul>
+		`;
 	})
 	.join("")}
 </ul>
