@@ -2,6 +2,7 @@ import { useState } from "react";
 import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { getTenseHelp } from "../spanish";
 import * as qstr from '../qtools/qstr';
+import { useStoreState } from "../store/hooks";
 
 interface IProps {
 	sv: SpanishVerb;
@@ -11,6 +12,7 @@ interface IProps {
 
 export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 	const [showInfo, setShowInfo] = useState(false);
+	const { appMode } = useStoreState((state) => state.profileModel);
 
 	const tenseClass = "tense" + tenseIdCode;
 
@@ -36,7 +38,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			{showInfo && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem'}} >
-						<div dangerouslySetInnerHTML={{ __html: getTenseHelp(tenseIdCode) }}></div>
+						<div dangerouslySetInnerHTML={{ __html: getTenseHelp(tenseIdCode, appMode) }}></div>
 					</td>
 				</tr>
 			)}

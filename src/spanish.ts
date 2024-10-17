@@ -428,10 +428,22 @@ export const htmlListEndingsForVerbType = (
 	`;
 };
 
-export const getTenseHelp = (tenseIdCode: SpanishVerbTenseIdCode) => {
+const displayDevBox = () => {
+	return `
+		<p>dev box here</p>	
+	`;
+};
+
+export const getTenseHelp = (
+	tenseIdCode: SpanishVerbTenseIdCode,
+	appMode: string
+) => {
+	let r = "";
+
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
-	return `
+
+	r += `
 <h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>
 <ul class="list-disc ml-6">
 ${tense.rules
@@ -455,4 +467,13 @@ ${htmlListEndingsForVerbType(tense, "er")}
 ${htmlListEndingsForVerbType(tense, "ir")}
 
 	`;
+
+	console.log(111, appMode);
+	if (appMode === "dev") {
+		r += displayDevBox();
+	} else {
+		r += 'NOT IN DEV MODE';
+	}
+
+	return r;
 };

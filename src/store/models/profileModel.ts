@@ -11,6 +11,7 @@ export interface ProfileModel {
 	learnedExamples: string[];
 	verbsTestedCorrect: string[];
 	spanishVerbs: SpanishVerb[];
+	appMode: string;
 
 	// computed
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
@@ -25,6 +26,7 @@ export interface ProfileModel {
 	removeExampleLearned: Action<this, string>;
 	addVerbsTestedCorrect: Action<this, string>;
 	loadSpanishVerbs: Action<this>;
+	loadAppMode: Action<this>;
 }
 
 export const profileModel: ProfileModel = {
@@ -35,6 +37,7 @@ export const profileModel: ProfileModel = {
 	learnedExamples: [],
 	verbsTestedCorrect: [],
 	spanishVerbs: [],
+	appMode: "",
 
 	//computed
 	getNumberOfVerbsTestedCorrect: computed((state) => {
@@ -73,5 +76,8 @@ export const profileModel: ProfileModel = {
 	loadSpanishVerbs: action((state) => {
 		const spanishVerbManager = new SpanishVerbManager(spanishVerbText);
 		state.spanishVerbs = spanishVerbManager.getVerbs();
+	}),
+	loadAppMode: action((state) => {
+		state.appMode = import.meta.env.VITE_APPMODE;
 	}),
 };
