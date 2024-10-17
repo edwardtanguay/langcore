@@ -30,55 +30,68 @@ export class SpanishVerbManager {
 	}
 
 	private create_2PRES(verbType: string, verbBase: string): PersonalPronouns {
-		if (verbType === "ar") {
-			return {
-				yo: `${verbBase}o`,
-				tu: `${verbBase}as`,
-				el: `${verbBase}a`,
-				nosotros: `${verbBase}amos`,
-				vosotros: `${verbBase}áis`,
-				ellos: `${verbBase}an`,
-			};
-		} else if (verbType === "er") {
-			return {
-				yo: `${verbBase}o`,
-				tu: `${verbBase}es`,
-				el: `${verbBase}e`,
-				nosotros: `${verbBase}emos`,
-				vosotros: `${verbBase}éis`,
-				ellos: `${verbBase}en`,
-			};
-		} else {
-			return {
-				yo: `${verbBase}o`,
-				tu: `${verbBase}es`,
-				el: `${verbBase}e`,
-				nosotros: `${verbBase}imos`,
-				vosotros: `${verbBase}ís`,
-				ellos: `${verbBase}en`,
-			};
+		switch (verbType) {
+			case "ar":
+				return {
+					yo: `${verbBase}${tenses._2PRES.endings.ar.yo}`,
+					tu: `${verbBase}${tenses._2PRES.endings.ar.tu}`,
+					el: `${verbBase}${tenses._2PRES.endings.ar.el}`,
+					nosotros: `${verbBase}${tenses._2PRES.endings.ar.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRES.endings.ar.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRES.endings.ar.ellos}`,
+				};
+			case "er":
+				return {
+					yo: `${verbBase}${tenses._2PRES.endings.er.yo}`,
+					tu: `${verbBase}${tenses._2PRES.endings.er.tu}`,
+					el: `${verbBase}${tenses._2PRES.endings.er.el}`,
+					nosotros: `${verbBase}${tenses._2PRES.endings.er.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRES.endings.er.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRES.endings.er.ellos}`,
+				};
+			case "ir":
+			default:
+				return {
+					yo: `${verbBase}${tenses._2PRES.endings.ir.yo}`,
+					tu: `${verbBase}${tenses._2PRES.endings.ir.tu}`,
+					el: `${verbBase}${tenses._2PRES.endings.ir.el}`,
+					nosotros: `${verbBase}${tenses._2PRES.endings.ir.nosotros}`,
+					vosotros: `${verbBase}${tenses._2PRES.endings.ir.vosotros}`,
+					ellos: `${verbBase}${tenses._2PRES.endings.ir.ellos}`,
+				};
 		}
 	}
 
 	private create_2IMPE(verbType: string, verbBase: string): PersonalPronouns {
-		if (verbType === "ar") {
-			return {
-				yo: `${verbBase}aba`,
-				tu: `${verbBase}abas`,
-				el: `${verbBase}aba`,
-				nosotros: `${verbBase}ábamos`,
-				vosotros: `${verbBase}abais`,
-				ellos: `${verbBase}aban`,
-			};
-		} else {
-			return {
-				yo: `${verbBase}ía`,
-				tu: `${verbBase}ías`,
-				el: `${verbBase}ía`,
-				nosotros: `${verbBase}íamos`,
-				vosotros: `${verbBase}íais`,
-				ellos: `${verbBase}ían`,
-			};
+		switch (verbType) {
+			case "ar":
+				return {
+					yo: `${verbBase}${tenses._2IMPE.endings.ar.yo}`,
+					tu: `${verbBase}${tenses._2IMPE.endings.ar.tu}`,
+					el: `${verbBase}${tenses._2IMPE.endings.ar.el}`,
+					nosotros: `${verbBase}${tenses._2IMPE.endings.ar.nosotros}`,
+					vosotros: `${verbBase}${tenses._2IMPE.endings.ar.vosotros}`,
+					ellos: `${verbBase}${tenses._2IMPE.endings.ar.ellos}`,
+				};
+			case "er":
+				return {
+					yo: `${verbBase}${tenses._2IMPE.endings.er.yo}`,
+					tu: `${verbBase}${tenses._2IMPE.endings.er.tu}`,
+					el: `${verbBase}${tenses._2IMPE.endings.er.el}`,
+					nosotros: `${verbBase}${tenses._2IMPE.endings.er.nosotros}`,
+					vosotros: `${verbBase}${tenses._2IMPE.endings.er.vosotros}`,
+					ellos: `${verbBase}${tenses._2IMPE.endings.er.ellos}`,
+				};
+			case "ir":
+			default:
+				return {
+					yo: `${verbBase}${tenses._2IMPE.endings.ir.yo}`,
+					tu: `${verbBase}${tenses._2IMPE.endings.ir.tu}`,
+					el: `${verbBase}${tenses._2IMPE.endings.ir.el}`,
+					nosotros: `${verbBase}${tenses._2IMPE.endings.ir.nosotros}`,
+					vosotros: `${verbBase}${tenses._2IMPE.endings.ir.vosotros}`,
+					ellos: `${verbBase}${tenses._2IMPE.endings.ir.ellos}`,
+				};
 		}
 	}
 
