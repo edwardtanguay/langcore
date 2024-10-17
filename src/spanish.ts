@@ -169,7 +169,7 @@ export const tenses = {
 				],
 			},
 			{
-				description: "a request or desire in the past",
+				description: "request or desire in the past",
 				examples: [
 					{
 						spanish: "Quería un coche nuevo.",
@@ -273,7 +273,7 @@ export const tenses = {
 				],
 			},
 			{
-				description: "a notable event or milestone in the past",
+				description: "notable event or milestone in the past",
 				examples: [
 					{
 						spanish: "Nos casamos en 2010.",
