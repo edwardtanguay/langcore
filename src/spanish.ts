@@ -140,7 +140,7 @@ export const tenses = {
 				],
 			},
 			{
-				description: "physical and emotional states in the past",
+				description: "physical, mental or emotional state in the past",
 				examples: [
 					{
 						spanish: "Ella estaba cansada y triste.",
