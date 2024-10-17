@@ -152,6 +152,7 @@ type SpanishVerbPrefixes = {
 };
 
 export type SpanishTense = {
+	idCode: string;
 	title: string;
 	prefixes: SpanishVerbPrefixes;
 	rules: SpanishTenseRule[];

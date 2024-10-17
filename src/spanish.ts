@@ -7,6 +7,7 @@ import {
 
 export const tenses = {
 	_2PRES: {
+		idCode: "_2PRES",
 		title: "present",
 		prefixes: {
 			yo: "",
@@ -100,6 +101,7 @@ export const tenses = {
 		},
 	},
 	_2IMPE: {
+		idCode: "_2IMPE",
 		title: "imperfect",
 		prefixes: {
 			yo: "",
@@ -204,6 +206,7 @@ export const tenses = {
 		},
 	},
 	_2PRET: {
+		idCode: "_2PRET",
 		title: "preterite",
 		prefixes: {
 			yo: "",
@@ -307,6 +310,7 @@ export const tenses = {
 		},
 	},
 	_2PRPE: {
+		idCode: "_2PRPE",
 		title: "present perfect",
 		prefixes: {
 			yo: "he",
@@ -409,6 +413,7 @@ export const htmlListEndingsForVerbType = (
 	tense: SpanishTense,
 	verbType: SpanishVerbType
 ) => {
+	const tenseClass = `tense${tense.idCode}`;
 	return `
 <div class="ml-3">
 	<span>${verbType.toUpperCase()}: </span>
@@ -416,7 +421,7 @@ export const htmlListEndingsForVerbType = (
 		.map((entry, index) => {
 			const pronoun = entry[0] as SpanishPronoun;
 			const ending = entry[1];
-			return `<span key=${index}><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
+			return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
 		})
 		.join(" | ")}
 </div>
