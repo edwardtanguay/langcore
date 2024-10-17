@@ -410,7 +410,7 @@ export const htmlListEndingsForVerbType = (
 	verbType: SpanishVerbType
 ) => {
 	return `
-<div class="ml-3 data">
+<div class="ml-3">
 	<span>${verbType.toUpperCase()}: </span>
 	${Object.entries(tense.endings[verbType as SpanishVerbType])
 		.map((entry, index) => {
@@ -418,7 +418,7 @@ export const htmlListEndingsForVerbType = (
 			const ending = entry[1];
 			return `<span key=${index}><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
 		})
-		.join(", ")}
+		.join(" | ")}
 </div>
 	`;
 };
