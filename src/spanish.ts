@@ -1,6 +1,7 @@
 import {
 	SpanishPronoun,
 	SpanishTense,
+	SpanishVerb,
 	SpanishVerbTenseIdCode,
 	SpanishVerbType,
 } from "./types";
@@ -428,13 +429,20 @@ export const htmlListEndingsForVerbType = (
 	`;
 };
 
-const displayDevBox = () => {
+const displayDevBox = (
+	sv: SpanishVerb,
+	tenseIdCode: SpanishVerbTenseIdCode
+) => {
 	return `
-		<p>dev box here</p>	
+		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
+			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
+			<input class="w-full" value="${sv.spanish}; ${tenseIdCode}; nnn;"/>
+		</fieldset>
 	`;
 };
 
 export const getTenseHelp = (
+	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
 	appMode: string
 ) => {
@@ -468,11 +476,10 @@ ${htmlListEndingsForVerbType(tense, "ir")}
 
 	`;
 
-	console.log(111, appMode);
 	if (appMode === "dev") {
-		r += displayDevBox();
+		r += displayDevBox(sv, tenseIdCode);
 	} else {
-		r += 'NOT IN DEV MODE';
+		r += "NOT IN DEV MODE";
 	}
 
 	return r;
