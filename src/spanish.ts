@@ -254,7 +254,7 @@ ${htmlListEndingsForVerbType(tense, "ir")}
 ${tense.rules
 	.map((rule, index) => {
 		return `
-		<li key=${index}> <span class="font-semibold">${rule.description}</span></li>
+		<li key=${index}> <span class="font-bold">${rule.description}</span></li>
 		<ul class="list-disc ml-6">
 			${rule.examples.map((example, index) => {
 				return `<li key=${index} class="italic">${example.spanish}</li>`;
