@@ -1,4 +1,9 @@
-import { SpanishTense, SpanishVerbTenseIdCode, SpanishVerbType } from "./types";
+import {
+	SpanishPronoun,
+	SpanishTense,
+	SpanishVerbTenseIdCode,
+	SpanishVerbType,
+} from "./types";
 
 export const tenses = {
 	_2PRES: {
@@ -11,7 +16,62 @@ export const tenses = {
 			vosotros: "",
 			ellos: "",
 		},
-		rules: [],
+		rules: [
+			{
+				description: "action happening now",
+				examples: [
+					{
+						spanish: "Ellos estudian para el examen.",
+						english: "They are studying for the exam.",
+					},
+				],
+			},
+			{
+				description: "habitual action",
+				examples: [
+					{
+						spanish: "Todos los días camino al trabajo.",
+						english: "Every day, I walk to work.",
+					},
+				],
+			},
+			{
+				description: "general fact",
+				examples: [
+					{
+						spanish: "El sol sale por el este.",
+						english: "The sun rises in the east.",
+					},
+				],
+			},
+			{
+				description: "near future action",
+				examples: [
+					{
+						spanish: "Voy al cine mañana.",
+						english: "I am going to the cinema tomorrow.",
+					},
+				],
+			},
+			{
+				description: "description of current state",
+				examples: [
+					{
+						spanish: "Estoy cansado.",
+						english: "(I am tired.",
+					},
+				],
+			},
+			{
+				description: "instruction or command",
+				examples: [
+					{
+						spanish: "Doblas a la derecha en la esquina.",
+						english: "You turn right at the corner.",
+					},
+				],
+			},
+		],
 		endings: {
 			ar: {
 				yo: "o",
@@ -256,7 +316,66 @@ export const tenses = {
 			vosotros: "habéis",
 			ellos: "han",
 		},
-		rules: [],
+		rules: [
+			{
+				description:
+					"action that happened in the past and continued to the present",
+				examples: [
+					{
+						spanish: "He vivido aquí durante cinco años.",
+						english: "I have lived here for five years.",
+					},
+				],
+			},
+			{
+				description: "action completed in the recent past",
+				examples: [
+					{
+						spanish: "He comido ya.",
+						english: "I've eaten already.",
+					},
+					{
+						spanish: "Hemos terminado el proyecto.",
+						english: "We've finished the project.",
+					},
+				],
+			},
+			{
+				description: "life experience",
+				examples: [
+					{
+						spanish: "He visitado París.",
+						english: "I have visited Paris.",
+					},
+					{
+						spanish: "Nunca he estado en México.",
+						english: "I have never been to Mexico.",
+					},
+				],
+			},
+			{
+				description: "action that just happened",
+				examples: [
+					{
+						spanish: "Ya he terminado el trabajo.",
+						english: "I have already finished the work.",
+					},
+					{
+						spanish: "Todavía no hemos decidido qué hacer.",
+						english: "We haven't decided what to do yet.",
+					},
+				],
+			},
+			{
+				description: "ongoing or repeated action up to now",
+				examples: [
+					{
+						spanish: "Siempre he leído antes de dormir.",
+						english: "I have always read before sleeping.",
+					},
+				],
+			},
+		],
 		endings: {
 			ar: {
 				yo: "ado",
@@ -295,7 +414,9 @@ export const htmlListEndingsForVerbType = (
 	<span>${verbType.toUpperCase()}: </span>
 	${Object.entries(tense.endings[verbType as SpanishVerbType])
 		.map((entry, index) => {
-			return `<span key=${index}>-${entry[1]}</span>`;
+			const pronoun = entry[0] as SpanishPronoun;
+			const ending = entry[1];
+			return `<span key=${index}><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
 		})
 		.join(", ")}
 </div>
@@ -306,21 +427,23 @@ export const getTenseHelp = (tenseIdCode: SpanishVerbTenseIdCode) => {
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
 	return `
-<h2>${boldTitle} tense regular verb endings:</h2>
+<h2 class="mb-3">${boldTitle} tense regular verb endings:</h2>
 ${htmlListEndingsForVerbType(tense, "ar")}
 ${htmlListEndingsForVerbType(tense, "er")}
 ${htmlListEndingsForVerbType(tense, "ir")}
 
-<h2 class="mt-3">${boldTitle} tense is used for:</h2>
+<h2 class="mt-3 mb-3">${boldTitle} tense is used for:</h2>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
 		return `
 		<li key=${index}> <span class="font-bold">${rule.description}</span></li>
 		<ul class="list-disc ml-6">
-			${rule.examples.map((example, index) => {
-				return `<li key=${index} class="italic">${example.spanish}</li>`;
-			})}
+			${rule.examples
+				.map((example, index) => {
+					return `<li key=${index} class="italic">${example.spanish}</li>`;
+				})
+				.join("")}
 		</ul>
 		`;
 	})

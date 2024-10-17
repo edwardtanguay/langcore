@@ -121,6 +121,8 @@ export type SpanishVerbTenseIdCode = "_2PRES" | "_2IMPE" | "_2PRET" | "_2PRPE";
 
 export type SpanishVerbType = "ar" | "er" | "ir";
 
+export type SpanishPronoun = "yo" | "tu" | "el" | "nosotros" | "vosotros" | "ellos";
+
 type SpanishTenseExample = {
 	spanish: string;
 	english: string;
