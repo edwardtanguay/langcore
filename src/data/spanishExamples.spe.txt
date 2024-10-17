@@ -3,7 +3,7 @@ hablar; _2PRET; completed; He leído el artículo del que me hablaste.;  I read 
 pagar; _2PRET; completed; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
 comprender; _2IMPE;state; Nos comprendíamos muy bien.  ; We understood each other very well.
 deber;_2PRET;completed;  No debí haberme quedado despierto toda la noche.  ; I shouldn't have stayed up all night.
-llamar; _2PRET; completed; ¿Por qué no llamasteis?  ; Why didn't you call?
+llamar; _2PRET; completed; ¿Por qué no llamasteis?  ; Why didn't you guys call?
 llamar; _2PRPE; just; ¿Te he llamado en mal momento?  ; Have I called you at a bad time?
 leer; _2IMPE; habit; Leías un libro cada noche antes de dormir.;  You used to read a book every night before going to sleep.
 leer; _2IMPE; two; Cuando te vi en el parque, leías una revista.;  When I saw you in the park, you were reading a magazine.
