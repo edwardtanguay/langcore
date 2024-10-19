@@ -7,6 +7,7 @@ import {
 } from "./types";
 import { spanishPronounTexts } from "./types";
 import { spanishPronounIdCodes } from "./types";
+import * as qstr from "./qtools/qstr";
 
 export const tenses = {
 	_2PRES: {
@@ -588,12 +589,16 @@ const displayDevBox = (
 						return `
 						<fieldset class="border border-gray-600 rounded mb-3 p-2">
 							<legend class="flex gap-1 text-[1rem] ml-1">
-								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${spanishPronounTexts[index]})</div>
+								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${
+									spanishPronounTexts[index]
+								})</div>
 							</legend>
 
 							<div class="mb-2">spanishExamples.spe.txt: <input class="w-[20rem]" readonly value="${baseExampleText}"/></div>
 							<ul class="list-disc ml-4">
-								<li class="mb-2">Check Tatoeba for examples: <a href="nnn" class="underline" target="_blank">${fullVerbPhrase}</a></li>
+								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaLinkElement(
+									fullVerbPhrase
+								)}" class="underline" target="_blank">${fullVerbPhrase}</a></li>
 								<li class="mb-2">Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
 							</ul>
 
@@ -648,4 +653,16 @@ ${htmlListVerbConjugations(tense, "ir")}
 	}
 
 	return r;
+};
+
+export const buildTatoebaUrl = (word: string) => {
+	return `https://tatoeba.org/de/sentences/search?from=spa&query=%3D%22${qstr.replaceAll(
+		word,
+		" ",
+		"+"
+	)}%22&to=eng&page=1`;
+}
+
+export const buildTatoebaLinkElement = (word: string) => {
+	return `<a target="_blank" class="hover:underline" href="${buildTatoebaUrl(word)}">${word}</a>`;
 };
