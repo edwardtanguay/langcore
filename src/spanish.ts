@@ -588,7 +588,7 @@ const displayDevBox = (
 						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
 						<h4><span class="font-semibold">${fullVerbPhrase}</span> (${spanishPronounTexts[index]})</h4>
-						<div><input class="w-full mb-1" value="${baseExampleText}"/></div>
+						<div><input class="w-[20rem]" value="${baseExampleText}"/></div>
 						<div><input class="w-full text-[.7rem] mb-3" value="${chatGptQuestionText}"/></div>
 						`;
 					})
