@@ -7,6 +7,9 @@ export const PageSpanishVerbs = () => {
 
 	return (
 		<>
+			<div className="mb-3">
+				Authentic language sources: <a href="https://www.youtube.com/@ratito-pro/videos" target="_blank" className="underline">Spanish conversations A2/B1 text/audio</a>
+			</div>
 			<h2 className="mb-3">There are {spanishVerbs.length} Spanish verbs.</h2>
 			<section>
 				{spanishVerbs.map((sv) => {
@@ -36,7 +39,7 @@ export const PageSpanishVerbs = () => {
 									</tr>
 								</thead>
 								<tbody>
-									<SpanishTenseBlock sv={sv}  title="present" tenseIdCode="_2PRES" />
+									<SpanishTenseBlock sv={sv} title="present" tenseIdCode="_2PRES" />
 									<SpanishTenseBlock sv={sv} title="imperfect" tenseIdCode="_2IMPE" />
 									<SpanishTenseBlock sv={sv} title="preterite" tenseIdCode="_2PRET" />
 									<SpanishTenseBlock sv={sv} title="present perfect" tenseIdCode="_2PRPE" />
