@@ -132,6 +132,7 @@ type SpanishTenseExample = {
 
 type SpanishTenseRule = {
 	description: string;
+	idCode: string;
 	examples: SpanishTenseExample[];
 };
 

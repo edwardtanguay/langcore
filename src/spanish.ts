@@ -497,7 +497,7 @@ export const tenses = {
 			},
 			{
 				description:
-					"an experience or event that occurred (or didn't occur) earlier in a sequence of past actions",
+					"an event that occurred earlier in a sequence of past actions",
 				idCode: "earlierInSequenceOfPastActions",
 				examples: [
 					{
@@ -643,11 +643,22 @@ const displayDevBox = (
 								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaUrl(
 									fullVerbPhrase
 								)}" class="underline" target="_blank">${fullVerbPhrase}</a>
-							<ul class="list-disc ml-3 mt-1">
-								<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></li>
-							</ul>
-							</li>
-								<li class="mb-2">Or generate phrases with ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
+									<ul class="list-disc ml-3 mt-1">
+										<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></li>
+									</ul>
+								</li>
+								<li class="mb-2">Or generate phrases with ChatGPT:
+									<ul class="list-disc ml-3 mt-1">
+										${tense.rules.map((rule) => {
+											return `
+											<li>${rule.description} <span class="text-[.7rem] font-mono text-gray-800">[${rule.idCode}]</span>
+												<ul>
+													<li><input class="w-full" value="${chatGptQuestionText}"/>
+												</ul>
+											</li>`
+										}).join('')}
+									</ul>
+								</li>
 							</ul>
 
 						</fieldset>
@@ -678,8 +689,8 @@ ${tense.rules
 		<li key=${index}> <span class="font-bold">${rule.description}</span></li>
 		<ul class="list-disc ml-6">
 			${rule.examples
-				.map((example, index) => {
-					return `<li key=${index} class="tense${tenseIdCode}">${example.spanish}</li>`;
+				.map((example) => {
+					return `<li class="tense${tenseIdCode}">${example.spanish}</li>`;
 				})
 				.join("")}
 		</ul>
