@@ -4,6 +4,7 @@ export class SpanishExampleManager {
 
 	constructor(spanishExampleText: string) {
 		this.spanishExampleText = spanishExampleText
+		console.log(111, this.spanishExampleText);
 	}
 
 	getExamples() {
