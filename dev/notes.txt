@@ -8,8 +8,9 @@
 	- x put example under tatoeba
 	- x loop through reasons
 - .. update example file
+	- .. show reason code if dev mode
 
-- .. read in example file
+- read in example file
 
 - show examples to normal user
 - indicate example to developer 

@@ -706,8 +706,9 @@ export const getTenseHelp = (
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
+		const reasonIdCode = appMode === 'dev' ? `<span class="text-gray-500" > [${ rule.idCode }] </span>` : '';
 		return `
-		<li key=${index}> <span class="font-bold">${rule.description}</span></li>
+		<li key=${index}> <span class="font-bold">${rule.description}</span> ${reasonIdCode}</li>
 		<ul class="list-disc ml-6">
 			${rule.examples
 				.map((example) => {
