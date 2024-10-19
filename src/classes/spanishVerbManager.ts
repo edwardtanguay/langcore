@@ -2,6 +2,7 @@ import {
 	PersonalPronouns,
 	SpanishVerb,
 	SpanishVerbTenseIdCode,
+	SpanishVerbType,
 } from "../types";
 import * as qstr from "../qtools/qstr";
 import { tenses } from "../spanish";
@@ -95,7 +96,7 @@ export class SpanishVerbManager {
 			if (line !== "" && line.includes(";")) {
 				// e.g. "cantar; sing; 3.8"
 				const { verb, english, rank } = this.getVerbLineParts(line);
-				const verbType = verb.slice(-2); // ar, er, ir
+				const verbType:SpanishVerbType = verb.slice(-2) as SpanishVerbType; // ar, er, ir
 				const verbBase = verb.slice(0, -2); // habl
 				const spanishVerb: SpanishVerb = {
 					spanish: verb,
