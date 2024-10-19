@@ -427,11 +427,31 @@ export const tenses = {
 		rules: [
 			{
 				description:
-					"nnn",
+					"an action that happened before another past action",
 				examples: [
 					{
-						spanish: "nnn",
-						english: "nnn",
+						spanish: "Cuando llegué a la fiesta, todos ya se habían ido.",
+						english: "When I arrived at the party, everyone had already left.",
+					},
+				],
+			},
+			{
+				description:
+					"an action that was completed at some point before a specific time in the past",
+				examples: [
+					{
+						spanish: "Había terminado mi trabajo antes de las cinco.",
+						english: "I had finished my work before five o'clock.",
+					},
+				],
+			},
+			{
+				description:
+					"an experience or event that occurred earlier in a sequence of past actions",
+				examples: [
+					{
+						spanish: "Nunca había visto una película tan emocionante hasta entonces.",
+						english: "I had never seen such an exciting movie until then.",
 					},
 				],
 			},
