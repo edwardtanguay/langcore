@@ -520,6 +520,29 @@ export const getFullVerbPhrase = (
 	return `${tense.prefixes[pronoun]} ${sv.verbBase}${ending}`.trim();
 };
 
+export const getFullVerbPhrases = (
+	sv: SpanishVerb,
+	tense: SpanishTense,
+	verbType: SpanishVerbType
+) => {
+	const fullVerbPhrases: string[] = [];
+	Object.entries(tense.endings[verbType as SpanishVerbType]).forEach(
+		(entry) => {
+			const pronoun = entry[0] as SpanishPronoun;
+			const ending = entry[1];
+			const fullVerbPhrase = getFullVerbPhrase(
+				sv,
+				tense,
+				pronoun,
+				ending
+			);
+			fullVerbPhrases.push(fullVerbPhrase);
+		}
+	);
+	return fullVerbPhrases;
+};
+
+
 export const getChatGptQuestionTexts = (
 	sv: SpanishVerb,
 	tense: SpanishTense,
@@ -553,6 +576,7 @@ const displayDevBox = (
 		tense,
 		sv.verbType
 	);
+	const fullVerbPhrases = getFullVerbPhrases(sv, tense, sv.verbType);
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
@@ -561,7 +585,7 @@ const displayDevBox = (
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
 						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
-						const fullVerbPhrase = "nnn";
+						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
 						<h4><span class="font-semibold">${fullVerbPhrase}</span> (${spanishPronounTexts[index]})</h4>
 						<div><input class="w-full mb-1" value="${baseExampleText}"/></div>
