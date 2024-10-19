@@ -75,7 +75,7 @@ export type SpanishVerb = {
 	spanish: string;
 	english: string;
 	rank: number;
-	verbType: string;
+	verbType: SpanishVerbType;
 	verbBase: string;
 	conjugation1Url: string;
 	conjugation2Url: string;

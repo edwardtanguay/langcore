@@ -430,8 +430,10 @@ export const tenses = {
 					"an action that happened before another past action",
 				examples: [
 					{
-						spanish: "Cuando llegué a la fiesta, todos ya se habían ido.",
-						english: "When I arrived at the party, everyone had already left.",
+						spanish:
+							"Cuando llegué a la fiesta, todos ya se habían ido.",
+						english:
+							"When I arrived at the party, everyone had already left.",
 					},
 				],
 			},
@@ -440,7 +442,8 @@ export const tenses = {
 					"an action that was completed at some point before a specific time in the past",
 				examples: [
 					{
-						spanish: "Había terminado mi trabajo antes de las cinco.",
+						spanish:
+							"Había terminado mi trabajo antes de las cinco.",
 						english: "I had finished my work before five o'clock.",
 					},
 				],
@@ -450,8 +453,10 @@ export const tenses = {
 					"an experience or event that occurred earlier in a sequence of past actions",
 				examples: [
 					{
-						spanish: "Nunca había visto una película tan emocionante hasta entonces.",
-						english: "I had never seen such an exciting movie until then.",
+						spanish:
+							"Nunca había visto una película tan emocionante hasta entonces.",
+						english:
+							"I had never seen such an exciting movie until then.",
 					},
 				],
 			},
@@ -485,7 +490,7 @@ export const tenses = {
 	},
 };
 
-export const htmlListEndingsForVerbType = (
+export const htmlListVerbConjugations = (
 	tense: SpanishTense,
 	verbType: SpanishVerbType
 ) => {
@@ -504,14 +509,45 @@ export const htmlListEndingsForVerbType = (
 	`;
 };
 
+export const getVerbConjugations = (
+	tense: SpanishTense,
+	verbType: SpanishVerbType
+) => {
+	const verbConjugations = [];
+	// 	return `
+	// <div class="ml-3">
+	// 	<span>${verbType.toUpperCase()}: </span>
+	// 	${Object.entries(tense.endings[verbType as SpanishVerbType])
+	// 		.map((entry, index) => {
+	// 			const pronoun = entry[0] as SpanishPronoun;
+	// 			const ending = entry[1];
+	// 			return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
+	// 		})
+	// 		.join(" | ")}
+	// </div>
+	// 	`;
+	console.log(111, tense, verbType);
+	verbConjugations.push("aaa");
+	verbConjugations.push("bbb");
+	return verbConjugations;
+};
+
 const displayDevBox = (
 	sv: SpanishVerb,
+	tense: SpanishTense,
 	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
+	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; nnn;`;
+	const chatGptQuestionTexts = getVerbConjugations(tense,sv.verbType)
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
-			<input class="w-full" value="${sv.spanish}; ${tenseIdCode}; nnn;"/>
+			<div class="flex flex-col gap-2">
+				<input class="w-full" value="${baseExampleText}"/>
+				${chatGptQuestionTexts.map(text => {
+					return `<input class="w-full" value="${text}"/>`;
+				}).join('')}
+			</div>
 		</fieldset>
 	`;
 };
@@ -545,14 +581,14 @@ ${tense.rules
 	.join("")}
 </ul>
 <h2 class="mt-5 mb-3">2. ${boldTitle} tense regular verb endings:</h2>
-${htmlListEndingsForVerbType(tense, "ar")}
-${htmlListEndingsForVerbType(tense, "er")}
-${htmlListEndingsForVerbType(tense, "ir")}
+${htmlListVerbConjugations(tense, "ar")}
+${htmlListVerbConjugations(tense, "er")}
+${htmlListVerbConjugations(tense, "ir")}
 
 	`;
 
 	if (appMode === "dev") {
-		r += displayDevBox(sv, tenseIdCode);
+		r += displayDevBox(sv, tense, tenseIdCode);
 	} else {
 		r += "NOT IN DEV MODE";
 	}

@@ -1,5 +1,6 @@
 - x add mock page Spanish Links
 - x add next tense: past perfect
+- .. add to devbox for chatgpt
 - .. add past perfect examples
 - show examples 
 
