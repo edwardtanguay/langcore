@@ -2,7 +2,11 @@
 - x add next tense: past perfect
 - x add to devbox for chatgpt
 - x add past perfect examples
-- .. add reason idCodes
+- x add reason idCodes
+
+- .. integrate reason into generating example sentences
+	- .. put Tatoeba and others at top
+
 
 - update text file
 - show examples 
