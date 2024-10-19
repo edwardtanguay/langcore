@@ -542,7 +542,6 @@ export const getFullVerbPhrases = (
 	return fullVerbPhrases;
 };
 
-
 export const getChatGptQuestionTexts = (
 	sv: SpanishVerb,
 	tense: SpanishTense,
@@ -581,14 +580,16 @@ const displayDevBox = (
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
 			<div class="flex flex-col">
-				<h3 class="text-[1.1rem] font-semibold mb-3">Generate example sentences for spanishExamples.spe.txt</h3>
+				<h3 class="text-[1.1rem] font-semibold mb-3">Generate example sentences</h3>
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
 						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
 						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
-						<h4><span class="font-semibold">${fullVerbPhrase}</span> (${spanishPronounTexts[index]})</h4>
-						<div><input class="w-[20rem]" value="${baseExampleText}"/></div>
+						<h4 class="flex justify-between mb-3">
+							<div class="w-fit"><div class="font-semibold">${fullVerbPhrase}</div> (${spanishPronounTexts[index]})</div>
+							<div>spanishExamples.spe.txt: <input class="w-[20rem]" value="${baseExampleText}"/></div>
+						</h4>
 						<div><input class="w-full text-[.7rem] mb-3" value="${chatGptQuestionText}"/></div>
 						`;
 					})
