@@ -9,9 +9,9 @@
 	- x loop through reasons
 - x update example file
 	- x show reason code if dev mode
-- .. gray for current
+- x gray for current
 
-- read in example file
+- .. read in example file
 
 - show examples to normal user
 - indicate example to developer 
