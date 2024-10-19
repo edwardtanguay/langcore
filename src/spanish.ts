@@ -25,6 +25,7 @@ export const tenses = {
 		rules: [
 			{
 				description: "action happening now",
+				idCode: "now",
 				examples: [
 					{
 						spanish: "Ellos estudian para el examen.",
@@ -34,6 +35,7 @@ export const tenses = {
 			},
 			{
 				description: "habitual action",
+				idCode: "habit",
 				examples: [
 					{
 						spanish: "Todos los días camino al trabajo.",
@@ -43,6 +45,7 @@ export const tenses = {
 			},
 			{
 				description: "general fact",
+				idCode: "fact",
 				examples: [
 					{
 						spanish: "El sol sale por el este.",
@@ -52,6 +55,7 @@ export const tenses = {
 			},
 			{
 				description: "near future action",
+				idCode: "nearFuture",
 				examples: [
 					{
 						spanish: "Voy al cine mañana.",
@@ -61,6 +65,7 @@ export const tenses = {
 			},
 			{
 				description: "description of current state",
+				idCode: "currentState",
 				examples: [
 					{
 						spanish: "Estoy cansado.",
@@ -69,11 +74,22 @@ export const tenses = {
 				],
 			},
 			{
-				description: "instruction or command",
+				description: "instruction",
+				idCode: "instruction",
 				examples: [
 					{
 						spanish: "Doblas a la derecha en la esquina.",
 						english: "You turn right at the corner.",
+					},
+				],
+			},
+			{
+				description: "command",
+				idCode: "command",
+				examples: [
+					{
+						spanish: "Tú hablas español en clase, ¿entiendes?",
+						english: "You speak Spanish in class, do you understand?",
 					},
 				],
 			},
@@ -120,6 +136,7 @@ export const tenses = {
 		rules: [
 			{
 				description: "ongoing action in the past",
+				idCode: "ongoingAction",
 				examples: [
 					{
 						spanish: "Estaba leyendo un libro.",
@@ -129,6 +146,7 @@ export const tenses = {
 			},
 			{
 				description: "habitual action in the past",
+				idCode: "habitInPast",
 				examples: [
 					{
 						spanish: "Cada verano íbamos a la playa.",
@@ -138,6 +156,7 @@ export const tenses = {
 			},
 			{
 				description: "background information in the past",
+				idCode: "backgroundInformation",
 				examples: [
 					{
 						spanish: "Era una noche oscura y tormentosa.",
@@ -146,16 +165,38 @@ export const tenses = {
 				],
 			},
 			{
-				description: "physical, mental or emotional state in the past",
+				description: "physical state in the past",
+				idCode: "physicalStateInPast",
 				examples: [
 					{
-						spanish: "Ella estaba cansada y triste.",
-						english: "She was tired and sad.",
+						spanish: "Ella estaba cansada.",
+						english: "She was tired.",
+					},
+				],
+			},
+			{
+				description: "mental state in the past",
+				idCode: "mentalStateInPast",
+				examples: [
+					{
+						spanish: "Ella estaba estresada.",
+						english: "She was stressed.",
+					},
+				],
+			},
+			{
+				description: "emotional state in the past",
+				idCode: "emotionalStateInPast",
+				examples: [
+					{
+						spanish: "Ella estaba triste.",
+						english: "She was sad.",
 					},
 				],
 			},
 			{
 				description: "age in the past",
+				idCode: "ageInPast",
 				examples: [
 					{
 						spanish: "Tenía diez años cuando me mudé.",
@@ -165,6 +206,7 @@ export const tenses = {
 			},
 			{
 				description: "two simultaneous actions in the past",
+				idCode: "twoActionsInPast",
 				examples: [
 					{
 						spanish:
@@ -175,7 +217,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "request or desire in the past",
+				description: "a desire in the past",
+				idCode: "desireInPast",
 				examples: [
 					{
 						spanish: "Quería un coche nuevo.",
@@ -226,6 +269,7 @@ export const tenses = {
 		rules: [
 			{
 				description: "completed action in the past",
+				idCode: "completedActionInPast",
 				examples: [
 					{
 						spanish: "Ayer estudié para el examen.",
@@ -235,6 +279,7 @@ export const tenses = {
 			},
 			{
 				description: "specific time frame in the past",
+				idCode: "specificTimeFrameInPast",
 				examples: [
 					{
 						spanish: "El año pasado viajamos a España.",
@@ -244,6 +289,7 @@ export const tenses = {
 			},
 			{
 				description: "sequential actions in the past",
+				idCode: "sequentialActionsInPast",
 				examples: [
 					{
 						spanish: "Me levanté, me duché y desayuné.",
@@ -253,6 +299,7 @@ export const tenses = {
 			},
 			{
 				description: "interrupting action in the past",
+				idCode: "interruptingActionInPast",
 				examples: [
 					{
 						spanish: "Estaba estudiando cuando sonó el teléfono.",
@@ -261,7 +308,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "change in state or condition in the past",
+				description: "change in state in the past",
+				idCode: "changeInStateInPast",
 				examples: [
 					{
 						spanish: "Ella se puso feliz al recibir la noticia.",
@@ -270,8 +318,8 @@ export const tenses = {
 				],
 			},
 			{
-				description:
-					"action with a clear beginning and end in the past",
+				description: "action with a clear beginning and end in the past",
+				idCode: "clearBeginningAndEndInPast",
 				examples: [
 					{
 						spanish: "Viví en México por cinco años.",
@@ -280,7 +328,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "notable event or milestone in the past",
+				description: "notable event in the past",
+				idCode: "notableEventInPast",
 				examples: [
 					{
 						spanish: "Nos casamos en 2010.",
@@ -330,8 +379,8 @@ export const tenses = {
 		},
 		rules: [
 			{
-				description:
-					"action that happened in the past and continued to the present",
+				description: "action that happened in the past and continued to the present",
+				idCode: "inPastContinueToPresent",
 				examples: [
 					{
 						spanish: "He vivido aquí durante cinco años.",
@@ -341,6 +390,7 @@ export const tenses = {
 			},
 			{
 				description: "action completed in the recent past",
+				idCode: "completedInRecentPast",
 				examples: [
 					{
 						spanish: "He comido ya.",
@@ -353,7 +403,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "life experience",
+				description: "life experience or achievement",
+				idCode: "lifeExperienceInPast",
 				examples: [
 					{
 						spanish: "He visitado París.",
@@ -366,20 +417,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "action that just happened",
-				examples: [
-					{
-						spanish: "Ya he terminado el trabajo.",
-						english: "I have already finished the work.",
-					},
-					{
-						spanish: "Todavía no hemos decidido qué hacer.",
-						english: "We haven't decided what to do yet.",
-					},
-				],
-			},
-			{
-				description: "ongoing or repeated action up to now",
+				description: "repeated action up to now",
+				idCode: "repeatedActionUpToNow",
 				examples: [
 					{
 						spanish: "Siempre he leído antes de dormir.",
@@ -429,8 +468,8 @@ export const tenses = {
 		},
 		rules: [
 			{
-				description:
-					"an action that happened before another past action",
+				description: "an action that happened before another past action",
+				idCode: "happenedBeforeAnotherAction",
 				examples: [
 					{
 						spanish:
@@ -441,8 +480,8 @@ export const tenses = {
 				],
 			},
 			{
-				description:
-					"an action that was completed at some point before a specific time in the past",
+				description: "an action that was completed at some point before a specific time in the past",
+				idCode: "completedBeforeTimeInPast",
 				examples: [
 					{
 						spanish:
@@ -452,8 +491,8 @@ export const tenses = {
 				],
 			},
 			{
-				description:
-					"an experience or event that occurred earlier in a sequence of past actions",
+				description: "an experience or event that occurred (or didn't occur) earlier in a sequence of past actions",
+				idCode: "earlierInSequenceOfPastActions",
 				examples: [
 					{
 						spanish:
