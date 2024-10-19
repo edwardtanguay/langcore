@@ -13,6 +13,7 @@ import { store } from "./store/store.ts";
 import * as printerOutput from './printerOutput.ts';
 import { PageTestDutchVerbs } from "./pages/PageTestDutchVerbs.tsx";
 import { PageSpanishVerbs } from "./pages/PageSpanishVerbs.tsx";
+import { PageSpanishLinks } from "./pages/PageSpanishLinks.tsx";
 
 const getUrlParams = () => {
 	const params = new URLSearchParams(window.location.search);
@@ -56,7 +57,11 @@ const router = createBrowserRouter([
 			},
 			{
 				path: "spanishVerbs",
-				element: <PageSpanishVerbs/>
+				element: <PageSpanishVerbs />
+			},
+			{
+				path: "spanishLinks",
+				element: <PageSpanishLinks />
 			},
 			{
 				path: "about",

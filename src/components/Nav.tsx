@@ -27,6 +27,10 @@ export const Nav = () => {
 			title: `Spanish Verbs`
 		},
 		{
+			idCode: 'spanishLinks',
+			title: `Spanish Links`
+		},
+		{
 			idCode: 'profile',
 			title: 'Profile'
 		},
