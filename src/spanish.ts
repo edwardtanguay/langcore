@@ -510,6 +510,7 @@ export const htmlListVerbConjugations = (
 };
 
 export const getVerbConjugations = (
+	sv: SpanishVerb,
 	tense: SpanishTense,
 	verbType: SpanishVerbType
 ) => {
@@ -518,7 +519,8 @@ export const getVerbConjugations = (
 		(entry) => {
 			const pronoun = entry[0] as SpanishPronoun;
 			const ending = entry[1];
-			const text = `${pronoun} - ${ending}`;
+			const text =
+				`${tense.prefixes[pronoun]} ${sv.verbBase}${ending}`.trim();
 			verbConjugations.push(text);
 			// return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
 		}
@@ -532,7 +534,7 @@ const displayDevBox = (
 	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
 	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; nnn;`;
-	const chatGptQuestionTexts = getVerbConjugations(tense, sv.verbType);
+	const chatGptQuestionTexts = getVerbConjugations(sv, tense, sv.verbType);
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
