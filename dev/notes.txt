@@ -3,19 +3,16 @@
 - x add to devbox for chatgpt
 - x add past perfect examples
 - x add reason idCodes
-
-- .. integrate reason into generating example sentences
+- x integrate reason into generating example sentences
 	- x put Tatoeba and others at top
 	- x put example under tatoeba
-	- .. loop through reasons
+	- x loop through reasons
+- .. update example file
 
+- .. read in example file
 
-	- add back:
-		 <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/>
-
-
-- update text file
-- show examples 
+- show examples to normal user
+- indicate example to developer 
 
 
 	
