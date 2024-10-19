@@ -7,9 +7,6 @@ export const PageSpanishVerbs = () => {
 
 	return (
 		<>
-			<div className="mb-3">
-				Authentic language sources: <a href="https://www.youtube.com/@ratito-pro/videos" target="_blank" className="underline">Spanish conversations A2/B1 text/audio</a>
-			</div>
 			<h2 className="mb-3">There are {spanishVerbs.length} Spanish verbs.</h2>
 			<section>
 				{spanishVerbs.map((sv) => {
