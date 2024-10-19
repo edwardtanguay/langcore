@@ -586,11 +586,15 @@ const displayDevBox = (
 						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
 						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
-						<h4 class="flex mb-3 gap-1 text-[1rem]">
-							<div class="font-semibold">${fullVerbPhrase}</div> <div>(${spanishPronounTexts[index]})</div>
-						</h4>
-						<div>spanishExamples.spe.txt: <input class="w-[20rem]" value="${baseExampleText}"/></div>
-						<div><input class="w-full text-[.7rem] mb-3" value="${chatGptQuestionText}"/></div>
+						<fieldset class="border border-gray-600 rounded mb-3 p-2">
+							<legend class="flex gap-1 text-[1rem] ml-1">
+								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${spanishPronounTexts[index]})</div>
+							</legend>
+							<div class="flex flex-col gap-1">
+								<div>spanishExamples.spe.txt: <input class="w-[20rem]" value="${baseExampleText}"/></div>
+								<div><input class="w-full text-[.7rem]" value="${chatGptQuestionText}"/></div>
+							</div>
+						</fieldset>
 						`;
 					})
 					.join("")}
