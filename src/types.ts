@@ -166,3 +166,12 @@ export type SpanishTense = {
 		ir: SpanishTenseEndings;
 	};
 };
+
+export type SpanishExample = {
+	verb: string;
+	tense: string;
+	pronoun: string;
+	reason: string;
+	spanish: string;
+	english: string;
+}
