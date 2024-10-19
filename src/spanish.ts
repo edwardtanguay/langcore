@@ -590,10 +590,11 @@ const displayDevBox = (
 							<legend class="flex gap-1 text-[1rem] ml-1">
 								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${spanishPronounTexts[index]})</div>
 							</legend>
-							<div class="flex flex-col gap-1">
-								<div>spanishExamples.spe.txt: <input class="w-[20rem]" value="${baseExampleText}"/></div>
-								<div><input class="w-full text-[.7rem]" value="${chatGptQuestionText}"/></div>
-							</div>
+								<div>spanishExamples.spe.txt: <input class="w-[20rem]" readonly value="${baseExampleText}"/></div>
+							<ul class="list-disc ml-3">
+								<li>Check Tatoeba for examples: <a href="nnn" class="underline" target="_blank">nnn</a></li>
+								<li>Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
+							</ul>
 						</fieldset>
 						`;
 					})
