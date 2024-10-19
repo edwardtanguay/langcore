@@ -604,7 +604,7 @@ export const getChatGptQuestionTexts = (
 				pronoun,
 				ending
 			);
-			const text = `list 3 Spanish sentences using &quot;${fullVerbPhrase}&quot; with English translations, without parentheses`;
+			const text = `list 3 Spanish sentences using &quot;${fullVerbPhrase}&quot; and @@PRONOUNTEXT for @@REASON with English translations, without parentheses`;
 			verbConjugations.push(text);
 		}
 	);
@@ -649,16 +649,35 @@ const displayDevBox = (
 								</li>
 								<li class="mb-2">Generate phrases with ChatGPT:
 									<ul class="list-disc ml-3 mt-1">
-										${tense.rules.map((rule) => {
-											const specificBaseExampleText = qstr.replaceAll(baseExampleText, 'REASONIDCODE', 'nnn')
-											return `
+										${tense.rules
+											.map((rule) => {
+												const specificBaseExampleText =
+													qstr.replaceAll(
+														baseExampleText,
+														"REASONIDCODE",
+														rule.idCode
+													);
+												let specificChatGptQuestionText =
+													qstr.replaceAll(
+														chatGptQuestionText,
+														"@@REASON",
+														rule.description
+													);
+												specificChatGptQuestionText =
+													qstr.replaceAll(
+														specificChatGptQuestionText,
+														"@@PRONOUNTEXT",
+														`&quot;${spanishPronounTexts[index]}&quot;`
+													);
+												return `
 											<li><span class="font-bold">${rule.description}</span> <span class="text-[.7rem] font-mono text-gray-800">[${rule.idCode}]</span>
 												<ul class="mb-2">
-													<li class="mb-1"><input class="w-full" value="${chatGptQuestionText}"/></li>
+													<li class="mb-1"><input class="w-full" value="${specificChatGptQuestionText}"/></li>
 													<li><input class="w-full" value="${specificBaseExampleText}"/></li>
 												</ul>
-											</li>`
-										}).join('')}
+											</li>`;
+											})
+											.join("")}
 									</ul>
 								</li>
 							</ul>
@@ -709,8 +728,6 @@ ${htmlListVerbConjugations(tense, "ir")}
 
 	if (appMode === "dev") {
 		r += displayDevBox(sv, tense, tenseIdCode);
-	} else {
-		r += "NOT IN DEV MODE";
 	}
 
 	return r;

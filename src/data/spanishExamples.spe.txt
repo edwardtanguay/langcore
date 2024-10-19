@@ -9,7 +9,10 @@ leer; _2IMPE; habit; Leías un libro cada noche antes de dormir.;  You used to r
 leer; _2IMPE; two; Cuando te vi en el parque, leías una revista.;  When I saw you in the park, you were reading a magazine.
 leer; _2IMPE; habit; Leías mucho cuando eras niño.;  You used to read a lot when you were a child.
 
-entrar; _2PRPE; yo; completedInRecentPast; He entrado en una pizzería italiana.;  I went into an Italian pizzeria.
+hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el jefe antes de que llegara el correo.;  I had spoken with the boss before the mail arrived.
 
+hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el doctor antes de que me llamaran para la cita.;  I had spoken with the doctor before they called me for the appointment.
 
+hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con María antes de que llegara la noticia.;  I had spoken with María before the news arrived.
 
+hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con mi jefe cuando decidieron cambiar el horario.;  I had spoken with my boss when they decided to change the schedule.
