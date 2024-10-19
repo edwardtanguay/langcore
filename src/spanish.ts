@@ -580,7 +580,7 @@ const displayDevBox = (
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
 			<div class="flex flex-col">
-				<h3 class="text-[1.1rem] font-semibold mb-3">Generate example sentences</h3>
+				<h3 class="text-[1.1rem] font-semibold mb-4">Generate example sentences</h3>
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
 						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
@@ -590,11 +590,13 @@ const displayDevBox = (
 							<legend class="flex gap-1 text-[1rem] ml-1">
 								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${spanishPronounTexts[index]})</div>
 							</legend>
-								<div>spanishExamples.spe.txt: <input class="w-[20rem]" readonly value="${baseExampleText}"/></div>
-							<ul class="list-disc ml-3">
-								<li>Check Tatoeba for examples: <a href="nnn" class="underline" target="_blank">nnn</a></li>
-								<li>Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
+
+							<div class="mb-2">spanishExamples.spe.txt: <input class="w-[20rem]" readonly value="${baseExampleText}"/></div>
+							<ul class="list-disc ml-4">
+								<li class="mb-2">Check Tatoeba for examples: <a href="nnn" class="underline" target="_blank">${fullVerbPhrase}</a></li>
+								<li class="mb-2">Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
 							</ul>
+
 						</fieldset>
 						`;
 					})
