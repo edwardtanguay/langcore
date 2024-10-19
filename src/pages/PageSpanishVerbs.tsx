@@ -40,6 +40,7 @@ export const PageSpanishVerbs = () => {
 									<SpanishTenseBlock sv={sv} title="imperfect" tenseIdCode="_2IMPE" />
 									<SpanishTenseBlock sv={sv} title="preterite" tenseIdCode="_2PRET" />
 									<SpanishTenseBlock sv={sv} title="present perfect" tenseIdCode="_2PRPE" />
+									<SpanishTenseBlock sv={sv} title="past perfect" tenseIdCode="_2PAPE" />
 								</tbody>
 							</table>
 						</div>

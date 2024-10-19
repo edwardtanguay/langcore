@@ -132,7 +132,11 @@ export class SpanishVerbManager {
 								verbBase,
 								"_2PRPE"
 							),
-							_2PAPE: "hablaría", // Conditional (I would speak)
+							_2PAPE: this.createVerbTenses(
+								verbType,
+								verbBase,
+								"_2PAPE"
+							),
 							_2PREP: "hablarás", // Present (You speak)
 							_2FUIN: "hablaré", // Future (I will speak)
 							_2FUTU: "hablará", // Future (He/She/You formal will speak)

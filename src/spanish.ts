@@ -10,6 +10,7 @@ export const tenses = {
 	_2PRES: {
 		idCode: "_2PRES",
 		title: "present",
+		spanishTitles: ["presente"],
 		prefixes: {
 			yo: "",
 			tu: "",
@@ -104,6 +105,7 @@ export const tenses = {
 	_2IMPE: {
 		idCode: "_2IMPE",
 		title: "imperfect",
+		spanishTitles: ["pretérito imperfecto", "imperfecto"],
 		prefixes: {
 			yo: "",
 			tu: "",
@@ -209,6 +211,7 @@ export const tenses = {
 	_2PRET: {
 		idCode: "_2PRET",
 		title: "preterite",
+		spanishTitles: ["pretérito", "pretérito perfecto simple"],
 		prefixes: {
 			yo: "",
 			tu: "",
@@ -313,6 +316,7 @@ export const tenses = {
 	_2PRPE: {
 		idCode: "_2PRPE",
 		title: "present perfect",
+		spanishTitles: ["pretérito perfecto"],
 		prefixes: {
 			yo: "he",
 			tu: "has",
@@ -377,6 +381,57 @@ export const tenses = {
 					{
 						spanish: "Siempre he leído antes de dormir.",
 						english: "I have always read before sleeping.",
+					},
+				],
+			},
+		],
+		endings: {
+			ar: {
+				yo: "ado",
+				tu: "ado",
+				el: "ado",
+				nosotros: "ado",
+				vosotros: "ado",
+				ellos: "ado",
+			},
+			er: {
+				yo: "ido",
+				tu: "ido",
+				el: "ido",
+				nosotros: "ido",
+				vosotros: "ido",
+				ellos: "ido",
+			},
+			ir: {
+				yo: "ido",
+				tu: "ido",
+				el: "ido",
+				nosotros: "ido",
+				vosotros: "ido",
+				ellos: "ido",
+			},
+		},
+	},
+	_2PAPE: {
+		idCode: "_2PAPE",
+		title: "past perfect",
+		spanishTitles: ["pluscuamperfecto"],
+		prefixes: {
+			yo: "había",
+			tu: "habías",
+			el: "había",
+			nosotros: "habíamos",
+			vosotros: "habíais",
+			ellos: "habían",
+		},
+		rules: [
+			{
+				description:
+					"nnn",
+				examples: [
+					{
+						spanish: "nnn",
+						english: "nnn",
 					},
 				],
 			},
