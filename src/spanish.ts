@@ -5,6 +5,7 @@ import {
 	SpanishVerbTenseIdCode,
 	SpanishVerbType,
 } from "./types";
+import { spanishPronounTexts } from "./types";
 
 export const tenses = {
 	_2PRES: {
@@ -509,7 +510,7 @@ export const htmlListVerbConjugations = (
 	`;
 };
 
-export const getVerbConjugations = (
+export const getChatGptQuestionTexts = (
 	sv: SpanishVerb,
 	tense: SpanishTense,
 	verbType: SpanishVerbType
@@ -519,10 +520,10 @@ export const getVerbConjugations = (
 		(entry) => {
 			const pronoun = entry[0] as SpanishPronoun;
 			const ending = entry[1];
-			const text =
+			const fullVerbPhrase =
 				`${tense.prefixes[pronoun]} ${sv.verbBase}${ending}`.trim();
+			const text = `list 3 Spanish sentences using &quot;${fullVerbPhrase}&quot; with English translations, without parentheses`;
 			verbConjugations.push(text);
-			// return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
 		}
 	);
 	return verbConjugations;
@@ -533,16 +534,20 @@ const displayDevBox = (
 	tense: SpanishTense,
 	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
-	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; nnn;`;
-	const chatGptQuestionTexts = getVerbConjugations(sv, tense, sv.verbType);
+	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; PRONOUN; SPANISH; ENGLISH`;
+	const chatGptQuestionTexts = getChatGptQuestionTexts(sv, tense, sv.verbType);
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
 			<div class="flex flex-col gap-2">
-				<input class="w-full" value="${baseExampleText}"/>
+				<h3 class="text-[1.1rem] font-semibold">Generate example sentences for spanishExamples.spe.txt</h3>
 				${chatGptQuestionTexts
-					.map((text) => {
-						return `<input class="w-full" value="${text}"/>`;
+					.map((chatGptQuestionText, index) => {
+						return `
+						<h4><span class="font-semibold">${chatGptQuestionText}</span> - ${spanishPronounTexts[index]}</h4>
+						<div><input class="w-full text-[.7rem]" value="${chatGptQuestionText}"/></div>
+						<div><input class="w-full" value="${baseExampleText}"/></div>
+						`;
 					})
 					.join("")}
 			</div>

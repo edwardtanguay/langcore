@@ -1,4 +1,4 @@
-hablar; _2IMPE; ongoing; ¿Quién es el hombre con el que hablabas?; Who is the man you were talking to?
+hablar; _2IMPE; tu; ongoing; ¿Quién es el hombre con el que hablabas?; Who is the man you were talking to?
 hablar; _2PRET; completed; He leído el artículo del que me hablaste.;  I read the article you told me about.
 pagar; _2PRET; completed; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
 comprender; _2IMPE;state; Nos comprendíamos muy bien.  ; We understood each other very well.
