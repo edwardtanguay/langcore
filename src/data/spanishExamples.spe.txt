@@ -9,5 +9,7 @@ leer; _2IMPE; habit; Leías un libro cada noche antes de dormir.;  You used to r
 leer; _2IMPE; two; Cuando te vi en el parque, leías una revista.;  When I saw you in the park, you were reading a magazine.
 leer; _2IMPE; habit; Leías mucho cuando eras niño.;  You used to read a lot when you were a child.
 
+entrar; _2PRPE; yo; completedInRecentPast; He entrado en una pizzería italiana.;  I went into an Italian pizzeria.
+
 
 

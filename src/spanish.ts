@@ -629,7 +629,7 @@ const displayDevBox = (
 				<h3 class="text-[1.1rem] font-semibold mb-4">Generate example sentences</h3>
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
-						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; REASON; SPANISH; ENGLISH`;
+						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; REASONIDCODE; SPANISH; ENGLISH`;
 						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
 						<fieldset class="border border-gray-600 rounded mb-3 p-2">
@@ -647,13 +647,15 @@ const displayDevBox = (
 										<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></li>
 									</ul>
 								</li>
-								<li class="mb-2">Or generate phrases with ChatGPT:
+								<li class="mb-2">Generate phrases with ChatGPT:
 									<ul class="list-disc ml-3 mt-1">
 										${tense.rules.map((rule) => {
+											const specificBaseExampleText = qstr.replaceAll(baseExampleText, 'REASONIDCODE', 'nnn')
 											return `
-											<li>${rule.description} <span class="text-[.7rem] font-mono text-gray-800">[${rule.idCode}]</span>
-												<ul>
-													<li><input class="w-full" value="${chatGptQuestionText}"/>
+											<li><span class="font-bold">${rule.description}</span> <span class="text-[.7rem] font-mono text-gray-800">[${rule.idCode}]</span>
+												<ul class="mb-2">
+													<li class="mb-1"><input class="w-full" value="${chatGptQuestionText}"/></li>
+													<li><input class="w-full" value="${specificBaseExampleText}"/></li>
 												</ul>
 											</li>`
 										}).join('')}
