@@ -89,7 +89,8 @@ export const tenses = {
 				examples: [
 					{
 						spanish: "Tú hablas español en clase, ¿entiendes?",
-						english: "You speak Spanish in class, do you understand?",
+						english:
+							"You speak Spanish in class, do you understand?",
 					},
 				],
 			},
@@ -318,7 +319,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "action with a clear beginning and end in the past",
+				description:
+					"action with a clear beginning and end in the past",
 				idCode: "clearBeginningAndEndInPast",
 				examples: [
 					{
@@ -379,7 +381,8 @@ export const tenses = {
 		},
 		rules: [
 			{
-				description: "action that happened in the past and continued to the present",
+				description:
+					"action that happened in the past and continued to the present",
 				idCode: "inPastContinueToPresent",
 				examples: [
 					{
@@ -468,7 +471,8 @@ export const tenses = {
 		},
 		rules: [
 			{
-				description: "an action that happened before another past action",
+				description:
+					"an action that happened before another past action",
 				idCode: "happenedBeforeAnotherAction",
 				examples: [
 					{
@@ -480,7 +484,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "an action that was completed at some point before a specific time in the past",
+				description:
+					"an action that was completed at some point before a specific time in the past",
 				idCode: "completedBeforeTimeInPast",
 				examples: [
 					{
@@ -491,7 +496,8 @@ export const tenses = {
 				],
 			},
 			{
-				description: "an experience or event that occurred (or didn't occur) earlier in a sequence of past actions",
+				description:
+					"an experience or event that occurred (or didn't occur) earlier in a sequence of past actions",
 				idCode: "earlierInSequenceOfPastActions",
 				examples: [
 					{
@@ -633,12 +639,15 @@ const displayDevBox = (
 								})</div>
 							</legend>
 
-							<div class="mb-2">Line for spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></div>
 							<ul class="list-disc ml-4">
 								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaUrl(
 									fullVerbPhrase
-								)}" class="underline" target="_blank">${fullVerbPhrase}</a></li>
-								<li class="mb-2">Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
+								)}" class="underline" target="_blank">${fullVerbPhrase}</a>
+							<ul class="list-disc ml-3 mt-1">
+								<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></li>
+							</ul>
+							</li>
+								<li class="mb-2">Or generate phrases with ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
 							</ul>
 
 						</fieldset>
