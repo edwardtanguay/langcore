@@ -1,20 +1,9 @@
-hablar; _2IMPE; tu; ongoing; ¿Quién es el hombre con el que hablabas?; Who is the man you were talking to?
-
-
-hablar; _2PRET; completed; He leído el artículo del que me hablaste.;  I read the article you told me about.
-pagar; _2PRET; completed; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
-comprender; _2IMPE;state; Nos comprendíamos muy bien.  ; We understood each other very well.
-deber;_2PRET;completed;  No debí haberme quedado despierto toda la noche.  ; I shouldn't have stayed up all night.
-llamar; _2PRET; completed; ¿Por qué no llamasteis?  ; Why didn't you guys call?
-llamar; _2PRPE; just; ¿Te he llamado en mal momento?  ; Have I called you at a bad time?
-leer; _2IMPE; habit; Leías un libro cada noche antes de dormir.;  You used to read a book every night before going to sleep.
-leer; _2IMPE; two; Cuando te vi en el parque, leías una revista.;  When I saw you in the park, you were reading a magazine.
-leer; _2IMPE; habit; Leías mucho cuando eras niño.;  You used to read a lot when you were a child.
-
+hablar; _2IMPE; tu; ongoingAction; ¿Quién es el hombre con el que hablabas?; Who is the man you were talking to?
+hablar; _2PRET; completedActionInPast; He leído el artículo del que me hablaste.;  I read the article you told me about.
+pagar; _2PRET; completedActionInPast; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
+deber;_2PRET;completedActionInPast;  No debí haberme quedado despierto toda la noche.  ; I shouldn't have stayed up all night.
+llamar; _2PRET; completedActionInPast; ¿Por qué no llamasteis?  ; Why didn't you guys call?
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el jefe antes de que llegara el correo.;  I had spoken with the boss before the mail arrived.
-
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el doctor antes de que me llamaran para la cita.;  I had spoken with the doctor before they called me for the appointment.
-
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con María antes de que llegara la noticia.;  I had spoken with María before the news arrived.
-
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con mi jefe cuando decidieron cambiar el horario.;  I had spoken with my boss when they decided to change the schedule.
