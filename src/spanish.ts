@@ -6,6 +6,7 @@ import {
 	SpanishVerbType,
 } from "./types";
 import { spanishPronounTexts } from "./types";
+import { spanishPronounIdCodes } from "./types";
 
 export const tenses = {
 	_2PRES: {
@@ -510,6 +511,15 @@ export const htmlListVerbConjugations = (
 	`;
 };
 
+export const getFullVerbPhrase = (
+	sv: SpanishVerb,
+	tense: SpanishTense,
+	pronoun: SpanishPronoun,
+	ending: string
+) => {
+	return `${tense.prefixes[pronoun]} ${sv.verbBase}${ending}`.trim();
+};
+
 export const getChatGptQuestionTexts = (
 	sv: SpanishVerb,
 	tense: SpanishTense,
@@ -520,8 +530,12 @@ export const getChatGptQuestionTexts = (
 		(entry) => {
 			const pronoun = entry[0] as SpanishPronoun;
 			const ending = entry[1];
-			const fullVerbPhrase =
-				`${tense.prefixes[pronoun]} ${sv.verbBase}${ending}`.trim();
+			const fullVerbPhrase = getFullVerbPhrase(
+				sv,
+				tense,
+				pronoun,
+				ending
+			);
 			const text = `list 3 Spanish sentences using &quot;${fullVerbPhrase}&quot; with English translations, without parentheses`;
 			verbConjugations.push(text);
 		}
@@ -534,19 +548,24 @@ const displayDevBox = (
 	tense: SpanishTense,
 	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
-	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; PRONOUN; SPANISH; ENGLISH`;
-	const chatGptQuestionTexts = getChatGptQuestionTexts(sv, tense, sv.verbType);
+	const chatGptQuestionTexts = getChatGptQuestionTexts(
+		sv,
+		tense,
+		sv.verbType
+	);
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
-			<div class="flex flex-col gap-2">
-				<h3 class="text-[1.1rem] font-semibold">Generate example sentences for spanishExamples.spe.txt</h3>
+			<div class="flex flex-col">
+				<h3 class="text-[1.1rem] font-semibold mb-3">Generate example sentences for spanishExamples.spe.txt</h3>
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
+						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
+						const fullVerbPhrase = "nnn";
 						return `
-						<h4><span class="font-semibold">${chatGptQuestionText}</span> - ${spanishPronounTexts[index]}</h4>
-						<div><input class="w-full text-[.7rem]" value="${chatGptQuestionText}"/></div>
-						<div><input class="w-full" value="${baseExampleText}"/></div>
+						<h4><span class="font-semibold">${fullVerbPhrase}</span> (${spanishPronounTexts[index]})</h4>
+						<div><input class="w-full mb-1" value="${baseExampleText}"/></div>
+						<div><input class="w-full text-[.7rem] mb-3" value="${chatGptQuestionText}"/></div>
 						`;
 					})
 					.join("")}

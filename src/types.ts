@@ -123,6 +123,7 @@ export type SpanishVerbType = "ar" | "er" | "ir";
 
 export type SpanishPronoun = "yo" | "tu" | "el" | "nosotros" | "vosotros" | "ellos";
 export const spanishPronounTexts = ['yo', 'tú', 'él / ella / Usted', 'nosotros / nosotras', 'vosotros / vosotras', 'ellos / ellas / Ustedes'];
+export const spanishPronounIdCodes = ['yo', 'tu', 'el', 'nosotros', 'vosotros', 'ellos'];
 
 type SpanishTenseExample = {
 	spanish: string;
