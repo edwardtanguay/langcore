@@ -7,8 +7,9 @@
 	- x put Tatoeba and others at top
 	- x put example under tatoeba
 	- x loop through reasons
-- .. update example file
-	- .. show reason code if dev mode
+- x update example file
+	- x show reason code if dev mode
+- .. gray for current
 
 - read in example file
 

@@ -712,7 +712,7 @@ ${tense.rules
 		<ul class="list-disc ml-6">
 			${rule.examples
 				.map((example) => {
-					return `<li class="tense${tenseIdCode}">${example.spanish}</li>`;
+					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
 				})
 				.join("")}
 		</ul>
