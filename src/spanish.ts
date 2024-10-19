@@ -513,22 +513,16 @@ export const getVerbConjugations = (
 	tense: SpanishTense,
 	verbType: SpanishVerbType
 ) => {
-	const verbConjugations = [];
-	// 	return `
-	// <div class="ml-3">
-	// 	<span>${verbType.toUpperCase()}: </span>
-	// 	${Object.entries(tense.endings[verbType as SpanishVerbType])
-	// 		.map((entry, index) => {
-	// 			const pronoun = entry[0] as SpanishPronoun;
-	// 			const ending = entry[1];
-	// 			return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
-	// 		})
-	// 		.join(" | ")}
-	// </div>
-	// 	`;
-	console.log(111, tense, verbType);
-	verbConjugations.push("aaa");
-	verbConjugations.push("bbb");
+	const verbConjugations: string[] = [];
+	Object.entries(tense.endings[verbType as SpanishVerbType]).forEach(
+		(entry) => {
+			const pronoun = entry[0] as SpanishPronoun;
+			const ending = entry[1];
+			const text = `${pronoun} - ${ending}`;
+			verbConjugations.push(text);
+			// return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
+		}
+	);
 	return verbConjugations;
 };
 
@@ -538,15 +532,17 @@ const displayDevBox = (
 	tenseIdCode: SpanishVerbTenseIdCode
 ) => {
 	const baseExampleText = `${sv.spanish}; ${tenseIdCode}; nnn;`;
-	const chatGptQuestionTexts = getVerbConjugations(tense,sv.verbType)
+	const chatGptQuestionTexts = getVerbConjugations(tense, sv.verbType);
 	return `
 		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
 			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
 			<div class="flex flex-col gap-2">
 				<input class="w-full" value="${baseExampleText}"/>
-				${chatGptQuestionTexts.map(text => {
-					return `<input class="w-full" value="${text}"/>`;
-				}).join('')}
+				${chatGptQuestionTexts
+					.map((text) => {
+						return `<input class="w-full" value="${text}"/>`;
+					})
+					.join("")}
 			</div>
 		</fieldset>
 	`;
