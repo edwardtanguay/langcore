@@ -584,7 +584,7 @@ const displayDevBox = (
 				<h3 class="text-[1.1rem] font-semibold mb-4">Generate example sentences</h3>
 				${chatGptQuestionTexts
 					.map((chatGptQuestionText, index) => {
-						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; SPANISH; ENGLISH`;
+						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; REASON; SPANISH; ENGLISH`;
 						const fullVerbPhrase = fullVerbPhrases[index];
 						return `
 						<fieldset class="border border-gray-600 rounded mb-3 p-2">
@@ -594,9 +594,9 @@ const displayDevBox = (
 								})</div>
 							</legend>
 
-							<div class="mb-2">spanishExamples.spe.txt: <input class="w-[20rem]" readonly value="${baseExampleText}"/></div>
+							<div class="mb-2">Line for spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></div>
 							<ul class="list-disc ml-4">
-								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaLinkElement(
+								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaUrl(
 									fullVerbPhrase
 								)}" class="underline" target="_blank">${fullVerbPhrase}</a></li>
 								<li class="mb-2">Or ask ChatGPT: <input class="w-[40rem] text-[.7rem]" readonly value="${chatGptQuestionText}"/></li>
@@ -661,8 +661,10 @@ export const buildTatoebaUrl = (word: string) => {
 		" ",
 		"+"
 	)}%22&to=eng&page=1`;
-}
+};
 
 export const buildTatoebaLinkElement = (word: string) => {
-	return `<a target="_blank" class="hover:underline" href="${buildTatoebaUrl(word)}">${word}</a>`;
+	return `<a target="_blank" class="hover:underline" href="${buildTatoebaUrl(
+		word
+	)}">${word}</a>`;
 };
