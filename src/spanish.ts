@@ -644,7 +644,6 @@ export const getChatGptQuestionTexts = (
 	return verbConjugations;
 };
 
-
 const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
 	if (areaId === "main") {
 		return `
@@ -732,7 +731,11 @@ export const getTenseHelp = (
 	if (areaId === "main") {
 		r += `<h2 class="mb-3">2. ${boldTitle} tense is used for:</h2>`;
 	} else {
-		r += `<h2 class="mb-3">Examples of <span class="font-bold ${tenseClass}">${conjugationText}</span> (<span class="${tenseClass}">${spanishPronounTexts[pronounIndex]}</span>) in various uses of the ${boldTitle} tense:</h2>`;
+		r += `
+		<div class="flex justify-between">
+		<h2 class="mb-3">Examples of <span class="font-bold ${tenseClass}">${conjugationText}</span> (<span class="${tenseClass}">${spanishPronounTexts[pronounIndex]}</span>) in various uses of the ${boldTitle} tense:</h2>
+		<button class="buttonNormalDarker" style="align-self: flex-start">Dev</button>
+		</div>`;
 	}
 
 	r += `

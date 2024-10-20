@@ -10,6 +10,9 @@
 	.buttonNormal {
 		@apply rounded py-2 font-sans bg-gray-300 text-sm px-5;
 	}
+	.buttonNormalDarker {
+		@apply rounded py-[.1rem] font-sans bg-gray-400 text-sm px-2 hover:opacity-90;
+	}
 
 	.buttonManageArea {
 		@apply w-full rounded py-2 font-sans;

@@ -34,8 +34,11 @@
 			- x put count variable in store
 			- x make count more general
 			- x call it to display how many for each tense
-			- .. zeros too
-				- .. new static method
+			- x zeros too
+				- x new static method
+			- .. dev button
+				- .. mock
+				- only if devmode
 
 
 		- rank off
