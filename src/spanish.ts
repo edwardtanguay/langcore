@@ -742,17 +742,29 @@ const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
 	}
 };
 
+const getAiExampleGenerationText = (
+	spanishWord: string,
+	pronounText: string
+) => {
+	return `list 3 Spanish sentences using &quot;${spanishWord}&quot; and &quot;${pronounText}&quot; for action happening now with English translations, without parentheses`;
+	// return `this is AI text: ${spanishWord} ${tenseIdCode} ${useCase}`;
+};
+
 const displayDevModeBaseTextForAiExampleGeneration = (
 	appMode: string,
 	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
-	test: string
+	useCase: string,
+	pronounText: string
 ) => {
 	if (appMode === "dev") {
 		return `
 					<div class="mb-2 border border-gray-800 p-3 rounded">
-					<div class="mb-1">AI generation text: <input class=" w-full"/></div>
-					<div>add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; REASONIDCODE; SPANISH; ENGLISH`}"/> (AI)</div>
+					<div class="mb-1">AI generation text: <input class=" w-full" value="${getAiExampleGenerationText(
+						sv.spanish,
+						pronounText
+					)}"/></div>
+					<div>add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${useCase}; SPANISH; ENGLISH`}"/> (AI)</div>
 					</div>
 `;
 	} else {
@@ -857,7 +869,8 @@ ${tense.rules
 						appMode,
 						sv,
 						tenseIdCode,
-						spanishPronounIdCodes[pronounIndex]
+						spanishPronounIdCodes[pronounIndex],
+						spanishPronounTexts[pronounIndex]
 					)}
 				</li>
 			${genericExamples(rule, areaId)}
