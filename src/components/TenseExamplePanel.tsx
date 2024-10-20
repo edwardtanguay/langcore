@@ -1,9 +1,9 @@
 // import { useStoreState } from "../store/hooks";
-import { SpanishPronoun, SpanishVerb, SpanishVerbTenseIdCode } from "../types";
+import { SpanishExample, SpanishPronoun, SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { tenses } from '../spanish';
 import { spanishPronounTexts } from "../types";
 import { HtmlListVerbConjugations } from "./HtmlListVerbConjugations";
-import { useStoreState } from "../store/hooks";
+import { useStoreActions, useStoreState } from "../store/hooks";
 import { GenericExamples } from "./GenericExamples";
 import { spanishPronounIdCodes } from "../types";
 import { AiExampleGeneration } from "./AiExampleGeneration";
@@ -21,6 +21,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 	const { spanishExamples } = useStoreState((state) => state.profileModel);
 	const { appMode } = useStoreState((state) => state.profileModel);
 	const [localDevMode, setLocalDevMode] = useState(false);
+	const { setSpanishExamples } = useStoreActions((actions) => actions.profileModel);
 
 	const tense = tenses[tenseIdCode];
 	const tenseClass = `tense${tenseIdCode}`;
@@ -28,6 +29,12 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 	const localSpanishExamples = spanishExamples.filter(
 		(m) => m.verb === sv.spanish && m.tense === tenseIdCode
 	);
+
+	const handleToggleFlashcard = (example: SpanishExample) => {
+		const _spanishExamples = structuredClone(spanishExamples);
+		example.flashcardBackIsShowing = !example.flashcardBackIsShowing;
+		setSpanishExamples(_spanishExamples);
+	}
 
 	return (
 		<tr className="bg-gray-300 text-[#222] font-mono text-xs">
@@ -69,9 +76,9 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 										.filter((m) => m.pronoun === pronoun || areaIdCode === "main")
 										.map((m, index) => (
 											<div key={index} className="mb-2 w-fit">
-												<div className="bg-gray-100 py-1 px-2 rounded-t-md border-t border-gray-400 border-l border-r">{m.english}</div>
+												<div onClick={() => handleToggleFlashcard(m)} className="cursor-pointer bg-gray-100 py-1 px-2 rounded-t-md border-t border-gray-400 border-l border-r">{m.english}</div>
 												{m.flashcardBackIsShowing && (
-												<div className={`tense${m.tense} bg-gray-200 text-yellow-300 py-1 px-2 rounded-b-md border-b border-gray-400 border-l border-r`}>{m.spanish}</div>
+													<div className={`tense${m.tense} bg-gray-200 text-yellow-300 py-1 px-2 rounded-b-md border-b border-gray-400 border-l border-r`}>{m.spanish}</div>
 												)}
 											</div>
 										))}

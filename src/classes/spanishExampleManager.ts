@@ -104,6 +104,5 @@ export class SpanishExampleManager {
 				}
 			}
 		}
-		console.log(333, this.exampleCountObject);
 	}
 }
