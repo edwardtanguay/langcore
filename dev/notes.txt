@@ -21,9 +21,10 @@
 		- x make some rules general
 		- x only show yo on yo page
 		- x tu
-		- .. show pronouns for tense
+		- x show pronouns for tense
 		- .. examples coming soon, until then check Tatoeba for examples with _____
-		- ..
+		- .. move dev boxes up in show are 
+		- .. all rest
 	- put tatoeba link back in box
 	- devmode shows todos
 

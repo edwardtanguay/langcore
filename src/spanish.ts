@@ -793,7 +793,7 @@ ${tense.rules
 			(areaId !== "main" && rule.type === "general")
 		) {
 			return `
-			<li key=${index}> <span class="font-bold">${
+			<li key=${index} class="mt-3 mb-1"> <span class="font-bold text-[.9rem]">${
 				rule.description
 			}</span> ${reasonElement}</li>
 			<ul class="list-disc ml-6">
@@ -801,13 +801,16 @@ ${tense.rules
 					.filter((m) => m.pronoun === pronoun || areaId === "main")
 					.map((m) => {
 						return `
-						<li><span class="tense${m.tense}">${m.spanish}</span>
+						<li class="mb-1"><span class="tense${m.tense}">${m.spanish}</span>
 							<ul class="list-disc ml-6">
 								<li>${m.english}</li>
 							</ul>
 						</li>`;
 					})
 					.join("")}
+					<li class="italic opacity-70">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
+						conjugationText
+					)}" class="${tenseClass}">${conjugationText}</a></li>
 			${genericExamples(rule, areaId)}
 			</ul>
 			`;
