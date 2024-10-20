@@ -2,6 +2,7 @@ import {
 	SpanishExample,
 	SpanishPronoun,
 	SpanishTense,
+	SpanishTenseObject,
 	SpanishTenseRule,
 	SpanishVerb,
 	SpanishVerbTenseIdCode,
@@ -11,7 +12,7 @@ import { spanishPronounTexts } from "./types";
 import { spanishPronounIdCodes } from "./types";
 import * as qstr from "./qtools/qstr";
 
-export const tenses = {
+export const tenses:SpanishTenseObject = {
 	_2PRES: {
 		idCode: "_2PRES",
 		title: "present",
@@ -34,6 +35,7 @@ export const tenses = {
 						english: "They are studying for the exam.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "habitual action",
@@ -44,6 +46,7 @@ export const tenses = {
 						english: "Every day, I walk to work.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "general fact",
@@ -54,6 +57,7 @@ export const tenses = {
 						english: "The sun rises in the east.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "near future action",
@@ -64,6 +68,7 @@ export const tenses = {
 						english: "I am going to the cinema tomorrow.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "description of current state",
@@ -74,6 +79,7 @@ export const tenses = {
 						english: "(I am tired.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "instruction",
@@ -84,6 +90,7 @@ export const tenses = {
 						english: "You turn right at the corner.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "command",
@@ -95,6 +102,7 @@ export const tenses = {
 							"You speak Spanish in class, do you understand?",
 					},
 				],
+				type: "general"
 			},
 		],
 		endings: {
@@ -146,6 +154,7 @@ export const tenses = {
 						english: "I was reading a book.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "habitual action in the past",
@@ -156,6 +165,7 @@ export const tenses = {
 						english: "Every summer, we used to go to the beach.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "background information in the past",
@@ -166,6 +176,7 @@ export const tenses = {
 						english: "It was a dark and stormy night.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "physical state in the past",
@@ -176,6 +187,7 @@ export const tenses = {
 						english: "She was tired.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "mental state in the past",
@@ -186,6 +198,7 @@ export const tenses = {
 						english: "She was stressed.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "emotional state in the past",
@@ -196,6 +209,7 @@ export const tenses = {
 						english: "She was sad.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "age in the past",
@@ -206,6 +220,7 @@ export const tenses = {
 						english: "I was ten years old when I moved.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "two simultaneous actions in the past",
@@ -218,6 +233,7 @@ export const tenses = {
 							"While he was studying, she was listening to music.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "a desire in the past",
@@ -228,6 +244,7 @@ export const tenses = {
 						english: "I wanted a new car.",
 					},
 				],
+				type: "general"
 			},
 		],
 		endings: {
@@ -279,6 +296,7 @@ export const tenses = {
 						english: "Yesterday, I studied for the exam.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "specific time frame in the past",
@@ -289,6 +307,7 @@ export const tenses = {
 						english: "Last year, we traveled to Spain.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "sequential actions in the past",
@@ -299,6 +318,7 @@ export const tenses = {
 						english: "I got up, took a shower, and had breakfast.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "interrupting action in the past",
@@ -309,6 +329,7 @@ export const tenses = {
 						english: "I was studying when the phone rang.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "change in state in the past",
@@ -319,6 +340,7 @@ export const tenses = {
 						english: "She became happy upon receiving the news.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description:
@@ -330,6 +352,7 @@ export const tenses = {
 						english: "I lived in Mexico for five years.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "notable event in the past",
@@ -340,6 +363,7 @@ export const tenses = {
 						english: "We got married in 2010.",
 					},
 				],
+				type: "general"
 			},
 		],
 		endings: {
@@ -392,6 +416,7 @@ export const tenses = {
 						english: "I have lived here for five years.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "action completed in the recent past",
@@ -406,6 +431,7 @@ export const tenses = {
 						english: "We've finished the project.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "life experience or achievement",
@@ -420,6 +446,7 @@ export const tenses = {
 						english: "I have never been to Mexico.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description: "repeated action up to now",
@@ -430,6 +457,7 @@ export const tenses = {
 						english: "I have always read before sleeping.",
 					},
 				],
+				type: "general"
 			},
 		],
 		endings: {
@@ -484,6 +512,7 @@ export const tenses = {
 							"When I arrived at the party, everyone had already left.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description:
@@ -496,6 +525,7 @@ export const tenses = {
 						english: "I had finished my work before five o'clock.",
 					},
 				],
+				type: "general"
 			},
 			{
 				description:
@@ -509,6 +539,7 @@ export const tenses = {
 							"I had never seen such an exciting movie until then.",
 					},
 				],
+				type: "general"
 			},
 		],
 		endings: {

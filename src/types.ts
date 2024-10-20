@@ -117,13 +117,38 @@ export type SpanishVerb = {
 
 export type LookupLinkKind = "conjugate123teachme" | "conjugateReverso";
 
-export type SpanishVerbTenseIdCode = "_2PRES" | "_2IMPE" | "_2PRET" | "_2PRPE" | "_2PAPE";
+export type SpanishVerbTenseIdCode =
+	| "_2PRES"
+	| "_2IMPE"
+	| "_2PRET"
+	| "_2PRPE"
+	| "_2PAPE";
 
 export type SpanishVerbType = "ar" | "er" | "ir";
 
-export type SpanishPronoun = "yo" | "tu" | "el" | "nosotros" | "vosotros" | "ellos";
-export const spanishPronounTexts = ['yo', 'tú', 'él / ella / Usted', 'nosotros / nosotras', 'vosotros / vosotras', 'ellos / ellas / Ustedes'];
-export const spanishPronounIdCodes = ['yo', 'tu', 'el', 'nosotros', 'vosotros', 'ellos'];
+export type SpanishPronoun =
+	| "yo"
+	| "tu"
+	| "el"
+	| "nosotros"
+	| "vosotros"
+	| "ellos";
+export const spanishPronounTexts = [
+	"yo",
+	"tú",
+	"él / ella / Usted",
+	"nosotros / nosotras",
+	"vosotros / vosotras",
+	"ellos / ellas / Ustedes",
+];
+export const spanishPronounIdCodes = [
+	"yo",
+	"tu",
+	"el",
+	"nosotros",
+	"vosotros",
+	"ellos",
+];
 
 type SpanishTenseExample = {
 	spanish: string;
@@ -134,6 +159,7 @@ export type SpanishTenseRule = {
 	description: string;
 	idCode: string;
 	examples: SpanishTenseExample[];
+	type: "general" | "limited"
 };
 
 type SpanishTenseEndings = {
@@ -174,4 +200,8 @@ export type SpanishExample = {
 	reason: string;
 	spanish: string;
 	english: string;
-}
+};
+
+export type SpanishTenseObject = {
+	[key: string]: SpanishTense
+};
