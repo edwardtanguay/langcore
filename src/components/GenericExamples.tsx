@@ -8,10 +8,9 @@ interface IProps {
 export const GenericExamples = ({ rule, areaIdCode }: IProps) => {
 	return (
 		<>
-			<p>generic examples</p>
-			<p>{rule.description}</p>
-			<p>{areaIdCode}</p>
-
+			{areaIdCode === 'main' && (
+				<p>{rule.description}</p>
+			)}
 		</>
 	)
 }
