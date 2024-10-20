@@ -68,7 +68,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 											</li>
 										))}
 									{/* ${genericExamples(rule, areaIdCode)} */}
-									<GenericExamples />
+									<GenericExamples rule={rule} areaIdCode={areaIdCode} />
 								</ul>
 							</>
 						)
