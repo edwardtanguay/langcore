@@ -1,5 +1,5 @@
 import { Action, action, Computed, computed } from "easy-peasy";
-import { SpanishExample, SpanishVerb, UserVerb } from "../../types";
+import { ExampleCountObject, SpanishExample, SpanishVerb, UserVerb } from "../../types";
 import { SpanishVerbManager } from "../../classes/spanishVerbManager";
 import spanishVerbText from "../../data/spanishVerbs.spv.txt?raw";
 import spanishExamplesText from "../../data/spanishExamples.spe.txt?raw";
@@ -15,6 +15,7 @@ export interface ProfileModel {
 	spanishVerbs: SpanishVerb[];
 	appMode: string;
 	spanishExamples: SpanishExample[];
+	exampleCountObject: ExampleCountObject;
 
 	// computed
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
@@ -31,6 +32,7 @@ export interface ProfileModel {
 	loadSpanishVerbs: Action<this>;
 	loadAppMode: Action<this>;
 	loadSpanishExamples: Action<this>;
+	loadExampleCountObject: Action<this>;
 }
 
 export const profileModel: ProfileModel = {
@@ -43,6 +45,7 @@ export const profileModel: ProfileModel = {
 	spanishVerbs: [],
 	appMode: "",
 	spanishExamples: [],
+	exampleCountObject: {},
 
 	//computed
 	getNumberOfVerbsTestedCorrect: computed((state) => {
@@ -88,5 +91,9 @@ export const profileModel: ProfileModel = {
 	loadSpanishExamples: action((state) => {
 		const spanishExampleManager = new SpanishExampleManager(spanishExamplesText);
 		state.spanishExamples = spanishExampleManager.getExamples();
+	}),
+	loadExampleCountObject: action((state) => {
+		const spanishExampleManager = new SpanishExampleManager(spanishExamplesText);
+		state.exampleCountObject = spanishExampleManager.getExampleCountObject();
 	}),
 };

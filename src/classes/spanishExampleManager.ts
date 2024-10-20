@@ -5,7 +5,7 @@ export class SpanishExampleManager {
 	private spanishExampleText = "";
 	private exampleLines: string[] = [];
 	private spanishExamples: SpanishExample[] = [];
-	private exampleCountObject: ExampleCountObject = {}; 
+	private exampleCountObject: ExampleCountObject = {};
 
 	constructor(spanishExampleText: string) {
 		this.spanishExampleText = spanishExampleText;
@@ -38,26 +38,47 @@ export class SpanishExampleManager {
 		};
 	}
 
-	public static buildCountIdCode(verb: string, tense: string, pronoun: string, reason: string) {
+	public static buildCountIdCode(
+		verb: string,
+		tense: string,
+		pronoun: string,
+		reason: string
+	) {
 		return `${verb}-${tense}-${pronoun}-${reason}`;
+	}
+
+	public getExampleCountObject() {
+		return this.exampleCountObject;
 	}
 
 	private parseExamples() {
 		for (const _line of this.exampleLines) {
 			const line = _line.trim();
 			if (line !== "" && line.includes(";")) {
-				const {verb, tenseIdCode, pronounIdCode, reasonIdCode, spanish, english} = this.getExampleLineParts(line);
+				const {
+					verb,
+					tenseIdCode,
+					pronounIdCode,
+					reasonIdCode,
+					spanish,
+					english,
+				} = this.getExampleLineParts(line);
 				const spanishExample: SpanishExample = {
 					verb,
 					tense: tenseIdCode,
 					pronoun: pronounIdCode,
 					reason: reasonIdCode,
 					spanish,
-					english
-				}
+					english,
+				};
 				this.spanishExamples.push(spanishExample);
 
-				const countIdCode = SpanishExampleManager.buildCountIdCode(verb, tenseIdCode, pronounIdCode, reasonIdCode);
+				const countIdCode = SpanishExampleManager.buildCountIdCode(
+					verb,
+					tenseIdCode,
+					pronounIdCode,
+					reasonIdCode
+				);
 				if (this.exampleCountObject[countIdCode]) {
 					this.exampleCountObject[countIdCode]++;
 				} else {
