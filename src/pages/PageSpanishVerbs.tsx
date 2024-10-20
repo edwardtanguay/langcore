@@ -1,6 +1,8 @@
 import { LookupLink } from "../components/LookupLink";
 import { SpanishTenseBlock } from "../components/SpanishTenseBlock";
 import { useStoreState } from "../store/hooks";
+import { spanishPronounTexts } from '../types';
+import * as qstr from '../qtools/qstr';
 
 export const PageSpanishVerbs = () => {
 	const { spanishVerbs } = useStoreState((state) => state.profileModel);
@@ -31,12 +33,17 @@ export const PageSpanishVerbs = () => {
 											<LookupLink sv={sv} kind={"conjugate123teachme"} />
 											<LookupLink sv={sv} kind={"conjugateReverso"} />
 										</th>
-										<th>yo</th>
+										{spanishPronounTexts.map((spt, index) => {
+											return (
+												<th className="text-xs" key={index}>{qstr.replaceAll(spt, ' / ', ', ')}</th>
+											)
+										})}
+										{/* <th>yo</th>
 										<th>tú</th>
 										<th>él</th>
 										<th>nosotros</th>
 										<th>vosotros</th>
-										<th>ellos</th>
+										<th>ellos</th> */}
 									</tr>
 								</thead>
 								<tbody>

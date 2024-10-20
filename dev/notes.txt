@@ -39,12 +39,12 @@
 			- x put spanishtense in component
 			- x convert showTenseExamplePanel to React component
 
-		- .. rank off
-		- put all pronouns on
+		- x rank off
+		- .. put all pronouns on
 
 		- .. local dev button
 		- .. flashcards
-		
+
 		- .. all rest
 	- put tatoeba link back in box
 	- devmode shows todos
