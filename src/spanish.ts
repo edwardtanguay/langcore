@@ -176,7 +176,7 @@ export const tenses: SpanishTenseObject = {
 						english: "It was a dark and stormy night.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "physical state in the past",
@@ -187,7 +187,7 @@ export const tenses: SpanishTenseObject = {
 						english: "She was tired.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "mental state in the past",
@@ -198,7 +198,7 @@ export const tenses: SpanishTenseObject = {
 						english: "She was stressed.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "emotional state in the past",
@@ -209,7 +209,7 @@ export const tenses: SpanishTenseObject = {
 						english: "She was sad.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "age in the past",
@@ -220,7 +220,7 @@ export const tenses: SpanishTenseObject = {
 						english: "I was ten years old when I moved.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "two simultaneous actions in the past",
@@ -244,7 +244,7 @@ export const tenses: SpanishTenseObject = {
 						english: "I wanted a new car.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 		],
 		endings: {
@@ -340,7 +340,7 @@ export const tenses: SpanishTenseObject = {
 						english: "She became happy upon receiving the news.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description:
@@ -446,7 +446,7 @@ export const tenses: SpanishTenseObject = {
 						english: "I have never been to Mexico.",
 					},
 				],
-				type: "general",
+				type: "limited",
 			},
 			{
 				description: "repeated action up to now",
