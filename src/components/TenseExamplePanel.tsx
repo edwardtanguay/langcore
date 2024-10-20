@@ -4,6 +4,7 @@ import { tenses } from '../spanish';
 import { spanishPronounTexts } from "../types";
 import { HtmlListVerbConjugations } from "./HtmlListVerbConjugations";
 import { useStoreState } from "../store/hooks";
+import { GenericExamples } from "./GenericExamples";
 // import { spanishPronounIdCodes } from "../types";
 
 interface IProps {
@@ -66,6 +67,8 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 												</ul>
 											</li>
 										))}
+									{/* ${genericExamples(rule, areaIdCode)} */}
+									<GenericExamples />
 								</ul>
 							</>
 						)
