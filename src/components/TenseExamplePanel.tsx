@@ -7,6 +7,7 @@ import { useStoreState } from "../store/hooks";
 import { GenericExamples } from "./GenericExamples";
 import { spanishPronounIdCodes } from "../types";
 import { AiExampleGeneration } from "./AiExampleGeneration";
+import { useState } from "react";
 
 interface IProps {
 	areaIdCode: string;
@@ -18,6 +19,8 @@ interface IProps {
 
 export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronounIndex }: IProps) => {
 	const { spanishExamples } = useStoreState((state) => state.profileModel);
+	const { appMode } = useStoreState((state) => state.profileModel);
+	const [localDevMode, setLocalDevMode] = useState(false);
 
 	const tense = tenses[tenseIdCode];
 	const tenseClass = `tense${tenseIdCode}`;
@@ -46,7 +49,9 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 							<h2 className="mb-3 text-[1rem]">Examples of <span className={`font-bold ${tenseClass}`}>{conjugationText}</span> (<span className={tenseClass}>{spanishPronounTexts[pronounIndex]}</span>) in various uses of the <span className="font-bold">{tense.title}</span> tense:</h2>
 						</div>
 					)}
-					<button className="buttonNormalDarker">DEV</button>
+					{appMode === 'dev' && (
+						<button className="buttonNormalDarker">DEV</button>
+					)}
 				</div>
 
 				<ul className="list-disc ml-6">
@@ -81,6 +86,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 										pronounText={spanishPronounTexts[pronounIndex]}
 										conjugationText={conjugationText}
 										rule={rule}
+										devMode={localDevMode}
 									/>
 								</div>
 							</>

@@ -1,4 +1,3 @@
-import { useStoreState } from "../store/hooks";
 import { SpanishVerb, SpanishVerbTenseIdCode, SpanishTenseRule } from "../types"
 
 interface IProps {
@@ -7,7 +6,8 @@ interface IProps {
 	pronounIdCode: string,
 	pronounText: string,
 	conjugationText: string,
-	rule: SpanishTenseRule
+	rule: SpanishTenseRule,
+	devMode: boolean
 }
 
 const getAiExampleGenerationText = (
@@ -19,11 +19,10 @@ const getAiExampleGenerationText = (
 };
 
 
-export const AiExampleGeneration = ({ sv, tenseIdCode, pronounIdCode, pronounText, conjugationText, rule }: IProps) => {
-	const { appMode } = useStoreState((state) => state.profileModel);
+export const AiExampleGeneration = ({ sv, tenseIdCode, pronounIdCode, pronounText, conjugationText, rule, devMode }: IProps) => {
 	return (
 		<>
-			{appMode === 'dev' && (
+			{devMode && (
 				<fieldset className="ml-3 border border-gray-800 rounded bg-gray-400" style={{ padding: '.3rem .6rem .6rem .6rem' }} >
 					<legend className="bg-gray-700 px-1 py-0 text-gray-200">AI generation text</legend>
 					<input className="w-full mb-2 bg-gray-300 text-[.6rem]" value={getAiExampleGenerationText(
