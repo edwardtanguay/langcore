@@ -200,6 +200,7 @@ export type SpanishExample = {
 	reason: string;
 	spanish: string;
 	english: string;
+	flashcardBackIsShowing: boolean;
 };
 
 export type SpanishTenseObject = {

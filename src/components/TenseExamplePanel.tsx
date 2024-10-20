@@ -62,21 +62,19 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 						);
 
 						return (
-							<>
+							<div>
 								<li key={index} className="mt-3 mb-1"> <span className="font-bold text-[.9rem]">{rule.description}</span> </li>
-								<ul className="list-disc ml-6">
+								<div>
 									{localSpanishExamplesWithReason
 										.filter((m) => m.pronoun === pronoun || areaIdCode === "main")
 										.map((m, index) => (
-											<li key={index} className="mb-1">
-												<span className={`tense${m.tense}`}>{m.spanish}</span>
-												<ul className="list-disc ml-6">
-													<li>{m.english}</li>
-												</ul>
-											</li>
+											<div key={index} className="mb-1">
+												<div>{m.english}</div>
+												<div className={`tense${m.tense}`}>{m.spanish}</div>
+											</div>
 										))}
 									<GenericExamples rule={rule} areaIdCode={areaIdCode} />
-								</ul>
+								</div>
 
 								<div>
 									<AiExampleGeneration
@@ -89,7 +87,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 										devMode={localDevMode}
 									/>
 								</div>
-							</>
+							</div>
 						)
 					})}
 				</ul>
