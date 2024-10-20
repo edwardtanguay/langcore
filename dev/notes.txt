@@ -42,7 +42,7 @@
 		- x rank off
 		- x put all pronouns on
 
-		- .. local dev button
+		- x local dev button
 		- .. flashcards
 
 		- .. all rest
