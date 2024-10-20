@@ -12,7 +12,7 @@ import { spanishPronounTexts } from "./types";
 import { spanishPronounIdCodes } from "./types";
 import * as qstr from "./qtools/qstr";
 
-export const tenses:SpanishTenseObject = {
+export const tenses: SpanishTenseObject = {
 	_2PRES: {
 		idCode: "_2PRES",
 		title: "present",
@@ -35,7 +35,7 @@ export const tenses:SpanishTenseObject = {
 						english: "They are studying for the exam.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "habitual action",
@@ -46,7 +46,7 @@ export const tenses:SpanishTenseObject = {
 						english: "Every day, I walk to work.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "general fact",
@@ -57,7 +57,7 @@ export const tenses:SpanishTenseObject = {
 						english: "The sun rises in the east.",
 					},
 				],
-				type: "general"
+				type: "limited",
 			},
 			{
 				description: "near future action",
@@ -68,7 +68,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I am going to the cinema tomorrow.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "description of current state",
@@ -79,7 +79,7 @@ export const tenses:SpanishTenseObject = {
 						english: "(I am tired.",
 					},
 				],
-				type: "general"
+				type: "limited",
 			},
 			{
 				description: "instruction",
@@ -90,7 +90,7 @@ export const tenses:SpanishTenseObject = {
 						english: "You turn right at the corner.",
 					},
 				],
-				type: "general"
+				type: "limited",
 			},
 			{
 				description: "command",
@@ -102,7 +102,7 @@ export const tenses:SpanishTenseObject = {
 							"You speak Spanish in class, do you understand?",
 					},
 				],
-				type: "general"
+				type: "limited",
 			},
 		],
 		endings: {
@@ -154,7 +154,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I was reading a book.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "habitual action in the past",
@@ -165,7 +165,7 @@ export const tenses:SpanishTenseObject = {
 						english: "Every summer, we used to go to the beach.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "background information in the past",
@@ -176,7 +176,7 @@ export const tenses:SpanishTenseObject = {
 						english: "It was a dark and stormy night.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "physical state in the past",
@@ -187,7 +187,7 @@ export const tenses:SpanishTenseObject = {
 						english: "She was tired.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "mental state in the past",
@@ -198,7 +198,7 @@ export const tenses:SpanishTenseObject = {
 						english: "She was stressed.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "emotional state in the past",
@@ -209,7 +209,7 @@ export const tenses:SpanishTenseObject = {
 						english: "She was sad.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "age in the past",
@@ -220,7 +220,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I was ten years old when I moved.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "two simultaneous actions in the past",
@@ -233,7 +233,7 @@ export const tenses:SpanishTenseObject = {
 							"While he was studying, she was listening to music.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "a desire in the past",
@@ -244,7 +244,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I wanted a new car.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 		],
 		endings: {
@@ -296,7 +296,7 @@ export const tenses:SpanishTenseObject = {
 						english: "Yesterday, I studied for the exam.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "specific time frame in the past",
@@ -307,7 +307,7 @@ export const tenses:SpanishTenseObject = {
 						english: "Last year, we traveled to Spain.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "sequential actions in the past",
@@ -318,7 +318,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I got up, took a shower, and had breakfast.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "interrupting action in the past",
@@ -329,7 +329,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I was studying when the phone rang.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "change in state in the past",
@@ -340,7 +340,7 @@ export const tenses:SpanishTenseObject = {
 						english: "She became happy upon receiving the news.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description:
@@ -352,7 +352,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I lived in Mexico for five years.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "notable event in the past",
@@ -363,7 +363,7 @@ export const tenses:SpanishTenseObject = {
 						english: "We got married in 2010.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 		],
 		endings: {
@@ -416,7 +416,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I have lived here for five years.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "action completed in the recent past",
@@ -431,7 +431,7 @@ export const tenses:SpanishTenseObject = {
 						english: "We've finished the project.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "life experience or achievement",
@@ -446,7 +446,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I have never been to Mexico.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description: "repeated action up to now",
@@ -457,7 +457,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I have always read before sleeping.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 		],
 		endings: {
@@ -512,7 +512,7 @@ export const tenses:SpanishTenseObject = {
 							"When I arrived at the party, everyone had already left.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description:
@@ -525,7 +525,7 @@ export const tenses:SpanishTenseObject = {
 						english: "I had finished my work before five o'clock.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 			{
 				description:
@@ -539,7 +539,7 @@ export const tenses:SpanishTenseObject = {
 							"I had never seen such an exciting movie until then.",
 					},
 				],
-				type: "general"
+				type: "general",
 			},
 		],
 		endings: {
@@ -786,24 +786,26 @@ ${tense.rules
 			(m) => m.reason === rule.idCode
 		);
 
-		return `
-		<li key=${index}> <span class="font-bold">${
-			rule.description
-		}</span> ${reasonElement}</li>
-		<ul class="list-disc ml-6">
-			${localSpanishExamplesWithReason
-				.map((m) => {
-					return `
-					<li><span class="tense${m.tense}">${m.spanish}</span>
-						<ul class="list-disc ml-6">
-							<li>${m.english}</li>
-						</ul>
-					</li>`;
-				})
-				.join("")}
-		${genericExamples(rule, areaId)}
-		</ul>
-		`;
+		if (areaId === 'main' || (areaId !== 'main' && rule.type === 'general')) {
+			return `
+			<li key=${index}> <span class="font-bold">${
+				rule.description
+			}</span> ${reasonElement}</li>
+			<ul class="list-disc ml-6">
+				${localSpanishExamplesWithReason
+					.map((m) => {
+						return `
+						<li><span class="tense${m.tense}">${m.spanish}</span>
+							<ul class="list-disc ml-6">
+								<li>${m.english}</li>
+							</ul>
+						</li>`;
+					})
+					.join("")}
+			${genericExamples(rule, areaId)}
+			</ul>
+			`;
+		}
 	})
 	.join("")}
 </ul>
