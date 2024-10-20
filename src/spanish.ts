@@ -859,33 +859,34 @@ ${tense.rules
 						</li>`;
 					})
 					.join("")}
-					<li class="italic opacity-70">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
-						conjugationText
-					)}" class="${tenseClass}">${conjugationText}</a>
-					${displayDevModeBaseTextForTatoeba(
-						appMode,
-						sv,
-						tenseIdCode,
-						spanishPronounIdCodes[pronounIndex],
-						rule.idCode
-					)}
-					${displayDevModeBaseTextForAiExampleGeneration(
-						appMode,
-						sv,
-						tenseIdCode,
-						spanishPronounIdCodes[pronounIndex],
-						spanishPronounTexts[pronounIndex],
-						conjugationText,
-						rule
-					)}
-				</li>
 			${genericExamples(rule, areaId)}
 			</ul>
+			<div>
+				${displayDevModeBaseTextForTatoeba(
+					appMode,
+					sv,
+					tenseIdCode,
+					spanishPronounIdCodes[pronounIndex],
+					rule.idCode
+				)}
+				${displayDevModeBaseTextForAiExampleGeneration(
+					appMode,
+					sv,
+					tenseIdCode,
+					spanishPronounIdCodes[pronounIndex],
+					spanishPronounTexts[pronounIndex],
+					conjugationText,
+					rule
+				)}
+			</div>
 			`;
 		}
 	})
 	.join("")}
 </ul>
+<p class="mt-4 pt-3 border-t border-slate-400">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
+		conjugationText
+	)}" class="${tenseClass}">${conjugationText}</a></p>
 	`;
 
 	if (appMode === "dev" && areaId !== "main") {
