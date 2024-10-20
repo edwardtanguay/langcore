@@ -25,7 +25,8 @@
 		- x examples coming soon, until then check Tatoeba for examples with _____
 		- x move dev boxes up in show are 
 		- x tatoeba on bottom
-		- .. fix ai box
+		- x fix ai box
+		- .. devbox off
 		- show how many examples on each
 		- .. all rest
 		- .. flashcards

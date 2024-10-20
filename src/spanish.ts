@@ -868,9 +868,9 @@ ${tense.rules
 	)}" class="${tenseClass}">${conjugationText}</a></p>
 	`;
 
-	if (appMode === "dev" && areaId !== "main") {
-		r += displayDevBox(sv, tense, tenseIdCode);
-	}
+	// if (appMode === "dev" && areaId !== "main") {
+	// 	r += displayDevBox(sv, tense, tenseIdCode);
+	// }
 
 	return r;
 };
