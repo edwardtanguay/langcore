@@ -27,8 +27,9 @@
 		- x tatoeba on bottom
 		- x fix ai box
 		- x devbox off
-		- .. make easier to create 
-		- show how many examples on each
+		- x make easier to create 
+		- .. show how many examples on each
+			- .. first mock
 		- .. all rest
 		- .. flashcards
 	- put tatoeba link back in box
