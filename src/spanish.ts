@@ -733,7 +733,11 @@ ${tense.rules
 				.join("")}
 			${rule.examples
 				.map((example) => {
-					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
+					return `<li class="text-gray-600 italic">${example.spanish}
+						<ul class="list-disc ml-6">
+							<li>${example.english}</li>
+						</ul>
+					</li>`;
 				})
 				.join("")}
 		</ul>
