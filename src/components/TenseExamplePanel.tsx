@@ -55,8 +55,6 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 						return (
 							<>
 								<li key={index} className="mt-3 mb-1"> <span className="font-bold text-[.9rem]">{rule.description}</span> </li>
-
-
 								<ul className="list-disc ml-6">
 									{localSpanishExamplesWithReason
 										.filter((m) => m.pronoun === pronoun || areaIdCode === "main")
@@ -69,9 +67,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 											</li>
 										))}
 								</ul>
-
 							</>
-
 						)
 					})}
 				</ul>
