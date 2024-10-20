@@ -17,7 +17,9 @@
 		- x bold when selected
 		- x send main/yo and display accordingly
 		- x no show if not main
-		- .. switch 1/2
+		- x switch 1/2
+		- .. make some rules general
+		- .. only show yo on yo page
 	- put tatoeba link back in box
 	- devmode shows todos
 
