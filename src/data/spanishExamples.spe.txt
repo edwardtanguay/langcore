@@ -7,3 +7,7 @@ hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el jefe ante
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el doctor antes de que me llamaran para la cita.;  I had spoken with the doctor before they called me for the appointment.
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con María antes de que llegara la noticia.;  I had spoken with María before the news arrived.
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con mi jefe cuando decidieron cambiar el horario.;  I had spoken with my boss when they decided to change the schedule.
+
+hablar; _2PAPE; yo; completedBeforeTimeInPast;  Había hablado con el profesor antes de las 8 de la mañana.;  I had spoken with the professor before 8 in the morning.
+hablar; _2PAPE; yo; completedBeforeTimeInPast; Había hablado con mis padres antes de que empezara la cena a las 7.;  I had spoken with my parents before dinner started at 7.
+hablar; _2PAPE; yo; completedBeforeTimeInPast; Había hablado con el cliente antes del mediodía.;  I had spoken with the client before noon.
