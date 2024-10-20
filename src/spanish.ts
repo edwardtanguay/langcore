@@ -299,7 +299,7 @@ export const tenses: SpanishTenseObject = {
 				type: "general",
 			},
 			{
-				description: "at a specific time in the past",
+				description: "specific time in the past",
 				idCode: "specificTimeFrameInPast",
 				examples: [
 					{
