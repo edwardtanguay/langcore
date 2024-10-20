@@ -44,7 +44,8 @@
 
 		- x local dev button
 		- .. flashcards
-			- .. add the property flashcardBackIsShowing
+			- x  add the property flashcardBackIsShowing
+			- .. style half/half
 
 		- .. all rest
 	- put tatoeba link back in box

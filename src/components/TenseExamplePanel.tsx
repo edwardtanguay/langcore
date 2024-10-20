@@ -88,12 +88,12 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 									/>
 								</div>
 							</div>
-						)
+				)
 					})}
-				</ul>
+			</ul>
 
 
-			</td>
+		</td>
 		</tr >
 
 
