@@ -566,25 +566,6 @@ export const tenses: SpanishTenseObject = {
 	},
 };
 
-export const htmlListVerbConjugations = (
-	tense: SpanishTense,
-	verbType: SpanishVerbType
-) => {
-	const tenseClass = `tense${tense.idCode}`;
-	return `
-<div class="ml-3">
-	<span>${verbType.toUpperCase()}: </span>
-	${Object.entries(tense.endings[verbType as SpanishVerbType])
-		.map((entry, index) => {
-			const pronoun = entry[0] as SpanishPronoun;
-			const ending = entry[1];
-			return `<span key=${index} class="${tenseClass}"><span class="font-bold">${tense.prefixes[pronoun]}</span> -${ending}</span>`.trim();
-		})
-		.join(" | ")}
-</div>
-	`;
-};
-
 export const getFullVerbPhrase = (
 	sv: SpanishVerb,
 	tense: SpanishTense,
@@ -638,8 +619,6 @@ export const getChatGptQuestionTexts = (
 	);
 	return verbConjugations;
 };
-
-
 
 export const buildTatoebaUrl = (word: string) => {
 	return `https://tatoeba.org/de/sentences/search?from=spa&query=%3D%22${qstr.replaceAll(
