@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
-import { getTenseHelp } from "../spanish";
+import { showTenseExamplePanel } from "../spanish";
 import { useStoreState } from "../store/hooks";
 import { buildTatoebaLinkElement } from "../spanish";
 import { SpanishExampleManager } from "../classes/spanishExampleManager";
@@ -75,21 +75,21 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			{showInfos.main && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('main', sv, tenseIdCode, appMode, spanishExamples, 'yo', 0) }}></div>
+						<div dangerouslySetInnerHTML={{ __html: showTenseExamplePanel('main', sv, tenseIdCode, appMode, spanishExamples, 'yo', 0) }}></div>
 					</td>
 				</tr>
 			)}
 			{showInfos.yo && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('yo', sv, tenseIdCode, appMode, spanishExamples, 'yo', 0) }}></div>
+						<div dangerouslySetInnerHTML={{ __html: showTenseExamplePanel('yo', sv, tenseIdCode, appMode, spanishExamples, 'yo', 0) }}></div>
 					</td>
 				</tr>
 			)}
 			{showInfos.tu && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('tu', sv, tenseIdCode, appMode, spanishExamples, 'tu', 1) }}></div>
+						<div dangerouslySetInnerHTML={{ __html: showTenseExamplePanel('tu', sv, tenseIdCode, appMode, spanishExamples, 'tu', 1) }}></div>
 					</td>
 				</tr>
 			)}

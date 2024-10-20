@@ -698,7 +698,7 @@ const displayDevModeBaseTextForAiExampleGeneration = (
 	}
 };
 
-export const getTenseHelp = (
+export const showTenseExamplePanel = (
 	areaId: string,
 	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
