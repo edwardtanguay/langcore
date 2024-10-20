@@ -18,10 +18,31 @@ export class SpanishExampleManager {
 		return [];
 	}
 
+	private getExampleLineParts(line: string): {
+		verb: string;
+		tenseIdCode: string;
+		pronounIdCode: string;
+		reasonIdCode: string;
+		spanish: string;
+		english: string;
+	} {
+		const parts = qstr.breakIntoParts(line, ";");
+		return {
+			verb: parts[0],
+			tenseIdCode: parts[1],
+			pronounIdCode: parts[2],
+			reasonIdCode: parts[3],
+			spanish: parts[4],
+			english: parts[5],
+		};
+	}
+
 	private parseExamples() {
 		for (const _line of this.exampleLines) {
 			const line = _line.trim();
-			console.log(line);
+			if (line !== "" && line.includes(";")) {
+				console.log(line);
+			}
 		}
 	}
 }
