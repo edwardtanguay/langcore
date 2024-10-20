@@ -36,8 +36,8 @@
 			- x call it to display how many for each tense
 			- x zeros too
 				- x new static method
-			- .. put spanishtense in component
-			- convert showTenseExamplePanel to React component
+			- x put spanishtense in component
+			- .. convert showTenseExamplePanel to React component
 
 		- rank off
 		- put all pronouns on
