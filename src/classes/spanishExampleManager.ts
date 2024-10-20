@@ -5,7 +5,7 @@ export class SpanishExampleManager {
 	private spanishExampleText = "";
 	private exampleLines: string[] = [];
 	private spanishExamples: SpanishExample[] = [];
-	private exampleCountObject: ExampleCountObject = {}; 
+	private exampleCountObject: ExampleCountObject = {};
 
 	constructor(spanishExampleText: string) {
 		this.spanishExampleText = spanishExampleText;
@@ -38,8 +38,31 @@ export class SpanishExampleManager {
 		};
 	}
 
-	public static buildCountIdCode(verb: string, tense: string, pronoun: string) {
+	public static buildCountIdCode(
+		verb: string,
+		tense: string,
+		pronoun: string
+	) {
 		return `${verb}-${tense}-${pronoun}`;
+	}
+
+	public static getCount(
+		verb: string,
+		tense: string,
+		pronoun: string,
+		exampleCountObject: ExampleCountObject
+	): number {
+		const countIdCode = SpanishExampleManager.buildCountIdCode(
+			verb,
+			tense,
+			pronoun
+		);
+		const possibleCount = exampleCountObject[countIdCode];
+		if (possibleCount) {
+			return possibleCount;
+		} else {
+			return 0;
+		}
 	}
 
 	public getExampleCountObject() {
@@ -50,18 +73,29 @@ export class SpanishExampleManager {
 		for (const _line of this.exampleLines) {
 			const line = _line.trim();
 			if (line !== "" && line.includes(";")) {
-				const {verb, tenseIdCode, pronounIdCode, reasonIdCode, spanish, english} = this.getExampleLineParts(line);
+				const {
+					verb,
+					tenseIdCode,
+					pronounIdCode,
+					reasonIdCode,
+					spanish,
+					english,
+				} = this.getExampleLineParts(line);
 				const spanishExample: SpanishExample = {
 					verb,
 					tense: tenseIdCode,
 					pronoun: pronounIdCode,
 					reason: reasonIdCode,
 					spanish,
-					english
-				}
+					english,
+				};
 				this.spanishExamples.push(spanishExample);
 
-				const countIdCode = SpanishExampleManager.buildCountIdCode(verb, tenseIdCode, pronounIdCode);
+				const countIdCode = SpanishExampleManager.buildCountIdCode(
+					verb,
+					tenseIdCode,
+					pronounIdCode
+				);
 				if (this.exampleCountObject[countIdCode]) {
 					this.exampleCountObject[countIdCode]++;
 				} else {

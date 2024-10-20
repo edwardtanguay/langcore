@@ -35,6 +35,10 @@
 			- x make count more general
 			- x call it to display how many for each tense
 			- .. zeros too
+				- .. new static method
+
+
+		- rank off
 		- put all pronouns on
 		- .. all rest
 		- .. flashcards
