@@ -19,7 +19,7 @@ export const PageSpanishVerbs = () => {
 								<div>
 									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span>
 									{appMode === 'dev' && (
-										<span>- <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span></span>
+										<span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span></span>
 									)}
 								</div>
 								<div>
