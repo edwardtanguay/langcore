@@ -40,6 +40,25 @@ hablar; _2IMPE; yo; ongoingAction; Yo hablaba con mis amigos durante la tarde.; 
 hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba en clase cuando el profesor llegó.; I was speaking in class when the teacher arrived.  
 hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba por teléfono mientras cocinaba.; I was talking on the phone while I was cooking.
 
-hablar; _2PRET; yo; completedActionInPast; Yo hablé con mi hermano sobre el problema; I talked to my brother about the problem.  
-hablar; _2PRET; yo; completedActionInPast; Yo hablé en la reunión ayer; I spoke in the meeting yesterday.  
-hablar; _2PRET; yo; completedActionInPast; Yo hablé con el profesor después de clase; I spoke with the teacher after class.
+hablar; _2PRET; yo; completedActionInPast; Yo hablé con mi hermano sobre el problema.; I talked to my brother about the problem.  
+hablar; _2PRET; yo; completedActionInPast; Yo hablé en la reunión ayer.; I spoke in the meeting yesterday.  
+hablar; _2PRET; yo; completedActionInPast; Yo hablé con el profesor después de clase.; I spoke with the teacher after class.
+
+
+hablar; _2IMPE; yo; habitInPast; Yo hablaba con mis amigos todos los días.; I used to talk with my friends every day.  
+hablar; _2IMPE; yo; habitInPast; Yo hablaba con mi abuela cada semana.; I would talk with my grandmother every week.  
+hablar; _2IMPE; yo; habitInPast; Yo hablaba en clase de español a menudo.; I often talked in Spanish class.
+
+hablar; _2PRET; yo; specificTimeFrameInPast; Yo hablé con mi jefe el lunes.; I talked to my boss on Monday.  
+hablar; _2PRET; yo; specificTimeFrameInPast; Yo hablé en la conferencia el año pasado.; I spoke at the conference last year.  
+hablar; _2PRET; yo; specificTimeFrameInPast; Yo hablé con mis amigos durante las vacaciones.; I talked with my friends during the holidays.
+
+hablar; _2PRET; yo; sequentialActionsInPast; Yo hablé con mi madre y luego llamé a mi padre.; I talked to my mother and then called my father.  
+hablar; _2PRET; yo; sequentialActionsInPast; Yo hablé con el profesor y después envié el correo.; I spoke with the teacher and then sent the email.  
+hablar; _2PRET; yo; sequentialActionsInPast; Yo hablé con mis amigos y finalmente fui a casa.; I talked with my friends and finally went home.
+
+hablar; _2PRPE; yo; inPastContinueToPresent; Yo he hablado con muchos estudiantes este semestre.; I have talked with many students this semester.  
+hablar; _2PRPE; yo; inPastContinueToPresent; Yo he hablado sobre mis planes con mi familia.; I have talked about my plans with my family.  
+hablar; _2PRPE; yo; inPastContinueToPresent; Yo he hablado con el profesor varias veces este año.; I have spoken with the teacher several times this year.
+
+hablar; _2PRET; tu; specificTimeFrameInPast;  ¿Hablaste ayer con mi padre?;  Did you speak to my father yesterday?

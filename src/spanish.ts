@@ -299,7 +299,7 @@ export const tenses: SpanishTenseObject = {
 				type: "general",
 			},
 			{
-				description: "specific time frame in the past",
+				description: "at a specific time in the past",
 				idCode: "specificTimeFrameInPast",
 				examples: [
 					{
@@ -668,7 +668,7 @@ const getAiExampleGenerationText = (
 	pronounText: string,
 	rule: SpanishTenseRule
 ) => {
-	return `list 3 Spanish sentences using &quot;${conjugationText}&quot; and &quot;${pronounText}&quot; for ${rule.description} with English translations, without parentheses, each Spanish/English pair on one line separated by a semicolon`;
+	return `list 3 Spanish sentences using &quot;${conjugationText}&quot; and &quot;${pronounText}&quot; for ${rule.description} with English translations, without parentheses, each Spanish/English with a period at the end and the sentences separated by a semi-colon, like this: Sentence one.;Sentence two.`;
 };
 
 const displayDevModeBaseTextForAiExampleGeneration = (
