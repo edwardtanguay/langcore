@@ -40,7 +40,7 @@
 			- x convert showTenseExamplePanel to React component
 
 		- x rank off
-		- .. put all pronouns on
+		- x put all pronouns on
 
 		- .. local dev button
 		- .. flashcards
