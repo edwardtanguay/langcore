@@ -50,7 +50,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 						</div>
 					)}
 					{appMode === 'dev' && (
-						<button className="buttonNormalDarker">DEV</button>
+						<button className="buttonNormalDarker" onClick={() => setLocalDevMode(!localDevMode)}>DEV</button>
 					)}
 				</div>
 
