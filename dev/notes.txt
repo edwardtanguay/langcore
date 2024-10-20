@@ -15,7 +15,8 @@
 	- .. open same box for each tense instead of Tatoeba
 		- x toggle if same
 		- x bold when selected
-		- .. send main/yo and display accordingly
+		- x send main/yo and display accordingly
+		- .. no show if not main
 	- put tatoeba link back in box
 	- devmode shows todos
 

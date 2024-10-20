@@ -130,7 +130,7 @@ type SpanishTenseExample = {
 	english: string;
 };
 
-type SpanishTenseRule = {
+export type SpanishTenseRule = {
 	description: string;
 	idCode: string;
 	examples: SpanishTenseExample[];

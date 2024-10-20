@@ -2,6 +2,7 @@ import {
 	SpanishExample,
 	SpanishPronoun,
 	SpanishTense,
+	SpanishTenseRule,
 	SpanishVerb,
 	SpanishVerbTenseIdCode,
 	SpanishVerbType,
@@ -692,6 +693,24 @@ const displayDevBox = (
 	`;
 };
 
+const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
+	if (areaId === "main") {
+		return `
+			${rule.examples
+				.map((example) => {
+					return `<li class="text-gray-600 italic">${example.spanish}
+						<ul class="list-disc ml-6">
+							<li>${example.english}</li>
+						</ul>
+					</li>`;
+				})
+				.join("")}
+	`;
+	} else {
+		return "";
+	}
+};
+
 export const getTenseHelp = (
 	areaId: string,
 	sv: SpanishVerb,
@@ -720,9 +739,7 @@ export const getTenseHelp = (
 ${tense.rules
 	.map((rule, index) => {
 		const reasonElement =
-			appMode === "dev"
-				? `<span class="text-gray-500" > [${rule.idCode}] </span>`
-				: "";
+			appMode === "dev" ? `<span class="text-gray-500" ></span>` : "";
 		const localSpanishExamplesWithReason = localSpanishExamples.filter(
 			(m) => m.reason === rule.idCode
 		);
@@ -742,15 +759,7 @@ ${tense.rules
 					</li>`;
 				})
 				.join("")}
-			${rule.examples
-				.map((example) => {
-					return `<li class="text-gray-600 italic">${example.spanish}
-						<ul class="list-disc ml-6">
-							<li>${example.english}</li>
-						</ul>
-					</li>`;
-				})
-				.join("")}
+		${genericExamples(rule, areaId)}
 		</ul>
 		`;
 	})
