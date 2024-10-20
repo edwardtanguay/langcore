@@ -723,8 +723,14 @@ ${tense.rules
 			${localSpanishExamples
 				.filter((m) => m.reason === rule.idCode)
 				.map((m) => {
-					return `<li><span class="tense${m.tense}">${m.spanish}</span></li>`;
-				}).join('')}
+					return `
+					<li><span class="tense${m.tense}">${m.spanish}</span>
+						<ul class="list-disc ml-6">
+							<li>${m.english}</li>
+						</ul>
+					</li>`;
+				})
+				.join("")}
 			${rule.examples
 				.map((example) => {
 					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
