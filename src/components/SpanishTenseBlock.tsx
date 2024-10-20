@@ -13,6 +13,7 @@ interface IProps {
 export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 	const [showInfo, setShowInfo] = useState(false);
 	const { appMode } = useStoreState((state) => state.profileModel);
+	const { spanishExamples } = useStoreState((state) => state.profileModel);
 
 	const tenseClass = "tense" + tenseIdCode;
 
@@ -22,6 +23,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 	return (
 		<>
+			[examples: {spanishExamples.length}]
 			<tr className="text-[.8rem]">
 				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none hover:underline">{title}</span></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].yo) }}></td>

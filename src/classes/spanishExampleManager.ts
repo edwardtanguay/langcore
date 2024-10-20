@@ -15,7 +15,7 @@ export class SpanishExampleManager {
 	}
 
 	public getExamples() {
-		return [];
+		return this.spanishExamples;
 	}
 
 	private getExampleLineParts(line: string): {
