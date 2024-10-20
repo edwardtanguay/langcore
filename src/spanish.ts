@@ -720,9 +720,11 @@ ${tense.rules
 			rule.description
 		}</span> ${reasonElement}</li>
 		<ul class="list-disc ml-6">
-			${localSpanishExamples.filter((m) => {
-				return m.reason === rule.idCode;
-			}).length}
+			${localSpanishExamples
+				.filter((m) => m.reason === rule.idCode)
+				.map((m) => {
+					return `<li><span class="tense${m.tense}">${m.spanish}</span></li>`;
+				}).join('')}
 			${rule.examples
 				.map((example) => {
 					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
