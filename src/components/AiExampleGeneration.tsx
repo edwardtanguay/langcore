@@ -24,7 +24,7 @@ export const AiExampleGeneration = ({ sv, tenseIdCode, pronounIdCode, pronounTex
 			)}"/>
 					<div className="flex gap-2 h-[1rem]">
 						<div style={{ whiteSpace: 'nowrap' }} className="justify-center align-middle">add to spanishExamples.spe.txt:</div>
-						<input className="bg-gray-300 w-full" readOnly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; `}" />
+						<input className="bg-gray-300 w-full" readOnly value={`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode};`} />
 					</div>
 				</fieldset>
 			)}
