@@ -38,13 +38,15 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 					</div>
 				)}
 
-				{areaIdCode === 'main' ? (
-					<h2 className="mb-3">2. {tense.title} tense is used for:</h2>
-				) : (
-					<div className="flex justify-between">
-						<h2 className="mb-3">Examples of <span className={`font-bold ${tenseClass}`}>{conjugationText}</span> (<span className={tenseClass}>{spanishPronounTexts[pronounIndex]}</span>) in various uses of the TITLE tense:</h2>
-					</div>
-				)}
+				<div>
+					{areaIdCode === 'main' ? (
+						<h2 className="mb-3">2. {tense.title} tense is used for:</h2>
+					) : (
+						<div className="flex justify-between">
+							<h2 className="mb-3">Examples of <span className={`font-bold ${tenseClass}`}>{conjugationText}</span> (<span className={tenseClass}>{spanishPronounTexts[pronounIndex]}</span>) in various uses of the <span className="font-bold">{tense.title}</span> tense:</h2>
+						</div>
+					)}
+				</div>
 
 				<ul className="list-disc ml-6">
 					{tense.rules.map((rule, index) => {
