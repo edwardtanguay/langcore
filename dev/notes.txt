@@ -13,6 +13,8 @@
 - x read in example file
 - .. clicking on tense shows all reasons and for each examples for that verb, if none then generic example
 	- .. open same box for each tense instead of Tatoeba
+		- x toggle if same
+		- .. bold when selected
 	- put tatoeba link back in box
 	- devmode shows todos
 
