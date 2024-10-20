@@ -36,7 +36,10 @@ hablar; _2PRES; tu; habit; Tú hablas con tus amigos todos los días.; You talk 
 hablar; _2PRES; tu; habit; Tú hablas con tu madre cada fin de semana.; You talk with your mother every weekend.  
 hablar; _2PRES; tu; habit; Tú hablas en clase todas las mañanas.; You speak in class every morning.
 
-
 hablar; _2IMPE; yo; ongoingAction; Yo hablaba con mis amigos durante la tarde.; I was talking with my friends in the afternoon.  
 hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba en clase cuando el profesor llegó.; I was speaking in class when the teacher arrived.  
 hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba por teléfono mientras cocinaba.; I was talking on the phone while I was cooking.
+
+hablar; _2PRET; yo; completedActionInPast; Yo hablé con mi hermano sobre el problema; I talked to my brother about the problem.  
+hablar; _2PRET; yo; completedActionInPast; Yo hablé en la reunión ayer; I spoke in the meeting yesterday.  
+hablar; _2PRET; yo; completedActionInPast; Yo hablé con el profesor después de clase; I spoke with the teacher after class.
