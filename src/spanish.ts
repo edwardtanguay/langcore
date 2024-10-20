@@ -742,6 +742,23 @@ const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
 	}
 };
 
+const displayDevModeBaseTextForTatoeba = (
+	appMode: string,
+	sv: SpanishVerb,
+	tenseIdCode: SpanishVerbTenseIdCode,
+	test: string
+) => {
+	if (appMode === "dev") {
+		return `
+				<ul class="list-disc ml-6">
+					<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; REASONIDCODE; SPANISH; ENGLISH`}"/></li>
+				</ul>
+`;
+	} else {
+		return "";
+	}
+};
+
 export const getTenseHelp = (
 	areaId: string,
 	sv: SpanishVerb,
@@ -810,7 +827,14 @@ ${tense.rules
 					.join("")}
 					<li class="italic opacity-70">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
 						conjugationText
-					)}" class="${tenseClass}">${conjugationText}</a></li>
+					)}" class="${tenseClass}">${conjugationText}</a>
+					${displayDevModeBaseTextForTatoeba(
+						appMode,
+						sv,
+						tenseIdCode,
+						spanishPronounIdCodes[pronounIndex]
+					)}
+				</li>
 			${genericExamples(rule, areaId)}
 			</ul>
 			`;
