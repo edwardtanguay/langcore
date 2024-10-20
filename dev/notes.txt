@@ -24,8 +24,9 @@
 		- x show pronouns for tense
 		- x examples coming soon, until then check Tatoeba for examples with _____
 		- x move dev boxes up in show are 
-		- .. tatoeba on bottom
-		- show all many example on each
+		- x tatoeba on bottom
+		- .. fix ai box
+		- show how many examples on each
 		- .. all rest
 		- .. flashcards
 	- put tatoeba link back in box

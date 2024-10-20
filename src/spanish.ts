@@ -768,25 +768,8 @@ const displayDevModeBaseTextForAiExampleGeneration = (
 						pronounText,
 						rule
 					)}"/></div>
-					<div>add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; SPANISH; ENGLISH`}"/> </div>
+					<div>222 add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; SPANISH; ENGLISH`}"/> </div>
 					</div>
-`;
-	} else {
-		return "";
-	}
-};
-const displayDevModeBaseTextForTatoeba = (
-	appMode: string,
-	sv: SpanishVerb,
-	tenseIdCode: SpanishVerbTenseIdCode,
-	test: string,
-	ruleIdCode: string
-) => {
-	if (appMode === "dev") {
-		return `
-				<ul class="list-disc ml-6">
-					<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; ${ruleIdCode}; SPANISH; ENGLISH`}"/></li>
-				</ul>
 `;
 	} else {
 		return "";
@@ -862,13 +845,6 @@ ${tense.rules
 			${genericExamples(rule, areaId)}
 			</ul>
 			<div>
-				${displayDevModeBaseTextForTatoeba(
-					appMode,
-					sv,
-					tenseIdCode,
-					spanishPronounIdCodes[pronounIndex],
-					rule.idCode
-				)}
 				${displayDevModeBaseTextForAiExampleGeneration(
 					appMode,
 					sv,
