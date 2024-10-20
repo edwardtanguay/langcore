@@ -1,15 +1,10 @@
 import {
-	SpanishExample,
 	SpanishPronoun,
 	SpanishTense,
 	SpanishTenseObject,
-	SpanishTenseRule,
 	SpanishVerb,
-	SpanishVerbTenseIdCode,
 	SpanishVerbType,
 } from "./types";
-import { spanishPronounTexts } from "./types";
-import { spanishPronounIdCodes } from "./types";
 import * as qstr from "./qtools/qstr";
 
 export const tenses: SpanishTenseObject = {
@@ -644,154 +639,7 @@ export const getChatGptQuestionTexts = (
 	return verbConjugations;
 };
 
-const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
-	if (areaId === "main") {
-		return `
-			${rule.examples
-				.map((example) => {
-					return `<li class="text-gray-600 italic">${example.spanish}
-						<ul class="list-disc ml-6">
-							<li>${example.english}</li>
-						</ul>
-					</li>`;
-				})
-				.join("")}
-	`;
-	} else {
-		return "";
-	}
-};
 
-const getAiExampleGenerationText = (
-	conjugationText: string,
-	pronounText: string,
-	rule: SpanishTenseRule
-) => {
-	return `list 3 Spanish sentences using &quot;${conjugationText}&quot; and &quot;${pronounText}&quot; for ${rule.description} with English translations, without parentheses, each Spanish/English with a period at the end and the sentences separated by a semi-colon, like this: Sentence one.;Sentence two.`;
-};
-
-const displayDevModeBaseTextForAiExampleGeneration = (
-	appMode: string,
-	sv: SpanishVerb,
-	tenseIdCode: SpanishVerbTenseIdCode,
-	pronounIdCode: string,
-	pronounText: string,
-	conjugationText: string,
-	rule: SpanishTenseRule
-) => {
-	if (appMode === "dev") {
-		return `<fieldset class="ml-3 border border-gray-800 rounded bg-gray-400" style="padding: .3rem .6rem .6rem .6rem">
-					<legend class="bg-gray-700 px-1 py-0 text-gray-200">AI generation text</legend>
-					<input class="w-full mb-2 bg-gray-300 text-[.6rem]" value="${getAiExampleGenerationText(
-						conjugationText,
-						pronounText,
-						rule
-					)}"/>
-					<div class="flex gap-2 h-[1rem]">
-						<div style="white-space: nowrap" class="justify-center align-middle">add to spanishExamples.spe.txt:</div>
-						<input class="bg-gray-300 w-full" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; `}"/> 
-					</div>
-				</fieldset>
-`;
-	} else {
-		return "";
-	}
-};
-
-export const showTenseExamplePanel = (
-	areaId: string,
-	sv: SpanishVerb,
-	tenseIdCode: SpanishVerbTenseIdCode,
-	appMode: string,
-	spanishExamples: SpanishExample[],
-	pronoun: SpanishPronoun,
-	pronounIndex: number
-) => {
-	let r = "";
-
-	const tense = tenses[tenseIdCode];
-	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
-	const localSpanishExamples = spanishExamples.filter(
-		(m) => m.verb === sv.spanish && m.tense === tenseIdCode
-	);
-	const conjugationText = sv.conj.indicative[tenseIdCode][pronoun];
-	const tenseClass = `tense${tenseIdCode}`;
-
-	if (areaId === "main") {
-		r += `
-		<div class="mb-6">
-			<h2 class="mb-3">1. ${boldTitle} tense regular verb endings:</h2>
-			${htmlListVerbConjugations(tense, "ar")}
-			${htmlListVerbConjugations(tense, "er")}
-			${htmlListVerbConjugations(tense, "ir")}
-		</div>
-		`;
-	}
-
-	if (areaId === "main") {
-		r += `<h2 class="mb-3">2. ${boldTitle} tense is used for:</h2>`;
-	} else {
-		r += `
-		<div class="flex justify-between">
-		<h2 class="mb-3">Examples of <span class="font-bold ${tenseClass}">${conjugationText}</span> (<span class="${tenseClass}">${spanishPronounTexts[pronounIndex]}</span>) in various uses of the ${boldTitle} tense:</h2>
-		</div>`;
-	}
-
-	r += `
-<ul class="list-disc ml-6">
-${tense.rules
-	.map((rule, index) => {
-		const reasonElement =
-			appMode === "dev" ? `<span class="text-gray-500" ></span>` : "";
-		const localSpanishExamplesWithReason = localSpanishExamples.filter(
-			(m) => m.reason === rule.idCode
-		);
-
-		if (
-			areaId === "main" ||
-			(areaId !== "main" && rule.type === "general")
-		) {
-			return `
-			<li key=${index} class="mt-3 mb-1"> <span class="font-bold text-[.9rem]">${
-				rule.description
-			}</span> ${reasonElement}</li>
-			<ul class="list-disc ml-6">
-				${localSpanishExamplesWithReason
-					.filter((m) => m.pronoun === pronoun || areaId === "main")
-					.map((m) => {
-						return `
-						<li class="mb-1"><span class="tense${m.tense}">${m.spanish}</span>
-							<ul class="list-disc ml-6">
-								<li>${m.english}</li>
-							</ul>
-						</li>`;
-					})
-					.join("")}
-			${genericExamples(rule, areaId)}
-			</ul>
-			<div>
-				${displayDevModeBaseTextForAiExampleGeneration(
-					appMode,
-					sv,
-					tenseIdCode,
-					spanishPronounIdCodes[pronounIndex],
-					spanishPronounTexts[pronounIndex],
-					conjugationText,
-					rule
-				)}
-			</div>
-			`;
-		}
-	})
-	.join("")}
-</ul>
-<p class="mt-4 pt-3 border-t border-slate-400">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
-		conjugationText
-	)}" class="${tenseClass}">${conjugationText}</a></p>
-	`;
-
-	return r;
-};
 
 export const buildTatoebaUrl = (word: string) => {
 	return `https://tatoeba.org/de/sentences/search?from=spa&query=%3D%22${qstr.replaceAll(
