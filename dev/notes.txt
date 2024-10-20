@@ -16,7 +16,8 @@
 		- x toggle if same
 		- x bold when selected
 		- x send main/yo and display accordingly
-		- .. no show if not main
+		- x no show if not main
+		- .. switch 1/2
 	- put tatoeba link back in box
 	- devmode shows todos
 
