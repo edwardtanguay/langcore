@@ -22,9 +22,10 @@
 		- x only show yo on yo page
 		- x tu
 		- x show pronouns for tense
-		- .. examples coming soon, until then check Tatoeba for examples with _____
+		- x examples coming soon, until then check Tatoeba for examples with _____
 		- .. move dev boxes up in show are 
 		- .. all rest
+		- .. flashcards
 	- put tatoeba link back in box
 	- devmode shows todos
 
