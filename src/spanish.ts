@@ -711,16 +711,18 @@ export const getTenseHelp = (
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
-		const reasonIdCode =
+		const reasonElement =
 			appMode === "dev"
 				? `<span class="text-gray-500" > [${rule.idCode}] </span>`
 				: "";
 		return `
 		<li key=${index}> <span class="font-bold">${
 			rule.description
-		}</span> ${reasonIdCode}</li>
+		}</span> ${reasonElement}</li>
 		<ul class="list-disc ml-6">
-			${localSpanishExamples.map((m) => m.reason === reasonIdCode).length}
+			${localSpanishExamples.filter((m) => {
+				return m.reason === rule.idCode;
+			}).length}
 			${rule.examples
 				.map((example) => {
 					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
