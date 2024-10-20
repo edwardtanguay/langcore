@@ -1,8 +1,8 @@
 hablar; _2IMPE; tu; ongoingAction; ¿Quién es el hombre con el que hablabas?; Who is the man you were talking to?
-hablar; _2PRET; completedActionInPast; He leído el artículo del que me hablaste.;  I read the article you told me about.
-pagar; _2PRET; completedActionInPast; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
-deber;_2PRET;completedActionInPast;  No debí haberme quedado despierto toda la noche.  ; I shouldn't have stayed up all night.
-llamar; _2PRET; completedActionInPast; ¿Por qué no llamasteis?  ; Why didn't you guys call?
+hablar; _2PRET; tu; completedActionInPast; He leído el artículo del que me hablaste.;  I read the article you told me about.
+pagar; _2PRET; el; completedActionInPast; La última vez que comimos afuera, ella pagó por la cena.  ; The last time we went out to eat, she paid for the dinner.
+deber;_2PRET;yo; completedActionInPast;  No debí haberme quedado despierto toda la noche.  ; I shouldn't have stayed up all night.
+llamar; _2PRET;vosotros; completedActionInPast; ¿Por qué no llamasteis?  ; Why didn't you guys call?
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el jefe antes de que llegara el correo.;  I had spoken with the boss before the mail arrived.
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con el doctor antes de que me llamaran para la cita.;  I had spoken with the doctor before they called me for the appointment.
 hablar; _2PAPE; yo; happenedBeforeAnotherAction; Había hablado con María antes de que llegara la noticia.;  I had spoken with María before the news arrived.

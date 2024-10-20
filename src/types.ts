@@ -159,7 +159,7 @@ export type SpanishTenseRule = {
 	description: string;
 	idCode: string;
 	examples: SpanishTenseExample[];
-	type: "general" | "limited"
+	type: "general" | "limited";
 };
 
 type SpanishTenseEndings = {
@@ -203,5 +203,9 @@ export type SpanishExample = {
 };
 
 export type SpanishTenseObject = {
-	[key: string]: SpanishTense
+	[key: string]: SpanishTense;
+};
+
+export type ExampleCountObject = {
+	[key: string]: number;
 };

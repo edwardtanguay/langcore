@@ -1,10 +1,11 @@
-import { SpanishExample } from "../types";
+import { ExampleCountObject, SpanishExample } from "../types";
 import * as qstr from "../qtools/qstr";
 
 export class SpanishExampleManager {
 	private spanishExampleText = "";
 	private exampleLines: string[] = [];
 	private spanishExamples: SpanishExample[] = [];
+	private exampleCountObject: ExampleCountObject = {}; 
 
 	constructor(spanishExampleText: string) {
 		this.spanishExampleText = spanishExampleText;
@@ -37,6 +38,10 @@ export class SpanishExampleManager {
 		};
 	}
 
+	public static buildCountIdCode(verb: string, tense: string, pronoun: string, reason: string) {
+		return `${verb}-${tense}-${pronoun}-${reason}`;
+	}
+
 	private parseExamples() {
 		for (const _line of this.exampleLines) {
 			const line = _line.trim();
@@ -51,6 +56,13 @@ export class SpanishExampleManager {
 					english
 				}
 				this.spanishExamples.push(spanishExample);
+
+				const countIdCode = SpanishExampleManager.buildCountIdCode(verb, tenseIdCode, pronounIdCode, reasonIdCode);
+				if (this.exampleCountObject[countIdCode]) {
+					this.exampleCountObject[countIdCode]++;
+				} else {
+					this.exampleCountObject[countIdCode] = 1;
+				}
 			}
 		}
 	}

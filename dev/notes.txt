@@ -29,7 +29,10 @@
 		- x devbox off
 		- x make easier to create 
 		- .. show how many examples on each
-			- .. first mock
+			- x first mock
+			- x make count data
+			- .. put count variable in store
+			- call it to display how many for each tense
 		- put all pronouns on
 		- .. all rest
 		- .. flashcards
