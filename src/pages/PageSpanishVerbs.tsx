@@ -29,7 +29,7 @@ export const PageSpanishVerbs = () => {
 							<table className="spanishVerb">
 								<thead>
 									<tr>
-										<th className="flex gap-1">
+										<th className="flex gap-1 cornerCell">
 											<LookupLink sv={sv} kind={"conjugate123teachme"} />
 											<LookupLink sv={sv} kind={"conjugateReverso"} />
 										</th>
