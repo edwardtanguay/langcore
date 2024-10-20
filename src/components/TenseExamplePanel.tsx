@@ -5,7 +5,7 @@ import { spanishPronounTexts } from "../types";
 import { HtmlListVerbConjugations } from "./HtmlListVerbConjugations";
 import { useStoreState } from "../store/hooks";
 import { GenericExamples } from "./GenericExamples";
-// import { spanishPronounIdCodes } from "../types";
+import { spanishPronounIdCodes } from "../types";
 import { AiExampleGeneration } from "./AiExampleGeneration";
 
 interface IProps {
@@ -17,7 +17,6 @@ interface IProps {
 }
 
 export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronounIndex }: IProps) => {
-	// const { appMode } = useStoreState((state) => state.profileModel);
 	const { spanishExamples } = useStoreState((state) => state.profileModel);
 
 	const tense = tenses[tenseIdCode];
@@ -72,8 +71,14 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 								</ul>
 
 								<div>
-									<AiExampleGeneration />
-									{/* {AiExampleGeneration(sv,tenseIdCode,spanishPronounIdCodes[pronounIndex],spanishPronounTexts[pronounIndex],conjugationText,rule)} */}
+									<AiExampleGeneration
+										sv={sv}
+										tenseIdCode={tenseIdCode}
+										pronounIdCode={spanishPronounIdCodes[pronounIndex]}
+										pronounText={spanishPronounTexts[pronounIndex]}
+										conjugationText={conjugationText}
+										rule={rule}
+									/>
 								</div>
 							</>
 						)
