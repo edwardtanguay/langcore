@@ -4,6 +4,7 @@ import { useStoreState } from "../store/hooks";
 
 export const PageSpanishVerbs = () => {
 	const { spanishVerbs } = useStoreState((state) => state.profileModel);
+	const { appMode } = useStoreState((state) => state.profileModel);
 
 	return (
 		<>
@@ -14,7 +15,10 @@ export const PageSpanishVerbs = () => {
 						<div key={sv.conj.base._1INFI} style={{ display: 'table' }} className="bg-slate-300 py-3 px-4 mb-3">
 							<div className="mb-2 flex justify-between">
 								<div>
-									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span>
+									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span>
+									{appMode === 'dev' && (
+										<span>- <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span></span>
+									)}
 								</div>
 								<div>
 									<span className="data">{sv.conj.base._1PRPA}</span> - <span className="data">{sv.conj.base._1PAPA}</span>
