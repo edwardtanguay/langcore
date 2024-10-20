@@ -15,3 +15,6 @@ hablar; _2PAPE; yo; completedBeforeTimeInPast; Había hablado con el cliente ant
 hablar; _2PAPE; ellos; earlierInSequenceOfPastActions; Ellos habían hablado con el director antes de presentar el informe.;  They had spoken with the director before presenting the report.
 hablar; _2PAPE; ellos; earlierInSequenceOfPastActions; Ellas habían hablado con el equipo antes de empezar el proyecto.;  They had spoken with the team before starting the project.
 hablar; _2PAPE; ellos; earlierInSequenceOfPastActions; Ustedes habían hablado con el proveedor antes de que llegara el material.;  You all had spoken with the supplier before the materials arrived.
+
+hablar; _2PRES; yo; now; Gracias por llamar pero en este momento yo hablo con mis amigos sobre el proyecto.;  Thanks for calling but at the moment I'm talking with my friends about the project.
+hablar; _2PRES; tu; nearFuture; Esta semana tú hablas con tu jefe acerca del nuevo plan?;  This week you're going to speak with your boss about the new plan?

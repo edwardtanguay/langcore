@@ -10,11 +10,11 @@
 - x update example file
 	- x show reason code if dev mode
 - x gray for current
-
 - x read in example file
-
-- .. show examples to normal user
-- indicate examples to developer 
+- .. clicking on tense shows all reasons and for each examples for that verb, if none then generic example
+	- .. open same box for each tense instead of Tatoeba
+	- put tatoeba link back in box
+	- devmode shows todos
 
 
 	
