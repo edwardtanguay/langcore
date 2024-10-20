@@ -26,8 +26,6 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 	const { spanishExamples } = useStoreState((state) => state.profileModel);
 	const { exampleCountObject } = useStoreState((state) => state.profileModel);
 
-	console.log(444, exampleCountObject);
-
 	const tenseClass = "tense" + tenseIdCode;
 
 	const handleToggleShowInfos = (areaIdCode: string) => {

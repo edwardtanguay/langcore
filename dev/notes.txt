@@ -31,7 +31,8 @@
 		- .. show how many examples on each
 			- x first mock
 			- x make count data
-			- .. put count variable in store
+			- x put count variable in store
+			- .. make count more general
 			- call it to display how many for each tense
 		- put all pronouns on
 		- .. all rest
