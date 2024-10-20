@@ -36,14 +36,14 @@
 			- x call it to display how many for each tense
 			- x zeros too
 				- x new static method
-
 			- put spanishtense in component
+
 
 
 		- rank off
 		- put all pronouns on
-		- .. all rest
 		- .. flashcards
+		- .. all rest
 	- put tatoeba link back in box
 	- devmode shows todos
 
