@@ -74,21 +74,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
 			{showInfos.main && (
-				<TenseExamplePanel areaIdCode="main" sv={sv} tenseIdCode={tenseIdCode} pronoun="yo" pronounIndex={0}/>
+				<TenseExamplePanel areaIdCode="main" sv={sv} tenseIdCode={tenseIdCode} pronoun="yo" pronounIndex={0} />
 			)}
 			{showInfos.yo && (
-				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
-					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: showTenseExamplePanel('yo', sv, tenseIdCode, appMode, spanishExamples, 'yo', 0) }}></div>
-					</td>
-				</tr>
+				<TenseExamplePanel areaIdCode="yo" sv={sv} tenseIdCode={tenseIdCode} pronoun="yo" pronounIndex={0} />
 			)}
 			{showInfos.tu && (
-				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
-					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: showTenseExamplePanel('tu', sv, tenseIdCode, appMode, spanishExamples, 'tu', 1) }}></div>
-					</td>
-				</tr>
+				<TenseExamplePanel areaIdCode="tu" sv={sv} tenseIdCode={tenseIdCode} pronoun="tu" pronounIndex={1} />
 			)}
 		</>
 	)
