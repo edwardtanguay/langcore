@@ -38,7 +38,7 @@ export interface ProfileModel {
 	loadAppMode: Action<this>;
 	loadSpanishExamples: Action<this>;
 	loadExampleCountObject: Action<this>;
-	setSpanishExamples: Action<this, SpanishExample[]>;
+	updateSpanishExample: Action<this, SpanishExample>;
 }
 
 export const profileModel: ProfileModel = {
@@ -107,7 +107,9 @@ export const profileModel: ProfileModel = {
 		state.exampleCountObject =
 			spanishExampleManager.getExampleCountObject();
 	}),
-	setSpanishExamples: action((state, spanishExamples) => {
-		state.spanishExamples = spanishExamples;
+	updateSpanishExample: action((state, spanishExample) => {
+		state.spanishExamples = state.spanishExamples.map((m) =>
+			m.spanish === spanishExample.spanish ? spanishExample : m
+		);
 	}),
 };

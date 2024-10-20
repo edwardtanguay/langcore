@@ -21,7 +21,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 	const { spanishExamples } = useStoreState((state) => state.profileModel);
 	const { appMode } = useStoreState((state) => state.profileModel);
 	const [localDevMode, setLocalDevMode] = useState(false);
-	const { setSpanishExamples } = useStoreActions((actions) => actions.profileModel);
+	const { updateSpanishExample } = useStoreActions((actions) => actions.profileModel);
 
 	const tense = tenses[tenseIdCode];
 	const tenseClass = `tense${tenseIdCode}`;
@@ -31,9 +31,8 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 	);
 
 	const handleToggleFlashcard = (example: SpanishExample) => {
-		const _spanishExamples = structuredClone(spanishExamples);
 		example.flashcardBackIsShowing = !example.flashcardBackIsShowing;
-		setSpanishExamples(_spanishExamples);
+		updateSpanishExample(example);
 	}
 
 	return (
