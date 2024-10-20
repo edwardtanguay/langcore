@@ -742,7 +742,7 @@ const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
 	}
 };
 
-const displayDevModeBaseTextForTatoeba = (
+const displayDevModeBaseTextForAiExampleGeneration = (
 	appMode: string,
 	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
@@ -750,8 +750,26 @@ const displayDevModeBaseTextForTatoeba = (
 ) => {
 	if (appMode === "dev") {
 		return `
+					<div class="mb-2 border border-gray-800 p-3 rounded">
+					<div class="mb-1">AI generation text: <input class=" w-full"/></div>
+					<div>add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; REASONIDCODE; SPANISH; ENGLISH`}"/> (AI)</div>
+					</div>
+`;
+	} else {
+		return "";
+	}
+};
+const displayDevModeBaseTextForTatoeba = (
+	appMode: string,
+	sv: SpanishVerb,
+	tenseIdCode: SpanishVerbTenseIdCode,
+	test: string,
+	ruleIdCode: string
+) => {
+	if (appMode === "dev") {
+		return `
 				<ul class="list-disc ml-6">
-					<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; REASONIDCODE; SPANISH; ENGLISH`}"/></li>
+					<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${test}; ${ruleIdCode}; SPANISH; ENGLISH`}"/></li>
 				</ul>
 `;
 	} else {
@@ -829,6 +847,13 @@ ${tense.rules
 						conjugationText
 					)}" class="${tenseClass}">${conjugationText}</a>
 					${displayDevModeBaseTextForTatoeba(
+						appMode,
+						sv,
+						tenseIdCode,
+						spanishPronounIdCodes[pronounIndex],
+						rule.idCode
+					)}
+					${displayDevModeBaseTextForAiExampleGeneration(
 						appMode,
 						sv,
 						tenseIdCode,
