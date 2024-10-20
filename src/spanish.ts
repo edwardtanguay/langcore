@@ -703,12 +703,11 @@ export const getTenseHelp = (
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
 	const localSpanishExamples = spanishExamples.filter(
-		(m) => m.verb === sv.spanish
+		(m) => m.verb === sv.spanish && m.tense === tenseIdCode
 	);
 
 	r += `
 <h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>
-<p>local: ${localSpanishExamples.length}</p>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
