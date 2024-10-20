@@ -30,6 +30,7 @@
 		- x make easier to create 
 		- .. show how many examples on each
 			- .. first mock
+		- put all pronouns on
 		- .. all rest
 		- .. flashcards
 	- put tatoeba link back in box
