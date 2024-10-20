@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
-import { showTenseExamplePanel } from "../spanish";
 import { useStoreState } from "../store/hooks";
 import { buildTatoebaLinkElement } from "../spanish";
 import { SpanishExampleManager } from "../classes/spanishExampleManager";
@@ -24,8 +23,6 @@ interface IProps {
 
 export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 	const [showInfos, setShowInfos] = useState(_initialShowInfos);
-	const { appMode } = useStoreState((state) => state.profileModel);
-	const { spanishExamples } = useStoreState((state) => state.profileModel);
 	const { exampleCountObject } = useStoreState((state) => state.profileModel);
 
 	const tenseClass = "tense" + tenseIdCode;
