@@ -761,15 +761,15 @@ const displayDevModeBaseTextForAiExampleGeneration = (
 	rule: SpanishTenseRule
 ) => {
 	if (appMode === "dev") {
-		return `
-					<div class="mb-2 border border-gray-800 p-3 rounded">
-					<div class="mb-1">AI generation text: <input class=" w-full" value="${getAiExampleGenerationText(
+		return `<fieldset class="ml-3 border border-gray-800 rounded bg-gray-400" style="padding: .3rem .6rem .6rem .6rem">
+					<legend class="bg-gray-700 px-1 py-0 text-gray-200">AI generation text</legend>
+					<div class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem] bg-gray-300" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; SPANISH; ENGLISH`}"/> </div>
+					<input class="w-full bg-gray-300 text-[.6rem]" value="${getAiExampleGenerationText(
 						conjugationText,
 						pronounText,
 						rule
-					)}"/></div>
-					<div>222 add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; SPANISH; ENGLISH`}"/> </div>
-					</div>
+					)}"/>
+				</fieldset>
 `;
 	} else {
 		return "";
