@@ -644,85 +644,6 @@ export const getChatGptQuestionTexts = (
 	return verbConjugations;
 };
 
-const displayDevBox = (
-	sv: SpanishVerb,
-	tense: SpanishTense,
-	tenseIdCode: SpanishVerbTenseIdCode
-) => {
-	const chatGptQuestionTexts = getChatGptQuestionTexts(
-		sv,
-		tense,
-		sv.verbType
-	);
-	const fullVerbPhrases = getFullVerbPhrases(sv, tense, sv.verbType);
-	return `
-		<fieldset class="mt-6 bg-gray-400 p-3 border-gray-600 border-3">
-			<legend class="px-1 text-gray-200 font-bold bg-gray-500">Devbox</legend>
-			<div class="flex flex-col">
-				<h3 class="text-[1.1rem] font-semibold mb-4">Generate example sentences</h3>
-				${chatGptQuestionTexts
-					.map((chatGptQuestionText, index) => {
-						const baseExampleText = `${sv.spanish}; ${tenseIdCode}; ${spanishPronounIdCodes[index]}; REASONIDCODE; SPANISH; ENGLISH`;
-						const fullVerbPhrase = fullVerbPhrases[index];
-						return `
-						<fieldset class="border border-gray-600 rounded mb-3 p-2">
-							<legend class="flex gap-1 text-[1rem] ml-1">
-								<div class="font-semibold">${fullVerbPhrase}</div> <div>(${
-									spanishPronounTexts[index]
-								})</div>
-							</legend>
-
-							<ul class="list-disc ml-4">
-								<li class="mb-2">Check Tatoeba for examples: <a href="${buildTatoebaUrl(
-									fullVerbPhrase
-								)}" class="underline" target="_blank">${fullVerbPhrase}</a>
-									<ul class="list-disc ml-3 mt-1">
-										<li class="mb-2">add to spanishExamples.spe.txt: <input class="w-[24rem]" readonly value="${baseExampleText}"/></li>
-									</ul>
-								</li>
-								<li class="mb-2">Generate phrases with ChatGPT:
-									<ul class="list-disc ml-3 mt-1">
-										${tense.rules
-											.map((rule) => {
-												const specificBaseExampleText =
-													qstr.replaceAll(
-														baseExampleText,
-														"REASONIDCODE",
-														rule.idCode
-													);
-												let specificChatGptQuestionText =
-													qstr.replaceAll(
-														chatGptQuestionText,
-														"@@REASON",
-														rule.description
-													);
-												specificChatGptQuestionText =
-													qstr.replaceAll(
-														specificChatGptQuestionText,
-														"@@PRONOUNTEXT",
-														`&quot;${spanishPronounTexts[index]}&quot;`
-													);
-												return `
-											<li><span class="font-bold">${rule.description}</span> <span class="text-[.7rem] font-mono text-gray-800">[${rule.idCode}]</span>
-												<ul class="mb-2">
-													<li class="mb-1"><input class="w-full" value="${specificChatGptQuestionText}"/></li>
-													<li><input class="w-full" value="${specificBaseExampleText}"/></li>
-												</ul>
-											</li>`;
-											})
-											.join("")}
-									</ul>
-								</li>
-							</ul>
-
-						</fieldset>
-						`;
-					})
-					.join("")}
-			</div>
-		</fieldset>
-	`;
-};
 
 const genericExamples = (rule: SpanishTenseRule, areaId: string) => {
 	if (areaId === "main") {
@@ -747,8 +668,7 @@ const getAiExampleGenerationText = (
 	pronounText: string,
 	rule: SpanishTenseRule
 ) => {
-	return `list 3 Spanish sentences using &quot;${conjugationText}&quot; and &quot;${pronounText}&quot; for ${rule.description} with English translations, without parentheses`;
-	// return `this is AI text: ${spanishWord} ${tenseIdCode} ${useCase}`;
+	return `list 3 Spanish sentences using &quot;${conjugationText}&quot; and &quot;${pronounText}&quot; for ${rule.description} with English translations, without parentheses, each Spanish/English pair on one line separated by a semicolon`;
 };
 
 const displayDevModeBaseTextForAiExampleGeneration = (
@@ -763,15 +683,15 @@ const displayDevModeBaseTextForAiExampleGeneration = (
 	if (appMode === "dev") {
 		return `<fieldset class="ml-3 border border-gray-800 rounded bg-gray-400" style="padding: .3rem .6rem .6rem .6rem">
 					<legend class="bg-gray-700 px-1 py-0 text-gray-200">AI generation text</legend>
-					<div class="flex gap-2 mb-2 h-[1rem]">
-						<div style="white-space: nowrap" class="justify-center align-middle">add to spanishExamples.spe.txt:</div>
-						<input class="bg-gray-300 w-full" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; SPANISH; ENGLISH`}"/> 
-					</div>
-					<input class="w-full bg-gray-300 text-[.6rem]" value="${getAiExampleGenerationText(
+					<input class="w-full mb-2 bg-gray-300 text-[.6rem]" value="${getAiExampleGenerationText(
 						conjugationText,
 						pronounText,
 						rule
 					)}"/>
+					<div class="flex gap-2 h-[1rem]">
+						<div style="white-space: nowrap" class="justify-center align-middle">add to spanishExamples.spe.txt:</div>
+						<input class="bg-gray-300 w-full" readonly value="${`${sv.spanish}; ${tenseIdCode}; ${pronounIdCode}; ${rule.idCode}; `}"/> 
+					</div>
 				</fieldset>
 `;
 	} else {
@@ -867,10 +787,6 @@ ${tense.rules
 		conjugationText
 	)}" class="${tenseClass}">${conjugationText}</a></p>
 	`;
-
-	// if (appMode === "dev" && areaId !== "main") {
-	// 	r += displayDevBox(sv, tense, tenseIdCode);
-	// }
 
 	return r;
 };

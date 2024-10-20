@@ -26,7 +26,8 @@
 		- x move dev boxes up in show are 
 		- x tatoeba on bottom
 		- x fix ai box
-		- .. devbox off
+		- x devbox off
+		- .. make easier to create 
 		- show how many examples on each
 		- .. all rest
 		- .. flashcards

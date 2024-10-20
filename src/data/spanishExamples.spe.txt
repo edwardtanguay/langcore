@@ -21,14 +21,17 @@ hablar; _2PRES; tu; nearFuture; Esta semana tú hablas con tu jefe acerca del nu
 
 
 hablar; _2PRES; yo; habit; Yo hablo con mis padres todos los días.;  I talk with my parents every day.
-
 hablar; _2PRES; yo; habit; Yo hablo con mis amigos cada fin de semana.;  I talk with my friends every weekend.
-
 hablar; _2PRES; yo; habit; Yo hablo en reuniones de trabajo cada lunes.;  I speak at work meetings every Monday.
 
-
 hablar; _2PRES; yo; nearFuture; Yo hablo con el director mañana por la mañana.;  I am talking to the director tomorrow morning.
-
 hablar; _2PRES; yo; nearFuture; Yo hablo con el cliente más tarde hoy.;  I am speaking with the client later today.
-
 hablar; _2PRES; yo; nearFuture; Yo hablo con mi jefe sobre el proyecto la próxima semana.;  I am talking with my boss about the project next week.
+
+hablar; _2PRES; tu; now; Lo siento por interrumpirte. ¿Tú hablas con tu amigo sobre el proyecto?; I'm sorry I interrupted you. Are you talking with your friend about the project?  
+hablar; _2PRES; tu; now; Lo siento por interrumpirte. ¿Tú hablas con tu jefe sobre el informe?; I'm sorry I interrupted you. Are you talking with your boss about the report?  
+hablar; _2PRES; tu; nearFuture; ¿Tú hablas en la reunión de esta mañana?; Are you speaking in this morning's meeting?
+
+hablar; _2PRES; tu; habit; Tú hablas con tus amigos todos los días; You talk with your friends every day.  
+hablar; _2PRES; tu; habit; Tú hablas con tu madre cada fin de semana; You talk with your mother every weekend.  
+hablar; _2PRES; tu; habit; Tú hablas en clase todas las mañanas; You speak in class every morning.
