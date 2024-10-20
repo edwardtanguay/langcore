@@ -6,6 +6,7 @@ import { HtmlListVerbConjugations } from "./HtmlListVerbConjugations";
 import { useStoreState } from "../store/hooks";
 import { GenericExamples } from "./GenericExamples";
 // import { spanishPronounIdCodes } from "../types";
+import { AiExampleGeneration } from "./AiExampleGeneration";
 
 interface IProps {
 	areaIdCode: string;
@@ -67,9 +68,13 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 												</ul>
 											</li>
 										))}
-									{/* ${genericExamples(rule, areaIdCode)} */}
 									<GenericExamples rule={rule} areaIdCode={areaIdCode} />
 								</ul>
+
+								<div>
+									<AiExampleGeneration />
+									{/* {AiExampleGeneration(sv,tenseIdCode,spanishPronounIdCodes[pronounIndex],spanishPronounTexts[pronounIndex],conjugationText,rule)} */}
+								</div>
 							</>
 						)
 					})}
