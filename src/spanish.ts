@@ -715,13 +715,16 @@ ${tense.rules
 			appMode === "dev"
 				? `<span class="text-gray-500" > [${rule.idCode}] </span>`
 				: "";
+		const localSpanishExamplesWithReason = localSpanishExamples.filter(
+			(m) => m.reason === rule.idCode
+		);
+
 		return `
 		<li key=${index}> <span class="font-bold">${
 			rule.description
 		}</span> ${reasonElement}</li>
 		<ul class="list-disc ml-6">
-			${localSpanishExamples
-				.filter((m) => m.reason === rule.idCode)
+			${localSpanishExamplesWithReason
 				.map((m) => {
 					return `
 					<li><span class="tense${m.tense}">${m.spanish}</span>
