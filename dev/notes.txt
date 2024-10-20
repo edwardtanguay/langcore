@@ -18,8 +18,9 @@
 		- x send main/yo and display accordingly
 		- x no show if not main
 		- x switch 1/2
-		- .. make some rules general
+		- x make some rules general
 		- .. only show yo on yo page
+		- show pronouns for tense
 	- put tatoeba link back in box
 	- devmode shows todos
 

@@ -792,7 +792,7 @@ ${tense.rules
 				rule.description
 			}</span> ${reasonElement}</li>
 			<ul class="list-disc ml-6">
-				${localSpanishExamplesWithReason
+				${localSpanishExamplesWithReason.filter(m => m.pronoun === pronoun || areaId === 'main')
 					.map((m) => {
 						return `
 						<li><span class="tense${m.tense}">${m.spanish}</span>
