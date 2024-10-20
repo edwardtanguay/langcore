@@ -68,9 +68,9 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 									{localSpanishExamplesWithReason
 										.filter((m) => m.pronoun === pronoun || areaIdCode === "main")
 										.map((m, index) => (
-											<div key={index} className="mb-1">
-												<div>{m.english}</div>
-												<div className={`tense${m.tense}`}>{m.spanish}</div>
+											<div key={index} className="mb-2 w-fit">
+												<div className="bg-gray-100 py-1 px-2 rounded-t-md">{m.english}</div>
+												<div className={`tense${m.tense} bg-gray-200 text-yellow-300 py-1 px-2 rounded-b-md`}>{m.spanish}</div>
 											</div>
 										))}
 									<GenericExamples rule={rule} areaIdCode={areaIdCode} />
