@@ -55,7 +55,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 				</div>
 
 				<ul className="list-disc ml-6">
-					{tense.rules.map((rule, index) => {
+					{tense.rules.filter(m => m.type !== "limited").map((rule, index) => {
 
 						const localSpanishExamplesWithReason = localSpanishExamples.filter(
 							(m) => m.reason === rule.idCode
@@ -69,8 +69,10 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 										.filter((m) => m.pronoun === pronoun || areaIdCode === "main")
 										.map((m, index) => (
 											<div key={index} className="mb-2 w-fit">
-												<div className="bg-gray-100 py-1 px-2 rounded-t-md">{m.english}</div>
-												<div className={`tense${m.tense} bg-gray-200 text-yellow-300 py-1 px-2 rounded-b-md`}>{m.spanish}</div>
+												<div className="bg-gray-100 py-1 px-2 rounded-t-md border-t border-gray-400 border-l border-r">{m.english}</div>
+												{m.flashcardBackIsShowing && (
+												<div className={`tense${m.tense} bg-gray-200 text-yellow-300 py-1 px-2 rounded-b-md border-b border-gray-400 border-l border-r`}>{m.spanish}</div>
+												)}
 											</div>
 										))}
 									<GenericExamples rule={rule} areaIdCode={areaIdCode} />

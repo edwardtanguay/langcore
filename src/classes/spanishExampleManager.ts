@@ -88,7 +88,7 @@ export class SpanishExampleManager {
 					reason: reasonIdCode,
 					spanish,
 					english,
-					flashcardBackIsShowing: false
+					flashcardBackIsShowing: false,
 				};
 				this.spanishExamples.push(spanishExample);
 
