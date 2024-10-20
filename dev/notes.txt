@@ -20,8 +20,10 @@
 		- x switch 1/2
 		- x make some rules general
 		- x only show yo on yo page
-		- .. tu
-		- show pronouns for tense
+		- x tu
+		- .. show pronouns for tense
+		- .. examples coming soon, until then check Tatoeba for examples with _____
+		- ..
 	- put tatoeba link back in box
 	- devmode shows todos
 

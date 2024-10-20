@@ -748,7 +748,8 @@ export const getTenseHelp = (
 	tenseIdCode: SpanishVerbTenseIdCode,
 	appMode: string,
 	spanishExamples: SpanishExample[],
-	pronoun: SpanishPronoun
+	pronoun: SpanishPronoun,
+	pronounIndex: number
 ) => {
 	let r = "";
 
@@ -758,6 +759,7 @@ export const getTenseHelp = (
 		(m) => m.verb === sv.spanish && m.tense === tenseIdCode
 	);
 	const conjugationText = sv.conj.indicative[tenseIdCode][pronoun];
+	const tenseClass = `tense${tenseIdCode}`;
 
 	if (areaId === "main") {
 		r += `
@@ -773,7 +775,7 @@ export const getTenseHelp = (
 	if (areaId === "main") {
 		r += `<h2 class="mb-3">2. ${boldTitle} tense is used for:</h2>`;
 	} else {
-		r += `<h2 class="mb-3">examples of <span class="font-bold tense${tenseIdCode}">${conjugationText}</span> in various uses of the ${boldTitle} tense:</h2>`;
+		r += `<h2 class="mb-3">examples of <span class="font-bold ${tenseClass}">${conjugationText}</span> (<span class="${tenseClass}">${spanishPronounTexts[pronounIndex]}</span>) in various uses of the ${boldTitle} tense:</h2>`;
 	}
 
 	r += `
@@ -786,13 +788,17 @@ ${tense.rules
 			(m) => m.reason === rule.idCode
 		);
 
-		if (areaId === 'main' || (areaId !== 'main' && rule.type === 'general')) {
+		if (
+			areaId === "main" ||
+			(areaId !== "main" && rule.type === "general")
+		) {
 			return `
 			<li key=${index}> <span class="font-bold">${
 				rule.description
 			}</span> ${reasonElement}</li>
 			<ul class="list-disc ml-6">
-				${localSpanishExamplesWithReason.filter(m => m.pronoun === pronoun || areaId === 'main')
+				${localSpanishExamplesWithReason
+					.filter((m) => m.pronoun === pronoun || areaId === "main")
 					.map((m) => {
 						return `
 						<li><span class="tense${m.tense}">${m.spanish}</span>
