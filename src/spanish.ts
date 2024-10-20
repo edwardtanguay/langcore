@@ -734,7 +734,6 @@ export const getTenseHelp = (
 		r += `
 		<div class="flex justify-between">
 		<h2 class="mb-3">Examples of <span class="font-bold ${tenseClass}">${conjugationText}</span> (<span class="${tenseClass}">${spanishPronounTexts[pronounIndex]}</span>) in various uses of the ${boldTitle} tense:</h2>
-		<button class="buttonNormalDarker" style="align-self: flex-start">Dev</button>
 		</div>`;
 	}
 

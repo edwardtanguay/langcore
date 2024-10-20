@@ -78,3 +78,8 @@ const displayDevBox = (
 		</fieldset>
 	`;
 };
+
+
+						{appMode === 'dev' && (
+							<button className="buttonNormalDarker float-right" style={{ alignSelf: 'flex-start' }} onClick={() => setShowDevControls(!showDevControls)}>Dev</button>
+						)}
