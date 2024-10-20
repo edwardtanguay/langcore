@@ -41,7 +41,16 @@ export class SpanishExampleManager {
 		for (const _line of this.exampleLines) {
 			const line = _line.trim();
 			if (line !== "" && line.includes(";")) {
-				console.log(line);
+				const {verb, tenseIdCode, pronounIdCode, reasonIdCode, spanish, english} = this.getExampleLineParts(line);
+				const spanishExample: SpanishExample = {
+					verb,
+					tense: tenseIdCode,
+					pronoun: pronounIdCode,
+					reason: reasonIdCode,
+					spanish,
+					english
+				}
+				this.spanishExamples.push(spanishExample);
 			}
 		}
 	}
