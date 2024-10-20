@@ -89,6 +89,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			{showInfos.tu && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
+						<button>here</button>
 						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('tu', sv, tenseIdCode, appMode, spanishExamples, 'tu', 1) }}></div>
 					</td>
 				</tr>
