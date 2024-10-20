@@ -28,7 +28,7 @@
 		- x fix ai box
 		- x devbox off
 		- x make easier to create 
-		- .. show how many examples on each
+		- x show how many examples on each
 			- x first mock
 			- x make count data
 			- x put count variable in store
@@ -37,12 +37,14 @@
 			- x zeros too
 				- x new static method
 			- x put spanishtense in component
-			- .. convert showTenseExamplePanel to React component
+			- x convert showTenseExamplePanel to React component
 
-		- rank off
+		- .. rank off
 		- put all pronouns on
 
+		- .. local dev button
 		- .. flashcards
+		
 		- .. all rest
 	- put tatoeba link back in box
 	- devmode shows todos
