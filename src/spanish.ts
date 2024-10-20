@@ -693,10 +693,12 @@ const displayDevBox = (
 };
 
 export const getTenseHelp = (
+	areaId: string,
 	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
 	appMode: string,
-	spanishExamples: SpanishExample[]
+	spanishExamples: SpanishExample[],
+	pronoun: SpanishPronoun
 ) => {
 	let r = "";
 
@@ -705,9 +707,15 @@ export const getTenseHelp = (
 	const localSpanishExamples = spanishExamples.filter(
 		(m) => m.verb === sv.spanish && m.tense === tenseIdCode
 	);
+	const conjugationText = sv.conj.indicative[tenseIdCode][pronoun];
+
+	if (areaId === "main") {
+		r += `<h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>`;
+	} else {
+		r += `<h2 class="mb-3">examples of <span class="font-bold tense${tenseIdCode}">${conjugationText}</span> in various uses of the ${boldTitle} tense:</h2>`;
+	}
 
 	r += `
-<h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
@@ -748,14 +756,18 @@ ${tense.rules
 	})
 	.join("")}
 </ul>
-<h2 class="mt-5 mb-3">2. ${boldTitle} tense regular verb endings:</h2>
-${htmlListVerbConjugations(tense, "ar")}
-${htmlListVerbConjugations(tense, "er")}
-${htmlListVerbConjugations(tense, "ir")}
-
 	`;
 
-	if (appMode === "dev") {
+	if (areaId === "main") {
+		r += `
+			<h2 class="mt-5 mb-3">2. ${boldTitle} tense regular verb endings:</h2>
+			${htmlListVerbConjugations(tense, "ar")}
+			${htmlListVerbConjugations(tense, "er")}
+			${htmlListVerbConjugations(tense, "ir")}
+		`;
+	}
+
+	if (appMode === "dev" && areaId !== "main") {
 		r += displayDevBox(sv, tense, tenseIdCode);
 	}
 
