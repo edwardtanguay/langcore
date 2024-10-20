@@ -118,6 +118,5 @@
 						.join("")}
 				</ul>
 
-				<p className="mt-4 pt-3 border-t border-slate-400">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(
-		conjugationText
-	)}" className="${tenseClass}">${conjugationText}</a></p>
+
+<p className="mt-4 pt-3 border-t border-slate-400">look for examples at Tatoeba: <a target="_blank" href="${buildTatoebaUrl(conjugationText)}" className="${tenseClass}">${conjugationText}</a></p>
