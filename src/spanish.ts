@@ -720,6 +720,7 @@ ${tense.rules
 			rule.description
 		}</span> ${reasonIdCode}</li>
 		<ul class="list-disc ml-6">
+			${localSpanishExamples.map((m) => m.reason === reasonIdCode).length}
 			${rule.examples
 				.map((example) => {
 					return `<li class="text-gray-600 italic">${example.spanish}</li>`;
