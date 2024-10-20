@@ -11,10 +11,10 @@
 	- x show reason code if dev mode
 - x gray for current
 
-- .. read in example file
+- x read in example file
 
-- show examples to normal user
-- indicate example to developer 
+- .. show examples to normal user
+- indicate examples to developer 
 
 
 	

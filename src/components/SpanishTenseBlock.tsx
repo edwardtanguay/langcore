@@ -23,7 +23,6 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 	return (
 		<>
-			[examples: {spanishExamples.length}]
 			<tr className="text-[.8rem]">
 				<td><span onClick={handleToggleShowInfo} className="cursor-pointer select-none hover:underline">{title}</span></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].yo) }}></td>
@@ -36,7 +35,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			{showInfo && (
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
-						<div dangerouslySetInnerHTML={{ __html: getTenseHelp(sv, tenseIdCode, appMode) }}></div>
+						<div dangerouslySetInnerHTML={{ __html: getTenseHelp(sv, tenseIdCode, appMode, spanishExamples) }}></div>
 					</td>
 				</tr>
 			)}

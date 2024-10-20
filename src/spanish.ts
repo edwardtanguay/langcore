@@ -1,4 +1,5 @@
 import {
+	SpanishExample,
 	SpanishPronoun,
 	SpanishTense,
 	SpanishVerb,
@@ -694,21 +695,31 @@ const displayDevBox = (
 export const getTenseHelp = (
 	sv: SpanishVerb,
 	tenseIdCode: SpanishVerbTenseIdCode,
-	appMode: string
+	appMode: string,
+	spanishExamples: SpanishExample[]
 ) => {
 	let r = "";
 
 	const tense = tenses[tenseIdCode];
 	const boldTitle = `<span class="font-bold">${tense.title}</span>`;
+	const localSpanishExamples = spanishExamples.filter(
+		(m) => m.verb === sv.spanish
+	);
 
 	r += `
 <h2 class="mb-3">1. ${boldTitle} tense is used for:</h2>
+<p>local: ${localSpanishExamples.length}</p>
 <ul class="list-disc ml-6">
 ${tense.rules
 	.map((rule, index) => {
-		const reasonIdCode = appMode === 'dev' ? `<span class="text-gray-500" > [${ rule.idCode }] </span>` : '';
+		const reasonIdCode =
+			appMode === "dev"
+				? `<span class="text-gray-500" > [${rule.idCode}] </span>`
+				: "";
 		return `
-		<li key=${index}> <span class="font-bold">${rule.description}</span> ${reasonIdCode}</li>
+		<li key=${index}> <span class="font-bold">${
+			rule.description
+		}</span> ${reasonIdCode}</li>
 		<ul class="list-disc ml-6">
 			${rule.examples
 				.map((example) => {
