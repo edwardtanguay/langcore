@@ -32,6 +32,11 @@ hablar; _2PRES; tu; now; Lo siento por interrumpirte. ¿Tú hablas con tu amigo 
 hablar; _2PRES; tu; now; Lo siento por interrumpirte. ¿Tú hablas con tu jefe sobre el informe?; I'm sorry I interrupted you. Are you talking with your boss about the report?  
 hablar; _2PRES; tu; nearFuture; ¿Tú hablas en la reunión de esta mañana?; Are you speaking in this morning's meeting?
 
-hablar; _2PRES; tu; habit; Tú hablas con tus amigos todos los días; You talk with your friends every day.  
-hablar; _2PRES; tu; habit; Tú hablas con tu madre cada fin de semana; You talk with your mother every weekend.  
-hablar; _2PRES; tu; habit; Tú hablas en clase todas las mañanas; You speak in class every morning.
+hablar; _2PRES; tu; habit; Tú hablas con tus amigos todos los días.; You talk with your friends every day.  
+hablar; _2PRES; tu; habit; Tú hablas con tu madre cada fin de semana.; You talk with your mother every weekend.  
+hablar; _2PRES; tu; habit; Tú hablas en clase todas las mañanas.; You speak in class every morning.
+
+
+hablar; _2IMPE; yo; ongoingAction; Yo hablaba con mis amigos durante la tarde.; I was talking with my friends in the afternoon.  
+hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba en clase cuando el profesor llegó.; I was speaking in class when the teacher arrived.  
+hablar; _2IMPE; yo; twoActionsInPast; Yo hablaba por teléfono mientras cocinaba.; I was talking on the phone while I was cooking.

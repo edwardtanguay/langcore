@@ -3,6 +3,7 @@ import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { getTenseHelp } from "../spanish";
 import { useStoreState } from "../store/hooks";
 import { buildTatoebaLinkElement } from "../spanish";
+import { SpanishExampleManager } from "../classes/spanishExampleManager";
 
 const _initialShowInfos = {
 	main: false,
@@ -62,7 +63,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			<tr className="text-[.8rem] verbBlock">
 				<td><span onClick={() => handleToggleShowInfos('main')} className="cursor-pointer select-none hover:underline" style={{ fontWeight: showInfos.main ? 'bold' : 'normal' }}>{title}</span></td>
 
-				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('yo')} style={{ fontWeight: showInfos.yo ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].yo}</span><sup className="hasValue">{exampleCountObject['hablar-_2PRES-tu']}</sup></td>
+				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('yo')} style={{ fontWeight: showInfos.yo ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].yo}</span><sup className="hasValue">{exampleCountObject[SpanishExampleManager.buildCountIdCode(sv.spanish, tenseIdCode, "yo")]}</sup></td>
 
 				<td className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('tu')} style={{ fontWeight: showInfos.tu ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].tu}</td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].el) }}></td>
