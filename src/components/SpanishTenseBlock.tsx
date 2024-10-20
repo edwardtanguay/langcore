@@ -44,6 +44,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 					_showInfos.yo = true;
 				}
 				break;
+			case 'tu':
+				if (showInfos.tu) {
+					_showInfos.tu = false;
+				} else {
+					_showInfos.tu = true;
+				}
+				break;
 		}
 		console.log(111, _showInfos);
 		setShowInfos(_showInfos);
@@ -54,8 +61,7 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			<tr className="text-[.8rem]">
 				<td><span onClick={() => handleToggleShowInfos('main')} className="cursor-pointer select-none hover:underline" style={{ fontWeight: showInfos.main ? 'bold' : 'normal' }}>{title}</span></td>
 				<td className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('yo')} style={{ fontWeight: showInfos.yo ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].yo}</td>
-				{/* <td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].yo) }}></td> */}
-				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].tu) }}></td>
+				<td className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('tu')} style={{ fontWeight: showInfos.tu ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].tu}</td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].el) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].nosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
@@ -72,6 +78,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
 					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
 						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('yo', sv, tenseIdCode, appMode, spanishExamples, 'yo') }}></div>
+					</td>
+				</tr>
+			)}
+			{showInfos.tu && (
+				<tr className="bg-gray-300 text-[#222] font-mono text-xs">
+					<td colSpan={7} style={{ outline: '5px solid #aaa', borderRadius: '.5rem', padding: '1rem' }} >
+						<div dangerouslySetInnerHTML={{ __html: getTenseHelp('tu', sv, tenseIdCode, appMode, spanishExamples, 'tu') }}></div>
 					</td>
 				</tr>
 			)}
