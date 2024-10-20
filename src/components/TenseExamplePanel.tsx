@@ -55,7 +55,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 				</div>
 
 				<ul className="list-disc ml-6">
-					{tense.rules.map((rule, index) => {
+					{tense.rules.filter(m => m.type !== "limited").map((rule, index) => {
 
 						const localSpanishExamplesWithReason = localSpanishExamples.filter(
 							(m) => m.reason === rule.idCode
