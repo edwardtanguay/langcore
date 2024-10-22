@@ -5,11 +5,11 @@
 		- x port handling function as well
 	- x handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
 	- x setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
-	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
+	- x getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
 		- x put random function in separate area outside the state
 		- x add state to selectors
-		- .. put randome function in selectors
-
+		- x put randome function in selectors
+	- .. remove code
 	
 
 - fix "div cannot appear of p" error
