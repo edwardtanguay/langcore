@@ -128,21 +128,18 @@ export const profileModel: ProfileModel = {
 		if (_dutchVerb) {
 			_dutchVerb.isOpen = !dutchVerb.isOpen;
 		}
-		// dutchVerb.isOpen = !dutchVerb.isOpen;
-		// const _dutchVerbs = structuredClone(dutchVerbs);
-		// setDutchVerbs(_dutchVerbs);
-
-		// // update number of times opened
-		// if (dutchVerb.isOpen) {
-		// 	const userVerb = userVerbs.find(m => m.dpodId === dutchVerb.dpodId);
-		// 	if (userVerb) {
-		// 		userVerb.timesOpened++;
-		// 		setUserVerbs(userVerbs);
-		// 	} else {
-		// 		userVerbs.push({
-		// 			dpodId: dutchVerb.dpodId,
-		// 			timesOpened: 1
-		// 		})
-		// 	}
+		if (dutchVerb.isOpen) {
+			const userVerb = state.userVerbs.find(
+				(m) => m.dpodId === dutchVerb.dpodId
+			);
+			if (userVerb) {
+				userVerb.timesOpened++;
+			} else {
+				state.userVerbs.push({
+					dpodId: dutchVerb.dpodId,
+					timesOpened: 1,
+				});
+			}
+		}
 	}),
 };
