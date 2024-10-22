@@ -65,3 +65,4 @@ hablar; _2PRET; tu; specificTimeFrameInPast;  ¿Hablaste ayer con mi padre?;  Di
 
 hablar; _2PRET; tu; specificTimeFrameInPast; Conozco a la chica con la que hablaste ayer.;  I know the girl you were talking to yesterday.
 
+decidir; _2PRPE; tu; completedInRecentPast;  ¿Ya te has decidido?; Have you decided yet?

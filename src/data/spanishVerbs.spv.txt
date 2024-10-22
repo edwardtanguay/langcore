@@ -58,7 +58,6 @@ encender; light/turn on; 4.27
 envolver; wrap; 4.2
 
 vivir; live; 4.94
-escribir; write; 4.96
 abrir; open; 4.82
 recibir; receive; 4.3
 permitir; allow/permit; 4.1

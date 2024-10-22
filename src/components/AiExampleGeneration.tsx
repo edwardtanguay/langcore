@@ -15,6 +15,7 @@ const getAiExampleGenerationText = (
 	pronounText: string,
 	rule: SpanishTenseRule
 ) => {
+	// if(rule.idCode === '')
 	return `list 3 Spanish sentences using "${conjugationText}" and "${pronounText}" for ${rule.description} with English translations, without parentheses, each Spanish/English with a period at the end and the sentences separated by a semi-colon, like this: Sentence one.;Sentence two.`;
 };
 
