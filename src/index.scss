@@ -89,13 +89,11 @@ table.spanishVerb {
 		background-color: #f2f2f2;
 	}
 	th {
-		padding: 8px;
 		border: 1px solid #ddd;
+		padding: .3rem 1rem;
 	}
 	th.cornerCell {
-		padding: 8px;
 		border: 1px solid #ddd;
-		height: 4rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
