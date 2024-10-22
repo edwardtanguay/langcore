@@ -7,7 +7,8 @@
 	- x setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
 		- x put random function in separate area outside the state
-		- .. add state to selectors
+		- x add state to selectors
+		- .. put randome function in selectors
 
 	
 
