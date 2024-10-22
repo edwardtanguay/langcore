@@ -23,8 +23,4 @@ export const useSelectors = () => {
 	}
 
 	return { getTestNumber, getTestMessage, getRandomNotAnsweredCorrectlyVerb };
-	// return [getTestNumber, getTestMessage];
 }
-
-
-

@@ -5,7 +5,6 @@ import { useSelectors } from "../store/useSelectors";
 export const PageWelcome = () => {
 	const { dutchVerbs } = useStoreState((state) => state.profileModel);
 	const { getTestNumber, getTestMessage, getRandomNotAnsweredCorrectlyVerb } = useSelectors();
-	// const { getTestNumber, getTestMessage } = useSelectors();
 
 	const randomeVerb = getRandomNotAnsweredCorrectlyVerb();
 
@@ -19,8 +18,6 @@ export const PageWelcome = () => {
 			<p>test 002: {getTestNumber()}</p>
 			<p>test 003: {getTestMessage()}</p>
 			<p>test 004: {randomeVerb.infinitive}</p>
-
-
 		</>
 	)
 }

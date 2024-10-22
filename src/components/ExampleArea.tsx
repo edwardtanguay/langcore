@@ -1,5 +1,3 @@
-import { useContext } from "react";
-import { AppContext } from "../AppContext";
 import { DutchVerbExample } from "../types";
 import { PiSpeakerHighFill } from "react-icons/pi";
 import { MdOutlineCheckBoxOutlineBlank } from "react-icons/md";
@@ -10,11 +8,10 @@ interface IProps {
 	examples: DutchVerbExample[]
 }
 
-
 export const ExampleArea = ({ examples }: IProps) => {
-	const { dutchVerbs, setDutchVerbs } = useContext(AppContext);
 	const { learnedExamples } = useStoreState((state) => state.profileModel);
-	const { addExampleLearned, removeExampleLearned } = useStoreActions((actions) => actions.profileModel);
+	const { addExampleLearned, removeExampleLearned, setDutchVerbs } = useStoreActions((actions) => actions.profileModel);
+	const { dutchVerbs } = useStoreState((state) => state.profileModel);
 
 	const handleExampleToggle = (example: DutchVerbExample) => {
 		example.isOpen = !example.isOpen;
@@ -34,8 +31,6 @@ export const ExampleArea = ({ examples }: IProps) => {
 			addExampleLearned(example.dpodId);
 		}
 	}
-
-
 
 	return (
 		<div className="text-sm -mt-3">

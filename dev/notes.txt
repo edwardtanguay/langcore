@@ -1,4 +1,4 @@
-- .. convert useContext to easy-peasy 
+- x convert useContext to easy-peasy 
 	- x dutchVerbs: DutchVerb[];
 		- x load actual verbs
 		- x build verbs
@@ -9,10 +9,12 @@
 		- x put random function in separate area outside the state
 		- x add state to selectors
 		- x put randome function in selectors
-	- .. remove code
+	- x remove code
 	
 
+- delete test reacts
 - fix "div cannot appear of p" error
+
 
 
 

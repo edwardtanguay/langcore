@@ -5,7 +5,6 @@ import "./index.scss";
 import { PageWelcome } from "./pages/PageWelcome.tsx";
 import { PageAbout } from "./pages/PageAbout.tsx";
 import { Page404 } from "./pages/Page404.tsx";
-import { AppProvider } from "./AppContext.tsx";
 import { PageDutchVerbs } from "./pages/PageDutchVerbs.tsx";
 import { PageProfile } from "./pages/PageProfile.tsx";
 import { StoreProvider } from "easy-peasy";
@@ -83,9 +82,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 		)}
 		{mode !== 'print' && (
 			<StoreProvider store={store}>
-				<AppProvider>
-					<RouterProvider router={router} />
-				</AppProvider>
+				<RouterProvider router={router} />
 			</StoreProvider>
 		)}
 	</>

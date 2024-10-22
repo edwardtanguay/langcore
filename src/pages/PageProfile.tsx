@@ -1,13 +1,10 @@
 import React, { useState } from "react";
 import { useStoreState, useStoreActions } from "../store/hooks.ts"
-import { useContext } from "react";
-import { AppContext } from "../AppContext";
 import { NavLink } from "react-router-dom";
 
 export const PageProfile = () => {
-	const { firstName, learnedVerbs, userVerbs, verbsTestedCorrect } = useStoreState((state) => state.profileModel);
+	const { firstName, learnedVerbs, userVerbs, verbsTestedCorrect, dutchVerbs } = useStoreState((state) => state.profileModel);
 	const { setFirstName, resetAllLearningHistory } = useStoreActions((actions) => actions.profileModel);
-	const { dutchVerbs } = useContext(AppContext);
 	const [askingIfSure, setAskingIfSure] = useState(false);
 
 	const handleChangeFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {

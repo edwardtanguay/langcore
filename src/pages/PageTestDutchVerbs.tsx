@@ -1,20 +1,17 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import { useEffect, useState } from "react";
-// import { AppContext } from "../AppContext";
 import { DutchVerb } from "../types";
 import { useStoreActions, useStoreState } from "../store/hooks";
 import { FaMagnifyingGlass } from "react-icons/fa6";
 import { useSelectors } from "../store/useSelectors";
 
 export const PageTestDutchVerbs = () => {
-	// const { getRandomNotAnsweredCorrectlyVerb, dutchVerbs } = useContext(AppContext);
 	const [answerVerb, setAnswerVerb] = useState('');
 	const [dv, setDv] = useState<DutchVerb | null>(null);
 	const { verbsTestedCorrect } = useStoreState((state) => state.profileModel);
 	const { addVerbsTestedCorrect: addVerbTestedCorrect } = useStoreActions((actions) => actions.profileModel);
 	const [showingAnswer, setShowingAnswer] = useState(false);
 	const [verbIsCorrect, setVerbIsCorrect] = useState(false);
-	// const numberOfVerbsTestedCorrect = useStoreState((state) => state.profileModel.getNumberOfVerbsTestedCorrect);
 	const { dutchVerbs } = useStoreState((state) => state.profileModel);
 	const { getRandomNotAnsweredCorrectlyVerb } = useSelectors();
 

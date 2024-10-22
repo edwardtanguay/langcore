@@ -1,11 +1,8 @@
-// import { useContext } from "react";
-// import { AppContext } from "../AppContext";
 import { useStoreState } from "../store/hooks.ts"
 import { SingularDutchVerb } from "../components/SingularDutchVerb.tsx";
 import * as config from '../config.ts';
 
 export const PageDutchVerbs = () => {
-	// const { dutchVerbs } = useContext(AppContext);
 	const { dutchVerbs } = useStoreState((state) => state.profileModel);
 	const { learnedVerbs } = useStoreState((state) => state.profileModel);
 

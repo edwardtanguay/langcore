@@ -1,5 +1,3 @@
-// import { useContext } from "react";
-// import { AppContext } from "../AppContext";
 import * as config from '../config';
 import { DutchVerb } from "../types";
 import { useStoreActions, useStoreState } from "../store/hooks";
@@ -10,7 +8,6 @@ interface IProps {
 }
 
 export const VerbHeader = ({ dutchVerb, learnedVerbs }: IProps) => {
-	// const { handleIsOpenToggle } = useContext(AppContext);
 	const { userVerbs } = useStoreState((state) => state.profileModel);
 	const { handleIsOpenToggle } = useStoreActions((state) => state.profileModel);
 

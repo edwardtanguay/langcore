@@ -13,6 +13,7 @@ import { SpanishExampleManager } from "../../classes/spanishExampleManager";
 import { getDutchVerbs } from "../../dataModel";
 
 export interface ProfileModel {
+
 	// state variables
 	firstName: string;
 	learnedVerbs: string[];
@@ -44,7 +45,7 @@ export interface ProfileModel {
 	updateSpanishExample: Action<this, SpanishExample>;
 	loadDutchVerbs: Action<this>;
 	handleIsOpenToggle: Action<this, DutchVerb>;
-	
+	setDutchVerbs: Action<this, DutchVerb[]>;
 }
 
 export const profileModel: ProfileModel = {
@@ -143,4 +144,7 @@ export const profileModel: ProfileModel = {
 			}
 		}
 	}),
+	setDutchVerbs: action((state, dutchVerbs) => {
+		state.dutchVerbs = dutchVerbs;
+	})
 };
