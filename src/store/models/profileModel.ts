@@ -10,6 +10,7 @@ import { SpanishVerbManager } from "../../classes/spanishVerbManager";
 import spanishVerbText from "../../data/spanishVerbs.spv.txt?raw";
 import spanishExamplesText from "../../data/spanishExamples.spe.txt?raw";
 import { SpanishExampleManager } from "../../classes/spanishExampleManager";
+import { getDutchVerbs } from "../../dataModel"
 
 export interface ProfileModel {
 	// state variables
@@ -118,6 +119,6 @@ export const profileModel: ProfileModel = {
 		);
 	}),
 	loadDutchVerbs: action((state) => {
-		state.dutchVerbs = [];
+		state.dutchVerbs = getDutchVerbs() 
 	}),
 };

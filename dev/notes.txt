@@ -1,5 +1,6 @@
 - .. convert useContext to easy-peasy 
 	- .. dutchVerbs: DutchVerb[];
+		- .. load actual verbs
 	- setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	- handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
 	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;

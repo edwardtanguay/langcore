@@ -9,7 +9,7 @@ export const PageWelcome = () => {
 			<p>Welcome to the Language Core, currently we have <NavLink className="underline" to="/dutchVerbs"
 			>Dutch Verbs</NavLink>.</p>
 
-			<p>test: there are {dutchVerbs.length} dutch verbs</p>
+			<p>{dutchVerbs.map(m => m.infinitive).join(', ')}</p>
 		</>
 	)
 }
