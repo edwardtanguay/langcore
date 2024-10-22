@@ -1,5 +1,6 @@
 import { Action, action, Computed, computed } from "easy-peasy";
 import {
+	DutchVerb,
 	ExampleCountObject,
 	SpanishExample,
 	SpanishVerb,
@@ -21,6 +22,7 @@ export interface ProfileModel {
 	appMode: string;
 	spanishExamples: SpanishExample[];
 	exampleCountObject: ExampleCountObject;
+	dutchVerbs: DutchVerb[];
 
 	// computed variables
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
@@ -39,6 +41,7 @@ export interface ProfileModel {
 	loadSpanishExamples: Action<this>;
 	loadExampleCountObject: Action<this>;
 	updateSpanishExample: Action<this, SpanishExample>;
+	loadDutchVerbs: Action<this>;
 }
 
 export const profileModel: ProfileModel = {
@@ -53,8 +56,9 @@ export const profileModel: ProfileModel = {
 	appMode: "",
 	spanishExamples: [],
 	exampleCountObject: {},
+	dutchVerbs: [],
 
-	// computed variables
+	// computed variablesjj
 	getNumberOfVerbsTestedCorrect: computed((state) => {
 		return state.verbsTestedCorrect.length;
 	}),
@@ -112,5 +116,8 @@ export const profileModel: ProfileModel = {
 		state.spanishExamples = state.spanishExamples.map((m) =>
 			m.spanish === spanishExample.spanish ? spanishExample : m
 		);
+	}),
+	loadDutchVerbs: action((state) => {
+		state.dutchVerbs = [];
 	}),
 };

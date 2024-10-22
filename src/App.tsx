@@ -4,13 +4,14 @@ import { useEffect } from "react";
 import { useStoreActions } from "./store/hooks";
 
 function App() {
-	const { loadSpanishVerbs, loadSpanishExamples, loadAppMode, loadExampleCountObject } = useStoreActions((actions) => actions.profileModel);
+	const { loadSpanishVerbs, loadSpanishExamples, loadAppMode, loadExampleCountObject, loadDutchVerbs } = useStoreActions((actions) => actions.profileModel);
 
 	useEffect(() => {
 		loadSpanishVerbs();
 		loadSpanishExamples();
 		loadAppMode();
 		loadExampleCountObject();
+		loadDutchVerbs();
 	}, [])
 
 	return (
