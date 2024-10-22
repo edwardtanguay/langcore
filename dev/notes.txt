@@ -1,6 +1,12 @@
 - .. convert useContext to easy-peasy 
 	- .. dutchVerbs: DutchVerb[];
-		- .. load actual verbs
+		- x load actual verbs
+		- x build verbs
+		- .. port handling function as well
+
+- fix "div cannot appear of p" error
+
+
 	- setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	- handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
 	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;

@@ -1,8 +1,8 @@
-import { useContext } from "react";
-import { AppContext } from "../AppContext";
+// import { useContext } from "react";
+// import { AppContext } from "../AppContext";
 import * as config from '../config';
 import { DutchVerb } from "../types";
-import { useStoreState } from "../store/hooks";
+import { useStoreActions, useStoreState } from "../store/hooks";
 
 interface IProps {
 	dutchVerb: DutchVerb;
@@ -10,8 +10,9 @@ interface IProps {
 }
 
 export const VerbHeader = ({ dutchVerb, learnedVerbs }: IProps) => {
-	const { handleIsOpenToggle } = useContext(AppContext);
+	// const { handleIsOpenToggle } = useContext(AppContext);
 	const { userVerbs } = useStoreState((state) => state.profileModel);
+	const { handleIsOpenToggle } = useStoreActions((state) => state.profileModel);
 
 	const isLearned = learnedVerbs.includes(dutchVerb.dpodId);
 	const userVerb = userVerbs.find(m => m.dpodId === dutchVerb.dpodId);

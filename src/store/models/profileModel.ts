@@ -10,7 +10,7 @@ import { SpanishVerbManager } from "../../classes/spanishVerbManager";
 import spanishVerbText from "../../data/spanishVerbs.spv.txt?raw";
 import spanishExamplesText from "../../data/spanishExamples.spe.txt?raw";
 import { SpanishExampleManager } from "../../classes/spanishExampleManager";
-import { getDutchVerbs } from "../../dataModel"
+import { getDutchVerbs } from "../../dataModel";
 
 export interface ProfileModel {
 	// state variables
@@ -43,10 +43,10 @@ export interface ProfileModel {
 	loadExampleCountObject: Action<this>;
 	updateSpanishExample: Action<this, SpanishExample>;
 	loadDutchVerbs: Action<this>;
+	handleIsOpenToggle: Action<this, DutchVerb>;
 }
 
 export const profileModel: ProfileModel = {
-
 	// state variables
 	firstName: "",
 	learnedVerbs: [],
@@ -119,6 +119,30 @@ export const profileModel: ProfileModel = {
 		);
 	}),
 	loadDutchVerbs: action((state) => {
-		state.dutchVerbs = getDutchVerbs() 
+		state.dutchVerbs = getDutchVerbs();
+	}),
+	handleIsOpenToggle: action((state, dutchVerb) => {
+		const _dutchVerb = state.dutchVerbs.find(
+			(m) => m.dpodId === dutchVerb.dpodId
+		);
+		if (_dutchVerb) {
+			_dutchVerb.isOpen = !dutchVerb.isOpen;
+		}
+		// dutchVerb.isOpen = !dutchVerb.isOpen;
+		// const _dutchVerbs = structuredClone(dutchVerbs);
+		// setDutchVerbs(_dutchVerbs);
+
+		// // update number of times opened
+		// if (dutchVerb.isOpen) {
+		// 	const userVerb = userVerbs.find(m => m.dpodId === dutchVerb.dpodId);
+		// 	if (userVerb) {
+		// 		userVerb.timesOpened++;
+		// 		setUserVerbs(userVerbs);
+		// 	} else {
+		// 		userVerbs.push({
+		// 			dpodId: dutchVerb.dpodId,
+		// 			timesOpened: 1
+		// 		})
+		// 	}
 	}),
 };
