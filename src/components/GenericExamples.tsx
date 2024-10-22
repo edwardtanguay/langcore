@@ -9,7 +9,7 @@ export const GenericExamples = ({ rule, areaIdCode }: IProps) => {
 	return (
 		<>
 			{areaIdCode === 'main' && (
-				<>
+				<ul className="list-disc ml-3">
 					{rule.examples.map((example) => {
 						return (
 							<li className="text-gray-600 italic">{example.spanish}
@@ -19,7 +19,7 @@ export const GenericExamples = ({ rule, areaIdCode }: IProps) => {
 							</li>
 						)
 					})}
-				</>
+				</ul>
 			)}
 		</>
 	)
