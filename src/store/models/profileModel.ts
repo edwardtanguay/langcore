@@ -11,7 +11,7 @@ import spanishExamplesText from "../../data/spanishExamples.spe.txt?raw";
 import { SpanishExampleManager } from "../../classes/spanishExampleManager";
 
 export interface ProfileModel {
-	// variables
+	// state variables
 	firstName: string;
 	learnedVerbs: string[];
 	userVerbs: UserVerb[];
@@ -22,7 +22,7 @@ export interface ProfileModel {
 	spanishExamples: SpanishExample[];
 	exampleCountObject: ExampleCountObject;
 
-	// computed
+	// computed variables
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
 
 	// actions
@@ -42,7 +42,8 @@ export interface ProfileModel {
 }
 
 export const profileModel: ProfileModel = {
-	// state
+
+	// state variables
 	firstName: "",
 	learnedVerbs: [],
 	userVerbs: [],
@@ -53,7 +54,7 @@ export const profileModel: ProfileModel = {
 	spanishExamples: [],
 	exampleCountObject: {},
 
-	//computed
+	// computed variables
 	getNumberOfVerbsTestedCorrect: computed((state) => {
 		return state.verbsTestedCorrect.length;
 	}),
