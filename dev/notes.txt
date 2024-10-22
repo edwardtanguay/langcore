@@ -4,8 +4,9 @@
 		- x build verbs
 		- x port handling function as well
 	- x handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
-	- .. setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
+	- x setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
+		- .. put random function in separate area outside the state
 
 	
 

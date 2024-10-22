@@ -44,6 +44,7 @@ export interface ProfileModel {
 	updateSpanishExample: Action<this, SpanishExample>;
 	loadDutchVerbs: Action<this>;
 	handleIsOpenToggle: Action<this, DutchVerb>;
+	
 }
 
 export const profileModel: ProfileModel = {
@@ -59,7 +60,7 @@ export const profileModel: ProfileModel = {
 	exampleCountObject: {},
 	dutchVerbs: [],
 
-	// computed variablesjj
+	// computed variables
 	getNumberOfVerbsTestedCorrect: computed((state) => {
 		return state.verbsTestedCorrect.length;
 	}),
