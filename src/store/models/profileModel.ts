@@ -4,6 +4,7 @@ import {
 	ExampleCountObject,
 	SpanishExample,
 	SpanishVerb,
+	User,
 	UserVerb,
 } from "../../types";
 import { SpanishVerbManager } from "../../classes/spanishVerbManager";
@@ -15,7 +16,7 @@ import { getDutchVerbs } from "../../dataModel";
 export interface ProfileModel {
 
 	// state variables
-	firstName: string;
+	user: User;
 	learnedVerbs: string[];
 	userVerbs: UserVerb[];
 	learnedExamples: string[];
@@ -30,7 +31,7 @@ export interface ProfileModel {
 	getNumberOfVerbsTestedCorrect: Computed<this, number>;
 
 	// actions
-	setFirstName: Action<this, string>;
+	setUser: Action<this, User>;
 	addVerbLearned: Action<this, string>;
 	removeVerbLearned: Action<this, string>;
 	resetAllLearningHistory: Action<this>;
@@ -50,7 +51,9 @@ export interface ProfileModel {
 
 export const profileModel: ProfileModel = {
 	// state variables
-	firstName: "",
+	user: {
+		firstName: ""
+	},
 	learnedVerbs: [],
 	userVerbs: [],
 	learnedExamples: [],
@@ -67,8 +70,9 @@ export const profileModel: ProfileModel = {
 	}),
 
 	// actions
-	setFirstName: action((state, firstName) => {
-		state.firstName = firstName;
+	setUser: action((state, user) => {
+		const _user = structuredClone(user)
+		state.user = _user;
 	}),
 	addVerbLearned: action((state, verbIdCode) => {
 		state.learnedVerbs.push(verbIdCode);

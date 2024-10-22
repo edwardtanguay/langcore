@@ -3,13 +3,14 @@ import { useStoreState, useStoreActions } from "../store/hooks.ts"
 import { NavLink } from "react-router-dom";
 
 export const PageProfile = () => {
-	const { firstName, learnedVerbs, userVerbs, verbsTestedCorrect, dutchVerbs } = useStoreState((state) => state.profileModel);
-	const { setFirstName, resetAllLearningHistory } = useStoreActions((actions) => actions.profileModel);
+	const { user, learnedVerbs, userVerbs, verbsTestedCorrect, dutchVerbs } = useStoreState((state) => state.profileModel);
+	const { setUser, resetAllLearningHistory } = useStoreActions((actions) => actions.profileModel);
 	const [askingIfSure, setAskingIfSure] = useState(false);
 
 	const handleChangeFirstName = (e: React.ChangeEvent<HTMLInputElement>) => {
 		const value = e.target.value;
-		setFirstName(value);
+		user.firstName = value;
+		setUser(user);
 	}
 
 	const percent = ((learnedVerbs.length / dutchVerbs.length) * 100).toFixed(0);
@@ -31,9 +32,9 @@ export const PageProfile = () => {
 		<form>
 			<div className="formRow">
 				<label htmlFor="firstName">First Name:</label>
-				<input type="text" id="firstName" onChange={e => handleChangeFirstName(e)} value={firstName}></input>
+				<input type="text" id="firstName" onChange={e => handleChangeFirstName(e)} value={user.firstName}></input>
 			</div>
-			{firstName !== "" && (
+			{user.firstName !== "" && (
 				<>
 					<div className="formRow mt-3">
 						<label className="-mb-1">Stats:</label>

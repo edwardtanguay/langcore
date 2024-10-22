@@ -210,3 +210,7 @@ export type SpanishTenseObject = {
 export type ExampleCountObject = {
 	[key: string]: number;
 };
+
+export type User = {
+	firstName: string;
+}

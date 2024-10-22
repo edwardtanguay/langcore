@@ -10,15 +10,10 @@
 		- x add state to selectors
 		- x put randome function in selectors
 	- x remove code
-	
+- x delete test reacts
+- x fix "div cannot appear of p" error
 
-- delete test reacts
-- fix "div cannot appear of p" error
-
-
-
-
-
+- .. add score to user
 
 ==========================================
 - x add mock page Spanish Links
