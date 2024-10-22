@@ -4,7 +4,7 @@ import { useSelectors } from "../store/useSelectors";
 
 export const PageWelcome = () => {
 	const { dutchVerbs } = useStoreState((state) => state.profileModel);
-	const [getTestNumber] = useSelectors();
+	const [getTestNumber, getTestMessage] = useSelectors();
 
 	return (
 		<>
@@ -14,6 +14,7 @@ export const PageWelcome = () => {
 			<p>test 001: {dutchVerbs.map(m => m.infinitive).join(', ')}</p>
 
 			<p>test 002: {getTestNumber()}</p>
+			<p>test 003: {getTestMessage()}</p>
 
 		</>
 	)

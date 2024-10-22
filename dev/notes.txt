@@ -6,7 +6,8 @@
 	- x handleIsOpenToggle: (dutchVerb: DutchVerb) => void;
 	- x setDutchVerbs: React.Dispatch<React.SetStateAction<DutchVerb[]>>;
 	- getRandomNotAnsweredCorrectlyVerb: () => DutchVerb;
-		- .. put random function in separate area outside the state
+		- x put random function in separate area outside the state
+		- .. add state to selectors
 
 	
 
