@@ -80,6 +80,7 @@ export type SpanishVerb = {
 	verbBase: string;
 	conjugation1Url: string;
 	conjugation2Url: string;
+	tensesThatDeviateFromRegular: string[];
 	conj: {
 		base: {
 			_1INFI: string;

@@ -57,12 +57,15 @@ export class SpanishVerbBuilder {
 		if (this._spanishVerb.verbKind === "irregular") {
 			if (this._pastpart !== "") {
 				this._spanishVerb.conj.base._1PAPA = this._pastpart;
+				this._spanishVerb.tensesThatDeviateFromRegular.push('_1PAPA')
 				this.overridePastParticiple(
 					this._spanishVerb.conj.indicative._2PRPE
 				);
+				this._spanishVerb.tensesThatDeviateFromRegular.push('_2PRPE')
 				this.overridePastParticiple(
 					this._spanishVerb.conj.indicative._2PAPE
 				);
+				this._spanishVerb.tensesThatDeviateFromRegular.push('_2PAPE')
 			}
 		}
 	}
@@ -84,6 +87,7 @@ export class SpanishVerbBuilder {
 			verbType,
 			conjugation1Url: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,
 			conjugation2Url: `https://conjugator.reverso.net/conjugation-spanish-verb-${verb}.html`,
+			tensesThatDeviateFromRegular: [],
 			conj: {
 				base: {
 					_1INFI: verb,

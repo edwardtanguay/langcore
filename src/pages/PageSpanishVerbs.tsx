@@ -14,17 +14,17 @@ export const PageSpanishVerbs = () => {
 			<section>
 				{spanishVerbs.map((sv) => {
 					return (
-						<div key={sv.conj.base._1INFI} style={{ display: 'table', border: sv.verbKind==='regular' ? '2px solid white': '2px solid #888', borderRadius: sv.verbKind === 'regular' ? '.5rem' : '0rem', backgroundColor: sv.verbKind==='regular' ? '#ddd' : '#ccc' }} className="py-3 px-4 mb-3">
+						<div key={sv.conj.base._1INFI} style={{ display: 'table', border: sv.verbKind === 'regular' ? '2px solid white' : '2px solid #888', borderRadius: sv.verbKind === 'regular' ? '.5rem' : '0rem', backgroundColor: sv.verbKind === 'regular' ? '#ddd' : '#ccc' }} className="py-3 px-4 mb-3">
 							<div className="mb-2 flex justify-between">
 								<div>
-									<span className="font-semibold text-[1.1rem] font-mono" style={{color: sv.verbKind==="regular" ? 'brown': '#333'}}>{sv.spanish}</span> <span className="text-[1rem] italic opacity-50">({sv.english})</span>
-										<span> - <span className="text-[.7rem] opacity-50">{sv.verbKind}</span></span>
+									<span className="font-semibold text-[1.1rem] font-mono" style={{ color: sv.verbKind === "regular" ? 'brown' : '#333' }}>{sv.spanish}</span> <span className="text-[1rem] italic opacity-50">({sv.english})</span>
+									<span> - <span className="text-[.7rem] opacity-50">{sv.verbKind}</span></span>
 									{appMode === 'dev' && false && (
 										<span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span></span>
 									)}
 								</div>
 								<div>
-									<span className="data">{sv.conj.base._1PRPA}</span> - <span className="data">{sv.conj.base._1PAPA}</span>
+									<span className="data">{sv.conj.base._1PRPA}</span> - <span className={`data ${sv.tensesThatDeviateFromRegular.includes('_1PAPA') ? 'tenseChangeHighlight' : ''}`}>{sv.conj.base._1PAPA}</span>
 								</div>
 							</div>
 							<table className="spanishVerb">

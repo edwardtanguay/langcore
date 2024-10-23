@@ -6,9 +6,9 @@
 	- x refactor to SpanishVerbBuilder
 	- x fix: use this_pastpart for all the verbs that need it
 	- x add general tatoeba link
-	- .. convert last three tense
-
+	- x convert last three tenses
 	- .. on irregular verbs: show what deviates from regular verbs
+	
 	- on irregular verbs: show note 
 
 
