@@ -75,6 +75,7 @@ export type SpanishVerb = {
 	spanish: string;
 	english: string;
 	rank: number;
+	verbKind: VerbKind;
 	verbType: SpanishVerbType;
 	verbBase: string;
 	conjugation1Url: string;
@@ -214,4 +215,13 @@ export type ExampleCountObject = {
 export type User = {
 	firstName: string;
 	score: number;
+};
+
+export type VerbKind = "regular" | "irregular";
+
+export type VerbLineParts = {
+	verb: string;
+	english: string;
+	rank: number;
+	rest: string;
 };

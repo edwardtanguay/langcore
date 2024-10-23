@@ -18,6 +18,7 @@ export const PageSpanishVerbs = () => {
 							<div className="mb-2 flex justify-between">
 								<div>
 									<span className="font-semibold text-[1.1rem] data">{sv.spanish}</span> - <span className="text-[1rem] italic opacity-50">{sv.english}</span>
+										<span> - <span className="text-[.7rem] opacity-50">{sv.verbKind}</span></span>
 									{appMode === 'dev' && (
 										<span> - <span className="text-[.7rem] opacity-50">{sv.rank.toFixed(2)}</span></span>
 									)}

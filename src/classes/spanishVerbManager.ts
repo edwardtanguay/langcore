@@ -3,6 +3,8 @@ import {
 	SpanishVerb,
 	SpanishVerbTenseIdCode,
 	SpanishVerbType,
+	VerbKind,
+	VerbLineParts,
 } from "../types";
 import * as qstr from "../qtools/qstr";
 import { tenses } from "../spanish";
@@ -77,16 +79,13 @@ export class SpanishVerbManager {
 		}
 	}
 
-	private getVerbLineParts(line: string): {
-		verb: string;
-		english: string;
-		rank: number;
-	} {
+	private getVerbLineParts(line: string): VerbLineParts {
 		const parts = qstr.breakIntoParts(line, ";");
 		return {
 			verb: parts[0],
 			english: parts[1],
 			rank: parts[2] ? Number(parts[2]) : 3.0,
+			rest: parts[3]
 		};
 	}
 
@@ -94,14 +93,15 @@ export class SpanishVerbManager {
 		for (const _line of this.verbLines) {
 			const line = _line.trim();
 			if (line !== "" && line.includes(";")) {
-				// e.g. "cantar; sing; 3.8"
-				const { verb, english, rank } = this.getVerbLineParts(line);
-				const verbType:SpanishVerbType = verb.slice(-2) as SpanishVerbType; // ar, er, ir
+				const { verb, english, rank, rest } = this.getVerbLineParts(line);
+				const verbKind: VerbKind = rest === 'regular' ? "regular" : "irregular"; 
 				const verbBase = verb.slice(0, -2); // habl
+				const verbType:SpanishVerbType = verb.slice(-2) as SpanishVerbType; 
 				const spanishVerb: SpanishVerb = {
 					spanish: verb,
 					english,
 					rank,
+					verbKind,
 					verbBase,
 					verbType,
 					conjugation1Url: `https://www.123teachme.com/spanish_verb_conjugation/${verb}`,

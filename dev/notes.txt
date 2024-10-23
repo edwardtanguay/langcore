@@ -1,3 +1,8 @@
+x record if regular or irregular
+- .. show regular or irregular
+
+
+=============================================
 - .. put in basics with tests, e.g. colors, days, months
 	- x make file
 	- .. Spanish Tests page
