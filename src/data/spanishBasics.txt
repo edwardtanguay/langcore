@@ -1,0 +1,223 @@
+colors;red;roja
+colors;blue;azul
+colors;green;verde
+colors;yellow;amarillo
+colors;black;negro
+colors;white;blanco
+colors;purple;púrpura
+colors;orange;naranja
+colors;pink;rosa
+colors;brown;marrón
+colors;gray;gris
+colors;violet;violeta
+colors;indigo;índigo
+colors;turquoise;turquesa
+colors;gold;dorado
+colors;silver;plateado
+colors;beige;beige
+colors;magenta;magenta
+
+months;January;Enero
+months;February;Febrero
+months;March;Marzo
+months;April;Abril
+months;May;Mayo
+months;June;Junio
+months;July;Julio
+months;August;Agosto
+months;September;Septiembre
+months;October;Octubre
+months;November;Noviembre
+months;December;Diciembre
+
+daysOfWeek;Monday;lunes
+daysOfWeek;Tuesday;martes
+daysOfWeek;Wednesday;miércoles
+daysOfWeek;Thursday;jueves
+daysOfWeek;Friday;viernes
+daysOfWeek;Saturday;sábado
+daysOfWeek;Sunday;domingo
+
+numbers;zero;cero
+numbers;one;uno
+numbers;two;dos
+numbers;three;tres
+numbers;four;cuatro
+numbers;five;cinco
+numbers;six;seis
+numbers;seven;siete
+numbers;eight;ocho
+numbers;nine;nueve
+numbers;ten;diez
+numbers;eleven;once
+numbers;twelve;doce
+numbers;thirteen;trece
+numbers;fourteen;catorce
+numbers;fifteen;quince
+numbers;sixteen;dieciséis
+numbers;seventeen;diecisiete
+numbers;eighteen;dieciocho
+numbers;nineteen;diecinueve
+numbers;twenty;veinte
+numbers;twenty-one;veintiuno
+numbers;twenty-two;veintidós
+numbers;twenty-three;veintitrés
+numbers;twenty-four;veinticuatro
+numbers;twenty-five;veinticinco
+numbers;twenty-six;veintiséis
+numbers;twenty-seven;veintisiete
+numbers;twenty-eight;veintiocho
+numbers;twenty-nine;veintinueve
+numbers;thirty;treinta
+numbers;thirty-one;treinta y uno
+numbers;thirty-two;treinta y dos
+numbers;thirty-three;treinta y tres
+numbers;thirty-four;treinta y cuatro
+numbers;thirty-five;treinta y cinco
+numbers;thirty-six;treinta y seis
+numbers;thirty-seven;treinta y siete
+numbers;thirty-eight;treinta y ocho
+numbers;thirty-nine;treinta y nueve
+numbers;forty;cuarenta
+numbers;forty-one;cuarenta y uno
+numbers;forty-two;cuarenta y dos
+numbers;forty-three;cuarenta y tres
+numbers;forty-four;cuarenta y cuatro
+numbers;forty-five;cuarenta y cinco
+numbers;forty-six;cuarenta y seis
+numbers;forty-seven;cuarenta y siete
+numbers;forty-eight;cuarenta y ocho
+numbers;forty-nine;cuarenta y nueve
+numbers;fifty;cincuenta
+numbers;fifty-one;cincuenta y uno
+numbers;fifty-two;cincuenta y dos
+numbers;fifty-three;cincuenta y tres
+numbers;fifty-four;cincuenta y cuatro
+numbers;fifty-five;cincuenta y cinco
+numbers;fifty-six;cincuenta y seis
+numbers;fifty-seven;cincuenta y siete
+numbers;fifty-eight;cincuenta y ocho
+numbers;fifty-nine;cincuenta y nueve
+numbers;sixty;sesenta
+numbers;sixty-one;sesenta y uno
+numbers;sixty-two;sesenta y dos
+numbers;sixty-three;sesenta y tres
+numbers;sixty-four;sesenta y cuatro
+numbers;sixty-five;sesenta y cinco
+numbers;sixty-six;sesenta y seis
+numbers;sixty-seven;sesenta y siete
+numbers;sixty-eight;sesenta y ocho
+numbers;sixty-nine;sesenta y nueve
+numbers;seventy;setenta
+numbers;seventy-one;setenta y uno
+numbers;seventy-two;setenta y dos
+numbers;seventy-three;setenta y tres
+numbers;seventy-four;setenta y cuatro
+numbers;seventy-five;setenta y cinco
+numbers;seventy-six;setenta y seis
+numbers;seventy-seven;setenta y siete
+numbers;seventy-eight;setenta y ocho
+numbers;seventy-nine;setenta y nueve
+numbers;eighty;ochenta
+numbers;eighty-one;ochenta y uno
+numbers;eighty-two;ochenta y dos
+numbers;eighty-three;ochenta y tres
+numbers;eighty-four;ochenta y cuatro
+numbers;eighty-five;ochenta y cinco
+numbers;eighty-six;ochenta y seis
+numbers;eighty-seven;ochenta y siete
+numbers;eighty-eight;ochenta y ocho
+numbers;eighty-nine;ochenta y nueve
+numbers;ninety;noventa
+numbers;ninety-one;noventa y uno
+numbers;ninety-two;noventa y dos
+numbers;ninety-three;noventa y tres
+numbers;ninety-four;noventa y cuatro
+numbers;ninety-five;noventa y cinco
+numbers;ninety-six;noventa y seis
+numbers;ninety-seven;noventa y siete
+numbers;ninety-eight;noventa y ocho
+numbers;ninety-nine;noventa y nueve
+numbers;one hundred;cien
+
+numbers;one hundred and one;ciento uno
+numbers;one hundred and two;ciento dos
+numbers;one hundred and three;ciento tres
+numbers;one hundred and four;ciento cuatro
+numbers;one hundred and five;ciento cinco
+numbers;one hundred and six;ciento seis
+numbers;one hundred and seven;ciento siete
+numbers;one hundred and eight;ciento ocho
+numbers;one hundred and nine;ciento nueve
+numbers;one hundred and ten;ciento diez
+numbers;one hundred and eleven;ciento once
+numbers;one hundred and twelve;ciento doce
+numbers;one hundred and thirteen;ciento trece
+numbers;one hundred and fourteen;ciento catorce
+numbers;one hundred and fifteen;ciento quince
+numbers;one hundred and sixteen;ciento dieciséis
+numbers;one hundred and seventeen;ciento diecisiete
+numbers;one hundred and eighteen;ciento dieciocho
+numbers;one hundred and nineteen;ciento diecinueve
+numbers;one hundred and twenty;ciento veinte
+
+numbers;two hundred;doscientos
+numbers;three hundred;trescientos
+numbers;four hundred;cuatrocientos
+numbers;five hundred;quinientos
+numbers;six hundred;seiscientos
+numbers;seven hundred;setecientos
+numbers;eight hundred;ochocientos
+numbers;nine hundred;novecientos
+numbers;one thousand;mil
+
+numbers;two hundred and one;doscientos uno
+numbers;two hundred and two;doscientos dos
+numbers;two hundred and one;doscientos uno
+numbers;two hundred and two;doscientos dos
+numbers;two hundred and three;doscientos tres
+numbers;two hundred and four;doscientos cuatro
+numbers;two hundred and five;doscientos cinco
+numbers;two hundred and six;doscientos seis
+numbers;two hundred and seven;doscientos siete
+numbers;two hundred and eight;doscientos ocho
+numbers;two hundred and nine;doscientos nueve
+numbers;two hundred and ten;doscientos diez
+numbers;two hundred and eleven;doscientos once
+numbers;two hundred and twelve;doscientos doce
+numbers;two hundred and thirteen;doscientos trece
+numbers;two hundred and fourteen;doscientos catorce
+numbers;two hundred and fifteen;doscientos quince
+numbers;two hundred and sixteen;doscientos dieciséis
+numbers;two hundred and seventeen;doscientos diecisiete
+numbers;two hundred and eighteen;doscientos dieciocho
+numbers;two hundred and nineteen;doscientos diecinueve
+numbers;two hundred and twenty;doscientos veinte
+numbers;two hundred and twenty-one;doscientos veintiuno
+numbers;two hundred and twenty-two;doscientos veintidós
+numbers;two hundred and twenty-three;doscientos veintitrés
+
+time;It’s one o’clock.;Es la una.
+time;It’s two o'clock.;Son las dos.
+time;It’s three o’clock.;Son las tres.
+time;It’s four o’clock.;Son las cuatro.
+time;It’s five o’clock.;Son las cinco.
+time;It’s six o’clock.;Son las seis.
+time;It’s seven o’clock.;Son las siete.
+time;It’s eight o’clock.;Son las ocho.
+time;It’s nine o’clock.;Son las nueve.
+time;It’s ten o’clock.;Son las diez.
+time;It’s eleven o’clock.;Son las once.
+time;It’s twelve o’clock.;Son las doce.
+time;five past;y cinco
+time;ten past; y diez
+time;quarter past;y cuarto
+time;twenty past; y veinte
+time;twenty-five past;y veintecinco
+time;half past;y media
+time;twenty-five to;menos veintecinco
+time;twenty to;menos veinte
+time;quarter to;menos cuarto
+time;ten to;menos diez
+time;five to;menu cinco
+time;exactly/o’clock;en punto
