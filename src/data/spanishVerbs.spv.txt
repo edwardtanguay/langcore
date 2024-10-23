@@ -18,4 +18,4 @@ comer;to eat;4.67;regular
 dedidir;to decide;4.51;regular
 
 // IR-IRREGULAR ==================================================
-escribir; write; 4.96; pastpart:escrito
+escribir; write; 4.96; pastpart:escrito; note: past participle = escrito

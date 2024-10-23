@@ -165,8 +165,15 @@ export class SpanishVerbManager {
 						},
 					},
 				};
+				this.applyExceptions(spanishVerb);
 				this.spanishVerbs.push(spanishVerb);
 			}
+		}
+	}
+
+	private applyExceptions(sv: SpanishVerb) {
+		if (sv.verbKind === "irregular") {
+			sv.spanish = sv.spanish + "+IRREGULAR"
 		}
 	}
 
