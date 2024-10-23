@@ -65,6 +65,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 					_showInfos.nosotros = true;
 				}
 				break;
+			case 'vosotros':
+				if (showInfos.vosotros) {
+					_showInfos.vosotros = false;
+				} else {
+					_showInfos.vosotros = true;
+				}
+				break;
 		}
 		setShowInfos(_showInfos);
 	}
@@ -82,7 +89,8 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('nosotros')} style={{ fontWeight: showInfos.nosotros ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].nosotros}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "nosotros", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "nosotros", exampleCountObject)}</sup></td>
 
-				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
+				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('vosotros')} style={{ fontWeight: showInfos.vosotros ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].vosotros}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "vosotros", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "vosotros", exampleCountObject)}</sup></td>
+
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
 			{showInfos.main && (
@@ -99,6 +107,9 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			)}
 			{showInfos.nosotros && (
 				<TenseExamplePanel areaIdCode="nosotros" sv={sv} tenseIdCode={tenseIdCode} pronoun="nosotros" pronounIndex={3} />
+			)}
+			{showInfos.vosotros && (
+				<TenseExamplePanel areaIdCode="vosotros" sv={sv} tenseIdCode={tenseIdCode} pronoun="vosotros" pronounIndex={4} />
 			)}
 		</>
 	)

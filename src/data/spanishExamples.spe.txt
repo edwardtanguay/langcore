@@ -90,3 +90,8 @@ escribir; _2PRET; el; completedActionInPast; Ella tampoco escribió.; She didn't
 
 escribir; _2PRET; tu; completedActionInPast; ¿Cuándo fue la última vez que escribiste una carta de amor?;  When is the last time you wrote a love letter?
 
+escribir; _2PRPE; vosotros; inPastContinueToPresent; Habéis escrito una carta que sigue siendo importante.; You all have written a letter that is still important.
+
+escribir; _2PRPE; vosotros; inPastContinueToPresent; Habéis escrito un libro que muchos están leyendo.; You guys have written a book that many are reading.
+
+escribir; _2PRPE; vosotros; inPastContinueToPresent; Habéis escrito varios artículos desde que empezó el proyecto.; You guys have written several articles since the project started.
