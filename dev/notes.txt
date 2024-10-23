@@ -1,3 +1,12 @@
+- .. put in basics with tests, e.g. colors, days, months
+	- .. make json file
+	- Spanish Tests page
+		- enable choose test and play
+		- somehow make it generic so any collection of flashcards can be sent
+
+
+
+==========================================
 - x convert useContext to easy-peasy 
 	- x dutchVerbs: DutchVerb[];
 		- x load actual verbs
@@ -14,8 +23,7 @@
 - x fix "div cannot appear of p" error
 
 - x add score to user
-- .. welcome page test
-
+- x welcome page test
 ==========================================
 - x add mock page Spanish Links
 - x add next tense: past perfect
