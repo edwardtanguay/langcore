@@ -1,6 +1,7 @@
 
 // AR-REGULAR ==================================================
 hablar; speak; 4.98; regular
+olvidar;to forget;4.88;regular
 
 // AR-IRREGULAR ==================================================
 

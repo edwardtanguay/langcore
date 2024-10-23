@@ -72,3 +72,8 @@ hablar; _2PRET; yo; clearBeginningAndEndInPast; Hablé con mi jefe sobre el proy
 hablar; _2PRET; yo; clearBeginningAndEndInPast; Ayer hablé con el doctor por veinte minutos.; Yesterday I spoke with the doctor for twenty minutes.
 
 hablar; _2PRET; yo; clearBeginningAndEndInPast; Hablé con mi hermano al final del día.; I spoke with my brother at the end of the day.
+
+
+olvidar; _2IMPE; tu; ongoingAction; Olvidabas siempre tus llaves en casa.; You were always forgetting your keys at home.
+olvidar; _2IMPE; tu; ongoingAction;Olvidabas lo que te dije cada vez.; You kept forgetting what I told you every time.
+olvidar; _2IMPE; tu; ongoingAction; Olvidabas llevar el almuerzo a la escuela.; You were forgetting to take lunch to school.

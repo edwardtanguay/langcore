@@ -4,7 +4,6 @@
 	- eie; e to ie
 	
 // ar-regular
-olvidar;to forget;4.88;regular
 usar;to use;4.67;regular
 
 // ar-irregular
