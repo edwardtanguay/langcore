@@ -21,6 +21,5 @@ caber;to fit, to be possible, to be appropriate; 3.9; presyo-pressubj:quep, pret
 //ir-irregular
 
 
-
 // reflexive verbs
 decidirse

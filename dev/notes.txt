@@ -3,7 +3,8 @@
 - x allow comments
 - .. build irregular verb - easy
 	- x border different for each
-	- .. refactor to SpanishVerbBuilder
+	- x refactor to SpanishVerbBuilder
+	- .. fix: use this_pastpart for all the verbs that need it
 
 
 	- fix: Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.

@@ -13,7 +13,8 @@ export class SpanishVerbBuilder {
 	private _verbLine: string = "";
 	private _spanishVerb: SpanishVerb = {} as SpanishVerb;
 	private _isVerb: boolean = false;
-	private _rest: string = '';
+	private _rest: string = "";
+	private _pastpart: string = "";
 
 	constructor(verbLine: string) {
 		this._verbLine = verbLine.trim();
@@ -29,14 +30,15 @@ export class SpanishVerbBuilder {
 
 	private parseRest() {
 		const restObj = qstr.parseKeyValueLine(this._rest);
-		console.log(444, restObj);
+		this._pastpart = restObj.pastpart ? restObj.pastpart : "";
 	}
 
 	private applyExceptions() {
 		this.parseRest();
 		if (this._spanishVerb.verbKind === "irregular") {
-			this._spanishVerb.spanish =
-				this._spanishVerb.spanish + "+IRREGULAR";
+			if (this._pastpart !== "") {
+				this._spanishVerb.conj.base._1PAPA = this._pastpart;
+			}
 		}
 	}
 

@@ -176,8 +176,15 @@ export const displayAsScore = (score: number) => {
 	return score.toString().padStart(5, "0");
 };
 
+// e.g. "name: Hans, age: 99"
 export const parseKeyValueLine = (line: string) => {
-	return {
-		test: '999'
+	const parts = qstr.breakIntoParts(line, ",");
+	const ro: { [key: string]: string } = {};
+	for (const part of parts) {
+		const halves = qstr.breakIntoParts(part, ":");
+		const key = String(halves[0]);
+		const value = halves[1];
+		ro[key] = value;
 	}
-}
+	return ro;
+};
