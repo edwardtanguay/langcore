@@ -72,6 +72,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 					_showInfos.vosotros = true;
 				}
 				break;
+			case 'ellos':
+				if (showInfos.ellos) {
+					_showInfos.ellos = false;
+				} else {
+					_showInfos.ellos = true;
+				}
+				break;
 		}
 		setShowInfos(_showInfos);
 	}
@@ -91,7 +98,8 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('vosotros')} style={{ fontWeight: showInfos.vosotros ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].vosotros}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "vosotros", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "vosotros", exampleCountObject)}</sup></td>
 
-				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>
+				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('ellos')} style={{ fontWeight: showInfos.ellos ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].ellos}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "ellos", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "ellos", exampleCountObject)}</sup></td>
+
 			</tr>
 			{showInfos.main && (
 				<TenseExamplePanel areaIdCode="main" sv={sv} tenseIdCode={tenseIdCode} pronoun="yo" pronounIndex={0} />
@@ -110,6 +118,9 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			)}
 			{showInfos.vosotros && (
 				<TenseExamplePanel areaIdCode="vosotros" sv={sv} tenseIdCode={tenseIdCode} pronoun="vosotros" pronounIndex={4} />
+			)}
+			{showInfos.ellos && (
+				<TenseExamplePanel areaIdCode="ellos" sv={sv} tenseIdCode={tenseIdCode} pronoun="ellos" pronounIndex={5} />
 			)}
 		</>
 	)
