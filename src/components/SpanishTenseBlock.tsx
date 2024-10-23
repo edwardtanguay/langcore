@@ -58,8 +58,14 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 					_showInfos.el = true;
 				}
 				break;
+			case 'nosotros':
+				if (showInfos.nosotros) {
+					_showInfos.nosotros = false;
+				} else {
+					_showInfos.nosotros = true;
+				}
+				break;
 		}
-		console.log(111, _showInfos);
 		setShowInfos(_showInfos);
 	}
 
@@ -74,7 +80,8 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('el')} style={{ fontWeight: showInfos.el ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].el}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject)}</sup></td>
 
-				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].nosotros) }}></td>
+				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('nosotros')} style={{ fontWeight: showInfos.nosotros ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].nosotros}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "nosotros", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "nosotros", exampleCountObject)}</sup></td>
+
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>
 			</tr>
@@ -89,6 +96,9 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			)}
 			{showInfos.el && (
 				<TenseExamplePanel areaIdCode="el" sv={sv} tenseIdCode={tenseIdCode} pronoun="el" pronounIndex={2} />
+			)}
+			{showInfos.nosotros && (
+				<TenseExamplePanel areaIdCode="nosotros" sv={sv} tenseIdCode={tenseIdCode} pronoun="nosotros" pronounIndex={3} />
 			)}
 		</>
 	)
