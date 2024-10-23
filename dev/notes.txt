@@ -4,7 +4,9 @@
 - .. build irregular verb - easy
 	- x border different for each
 	- x refactor to SpanishVerbBuilder
-	- .. fix: use this_pastpart for all the verbs that need it
+	- x fix: use this_pastpart for all the verbs that need it
+	- .. on irregular verbs: show what deviates from regular verbs
+	- on irregular verbs: show note 
 
 
 	- fix: Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.

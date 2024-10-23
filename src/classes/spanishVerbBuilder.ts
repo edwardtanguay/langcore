@@ -15,6 +15,7 @@ export class SpanishVerbBuilder {
 	private _isVerb: boolean = false;
 	private _rest: string = "";
 	private _pastpart: string = "";
+	private _regularPastParticiple = "";
 
 	constructor(verbLine: string) {
 		this._verbLine = verbLine.trim();
@@ -33,11 +34,35 @@ export class SpanishVerbBuilder {
 		this._pastpart = restObj.pastpart ? restObj.pastpart : "";
 	}
 
+	private replacePastParticiple(text: string) {
+		return qstr.replaceAll(
+			text,
+			" " + this._regularPastParticiple,
+			" " + this._pastpart
+		);
+	}
+
+	private overridePastParticiple(pronouns: PersonalPronouns) {
+		pronouns.yo = this.replacePastParticiple(pronouns.yo);
+		pronouns.tu = this.replacePastParticiple(pronouns.tu);
+		pronouns.el = this.replacePastParticiple(pronouns.el);
+		pronouns.nosotros = this.replacePastParticiple(pronouns.nosotros);
+		pronouns.vosotros = this.replacePastParticiple(pronouns.vosotros);
+		pronouns.ellos = this.replacePastParticiple(pronouns.ellos);
+	}
+
 	private applyExceptions() {
 		this.parseRest();
+		console.log(111, this._regularPastParticiple);
 		if (this._spanishVerb.verbKind === "irregular") {
 			if (this._pastpart !== "") {
 				this._spanishVerb.conj.base._1PAPA = this._pastpart;
+				this.overridePastParticiple(
+					this._spanishVerb.conj.indicative._2PRPE
+				);
+				this.overridePastParticiple(
+					this._spanishVerb.conj.indicative._2PAPE
+				);
 			}
 		}
 	}
@@ -48,6 +73,8 @@ export class SpanishVerbBuilder {
 		const verbKind: VerbKind = rest === "regular" ? "regular" : "irregular";
 		const verbBase = verb.slice(0, -2); // habl
 		const verbType: SpanishVerbType = verb.slice(-2) as SpanishVerbType;
+		this._regularPastParticiple =
+			verbBase + (verbType === "ar" ? "ado" : "ido");
 		this._spanishVerb = {
 			spanish: verb,
 			english,
