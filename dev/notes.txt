@@ -1,9 +1,12 @@
 - .. put in basics with tests, e.g. colors, days, months
-	- .. make json file
-	- Spanish Tests page
-		- enable choose test and play
-		- somehow make it generic so any collection of flashcards can be sent
-
+	- x make file
+	- .. Spanish Tests page
+		- .. make basic page
+		- make two tests: Multiple Choice, Fill-in-the-Blank, choose
+		- load test content
+		- show countdown of number of items to test
+		- test until none left
+		- user can mark with slider how well he knows the item
 
 
 ==========================================
