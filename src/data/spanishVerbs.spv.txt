@@ -2,16 +2,20 @@
 // AR-REGULAR ==================================================
 hablar; speak; 4.98; regular
 olvidar;to forget;4.88;regular
+usar;to use;4.67;regular
 
 // AR-IRREGULAR ==================================================
 
 
 // ER-REGULAR ==================================================
+comer;to eat;4.67;regular
 
 // ER-IRREGULAR ==================================================
 
 
 
 // IR-REGULAR ==================================================
+dedidir;to decide;4.51;regular
 
 // IR-IRREGULAR ==================================================
+escribir; write; 4.96; pastpart:escrito

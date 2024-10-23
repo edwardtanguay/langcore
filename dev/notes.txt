@@ -1,7 +1,8 @@
 - x record if regular or irregular
 - x show regular or irregular
-- .. allow comments
+- x allow comments
 - .. build irregular verb - easy
+	- .. border different for each
 
 
 
