@@ -77,3 +77,11 @@ hablar; _2PRET; yo; clearBeginningAndEndInPast; Hablé con mi hermano al final d
 olvidar; _2IMPE; tu; ongoingAction; Olvidabas siempre tus llaves en casa.; You were always forgetting your keys at home.
 olvidar; _2IMPE; tu; ongoingAction;Olvidabas lo que te dije cada vez.; You kept forgetting what I told you every time.
 olvidar; _2IMPE; tu; ongoingAction; Olvidabas llevar el almuerzo a la escuela.; You were forgetting to take lunch to school.
+
+escribir; _2PRPE; tu; inPastContinueToPresent; Has escrito muchos libros en los últimos años; You have written many books in the past few years.
+
+escribir; _2PRPE; tu; inPastContinueToPresent; Has escrito esa carta desde esta mañana; You have been writing that letter since this morning.
+
+escribir; _2PRPE; tu; inPastContinueToPresent; Has escrito en tu diario todos los días esta semana; You have written in your journal every day this week.
+
+escribir; _2PRET; el; completedActionInPast; Ella tampoco escribió.; She didn't write either.

@@ -51,6 +51,13 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 					_showInfos.tu = true;
 				}
 				break;
+			case 'el':
+				if (showInfos.el) {
+					_showInfos.el = false;
+				} else {
+					_showInfos.el = true;
+				}
+				break;
 		}
 		console.log(111, _showInfos);
 		setShowInfos(_showInfos);
@@ -65,7 +72,9 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('tu')} style={{ fontWeight: showInfos.tu ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].tu}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "tu", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "tu", exampleCountObject)}</sup></td>
 
-				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].el) }}></td>
+				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('el')} style={{ fontWeight: showInfos.el ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].el}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject)}</sup></td>
+
+				{/* <td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].el) }}></td> */}
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].nosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>
@@ -78,6 +87,9 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 			)}
 			{showInfos.tu && (
 				<TenseExamplePanel areaIdCode="tu" sv={sv} tenseIdCode={tenseIdCode} pronoun="tu" pronounIndex={1} />
+			)}
+			{showInfos.el && (
+				<TenseExamplePanel areaIdCode="el" sv={sv} tenseIdCode={tenseIdCode} pronoun="el" pronounIndex={2} />
 			)}
 		</>
 	)
