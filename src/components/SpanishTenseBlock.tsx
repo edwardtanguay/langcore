@@ -74,7 +74,6 @@ export const SpanishTenseBlock = ({ sv, title, tenseIdCode }: IProps) => {
 
 				<td><span className={`${tenseClass} cursor-pointer select-none hover:underline`} onClick={() => handleToggleShowInfos('el')} style={{ fontWeight: showInfos.el ? 'bold' : 'normal' }}>{sv.conj.indicative[tenseIdCode].el}</span><sup className={SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject) === 0 ? 'zero' : 'hasValue'}>{SpanishExampleManager.getCount(sv.spanish, tenseIdCode, "el", exampleCountObject)}</sup></td>
 
-				{/* <td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].el) }}></td> */}
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].nosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].vosotros) }}></td>
 				<td className={tenseClass} dangerouslySetInnerHTML={{ __html: buildTatoebaLinkElement(sv.conj.indicative[tenseIdCode].ellos) }}></td>

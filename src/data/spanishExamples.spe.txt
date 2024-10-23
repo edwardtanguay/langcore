@@ -85,3 +85,8 @@ escribir; _2PRPE; tu; inPastContinueToPresent; Has escrito esa carta desde esta 
 escribir; _2PRPE; tu; inPastContinueToPresent; Has escrito en tu diario todos los días esta semana; You have written in your journal every day this week.
 
 escribir; _2PRET; el; completedActionInPast; Ella tampoco escribió.; She didn't write either.
+
+
+
+escribir; _2PRET; tu; completedActionInPast; ¿Cuándo fue la última vez que escribiste una carta de amor?;  When is the last time you wrote a love letter?
+

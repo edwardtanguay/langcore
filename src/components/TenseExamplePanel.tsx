@@ -1,6 +1,6 @@
 // import { useStoreState } from "../store/hooks";
 import { SpanishExample, SpanishPronoun, SpanishVerb, SpanishVerbTenseIdCode } from "../types";
-import { tenses } from '../spanish';
+import { buildTatoebaUrl, tenses } from '../spanish';
 import { spanishPronounTexts } from "../types";
 import { HtmlListVerbConjugations } from "./HtmlListVerbConjugations";
 import { useStoreActions, useStoreState } from "../store/hooks";
@@ -100,6 +100,7 @@ export const TenseExamplePanel = ({ areaIdCode, sv, tenseIdCode, pronoun, pronou
 					})}
 				</ul>
 
+				<p style={{ borderTop: '1px solid #bbb', marginTop: '.7rem', paddingTop: '.7rem' }}>Also check for examples at Tatoeba: <a target="_blank" className="underline" href={buildTatoebaUrl(conjugationText)}>{conjugationText}</a></p>
 
 			</td>
 		</tr >

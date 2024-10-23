@@ -3,6 +3,7 @@
 hablar; speak; 4.98; regular
 olvidar;to forget;4.88;regular
 usar;to use;4.67;regular
+estudiar;to study;4.89;regular
 
 // AR-IRREGULAR ==================================================
 
