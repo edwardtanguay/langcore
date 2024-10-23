@@ -2,7 +2,11 @@
 - x show regular or irregular
 - x allow comments
 - .. build irregular verb - easy
-	- .. border different for each
+	- x border different for each
+	- .. refactor to SpanishVerbBuilder
+
+
+	- fix: Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
 
 
 
