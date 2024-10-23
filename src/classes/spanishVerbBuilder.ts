@@ -13,6 +13,7 @@ export class SpanishVerbBuilder {
 	private _verbLine: string = "";
 	private _spanishVerb: SpanishVerb = {} as SpanishVerb;
 	private _isVerb: boolean = false;
+	private _rest: string = '';
 
 	constructor(verbLine: string) {
 		this._verbLine = verbLine.trim();
@@ -26,8 +27,22 @@ export class SpanishVerbBuilder {
 		}
 	}
 
+	private parseRest() {
+		const restObj = qstr.parseKeyValueLine(this._rest);
+		console.log(444, restObj);
+	}
+
+	private applyExceptions() {
+		this.parseRest();
+		if (this._spanishVerb.verbKind === "irregular") {
+			this._spanishVerb.spanish =
+				this._spanishVerb.spanish + "+IRREGULAR";
+		}
+	}
+
 	private parse() {
 		const { verb, english, rank, rest } = this.getVerbLineParts();
+		this._rest = rest;
 		const verbKind: VerbKind = rest === "regular" ? "regular" : "irregular";
 		const verbBase = verb.slice(0, -2); // habl
 		const verbType: SpanishVerbType = verb.slice(-2) as SpanishVerbType;
@@ -144,13 +159,6 @@ export class SpanishVerbBuilder {
 						`${tenses[verbTenseIdCode].prefixes.vosotros} ${verbBase}${tenses[verbTenseIdCode].endings.ir.vosotros}`.trim(),
 					ellos: `${tenses[verbTenseIdCode].prefixes.ellos} ${verbBase}${tenses[verbTenseIdCode].endings.ir.ellos}`.trim(),
 				};
-		}
-	}
-
-	private applyExceptions() {
-		if (this._spanishVerb.verbKind === "irregular") {
-			this._spanishVerb.spanish =
-				this._spanishVerb.spanish + "+IRREGULAR";
 		}
 	}
 

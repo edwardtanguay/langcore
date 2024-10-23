@@ -175,3 +175,9 @@ export const randomizeInPlaceArray = (arr: SortedItem[]): void => {
 export const displayAsScore = (score: number) => {
 	return score.toString().padStart(5, "0");
 };
+
+export const parseKeyValueLine = (line: string) => {
+	return {
+		test: '999'
+	}
+}
