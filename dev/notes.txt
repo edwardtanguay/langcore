@@ -13,7 +13,8 @@
 - x delete test reacts
 - x fix "div cannot appear of p" error
 
-- .. add score to user
+- x add score to user
+- .. welcome page test
 
 ==========================================
 - x add mock page Spanish Links

@@ -213,4 +213,5 @@ export type ExampleCountObject = {
 
 export type User = {
 	firstName: string;
-}
+	score: number;
+};

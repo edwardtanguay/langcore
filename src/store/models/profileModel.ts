@@ -52,7 +52,8 @@ export interface ProfileModel {
 export const profileModel: ProfileModel = {
 	// state variables
 	user: {
-		firstName: ""
+		firstName: "",
+		score: 0
 	},
 	learnedVerbs: [],
 	userVerbs: [],
@@ -84,6 +85,7 @@ export const profileModel: ProfileModel = {
 		state.learnedVerbs = [];
 		state.userVerbs = [];
 		state.verbsTestedCorrect = [];
+		state.user.score = 0;
 	}),
 	setUserVerbs: action((state, userVerbs) => {
 		state.userVerbs = userVerbs;

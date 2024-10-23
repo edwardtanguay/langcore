@@ -1,6 +1,7 @@
 import { Nav } from "./Nav";
 import { useStoreState } from "../store/hooks.ts"
 import { NavLink } from "react-router-dom";
+import * as qstr from '../qtools/qstr';
 
 export const Header = () => {
 	const { user } = useStoreState((state) => state.profileModel);
@@ -12,7 +13,7 @@ export const Header = () => {
 				{user.firstName.trim() === '' ? (
 					<p><NavLink to="profile">SIGN IN</NavLink></p>
 				) : (
-					<p><NavLink to="profile">{user.firstName}</NavLink></p>
+					<p><NavLink to="profile" style={{color: 'navy'}}>{user.firstName} - {qstr.displayAsScore(user.score)}</NavLink></p>
 				)}
 			</div>
 			<Nav />

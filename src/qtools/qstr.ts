@@ -168,9 +168,10 @@ export const trimBeginningLinesOfBlanks = (lines: string[]) => {
 	return newLines;
 };
 
-export const randomizeInPlaceArray = (
-	arr: SortedItem[]
-): void => {
+export const randomizeInPlaceArray = (arr: SortedItem[]): void => {
 	arr.sort(() => Math.random() - 0.5);
 };
 
+export const displayAsScore = (score: number) => {
+	return score.toString().padStart(5, "0");
+};
