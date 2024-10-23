@@ -1,5 +1,9 @@
-x record if regular or irregular
-- .. show regular or irregular
+- x record if regular or irregular
+- x show regular or irregular
+- .. allow comments
+- .. build irregular verb - easy
+
+
 
 
 =============================================

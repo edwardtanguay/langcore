@@ -85,7 +85,7 @@ export class SpanishVerbManager {
 			verb: parts[0],
 			english: parts[1],
 			rank: parts[2] ? Number(parts[2]) : 3.0,
-			rest: parts[3]
+			rest: parts[3],
 		};
 	}
 
@@ -93,10 +93,14 @@ export class SpanishVerbManager {
 		for (const _line of this.verbLines) {
 			const line = _line.trim();
 			if (line !== "" && line.includes(";")) {
-				const { verb, english, rank, rest } = this.getVerbLineParts(line);
-				const verbKind: VerbKind = rest === 'regular' ? "regular" : "irregular"; 
+				const { verb, english, rank, rest } =
+					this.getVerbLineParts(line);
+				const verbKind: VerbKind =
+					rest === "regular" ? "regular" : "irregular";
 				const verbBase = verb.slice(0, -2); // habl
-				const verbType:SpanishVerbType = verb.slice(-2) as SpanishVerbType; 
+				const verbType: SpanishVerbType = verb.slice(
+					-2
+				) as SpanishVerbType;
 				const spanishVerb: SpanishVerb = {
 					spanish: verb,
 					english,

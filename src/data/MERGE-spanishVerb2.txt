@@ -1,0 +1,36 @@
+- rules: 
+	- zce; z to c before e
+	- oue; ou to e
+	- eie; e to ie
+	
+// ar-regular
+olvidar;to forget;4.88;regular
+usar;to use;4.67;regular
+
+// ar-irregular
+estar;to be (temporarily);5.0;pres:estoy/estás/está/-/-/están, pret:estuve/estuviste/estuvo/estuvimos/estuvisteis/estuvieron, pressubj:esté/estés/esté/estemos/estéis/estén, impesubj: estuviera/estuvieras/estuviera/estuviéramos/estuvierais/estuvieran, impesubj2:none, futusubj: estuviere/estuvieres/estuviere/estuviéremos/estuviereis/estuvieren, affiimpe: está/esté/estemos/estad/estén, negaimpe: no estés/no esté/no estemos/no estéis/no estén 
+organizar;organize; 4.45; cze
+desplegar; to deploy; 3.8; eie
+comenzar; to begin; 4.78; eie; pretyo:comencé
+pensar;to think;4.94;eie; 
+
+
+// er-regular
+comer;to eat
+
+// er-irregular
+ser;to be (permanently);4.0;pres:soy/eres/es/somos/sois/son, impe:era/eras/era/éramos/erais/eran, pret:fui/fuiste/fue/fuimos/fuisteis/fueron, impesubj1:fuera/fueras/fueras/fueras/fueras/fueras, impesubj2:fuese/fueses/fuese/fuésemos/fuésemos/fuesen, futusubj:fuere/fueres/fuere/fuéremos/fuereis/fueren
+poder;to be able to;4.97; oue, pret:pud, futu-cond:podr, gerund:pudiendo
+hacer;to do/make;4.99; pret:hichiz, futu-cond:har, presyo-pressubj:hag, pp:hecho
+leer;to read;4.3;prespart:leyendo, pastpart:leído, pret:leí/leíste/leyó/leímos/leísteis/leyeron; impesubj1:ley-i, impesubj2:ley-i, futusubj:ley-i
+caber;to fit, to be possible, to be appropriate; 3.9; presyo-pressubj:quep, pret:cup, futu-cond:cab, impe-not-tu-voso: quep, impesubj1-impesubj2:cup
+
+
+
+
+//ir-regular
+dedidir;to decide;4.51;regular
+interrumpir; to interrupt;3.5;regular
+
+//ir-irregular
+escribir; write; 4.96; pastpart:escrito
