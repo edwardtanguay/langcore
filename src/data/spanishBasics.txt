@@ -2,11 +2,6 @@ colors;red;roja
 colors;blue;azul
 colors;green;verde
 colors;yellow;amarillo
-colors;black;negro
-colors;white;blanco
-colors;purple;púrpura
-colors;orange;naranja
-colors;pink;rosa
 colors;brown;marrón
 colors;gray;gris
 colors;violet;violeta
@@ -16,6 +11,11 @@ colors;gold;dorado
 colors;silver;plateado
 colors;beige;beige
 colors;magenta;magenta
+colors;black;negro
+colors;white;blanco
+colors;purple;púrpura
+colors;orange;naranja
+colors;pink;rosa
 
 months;January;Enero
 months;February;Febrero
@@ -221,3 +221,7 @@ time;quarter to;menos cuarto
 time;ten to;menos diez
 time;five to;menu cinco
 time;exactly/o’clock;en punto
+
+letters;pronounce "a";nnn
+letters;pronounce "b";nnn
+nnn
