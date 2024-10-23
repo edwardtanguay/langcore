@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { SpanishVerb, SpanishVerbTenseIdCode } from "../types";
 import { useStoreState } from "../store/hooks";
-import { buildTatoebaLinkElement } from "../spanish";
 import { SpanishExampleManager } from "../classes/spanishExampleManager";
 import { TenseExamplePanel } from "./TenseExamplePanel";
 
