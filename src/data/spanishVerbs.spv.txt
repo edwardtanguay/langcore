@@ -1,21 +1,28 @@
 
 // AR-REGULAR ==================================================
-hablar; speak; 4.98; regular
+hablar; to speak; 4.98; regular
 olvidar;to forget;4.88;regular
 usar;to use;4.67;regular
 estudiar;to study;4.89;regular
+gustar;to like;4.83;regular
 
 // AR-IRREGULAR ==================================================
 
 // ER-REGULAR ==================================================
 comer;to eat;4.67;regular
+beber; to drink; 4.91;regular
+correr; to run; 4.92;regular
+comprender; to understand; 4.91;regulark
+deber;should/must/ought; 4.97;regular
+aprender; to learn; 4.96; regular
+vender; to sell; 4.69;regular
+meter; to put in, to place, to insert; 4.75;regular
 
 // ER-IRREGULAR ==================================================
-
-
 
 // IR-REGULAR ==================================================
 decidir;to decide;4.51;regular
 
 // IR-IRREGULAR ==================================================
-escribir; write; 4.96; pastpart:escrito
+escribir; to write; 4.96; pastpart:escrito
+describir; to describe; 4.51; pastpart:descrito; seeAlso:escribir

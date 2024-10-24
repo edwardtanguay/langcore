@@ -2,20 +2,30 @@
 	- zce; z to c before e
 	- oue; ou to e
 	- eie; e to ie
+	- itoy: i to y when not accented
+	- gtogu: g to gu before e
 	
 // ar-irregular
 estar;to be (temporarily);5.0;pres:estoy/estás/está/-/-/están, pret:estuve/estuviste/estuvo/estuvimos/estuvisteis/estuvieron, pressubj:esté/estés/esté/estemos/estéis/estén, impesubj: estuviera/estuvieras/estuviera/estuviéramos/estuvierais/estuvieran, impesubj2:none, futusubj: estuviere/estuvieres/estuviere/estuviéremos/estuviereis/estuvieren, affiimpe: está/esté/estemos/estad/estén, negaimpe: no estés/no esté/no estemos/no estéis/no estén 
-desplegar; to deploy; 3.8; eie
+--
 comenzar; to begin; 4.78; eie; pretyo:comencé
 pensar;to think;4.94;eie; 
+pagar; pay; 4.92; gtogu; pretyo: pagué, pressubj: pague/pagues/pague/paguemos/paguéis/paguen; affiimpe: -/pague/paguemos/-/paguen; negaimpe: no pagues/no pague/no paguemos/no paguéis/no paguen
+desplegar; to deploy; 3.8; eie
 
 
 // er-irregular
 ser;to be (permanently);4.0;pres:soy/eres/es/somos/sois/son, impe:era/eras/era/éramos/erais/eran, pret:fui/fuiste/fue/fuimos/fuisteis/fueron, impesubj1:fuera/fueras/fueras/fueras/fueras/fueras, impesubj2:fuese/fueses/fuese/fuésemos/fuésemos/fuesen, futusubj:fuere/fueres/fuere/fuéremos/fuereis/fueren
-poder;to be able to;4.97; oue, pret:pud, futu-cond:podr, gerund:pudiendo
-hacer;to do/make;4.99; pret:hichiz, futu-cond:har, presyo-pressubj:hag, pp:hecho
+--
+poder;to be able to;4.97; oue, pret:pud-, futu&cond:podr-, gerund:pudiendo
+poner: to put; 4.91; presyo&pressubj:pong-, pastpart: puesto, pret&impesubj:pus-, futu&cond:pondr-
+tener; to have;4.92; eie:"e changes to ie 3x in the present", pres: tengo/tienes/tiene/-/-/tienen, pret:tuv-, futu&cond: tendre-, presyo&pressubj:teng-, impesubj: tuv-
+hacer;to do/make;4.99; pret:hic-hiz-, futu&cond:har, presyo&pressubj:hag, pastpart:hecho
+--
 leer;to read;4.3;prespart:leyendo, pastpart:leído, pret:leí/leíste/leyó/leímos/leísteis/leyeron; impesubj1:ley-i, impesubj2:ley-i, futusubj:ley-i
-caber;to fit, to be possible, to be appropriate; 3.9; presyo-pressubj:quep, pret:cup, futu-cond:cab, impe-not-tu-voso: quep, impesubj1-impesubj2:cup
+creer; believe; 4.5; itoy; pastpart: creído; group: leer (similar past participle)
+--
+caber;to fit, to be possible, to be appropriate; 3.5; presyo-pressubj:quep, pret:cup, futu-cond:cab, impe-not-tu-voso: quep, impesubj1-impesubj2:cup
 
 //ir-irregular
 

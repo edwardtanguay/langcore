@@ -24,36 +24,25 @@ tomar; take/drink; 4.9
 preguntar; ask; 4.96
 necesitar; need; 4.78
 saltar; jump; 4.44
-pagar; pay; 4.92
 dibujar; draw; 3.7
 cortar; cut; 4.2
 
-comer; eat; 4.92
-beber; drink; 4.91
-aprender; learn; 4.96
-correr; run; 4.92
-leer; read; 4.82
-vender; sell; 4.69
-temer; fear; 3.6
-comprender; understand; 4.91
 responder; answer; 4.88
+encender; light/turn on; 4.27
+temer; fear; 3.6
 depender; depend; 4.4
 barrer; sweep; 3.4
-creer; believe; 4.5
 romper; break; 3.4
 prometer; promise; 4.1
 toser; cough; 3.1
 esconder; hide; 3.5
-deber; owe/must; 4.93
 poseer; possess; 3.8
 sorprender; surprise; 4.0
 proceder; proceed; 3.9
 suceder; happen; 4.4
-meter; put in; 4.75
 tejer; knit; 2.7
 absorber; absorb; 3.9
 coser; sew; 2.3
-encender; light/turn on; 4.27
 envolver; wrap; 4.2
 
 vivir; live; 4.94
