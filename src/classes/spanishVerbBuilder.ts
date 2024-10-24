@@ -53,7 +53,6 @@ export class SpanishVerbBuilder {
 
 	private applyExceptions() {
 		this.parseRest();
-		console.log(111, this._regularPastParticiple);
 		if (this._spanishVerb.verbKind === "irregular") {
 			if (this._pastpart !== "") {
 				this._spanishVerb.conj.base._1PAPA = this._pastpart;

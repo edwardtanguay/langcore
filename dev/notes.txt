@@ -7,12 +7,8 @@
 	- x fix: use this_pastpart for all the verbs that need it
 	- x add general tatoeba link
 	- x convert last three tenses
-	- .. on irregular verbs: show what deviates from regular verbs
-	
-	- on irregular verbs: show note 
+	- x on irregular verbs: show what deviates from regular verbs
 
-
-	- fix: Warning: validateDOMNesting(...): <div> cannot appear as a descendant of <p>.
 
 
 
