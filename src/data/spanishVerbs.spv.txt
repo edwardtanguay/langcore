@@ -7,7 +7,6 @@ estudiar;to study;4.89;regular
 
 // AR-IRREGULAR ==================================================
 
-
 // ER-REGULAR ==================================================
 comer;to eat;4.67;regular
 
@@ -16,7 +15,7 @@ comer;to eat;4.67;regular
 
 
 // IR-REGULAR ==================================================
-dedidir;to decide;4.51;regular
+decidir;to decide;4.51;regular
 
 // IR-IRREGULAR ==================================================
 escribir; write; 4.96; pastpart:escrito

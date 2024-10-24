@@ -5,7 +5,6 @@
 	
 // ar-irregular
 estar;to be (temporarily);5.0;pres:estoy/estás/está/-/-/están, pret:estuve/estuviste/estuvo/estuvimos/estuvisteis/estuvieron, pressubj:esté/estés/esté/estemos/estéis/estén, impesubj: estuviera/estuvieras/estuviera/estuviéramos/estuvierais/estuvieran, impesubj2:none, futusubj: estuviere/estuvieres/estuviere/estuviéremos/estuviereis/estuvieren, affiimpe: está/esté/estemos/estad/estén, negaimpe: no estés/no esté/no estemos/no estéis/no estén 
-organizar;organize; 4.45; cze
 desplegar; to deploy; 3.8; eie
 comenzar; to begin; 4.78; eie; pretyo:comencé
 pensar;to think;4.94;eie; 

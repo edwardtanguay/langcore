@@ -1,13 +1,18 @@
 - x record if regular or irregular
 - x show regular or irregular
 - x allow comments
-- .. build irregular verb - easy
+- x build irregular verb - easy
 	- x border different for each
 	- x refactor to SpanishVerbBuilder
 	- x fix: use this_pastpart for all the verbs that need it
 	- x add general tatoeba link
 	- x convert last three tenses
 	- x on irregular verbs: show what deviates from regular verbs
+- .. rest of irregular verbs
+	- .. organizar;organize; 4.45; cze
+		- .. first finish all the other tenses
+			- .. _2PREP
+
 
 
 
