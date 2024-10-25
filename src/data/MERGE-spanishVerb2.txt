@@ -1,33 +1,59 @@
+- templates
+
+affiimpe: nnn/nnn/nnn/nnn/nnn/nnn, negaimpe: nnn/nnn/nnn/nnn/nnn/nnn
+impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
+
 - rules: 
-	- zce; z to c before e
-	- oue; ou to e
-	- eie; e to ie
+	- ztoc; z to c before e
+	- outoe; ou to e
+	- etoie; e to ie
 	- itoy: i to y when not accented
 	- gtogu: g to gu before e
+	- ctoqu: c to qu before e
+	- etoi: e to i
+	- gutog: gu to g before o or a
+	- otoue: o to ue
 	
 // ar-irregular
 estar;to be (temporarily);5.0;pres:estoy/estás/está/-/-/están, pret:estuve/estuviste/estuvo/estuvimos/estuvisteis/estuvieron, pressubj:esté/estés/esté/estemos/estéis/estén, impesubj: estuviera/estuvieras/estuviera/estuviéramos/estuvierais/estuvieran, impesubj2:none, futusubj: estuviere/estuvieres/estuviere/estuviéremos/estuviereis/estuvieren, affiimpe: está/esté/estemos/estad/estén, negaimpe: no estés/no esté/no estemos/no estéis/no estén 
 --
-comenzar; to begin; 4.78; eie; pretyo:comencé
-pensar;to think;4.94;eie; 
+dar; to give; 4.92; pres: doy/-/-/-/dais/-, pret: di/diste/dio/dimos/disteis/dieron, pressubj: dé/des/dé/demos/deis/den, lookup, impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
+llegar; to arrive; 4.89; pret:llegué, lookup
+comenzar; to begin; 4.78; etoie; pretyo:comencé
+pensar;to think;4.94;etoie, lookup
+encontrar;to find; 4.93; otoue, lookup
+contar; to count;4.4;otoue
 pagar; pay; 4.92; gtogu; pretyo: pagué, pressubj: pague/pagues/pague/paguemos/paguéis/paguen; affiimpe: -/pague/paguemos/-/paguen; negaimpe: no pagues/no pague/no paguemos/no paguéis/no paguen
-desplegar; to deploy; 3.8; eie
+desplegar; to deploy; 3.8; etoie
+sacar;to take out;3.5;ctoqu, pretyo&pressubj: saq-, affiimpe: saca/saque/-/sacad/saquen, negaimpe: no saques/no saque/-/no saquéis/no saquen
+destacar;to emphasize;4.1; ctoqu, pretyo: destaqué, subj: destaqu-, affiimpe: -/destaque/destaquemos/-/destaquen, negaimpe: no destaques/no destaque/no destaquemos/no destaquéis/no destaquen
+lanzar;to launch;3.4;ztoc
 
 
 // er-irregular
 ser;to be (permanently);4.0;pres:soy/eres/es/somos/sois/son, impe:era/eras/era/éramos/erais/eran, pret:fui/fuiste/fue/fuimos/fuisteis/fueron, impesubj1:fuera/fueras/fueras/fueras/fueras/fueras, impesubj2:fuese/fueses/fuese/fuésemos/fuésemos/fuesen, futusubj:fuere/fueres/fuere/fuéremos/fuereis/fueren
 --
-poder;to be able to;4.97; oue, pret:pud-, futu&cond:podr-, gerund:pudiendo
+poder;to be able to;4.97; outoe, pret:pud-, futu&cond:podr-, gerund:pudiendo
 poner: to put; 4.91; presyo&pressubj:pong-, pastpart: puesto, pret&impesubj:pus-, futu&cond:pondr-
-tener; to have;4.92; eie:"e changes to ie 3x in the present", pres: tengo/tienes/tiene/-/-/tienen, pret:tuv-, futu&cond: tendre-, presyo&pressubj:teng-, impesubj: tuv-
+tener; to have;4.92; etoie:"e changes to ie 3x in the present", pres: tengo/tienes/tiene/-/-/tienen, pret:tuv-, futu&cond: tendre-, presyo&pressubj:teng-, impesubj: tuv-
 hacer;to do/make;4.99; pret:hic-hiz-, futu&cond:har, presyo&pressubj:hag, pastpart:hecho
+querer;to want; 4.98; etoie, pres: quiero/quieres/quiere/-/-/quieren, pret:quis-, futu&cond: querr-, impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
+saber;to know how to; 4.87;yo:sé, pret:sub-(flat), futu&cond: sabr-, pressubj: sep-, impesubj&futusubj: sup- , affiimpe: sabe/sepa/sepamos/-/sepan, negaimpe: no sepas/no sepa/no sepamos/no sepáis/no sepan
+conocer;to know something/someone;4.89; presyo&pressubj: conozc-, affiimpe: -/conozca/conozcamos/-/conozcan, negaimpe: no conozcas/no conozca/no conozcamos/no conozcáis/no conozcan
 --
 leer;to read;4.3;prespart:leyendo, pastpart:leído, pret:leí/leíste/leyó/leímos/leísteis/leyeron; impesubj1:ley-i, impesubj2:ley-i, futusubj:ley-i
 creer; believe; 4.5; itoy; pastpart: creído; group: leer (similar past participle)
+ofrecer; to offer; 4.4; ctozc; lookup
 --
 caber;to fit, to be possible, to be appropriate; 3.5; presyo-pressubj:quep, pret:cup, futu-cond:cab, impe-not-tu-voso: quep, impesubj1-impesubj2:cup
+fortalecer; strenthen;3.3; lookup
+exponer; to expose; 3.8; lookup
 
 //ir-irregular
+ir;to go;4.99;prespart:yendo, pres: voy/vas/va/vamos/vais/van, impe: iba/ibas/iba/íbamos/ibais/iban, pret: fui/fuiste/fue/fuimos/fuisteis/fueron; pressubj: vay-, impesubj1: fuera/fueras/fuera/fuéramos/fuerais/fueran, impesubj2: fuese/fueses/fuese/fuésemos/fueseis/fuesen; futusubj: fu-, affiimpe: ve/vaya/vamos/-/vayan, negaimpe: 
+--
+requerir; require;4.3;etoie
+persiguir;to pursue;3.7;etoi, gutog, pres:persigo/persigues/persigue/-/-/persiguen, pressubj: persiga/persigas/persiga/persigamos/persigáis/persigan, impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup, prespart: persiguiendo
 
 
 // reflexive verbs

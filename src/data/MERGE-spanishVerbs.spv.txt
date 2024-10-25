@@ -1,7 +1,6 @@
 cantar; sing; 3.8
 nadar; swim; 4.1
 trabajar; work; 4.7
-estudiar; study; 4.83
 caminar; walk; 4.6
 bailar; dance; 3.8
 cocinar; cook; 4.2
@@ -11,16 +10,12 @@ comprar; buy; 4.91
 llamar; call; 4.88
 enseñar; teach; 4.57
 visitar; visit; 4.61
-ayudar; help; 4.81
 limpiar; clean; 4.41
-usar; use; 4.71
-mirar; watch/look; 4.81
 buscar; search; 4.89
 llegar; arrive; 4.93
 cambiar; change; 4.82
 entrar; enter; 4.55
 esperar; wait/hope; 4.81
-tomar; take/drink; 4.9
 preguntar; ask; 4.96
 necesitar; need; 4.78
 saltar; jump; 4.44

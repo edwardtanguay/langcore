@@ -5,6 +5,16 @@ olvidar;to forget;4.88;regular
 usar;to use;4.67;regular
 estudiar;to study;4.89;regular
 gustar;to like;4.83;regular
+mirar; to watch; 4.62;regular
+ayudar; help; 4.81; regular
+tomar; take/drink; 4.9
+esperar; to wait, expect; 4.82; regular
+--
+hospedar; to host; 2.9;regular
+remontar;to overcome;3.7;regular
+comentar;to comment;4.1;regular
+vislumbrar;to glimpse;2.3;regular
+dominar; to dominate; 3.1;regular
 
 // AR-IRREGULAR ==================================================
 
