@@ -391,7 +391,7 @@ export const tenses: SpanishTenseObject = {
 	_2PRPE: {
 		idCode: "_2PRPE",
 		title: "present perfect",
-		spanishTitles: ["pretérito perfecto"],
+		spanishTitles: ["pretérito perfecto, pretérito compuesto"],
 		prefixes: {
 			yo: "he",
 			tu: "has",

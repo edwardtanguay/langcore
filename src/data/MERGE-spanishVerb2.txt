@@ -2,6 +2,7 @@
 
 affiimpe: nnn/nnn/nnn/nnn/nnn/nnn, negaimpe: nnn/nnn/nnn/nnn/nnn/nnn
 impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
+affiimpe: lookup, negaimpe: lookup
 
 - rules: 
 	- ztoc; z to c before e
@@ -14,7 +15,7 @@ impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
 	- gutog: gu to g before o or a
 	- otoue: o to ue
 	
-// ar-irregular
+// *********** AR-IRREGULAR
 estar;to be (temporarily);5.0;pres:estoy/estás/está/-/-/están, pret:estuve/estuviste/estuvo/estuvimos/estuvisteis/estuvieron, pressubj:esté/estés/esté/estemos/estéis/estén, impesubj: estuviera/estuvieras/estuviera/estuviéramos/estuvierais/estuvieran, impesubj2:none, futusubj: estuviere/estuvieres/estuviere/estuviéremos/estuviereis/estuvieren, affiimpe: está/esté/estemos/estad/estén, negaimpe: no estés/no esté/no estemos/no estéis/no estén 
 --
 dar; to give; 4.92; pres: doy/-/-/-/dais/-, pret: di/diste/dio/dimos/disteis/dieron, pressubj: dé/des/dé/demos/deis/den, lookup, impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
@@ -30,13 +31,14 @@ destacar;to emphasize;4.1; ctoqu, pretyo: destaqué, subj: destaqu-, affiimpe: -
 lanzar;to launch;3.4;ztoc
 
 
-// er-irregular
+// *********** ER-IRREGULAR
 ser;to be (permanently);4.0;pres:soy/eres/es/somos/sois/son, impe:era/eras/era/éramos/erais/eran, pret:fui/fuiste/fue/fuimos/fuisteis/fueron, impesubj1:fuera/fueras/fueras/fueras/fueras/fueras, impesubj2:fuese/fueses/fuese/fuésemos/fuésemos/fuesen, futusubj:fuere/fueres/fuere/fuéremos/fuereis/fueren
 --
 poder;to be able to;4.97; outoe, pret:pud-, futu&cond:podr-, gerund:pudiendo
 poner: to put; 4.91; presyo&pressubj:pong-, pastpart: puesto, pret&impesubj:pus-, futu&cond:pondr-
 tener; to have;4.92; etoie:"e changes to ie 3x in the present", pres: tengo/tienes/tiene/-/-/tienen, pret:tuv-, futu&cond: tendre-, presyo&pressubj:teng-, impesubj: tuv-
 hacer;to do/make;4.99; pret:hic-hiz-, futu&cond:har, presyo&pressubj:hag, pastpart:hecho
+ver; to see; 4.79; presyo: veo, presvoso: veis, presperf: ve-, pretyo: vi, pretel: vio, pastpart: visto, pressubj: ve-, affiimpe: lookup, negaimpe: lookup
 querer;to want; 4.98; etoie, pres: quiero/quieres/quiere/-/-/quieren, pret:quis-, futu&cond: querr-, impesubj:lookup, futusubj:lookup, affiimpe: lookup, negaimpe: lookup
 saber;to know how to; 4.87;yo:sé, pret:sub-(flat), futu&cond: sabr-, pressubj: sep-, impesubj&futusubj: sup- , affiimpe: sabe/sepa/sepamos/-/sepan, negaimpe: no sepas/no sepa/no sepamos/no sepáis/no sepan
 conocer;to know something/someone;4.89; presyo&pressubj: conozc-, affiimpe: -/conozca/conozcamos/-/conozcan, negaimpe: no conozcas/no conozca/no conozcamos/no conozcáis/no conozcan
@@ -49,7 +51,7 @@ caber;to fit, to be possible, to be appropriate; 3.5; presyo-pressubj:quep, pret
 fortalecer; strenthen;3.3; lookup
 exponer; to expose; 3.8; lookup
 
-//ir-irregular
+// ************ IR-IRREGULAR
 ir;to go;4.99;prespart:yendo, pres: voy/vas/va/vamos/vais/van, impe: iba/ibas/iba/íbamos/ibais/iban, pret: fui/fuiste/fue/fuimos/fuisteis/fueron; pressubj: vay-, impesubj1: fuera/fueras/fuera/fuéramos/fuerais/fueran, impesubj2: fuese/fueses/fuese/fuésemos/fueseis/fuesen; futusubj: fu-, affiimpe: ve/vaya/vamos/-/vayan, negaimpe: 
 --
 requerir; require;4.3;etoie

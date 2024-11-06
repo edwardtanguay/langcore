@@ -9,6 +9,9 @@ mirar; to watch; 4.62;regular
 ayudar; help; 4.81; regular
 tomar; take/drink; 4.9
 esperar; to wait, expect; 4.82; regular
+notar; to note; 4.34; regular
+echar;to throw, cast, fling; 4.33; regular
+dejar;to allow, let;4.83;regular
 --
 hospedar; to host; 2.9;regular
 remontar;to overcome;3.7;regular
@@ -32,6 +35,7 @@ meter; to put in, to place, to insert; 4.75;regular
 
 // IR-REGULAR ==================================================
 decidir;to decide;4.51;regular
+subir; to go up, to upload; 4.53;regular
 
 // IR-IRREGULAR ==================================================
 escribir; to write; 4.96; pastpart:escrito

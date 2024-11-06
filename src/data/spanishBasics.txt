@@ -225,3 +225,34 @@ time;exactly/o’clock;en punto
 letters;pronounce "a";nnn
 letters;pronounce "b";nnn
 nnn
+
+commonWords;of course;por supuesto
+commonWords;often; a menudo
+commonWords;besides; además
+commonWords;although; aunque
+commonWords;soon; pronto
+commonWords;however; sin embargo
+commonWords;since/because; puesto que
+commonWords;always; siempre
+commonWords;also; también
+commonWords;as long as;a medida que
+commonWords;in fact; de hecho
+commonWords;meanwhile; mientras tanto
+commonWords;especially; especialmente
+commonWords;even though; a pesar de que
+commonWords;therefore; por lo tanto
+commonWords;finally; finalmente
+commonWords;first; primero
+commonWords;next; siguiente
+commonWords;likewise; igualmente
+commonWords;instead; en lugar de
+commonWords;for example; por ejemplo
+commonWords;particularly; particularmente
+commonWords;nevertheless; no obstante
+commonWords;especially; sobre todo
+commonWords;in addition; además
+commonWords;otherwise; de otra manera
+commonWords;sometimes; a veces
+commonWords;frequently; con frecuencia
+commonWords;generally; generalmente
+commonWords;rarely; raramente
