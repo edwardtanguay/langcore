@@ -25,7 +25,7 @@ dominar; to dominate; 3.1;regular
 comer;to eat;4.67;regular
 beber; to drink; 4.91;regular
 correr; to run; 4.92;regular
-comprender; to understand; 4.91;regulark
+comprender; to understand; 4.91;regular
 deber;should/must/ought; 4.97;regular
 aprender; to learn; 4.96; regular
 vender; to sell; 4.69;regular

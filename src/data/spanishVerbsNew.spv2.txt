@@ -1,0 +1,125 @@
+==AR=================================================
+----ar important------------------------
+estar;irr;be;to be in a temporary state;pres:estoy,estás,está,-,-,están;pret:estuve,estuviste,estuvo,estuvimos,estuvisteis,estuvieron;subj:esté,estés,esté,-,-,estén;5.0
+dar;irr;give;pres:doy,-,-,-,dais,-;pret:di,diste,dio,dimos,disteis,dieron;subj:dé,-,dé,-,deis,-;4.9
+llegar;irr;arrive;pret:llegué,-,-,-,-,-;subj:llegue,llegues,llegue,lleguemos,lleguéis,lleguen;4.7
+----ar regular-----------------------
+acompañar;reg;accompany
+activar;reg;activate
+agregar;reg;add
+anidar;reg;nest
+apuntar;reg;note,write down
+arruinar;reg;ruin
+asignar;reg;assign,allocate,attribute
+ayudar;reg;help
+bajar;reg;go down
+cambiar;reg;change;4.7
+confirmar;reg;confirm
+controlar;reg;control,inspect,check
+copiar;reg;copy
+cortar;reg;cut
+cuidar;reg;take care of
+crear;reg;create,make
+dejar;reg;leave,abandon,let,allow
+designar;reg;appoint,designate
+duchar;reg;shower
+echar;reg;throw,cast,fling,hurl,pitch,toss
+ejecutar;reg;execute;3.8
+encantar;reg;delight
+entrar;reg;enter
+escuchar;reg;listen to,hear
+esperar;reg;wait,hope
+estudiar;reg;study
+examinar;reg;examine,consider
+explorar;reg;explore,pioneer
+fallar;reg;fail;[fah-YAR]
+fascinar;reg;fascinate
+fijar;reg;fix,fasten,secure;3.1
+generar;reg;generate;3.9
+girar;reg;turn;4.6
+guardar;reg;save
+igualar;reg;equalize,make equal 
+incorporar;reg;incorporate
+intentar;reg;try,attempt
+llamar;reg;call,name;4.5
+lograr;reg;achieve;2.9
+mandar;reg;give an order,send
+matar;reg;kill
+mejorar;reg;improve
+mirar;reg;watch;4.8
+necesitar;reg;require;4.3
+ocultar;reg;hide
+operar;reg;operate;4.7
+parar;reg;stop,halt
+pasar;reg;pass
+planear;reg;plan
+presionar;reg;press
+regalar;reg;give a gift;3.8
+revisar;reg;revise
+terminar;reg;finish,end
+tomar;reg;take,drink;4.6
+trabajar;reg;work
+usar;reg;use;4.7
+visitar;reg;visit
+----ar irregular-----------------------
+analizar;irr;analyze;pret:analicé,-,-,-,-,-;subj:analice,analices,analice,analicemos,analicéis,analicen
+buscar;irr;search for,look for;pret:busqué,-,-,-,-,-;subj:busque,busques,busque,busquemos,busquéis,busquen
+cerrar;irr;close,shut;pres:cierro,cierras,cierra,-,-,cierran;subj:cierre,cierres,cierre,-,-,cierren
+dedicar;irr;dedicate;pret:dediqué,-,-,-,-,-;subj:dedique;dediques;dedique;dediquemos;dediquéis;dediquen;3.9
+desplegar;irr;deploy;pres:despliego,despliegas,despliega,-,-,despliegan;pret:desplegué,-,-,-,-,-;subj:despliegue,despliegues,despliegue,despleguemos,despleguéis,desplieguen;4.3
+encontrar;irr;find,encounter;pres:encuentro,encuentras,encuentra,-,-,encuentran;subj:encuentre,encuentres,encuentre,-,-,encuentren
+evaluar;irr;evaluate;pres:evalúo,evalúas,evalúa,-,-,evalúan:subj:evalúe,evalúes,evalúe,-,-,evalúen
+modificar;irr;modify,change;pret:modifiqué,-,-,-,-,-;subj:modifique,modifiques,modifique,modifiquemos,modifiquéis,modifiquen
+mostrar;irr;show;pres:muestro,muestras,muestra,-,-,muestran;subj:muestre,muestres,muestre,-,-,muestren
+obligar;irr;oblige;pret:obligué;subj:obligue,obligues,obligue,obliguemos,obliguéis,obliguen
+recordar;irr;remember,remind;pres;recuerdo,recuerdas,recuerda,-,-,recuerdan;subj:recuerde,recuerdes,recuerde,-,-,recuerden
+significar;irr;signify,mean;pret:signifiqué,-,-,-,-,-;subj:signifique,signifiques,signifique,signifiquemos,signifiquéis,signifiquen 
+utilizar;irr;use,utilize;pret:utilicé,-,-,-,-,-;subj:utilice,utilices,utilice,utilicemos,utilicéis,utilicen
+
+==ER=================================================
+----er important------------------------
+ser;irr;be;TODO;5.0
+hacer;irr;do,make;TODO;5.0
+poder;irr;be able to;TODO;5.0
+tener;irr;have;TODO;5.0
+deber;reg;owe,must,should,ought to;4.9
+poner;irr;put,place,set;TODO;4.9
+querer;irr;want,love;TODO;4.8
+saber;irr;know;TODO;4.8
+ver;irr;see;TODO;4.8
+volver;irr;return,go back;TODO;4.7
+----er regular------------------------
+aprender;reg;learn;4.7
+meter;reg;put,place,insert
+----er irregular------------------------
+aparecer;irr;appear;pres:aparezco,-,-,-,-,-;subj:aparezca,aparezcas,aparezca,aparezcamos,aparezcáis,aparezcan
+mantaner;irr;maintain,get;TODO;4.3
+parecer;irr;seem,appear;pres:parezco,-,-,-,-,-;subj:parezca,parezcas,parezca,parezcamos,parezcáis,parezcan;3.9
+proveer;irr;provide;pret:-,proveíste, proveyó, proveímos, proveísteis, proveyeron:papa:provisto;prpa:proveyendo;4.5
+
+==IR================================================
+----ir important------------------------
+ir;irr;go;TODO;5.0
+decir;irr;say,tell;TODO;4.8
+----ir regular------------------------
+recibir;reg;receive,welcome,greet
+definir;reg;define,explain,clarify
+permitir;reg;permit,allow
+existir;reg;exist
+vivir;reg;live
+----ir irregular------------------------
+abrir;irr;open;papa:abierto
+incluir;irr;include;pres:incluyo,incluyes,incluye,-,-,incluyen;pret:-,-,incluyó,-,-,incluyeron;subj:incluya,incluyas,incluya,incluyamos,incluyáis,incluyan;prpa:incluyendo
+repetir;irr;repeat;pres:repito,repites,repite,-,-,repiten;pret:-,-,repitió,-,-,repitieron;subj:repita,repitas,repita,repitamos,repitáis,repitan
+servir;irr;serve;pres:sirvo,sirves,sirve,-,-,sirven;pret:-,-,sirvió,-,-,sirvieron:subj:sirva,sirvas,sirva,sirvamos,sirváis,sirvan
+
+==IRREGULAR RULES================================================
+e -> ie;desplegar,cerrar
+e -> i;repetir,servir
+z -> c;utilizar,analizar
+c -> qu before e;buscar,significar,dedicar
+o -> ue when accented;encontrar,recordar
+c -> zc;aparecer, parecer
+u -> ú;evaluar
+i -> y;proveer
+g -> gu before e;obligar
