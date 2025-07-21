@@ -1,0 +1,73 @@
+GROUP 1
+==============================================================
+==============================================================
+- aimer
+- parler
+- donner
+- penser
+- demander
+- travailler
+- trouver
+- regarder
+- arriver
+- entrer
+- rester
+- porter
+- jouer
+- montrer
+- commencer
+- appeler
+- habiter
+- marcher
+- écouter
+- fermer
+==============================================================
+
+GROUP 2
+==============================================================
+==============================================================
+- finir
+- choisir
+- grandir
+- grossir
+- maigrir
+- rougir
+- réussir
+- ralentir
+- obéir
+- réfléchir
+- bâtir
+- punir
+- remplir
+- établir
+- vieillir
+- nourrir
+- salir
+- fleurir
+- applaudir
+- réunir
+==============================================================
+
+GROUP 3
+==============================================================
+==============================================================
+- être
+- avoir
+- faire
+- aller
+- dire
+- pouvoir
+- vouloir
+- voir
+- savoir
+- devoir
+- venir
+- prendre
+- mettre
+- croire
+- tenir
+- lire
+- écrire
+- vivre
+- connaître
+==============================================================
