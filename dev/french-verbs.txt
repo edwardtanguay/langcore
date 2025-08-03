@@ -2,52 +2,50 @@ GROUP 1
 ==============================================================
 PRES: -e, -es, -e, -ons, -ez, -ent
 ==============================================================
-- aimer
-- parler
-- donner
-- penser
-- demander
-- travailler
-- trouver
-- regarder
-- arriver
-- entrer
-- rester
-- porter
-- jouer
-- montrer
-- commencer
 - appeler
-- habiter
-- marcher
+- arriver
+- aimer
+- commencer
+- créer
+- demander
+- donner
 - écouter
+- entrer
 - fermer
+- habiter
+- jouer
+- marcher
+- montrer
+- parler
+- penser
+- porter
+- regarder
+- rester
 ==============================================================
 
 GROUP 2
 ==============================================================
 PRES: –is, –is, –it, –issons, –issez, –issent
 ==============================================================
-- finir
+- applaudir
+- bâtir
 - choisir
+- établir
+- finir
+- fleurir
 - grandir
 - grossir
 - maigrir
-- rougir
-- réussir
-- ralentir
-- obéir
-- réfléchir
-- bâtir
-- punir
-- remplir
-- établir
-- vieillir
 - nourrir
-- salir
-- fleurir
-- applaudir
+- obéir
+- punir
+- ralentir
+- réfléchir
+- remplir
 - réunir
+- réussir
+- rougir
+- salir
 ==============================================================
 
 GROUP 3
@@ -57,11 +55,12 @@ GROUP 3
 	- PRES: suis, es, est, sommes, êtes, sont
 - avoir
 	- PRES: ai, as, a, avons, avez, ont
-- faire
 - aller
-- dire
 - pouvoir
 - vouloir
+--------------------------------------------------------------
+- faire
+- dire
 - voir
 - savoir
 - devoir
